@@ -10,7 +10,7 @@ import org.jboot.kernel.log.event.ApiLogEvent;
 import org.jboot.kernel.log.entity.LogAbstract;
 import org.jboot.kernel.log.entity.LogApi;
 import org.jboot.kernel.log.utils.LogAbstractUtil;
-import org.jboot.kernel.tool.constant.BladeConstant;
+import org.jboot.kernel.tool.constant.JConstant;
 import org.jboot.kernel.tool.utils.SpringUtil;
 import org.jboot.kernel.tool.utils.WebUtil;
 
@@ -28,7 +28,7 @@ public class ApiLogPublisher {
 	public static void publishEvent(String methodName, String methodClass, ApiLog apiLog, long time) {
 		HttpServletRequest request = WebUtil.getRequest();
 		LogApi logApi = new LogApi();
-		logApi.setType(BladeConstant.LOG_NORMAL_TYPE);
+		logApi.setType(JConstant.LOG_NORMAL_TYPE);
 		logApi.setTitle(apiLog.value());
 		logApi.setTime(String.valueOf(time));
 		logApi.setMethodClass(methodClass);

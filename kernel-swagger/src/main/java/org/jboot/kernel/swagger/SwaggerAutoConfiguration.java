@@ -43,7 +43,7 @@ public class SwaggerAutoConfiguration {
 	private static final List<String> DEFAULT_EXCLUDE_PATH = Arrays.asList("/error", "/actuator/**");
 
 	private static final String AUTHORIZATION_HEADER = "Authorization";
-	private static final String TOKEN_HEADER = "Blade-Auth";
+	private static final String TOKEN_HEADER = "J-Auth";
 	private static final String TENANT_HEADER = "Tenant-Id";
 
 	/**

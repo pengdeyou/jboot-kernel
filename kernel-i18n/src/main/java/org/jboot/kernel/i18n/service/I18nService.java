@@ -22,7 +22,7 @@ import java.util.stream.Stream;
 /**
  * I18n服务实现类
  *
- * @author BladeX
+ * @author JBoot Kernel
  */
 @Slf4j
 @RequiredArgsConstructor

@@ -20,7 +20,7 @@ import java.util.List;
  *
  * <p>处理 /ureport/* 路径的访问鉴权，放行前端资源文件</p>
  *
- * @author BladeX
+ * @author JBoot Kernel
  */
 @Slf4j
 public class UReportAuthFilter implements Filter {
@@ -181,7 +181,7 @@ public class UReportAuthFilter implements Filter {
 		response.setCharacterEncoding("UTF-8");
 
 		try (PrintWriter writer = response.getWriter()) {
-			writer.write("访问 UReport 需要 BladeX 的 Token 认证");
+			writer.write("访问 UReport 需要 JBoot Kernel 的 Token 认证");
 			writer.flush();
 		}
 	}

@@ -32,6 +32,6 @@ import org.springframework.context.annotation.Bean;
 public class VersionMappingAutoConfiguration {
 	@Bean
 	public WebMvcRegistrations bladeWebMvcRegistrations() {
-		return new BladeWebMvcRegistrations();
+		return new JWebMvcRegistrations();
 	}
 }

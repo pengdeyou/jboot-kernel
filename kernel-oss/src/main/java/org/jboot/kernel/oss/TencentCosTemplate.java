@@ -21,7 +21,7 @@ import com.qcloud.cos.model.ObjectMetadata;
 import com.qcloud.cos.model.PutObjectResult;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
-import org.jboot.kernel.oss.model.BladeFile;
+import org.jboot.kernel.oss.model.JFile;
 import org.jboot.kernel.oss.model.OssFile;
 import org.jboot.kernel.oss.props.OssProperties;
 import org.jboot.kernel.oss.rule.OssRule;
@@ -139,40 +139,40 @@ public class TencentCosTemplate implements OssTemplate {
 	 * 文件对象
 	 *
 	 * @param file 上传文件类
-	 * @return BladeFile
+	 * @return JFile
 	 */
 	@Override
 	@SneakyThrows
-	public BladeFile putFile(MultipartFile file) {
+	public JFile putFile(MultipartFile file) {
 		return putFile(ossProperties.getBucketName(), file.getOriginalFilename(), file);
 	}
 
 	/**
 	 * @param fileName 上传文件名
 	 * @param file     上传文件类
-	 * @return BladeFile
+	 * @return JFile
 	 */
 	@Override
 	@SneakyThrows
-	public BladeFile putFile(String fileName, MultipartFile file) {
+	public JFile putFile(String fileName, MultipartFile file) {
 		return putFile(ossProperties.getBucketName(), fileName, file);
 	}
 
 	@Override
 	@SneakyThrows
-	public BladeFile putFile(String bucketName, String fileName, MultipartFile file) {
+	public JFile putFile(String bucketName, String fileName, MultipartFile file) {
 		return putFile(bucketName, fileName, file.getInputStream());
 	}
 
 	@Override
 	@SneakyThrows
-	public BladeFile putFile(String fileName, InputStream stream) {
+	public JFile putFile(String fileName, InputStream stream) {
 		return putFile(ossProperties.getBucketName(), fileName, stream);
 	}
 
 	@Override
 	@SneakyThrows
-	public BladeFile putFile(String bucketName, String fileName, InputStream stream) {
+	public JFile putFile(String bucketName, String fileName, InputStream stream) {
 		return put(bucketName, stream, fileName, false);
 	}
 
@@ -183,10 +183,10 @@ public class TencentCosTemplate implements OssTemplate {
 	 * @param stream     输入流
 	 * @param key       文件名
 	 * @param cover     是否覆盖上传
-	 * @return BladeFile 上传文件信息
+	 * @return JFile 上传文件信息
 	 */
 	@SneakyThrows
-	public BladeFile put(String bucketName, InputStream stream, String key, boolean cover) {
+	public JFile put(String bucketName, InputStream stream, String key, boolean cover) {
 		makeBucket(bucketName);
 		String originalName = key;
 		key = getFileName(key);
@@ -203,7 +203,7 @@ public class TencentCosTemplate implements OssTemplate {
 				retry++;
 			}
 		}
-		BladeFile file = new BladeFile();
+		JFile file = new JFile();
 		file.setOriginalName(originalName);
 		file.setName(key);
 		file.setDomain(getOssHost(bucketName));

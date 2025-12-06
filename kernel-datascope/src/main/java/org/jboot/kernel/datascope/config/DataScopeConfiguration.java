@@ -2,8 +2,8 @@
 package org.jboot.kernel.datascope.config;
 
 import lombok.AllArgsConstructor;
-import org.jboot.kernel.datascope.handler.BladeDataScopeHandler;
-import org.jboot.kernel.datascope.handler.BladeScopeModelHandler;
+import org.jboot.kernel.datascope.handler.JDataScopeHandler;
+import org.jboot.kernel.datascope.handler.JScopeModelHandler;
 import org.jboot.kernel.datascope.handler.DataScopeHandler;
 import org.jboot.kernel.datascope.handler.ScopeModelHandler;
 import org.jboot.kernel.datascope.interceptor.DataScopeInterceptor;
@@ -30,14 +30,14 @@ public class DataScopeConfiguration {
 	@Bean
 	@ConditionalOnMissingBean(ScopeModelHandler.class)
 	public ScopeModelHandler scopeModelHandler() {
-		return new BladeScopeModelHandler(jdbcTemplate);
+		return new JScopeModelHandler(jdbcTemplate);
 	}
 
 	@Bean
 	@ConditionalOnBean(ScopeModelHandler.class)
 	@ConditionalOnMissingBean(DataScopeHandler.class)
 	public DataScopeHandler dataScopeHandler(ScopeModelHandler scopeModelHandler) {
-		return new BladeDataScopeHandler(scopeModelHandler);
+		return new JDataScopeHandler(scopeModelHandler);
 	}
 
 	@Bean

@@ -13,7 +13,7 @@ import org.jboot.kernel.tool.utils.ObjectUtil;
  * 查询拦截器执行器
  *
  * <p>
- * 目的：抽取此方法是为了后期方便同步更新 {@link BladePaginationInterceptor}
+ * 目的：抽取此方法是为了后期方便同步更新 {@link JPaginationInterceptor}
  * </p>
  *
  * @author L.cm

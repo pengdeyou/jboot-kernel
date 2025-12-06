@@ -32,5 +32,5 @@ knife4j:
     enable-footer: false
     enable-footer-custom: true
     language: zh_cn
-    footer-custom-content: Copyright © 2024 SpringBlade All Rights Reserved
+    footer-custom-content: Copyright © 2024 JBoot All Rights Reserved
 

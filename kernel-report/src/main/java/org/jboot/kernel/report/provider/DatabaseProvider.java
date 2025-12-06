@@ -8,7 +8,7 @@ import lombok.AllArgsConstructor;
 import org.jboot.kernel.report.entity.ReportFileEntity;
 import org.jboot.kernel.report.props.ReportDatabaseProperties;
 import org.jboot.kernel.report.service.IReportFileService;
-import org.jboot.kernel.tool.constant.BladeConstant;
+import org.jboot.kernel.tool.constant.JConstant;
 import org.jboot.kernel.tool.utils.DateUtil;
 
 import java.io.ByteArrayInputStream;
@@ -58,7 +58,7 @@ public class DatabaseProvider implements ReportProvider {
 			reportFileEntity.setName(fileName);
 			reportFileEntity.setContent(content.getBytes());
 			reportFileEntity.setCreateTime(now);
-			reportFileEntity.setIsDeleted(BladeConstant.DB_NOT_DELETED);
+			reportFileEntity.setIsDeleted(JConstant.DB_NOT_DELETED);
 		} else {
 			reportFileEntity.setContent(content.getBytes());
 		}

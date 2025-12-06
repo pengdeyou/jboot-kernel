@@ -48,11 +48,11 @@ public class MappingApiJackson2HttpMessageConverter extends AbstractReadWriteJac
 	 * @param properties   properties
 	 * @see Jackson2ObjectMapperBuilder#json()
 	 */
-	public MappingApiJackson2HttpMessageConverter(ObjectMapper objectMapper, BladeJacksonProperties properties) {
+	public MappingApiJackson2HttpMessageConverter(ObjectMapper objectMapper, JJacksonProperties properties) {
 		super(objectMapper, initWriteObjectMapper(objectMapper, properties), initMediaType(properties));
 	}
 
-	private static List<MediaType> initMediaType(BladeJacksonProperties properties) {
+	private static List<MediaType> initMediaType(JJacksonProperties properties) {
 		List<MediaType> supportedMediaTypes = new ArrayList<>();
 		supportedMediaTypes.add(MediaType.APPLICATION_JSON);
 		supportedMediaTypes.add(new MediaType("application", "*+json"));
@@ -63,17 +63,17 @@ public class MappingApiJackson2HttpMessageConverter extends AbstractReadWriteJac
 		return supportedMediaTypes;
 	}
 
-	private static ObjectMapper initWriteObjectMapper(ObjectMapper readObjectMapper, BladeJacksonProperties properties) {
+	private static ObjectMapper initWriteObjectMapper(ObjectMapper readObjectMapper, JJacksonProperties properties) {
 		// 拷贝 readObjectMapper
 		ObjectMapper writeObjectMapper = readObjectMapper.copy();
 		// 大数字 转 字符串
 		if (Boolean.TRUE.equals(properties.getBigNumToString())) {
-			writeObjectMapper.registerModules(BladeNumberModule.INSTANCE);
+			writeObjectMapper.registerModules(JNumberModule.INSTANCE);
 		}
 		// null 处理
 		if (Boolean.TRUE.equals(properties.getNullToEmpty())) {
-			writeObjectMapper.setSerializerFactory(writeObjectMapper.getSerializerFactory().withSerializerModifier(new BladeBeanSerializerModifier()));
-			writeObjectMapper.getSerializerProvider().setNullValueSerializer(BladeBeanSerializerModifier.NullJsonSerializers.STRING_JSON_SERIALIZER);
+			writeObjectMapper.setSerializerFactory(writeObjectMapper.getSerializerFactory().withSerializerModifier(new JBeanSerializerModifier()));
+			writeObjectMapper.getSerializerProvider().setNullValueSerializer(JBeanSerializerModifier.NullJsonSerializers.STRING_JSON_SERIALIZER);
 		}
 		return writeObjectMapper;
 	}

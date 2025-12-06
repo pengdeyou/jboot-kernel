@@ -6,7 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.jboot.kernel.secure.utils.SecureUtil;
 import org.jboot.kernel.tool.api.R;
 import org.jboot.kernel.tool.api.ResultCode;
-import org.jboot.kernel.tool.constant.BladeConstant;
+import org.jboot.kernel.tool.constant.JConstant;
 import org.jboot.kernel.tool.jackson.JsonUtil;
 import org.jboot.kernel.tool.utils.WebUtil;
 import org.springframework.http.MediaType;
@@ -33,8 +33,8 @@ public class SecureInterceptor implements AsyncHandlerInterceptor {
 		} else {
 			log.warn("签名认证失败，请求接口：{}，请求IP：{}，请求参数：{}", request.getRequestURI(), WebUtil.getIP(request), JsonUtil.toJson(request.getParameterMap()));
 			R result = R.fail(ResultCode.UN_AUTHORIZED);
-			response.setCharacterEncoding(BladeConstant.UTF_8);
-			response.setHeader(BladeConstant.CONTENT_TYPE_NAME, MediaType.APPLICATION_JSON_VALUE);
+			response.setCharacterEncoding(JConstant.UTF_8);
+			response.setHeader(JConstant.CONTENT_TYPE_NAME, MediaType.APPLICATION_JSON_VALUE);
 			response.setStatus(HttpServletResponse.SC_OK);
 			try {
 				response.getWriter().write(Objects.requireNonNull(JsonUtil.toJson(result)));

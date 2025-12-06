@@ -13,11 +13,11 @@ import org.apache.ibatis.logging.Log;
 import org.apache.ibatis.logging.nologging.NoLoggingImpl;
 import org.mybatis.spring.annotation.MapperScan;
 import org.jboot.kernel.mp.intercept.QueryInterceptor;
-import org.jboot.kernel.mp.plugins.BladePaginationInterceptor;
+import org.jboot.kernel.mp.plugins.JPaginationInterceptor;
 import org.jboot.kernel.mp.plugins.SqlLogInterceptor;
 import org.jboot.kernel.mp.props.MybatisPlusProperties;
 import org.jboot.kernel.secure.utils.SecureUtil;
-import org.jboot.kernel.tool.constant.BladeConstant;
+import org.jboot.kernel.tool.constant.JConstant;
 import org.jboot.kernel.tool.utils.Func;
 import org.jboot.kernel.tool.utils.ObjectUtil;
 import org.springframework.beans.factory.ObjectProvider;
@@ -48,7 +48,7 @@ public class MybatisPlusConfiguration {
 		return new TenantLineInnerInterceptor(new TenantLineHandler() {
 			@Override
 			public Expression getTenantId() {
-				return new StringValue(Func.toStr(SecureUtil.getTenantId(), BladeConstant.ADMIN_TENANT_ID));
+				return new StringValue(Func.toStr(SecureUtil.getTenantId(), JConstant.ADMIN_TENANT_ID));
 			}
 
 			@Override
@@ -70,7 +70,7 @@ public class MybatisPlusConfiguration {
 		// 配置租户拦截器
 		interceptor.addInnerInterceptor(tenantLineInnerInterceptor);
 		// 配置分页拦截器
-		BladePaginationInterceptor paginationInterceptor = new BladePaginationInterceptor();
+		JPaginationInterceptor paginationInterceptor = new JPaginationInterceptor();
 		// 配置自定义查询拦截器
 		QueryInterceptor[] queryInterceptorArray = queryInterceptors.getIfAvailable();
 		if (ObjectUtil.isNotEmpty(queryInterceptorArray)) {

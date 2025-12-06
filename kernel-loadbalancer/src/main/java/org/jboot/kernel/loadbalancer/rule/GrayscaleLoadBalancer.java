@@ -4,7 +4,7 @@ package org.jboot.kernel.loadbalancer.rule;
 import com.alibaba.nacos.common.utils.StringUtils;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.jboot.kernel.loadbalancer.props.BladeLoadBalancerProperties;
+import org.jboot.kernel.loadbalancer.props.JLoadBalancerProperties;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.*;
@@ -31,7 +31,7 @@ import static org.jboot.kernel.loadbalancer.constant.LoadBalancerConstant.VERSIO
 @RequiredArgsConstructor
 public class GrayscaleLoadBalancer implements ReactorServiceInstanceLoadBalancer {
 	private final ObjectProvider<ServiceInstanceListSupplier> serviceInstanceListSupplierProvider;
-	private final BladeLoadBalancerProperties bladeLoadBalancerProperties;
+	private final JLoadBalancerProperties bladeLoadBalancerProperties;
 
 	@Override
 	public Mono<Response<ServiceInstance>> choose(Request request) {

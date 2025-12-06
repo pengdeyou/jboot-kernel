@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 /**
  * I18n拦截器
  *
- * @author BladeX
+ * @author JBoot Kernel
  */
 @Slf4j
 @RequiredArgsConstructor

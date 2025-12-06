@@ -20,7 +20,7 @@ import okhttp3.internal.http.HttpHeaders;
 import okio.Buffer;
 import okio.BufferedSource;
 import okio.GzipSource;
-import org.jboot.kernel.launch.log.BladeLogLevel;
+import org.jboot.kernel.launch.log.JLogLevel;
 
 import java.io.EOFException;
 import java.io.IOException;
@@ -41,7 +41,7 @@ import java.util.concurrent.TimeUnit;
 public final class HttpLoggingInterceptor implements Interceptor {
 	private static final Charset UTF8 = StandardCharsets.UTF_8;
 	private final Logger logger;
-	private volatile BladeLogLevel level = BladeLogLevel.NONE;
+	private volatile JLogLevel level = JLogLevel.NONE;
 
 	public interface Logger {
 		/**
@@ -60,26 +60,26 @@ public final class HttpLoggingInterceptor implements Interceptor {
 	 * @param level log Level
 	 * @return HttpLoggingInterceptor
 	 */
-	public HttpLoggingInterceptor setLevel(BladeLogLevel level) {
+	public HttpLoggingInterceptor setLevel(JLogLevel level) {
 		this.level = Objects.requireNonNull(level, "level == null. Use Level.NONE instead.");
 		return this;
 	}
 
-	public BladeLogLevel getLevel() {
+	public JLogLevel getLevel() {
 		return level;
 	}
 
 	@Override
 	public Response intercept(Chain chain) throws IOException {
-		BladeLogLevel level = this.level;
+		JLogLevel level = this.level;
 
 		Request request = chain.request();
-		if (level == BladeLogLevel.NONE) {
+		if (level == JLogLevel.NONE) {
 			return chain.proceed(request);
 		}
 
-		boolean logBody = level == BladeLogLevel.BODY;
-		boolean logHeaders = logBody || level == BladeLogLevel.HEADERS;
+		boolean logBody = level == JLogLevel.BODY;
+		boolean logHeaders = logBody || level == JLogLevel.HEADERS;
 
 		RequestBody requestBody = request.body();
 		boolean hasRequestBody = requestBody != null;

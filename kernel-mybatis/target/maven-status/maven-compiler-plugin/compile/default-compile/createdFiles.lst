@@ -7,13 +7,13 @@ org/jboot/kernel/mp/support/SqlKeyword.class
 org/jboot/kernel/mp/base/BaseServiceImpl.class
 META-INF/spring-devtools.properties
 META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports
+org/jboot/kernel/mp/plugins/JPaginationInterceptor.class
 org/jboot/kernel/mp/intercept/QueryInterceptor.class
 org/jboot/kernel/mp/support/BaseEntityWrapper.class
 org/jboot/kernel/mp/config/MybatisPlusConfiguration.class
+org/jboot/kernel/mp/JMetaObjectHandler.class
 org/jboot/kernel/mp/plugins/SqlLogInterceptor.class
 META-INF/spring.factories
-org/jboot/kernel/mp/BladeMetaObjectHandler.class
-org/jboot/kernel/mp/plugins/BladePaginationInterceptor.class
 org/jboot/kernel/mp/support/Condition.class
 org/jboot/kernel/mp/plugins/QueryInterceptorExecutor.class
 org/jboot/kernel/mp/support/Query.class

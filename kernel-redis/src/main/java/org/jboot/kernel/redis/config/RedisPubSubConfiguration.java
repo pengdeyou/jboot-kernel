@@ -17,7 +17,7 @@
 package org.jboot.kernel.redis.config;
 
 
-import org.jboot.kernel.redis.cache.BladeRedis;
+import org.jboot.kernel.redis.cache.JRedis;
 import org.jboot.kernel.redis.pubsub.RPubSubListenerDetector;
 import org.jboot.kernel.redis.pubsub.RPubSubListenerLazyFilter;
 import org.jboot.kernel.redis.pubsub.RPubSubPublisher;
@@ -47,7 +47,7 @@ public class RedisPubSubConfiguration {
 	}
 
 	@Bean
-	public RPubSubPublisher topicEventPublisher(BladeRedis bladeRedis,
+	public RPubSubPublisher topicEventPublisher(JRedis bladeRedis,
 												RedisSerializer<Object> redisSerializer) {
 		return new RedisPubSubPublisher(bladeRedis, redisSerializer);
 	}

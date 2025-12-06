@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * Created by Blade.
+ * Created by J.
  *
  * @author smallchill
  */

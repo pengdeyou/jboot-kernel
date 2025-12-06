@@ -2,7 +2,7 @@
 package org.jboot.kernel.oss.config;
 
 import org.jboot.kernel.oss.props.OssProperties;
-import org.jboot.kernel.oss.rule.BladeOssRule;
+import org.jboot.kernel.oss.rule.JOssRule;
 import org.jboot.kernel.oss.rule.OssRule;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
@@ -28,7 +28,7 @@ public class OssConfiguration {
 	@Bean
 	@ConditionalOnMissingBean(OssRule.class)
 	public OssRule ossRule() {
-		return new BladeOssRule();
+		return new JOssRule();
 	}
 
 }

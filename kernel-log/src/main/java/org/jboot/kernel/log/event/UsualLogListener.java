@@ -4,7 +4,7 @@ package org.jboot.kernel.log.event;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.jboot.kernel.launch.props.BladeProperties;
+import org.jboot.kernel.launch.props.JProperties;
 import org.jboot.kernel.launch.server.ServerInfo;
 import org.jboot.kernel.log.constant.EventConstant;
 import org.jboot.kernel.log.feign.ILogClient;
@@ -28,7 +28,7 @@ public class UsualLogListener {
 
 	private final ILogClient logService;
 	private final ServerInfo serverInfo;
-	private final BladeProperties bladeProperties;
+	private final JProperties bladeProperties;
 
 	@Async
 	@Order

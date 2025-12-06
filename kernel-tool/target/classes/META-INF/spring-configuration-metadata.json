@@ -2,8 +2,8 @@
   "groups": [
     {
       "name": "blade.jackson",
-      "type": "org.jboot.kernel.tool.jackson.BladeJacksonProperties",
-      "sourceType": "org.jboot.kernel.tool.jackson.BladeJacksonProperties"
+      "type": "org.jboot.kernel.tool.jackson.JJacksonProperties",
+      "sourceType": "org.jboot.kernel.tool.jackson.JJacksonProperties"
     },
     {
       "name": "blade.request",
@@ -21,21 +21,21 @@
       "name": "blade.jackson.big-num-to-string",
       "type": "java.lang.Boolean",
       "description": "响应到前端，大数值自动写出为 String，避免精度丢失",
-      "sourceType": "org.jboot.kernel.tool.jackson.BladeJacksonProperties",
+      "sourceType": "org.jboot.kernel.tool.jackson.JJacksonProperties",
       "defaultValue": true
     },
     {
       "name": "blade.jackson.null-to-empty",
       "type": "java.lang.Boolean",
       "description": "null 转为 空，字符串转成\"\"，数组转为[]，对象转为{}，数字转为-1",
-      "sourceType": "org.jboot.kernel.tool.jackson.BladeJacksonProperties",
+      "sourceType": "org.jboot.kernel.tool.jackson.JJacksonProperties",
       "defaultValue": true
     },
     {
       "name": "blade.jackson.support-text-plain",
       "type": "java.lang.Boolean",
       "description": "支持 MediaType text\/plain，用于和 blade-api-crypto 一起使用",
-      "sourceType": "org.jboot.kernel.tool.jackson.BladeJacksonProperties",
+      "sourceType": "org.jboot.kernel.tool.jackson.JJacksonProperties",
       "defaultValue": false
     },
     {

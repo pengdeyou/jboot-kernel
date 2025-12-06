@@ -1,13 +1,12 @@
 org/jboot/kernel/redis/serializer/ProtoStuffSerializer.class
-org/jboot/kernel/redis/cache/BladeRedis.class
 org/jboot/kernel/redis/pubsub/RPubSubListenerDetector.class
 org/jboot/kernel/redis/cache/ICacheKey.class
 org/jboot/kernel/redis/cache/CacheKey.class
 org/jboot/kernel/redis/serializer/RedisKeySerializer.class
+org/jboot/kernel/redis/cache/JRedis.class
 org/jboot/kernel/redis/config/RedisCacheManagerConfig.class
 org/jboot/kernel/redis/config/RedisAutoCacheManager.class
 org/jboot/kernel/redis/pubsub/RPubSubListenerLazyFilter.class
-org/jboot/kernel/redis/config/BladeRedisCacheAutoConfiguration.class
 META-INF/spring-devtools.properties
 org/jboot/kernel/redis/config/RedisTemplateConfiguration.class
 META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports
@@ -16,6 +15,7 @@ org/jboot/kernel/redis/config/ProtoStuffSerializerConfiguration.class
 org/jboot/kernel/redis/config/RedisPubSubConfiguration.class
 META-INF/spring.factories
 org/jboot/kernel/redis/pubsub/RPubSubPublisher.class
+org/jboot/kernel/redis/config/JRedisCacheAutoConfiguration.class
 org/jboot/kernel/redis/pubsub/ChannelUtil.class
 org/jboot/kernel/redis/pubsub/RPubSubListener.class
 org/jboot/kernel/redis/serializer/BytesWrapper.class

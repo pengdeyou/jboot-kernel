@@ -6,9 +6,9 @@ import lombok.AllArgsConstructor;
 import org.jboot.kernel.secure.aspect.AuthAspect;
 import org.jboot.kernel.secure.interceptor.ClientInterceptor;
 import org.jboot.kernel.secure.interceptor.SecureInterceptor;
-import org.jboot.kernel.secure.props.BladeAuthProperties;
-import org.jboot.kernel.secure.props.BladeSecureProperties;
-import org.jboot.kernel.secure.props.BladeTokenProperties;
+import org.jboot.kernel.secure.props.JAuthProperties;
+import org.jboot.kernel.secure.props.JSecureProperties;
+import org.jboot.kernel.secure.props.JTokenProperties;
 import org.jboot.kernel.secure.provider.ClientDetailsServiceImpl;
 import org.jboot.kernel.secure.provider.IClientDetailsService;
 import org.jboot.kernel.secure.registry.SecureRegistry;
@@ -29,12 +29,12 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Order
 @AutoConfiguration
 @AllArgsConstructor
-@EnableConfigurationProperties({BladeAuthProperties.class, BladeSecureProperties.class, BladeTokenProperties.class})
+@EnableConfigurationProperties({JAuthProperties.class, JSecureProperties.class, JTokenProperties.class})
 public class SecureConfiguration implements WebMvcConfigurer {
 
 	private final SecureRegistry secureRegistry;
 
-	private final BladeSecureProperties secureProperties;
+	private final JSecureProperties secureProperties;
 
 	private final JdbcTemplate jdbcTemplate;
 

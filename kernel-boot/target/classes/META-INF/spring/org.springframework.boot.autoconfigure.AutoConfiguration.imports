@@ -1,4 +1,4 @@
-org.jboot.kernel.boot.config.BladeBootAutoConfiguration
-org.jboot.kernel.boot.config.BladeWebMvcConfiguration
+org.jboot.kernel.boot.config.JBootAutoConfiguration
+org.jboot.kernel.boot.config.JWebMvcConfiguration
 org.jboot.kernel.boot.config.RetryConfiguration
 org.jboot.kernel.boot.logger.RequestLogAspect

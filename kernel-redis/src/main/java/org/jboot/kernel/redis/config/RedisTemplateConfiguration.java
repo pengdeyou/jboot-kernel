@@ -16,7 +16,7 @@
 
 package org.jboot.kernel.redis.config;
 
-import org.jboot.kernel.redis.cache.BladeRedis;
+import org.jboot.kernel.redis.cache.JRedis;
 import org.jboot.kernel.redis.serializer.ProtoStuffSerializer;
 import org.jboot.kernel.redis.serializer.RedisKeySerializer;
 import org.jboot.kernel.tool.config.RedisConfiguration;
@@ -73,8 +73,8 @@ public class RedisTemplateConfiguration {
 	}
 
 	@Bean
-	public BladeRedis bladeRedis(RedisTemplate<String, Object> redisTemplate, StringRedisTemplate stringRedisTemplate) {
-		return new BladeRedis(redisTemplate, stringRedisTemplate);
+	public JRedis bladeRedis(RedisTemplate<String, Object> redisTemplate, StringRedisTemplate stringRedisTemplate) {
+		return new JRedis(redisTemplate, stringRedisTemplate);
 	}
 
 }

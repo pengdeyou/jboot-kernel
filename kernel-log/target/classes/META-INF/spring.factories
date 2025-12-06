@@ -2,7 +2,7 @@
 net.dreamlu.mica.feign.MicaFeignAutoConfiguration=\
   org.jboot.kernel.log.feign.ILogClient
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  org.jboot.kernel.log.config.BladeErrorMvcAutoConfiguration,\
-  org.jboot.kernel.log.config.BladeLogToolAutoConfiguration,\
-  org.jboot.kernel.log.error.BladeRestExceptionTranslator,\
+  org.jboot.kernel.log.config.JErrorMvcAutoConfiguration,\
+  org.jboot.kernel.log.config.JLogToolAutoConfiguration,\
+  org.jboot.kernel.log.error.JRestExceptionTranslator,\
   org.jboot.kernel.log.feign.LogClientFallback

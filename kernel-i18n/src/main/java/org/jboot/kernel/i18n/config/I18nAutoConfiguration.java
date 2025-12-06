@@ -25,7 +25,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 /**
  * I18n自动配置类
  *
- * @author BladeX
+ * @author JBoot Kernel
  */
 @Slf4j
 @AutoConfiguration

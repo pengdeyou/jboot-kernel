@@ -2,7 +2,7 @@
 
 package org.jboot.kernel.log.utils;
 
-import org.jboot.kernel.launch.props.BladeProperties;
+import org.jboot.kernel.launch.props.JProperties;
 import org.jboot.kernel.launch.server.ServerInfo;
 import org.jboot.kernel.log.entity.LogAbstract;
 import org.jboot.kernel.secure.utils.SecureUtil;
@@ -41,7 +41,7 @@ public class LogAbstractUtil {
 	 * @param bladeProperties 配置信息
 	 * @param serverInfo      服务信息
 	 */
-	public static void addOtherInfoToLog(LogAbstract logAbstract, BladeProperties bladeProperties, ServerInfo serverInfo) {
+	public static void addOtherInfoToLog(LogAbstract logAbstract, JProperties bladeProperties, ServerInfo serverInfo) {
 		logAbstract.setServiceId(bladeProperties.getName());
 		logAbstract.setServerHost(serverInfo.getHostName());
 		logAbstract.setServerIp(serverInfo.getIpWithPort());

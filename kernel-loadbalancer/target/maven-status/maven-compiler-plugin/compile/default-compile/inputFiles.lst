@@ -1,5 +1,5 @@
-/Users/dayu/project/jcloud/jboot-kernel/kernel-loadbalancer/src/main/java/org/jboot/kernel/loadbalancer/config/BladeLoadBalancerConfiguration.java
+/Users/dayu/project/jcloud/jboot-kernel/kernel-loadbalancer/src/main/java/org/jboot/kernel/loadbalancer/config/JLoadBalancerConfiguration.java
 /Users/dayu/project/jcloud/jboot-kernel/kernel-loadbalancer/src/main/java/org/jboot/kernel/loadbalancer/constant/LoadBalancerConstant.java
-/Users/dayu/project/jcloud/jboot-kernel/kernel-loadbalancer/src/main/java/org/jboot/kernel/loadbalancer/props/BladeLoadBalancerProperties.java
+/Users/dayu/project/jcloud/jboot-kernel/kernel-loadbalancer/src/main/java/org/jboot/kernel/loadbalancer/props/JLoadBalancerProperties.java
 /Users/dayu/project/jcloud/jboot-kernel/kernel-loadbalancer/src/main/java/org/jboot/kernel/loadbalancer/rule/GrayscaleEnvPostProcessor.java
 /Users/dayu/project/jcloud/jboot-kernel/kernel-loadbalancer/src/main/java/org/jboot/kernel/loadbalancer/rule/GrayscaleLoadBalancer.java

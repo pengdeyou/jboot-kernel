@@ -8,7 +8,7 @@
     <packaging>pom</packaging>
     <name>blade-tool</name>
     <description>
-        blade-tool is a powerful toolbox for SpringBlade
+        blade-tool is a powerful toolbox for JBoot
     </description>
     <url>https://github.com/chillzhuang/blade-tool</url>
     <developers>
@@ -35,7 +35,7 @@
     </scm>
 
     <properties>
-        <!-- Blade-Tool Version -->
+        <!-- J-Tool Version -->
         <revision>4.7.0</revision>
         <module.name>org.jboot.jboot.kernel</module.name>
         <!-- jdk Version -->

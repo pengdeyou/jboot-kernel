@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * I18n配置属性
  *
- * @author BladeX
+ * @author JBoot Kernel
  */
 @Data
 @ConfigurationProperties(prefix = I18nProperties.PREFIX)

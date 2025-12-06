@@ -2,7 +2,7 @@
 package org.jboot.kernel.boot.resolver;
 
 import lombok.extern.slf4j.Slf4j;
-import org.jboot.kernel.secure.BladeUser;
+import org.jboot.kernel.secure.JUser;
 import org.jboot.kernel.secure.utils.SecureUtil;
 import org.springframework.core.MethodParameter;
 import org.springframework.web.bind.support.WebDataBinderFactory;
@@ -11,7 +11,7 @@ import org.springframework.web.method.support.HandlerMethodArgumentResolver;
 import org.springframework.web.method.support.ModelAndViewContainer;
 
 /**
- * Token转化BladeUser
+ * Token转化JUser
  *
  * @author Chill
  */
@@ -26,7 +26,7 @@ public class TokenArgumentResolver implements HandlerMethodArgumentResolver {
 	 */
 	@Override
 	public boolean supportsParameter(MethodParameter methodParameter) {
-		return methodParameter.getParameterType().equals(BladeUser.class);
+		return methodParameter.getParameterType().equals(JUser.class);
 	}
 
 	/**

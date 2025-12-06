@@ -9,8 +9,8 @@
 /Users/dayu/project/jcloud/jboot-kernel/kernel-oss/src/main/java/org/jboot/kernel/oss/config/QiniuConfiguration.java
 /Users/dayu/project/jcloud/jboot-kernel/kernel-oss/src/main/java/org/jboot/kernel/oss/config/TencentCosConfiguration.java
 /Users/dayu/project/jcloud/jboot-kernel/kernel-oss/src/main/java/org/jboot/kernel/oss/enums/PolicyType.java
-/Users/dayu/project/jcloud/jboot-kernel/kernel-oss/src/main/java/org/jboot/kernel/oss/model/BladeFile.java
+/Users/dayu/project/jcloud/jboot-kernel/kernel-oss/src/main/java/org/jboot/kernel/oss/model/JFile.java
 /Users/dayu/project/jcloud/jboot-kernel/kernel-oss/src/main/java/org/jboot/kernel/oss/model/OssFile.java
 /Users/dayu/project/jcloud/jboot-kernel/kernel-oss/src/main/java/org/jboot/kernel/oss/props/OssProperties.java
-/Users/dayu/project/jcloud/jboot-kernel/kernel-oss/src/main/java/org/jboot/kernel/oss/rule/BladeOssRule.java
+/Users/dayu/project/jcloud/jboot-kernel/kernel-oss/src/main/java/org/jboot/kernel/oss/rule/JOssRule.java
 /Users/dayu/project/jcloud/jboot-kernel/kernel-oss/src/main/java/org/jboot/kernel/oss/rule/OssRule.java

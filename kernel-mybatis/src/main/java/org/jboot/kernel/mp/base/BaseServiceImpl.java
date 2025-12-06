@@ -11,9 +11,9 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.SneakyThrows;
 import org.jboot.kernel.mp.support.Condition;
-import org.jboot.kernel.secure.BladeUser;
+import org.jboot.kernel.secure.JUser;
 import org.jboot.kernel.secure.utils.SecureUtil;
-import org.jboot.kernel.tool.constant.BladeConstant;
+import org.jboot.kernel.tool.constant.JConstant;
 import org.jboot.kernel.tool.utils.DateUtil;
 import org.jboot.kernel.tool.utils.Func;
 import org.springframework.validation.annotation.Validated;
@@ -102,7 +102,7 @@ public class BaseServiceImpl<M extends BaseMapper<T>, T extends BaseEntity> exte
 
 	@SneakyThrows
 	private void resolveSave(T entity) {
-		BladeUser user = SecureUtil.getUser();
+		JUser user = SecureUtil.getUser();
 		if (user != null) {
 			entity.setCreateUser(user.getUserId());
 			entity.setCreateDept(Func.firstLong(user.getDeptId()));
@@ -112,14 +112,14 @@ public class BaseServiceImpl<M extends BaseMapper<T>, T extends BaseEntity> exte
 		entity.setCreateTime(now);
 		entity.setUpdateTime(now);
 		if (entity.getStatus() == null) {
-			entity.setStatus(BladeConstant.DB_STATUS_NORMAL);
+			entity.setStatus(JConstant.DB_STATUS_NORMAL);
 		}
-		entity.setIsDeleted(BladeConstant.DB_NOT_DELETED);
+		entity.setIsDeleted(JConstant.DB_NOT_DELETED);
 	}
 
 	@SneakyThrows
 	private void resolveUpdate(T entity) {
-		BladeUser user = SecureUtil.getUser();
+		JUser user = SecureUtil.getUser();
 		if (user != null) {
 			entity.setUpdateUser(user.getUserId());
 		}

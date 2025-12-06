@@ -18,7 +18,7 @@ import java.security.Security;
 /**
  * SM2加密、解密、签名和验证工具类。
  *
- * @author BladeX
+ * @author JBoot Kernel
  */
 public class SM2Util {
 	static {

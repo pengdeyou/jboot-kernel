@@ -2,7 +2,7 @@
 package org.jboot.kernel.oss;
 
 
-import org.jboot.kernel.oss.model.BladeFile;
+import org.jboot.kernel.oss.model.JFile;
 import org.jboot.kernel.oss.model.OssFile;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -112,18 +112,18 @@ public interface OssTemplate {
 	 * 上传文件
 	 *
 	 * @param file 上传文件类
-	 * @return BladeFile
+	 * @return JFile
 	 */
-	BladeFile putFile(MultipartFile file);
+	JFile putFile(MultipartFile file);
 
 	/**
 	 * 上传文件
 	 *
 	 * @param file     上传文件类
 	 * @param fileName 上传文件名
-	 * @return BladeFile
+	 * @return JFile
 	 */
-	BladeFile putFile(String fileName, MultipartFile file);
+	JFile putFile(String fileName, MultipartFile file);
 
 	/**
 	 * 上传文件
@@ -131,18 +131,18 @@ public interface OssTemplate {
 	 * @param bucketName 存储桶名称
 	 * @param fileName   上传文件名
 	 * @param file       上传文件类
-	 * @return BladeFile
+	 * @return JFile
 	 */
-	BladeFile putFile(String bucketName, String fileName, MultipartFile file);
+	JFile putFile(String bucketName, String fileName, MultipartFile file);
 
 	/**
 	 * 上传文件
 	 *
 	 * @param fileName 存储桶对象名称
 	 * @param stream   文件流
-	 * @return BladeFile
+	 * @return JFile
 	 */
-	BladeFile putFile(String fileName, InputStream stream);
+	JFile putFile(String fileName, InputStream stream);
 
 	/**
 	 * 上传文件
@@ -150,9 +150,9 @@ public interface OssTemplate {
 	 * @param bucketName 存储桶名称
 	 * @param fileName   存储桶对象名称
 	 * @param stream     文件流
-	 * @return BladeFile
+	 * @return JFile
 	 */
-	BladeFile putFile(String bucketName, String fileName, InputStream stream);
+	JFile putFile(String bucketName, String fileName, InputStream stream);
 
 	/**
 	 * 删除文件

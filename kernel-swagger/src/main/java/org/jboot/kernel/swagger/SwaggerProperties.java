@@ -41,11 +41,11 @@ public class SwaggerProperties {
 	/**
 	 * 标题
 	 **/
-	private String title = "SpringBlade 接口文档系统";
+	private String title = "JBoot 接口文档系统";
 	/**
 	 * 描述
 	 **/
-	private String description = "SpringBlade 接口文档系统";
+	private String description = "JBoot 接口文档系统";
 	/**
 	 * 版本
 	 **/
@@ -53,7 +53,7 @@ public class SwaggerProperties {
 	/**
 	 * 许可证
 	 **/
-	private String license = "Powered By SpringBlade";
+	private String license = "Powered By JBoot";
 	/**
 	 * 许可证URL
 	 **/

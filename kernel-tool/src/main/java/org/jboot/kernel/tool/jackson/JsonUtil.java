@@ -961,7 +961,7 @@ public class JsonUtil {
 			//反序列化时，属性不存在的兼容处理s
 			super.getDeserializationConfig().withoutFeatures(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
 			//日期格式化
-			super.registerModule(new BladeJavaTimeModule());
+			super.registerModule(new JJavaTimeModule());
 			//允许空字符串序列化为null对象
 			super.enable(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT);
 			super.findAndRegisterModules();

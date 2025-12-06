@@ -12,7 +12,7 @@ import org.springframework.core.annotation.Order;
 /**
  * UReport认证配置类
  *
- * @author BladeX
+ * @author JBoot Kernel
  */
 @Order
 @AutoConfiguration

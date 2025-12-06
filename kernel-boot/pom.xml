@@ -34,7 +34,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-cache</artifactId>
         </dependency>
-        <!-- Blade -->
+        <!-- J -->
         <dependency>
             <groupId>org.jboot</groupId>
             <artifactId>kernel-launch</artifactId>

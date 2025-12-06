@@ -14,7 +14,7 @@ import java.util.regex.Pattern;
 /**
  * Locale解析工具类
  *
- * @author BladeX
+ * @author JBoot Kernel
  */
 @Slf4j
 @UtilityClass

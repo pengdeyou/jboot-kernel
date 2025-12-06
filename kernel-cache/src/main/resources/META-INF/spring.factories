@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-org.jboot.kernel.cache.config.BladeCacheAutoConfiguration
+org.jboot.kernel.cache.config.JCacheAutoConfiguration

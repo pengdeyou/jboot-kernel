@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 /**
  * I18nLocale解析器
  *
- * @author BladeX
+ * @author JBoot Kernel
  */
 @Slf4j
 @RequiredArgsConstructor

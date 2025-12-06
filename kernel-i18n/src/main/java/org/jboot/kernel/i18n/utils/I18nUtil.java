@@ -15,7 +15,7 @@ import java.util.Optional;
 /**
  * I18n静态工具类
  *
- * @author BladeX
+ * @author JBoot Kernel
  */
 @Slf4j
 @UtilityClass

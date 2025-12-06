@@ -9,7 +9,7 @@ import java.io.File;
  * @author Chill
  */
 public class FileProxyManager {
-	private IFileProxy defaultFileProxyFactory = new BladeFileProxyFactory();
+	private IFileProxy defaultFileProxyFactory = new JFileProxyFactory();
 
 	private static FileProxyManager me = new FileProxyManager();
 

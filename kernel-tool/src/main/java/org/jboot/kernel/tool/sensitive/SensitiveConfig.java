@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 /**
  * 敏感信息处理配置类
  *
- * @author BladeX
+ * @author JBoot Kernel
  */
 @Builder
 @Data

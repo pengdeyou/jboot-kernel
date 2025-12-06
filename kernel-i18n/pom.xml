@@ -18,7 +18,7 @@
     </properties>
 
     <dependencies>
-        <!-- Blade -->
+        <!-- J -->
         <dependency>
             <groupId>org.jboot</groupId>
             <artifactId>kernel-tool</artifactId>

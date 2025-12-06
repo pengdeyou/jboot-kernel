@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 /**
  * 脱敏类型枚举.
  *
- * @author BladeX
+ * @author JBoot Kernel
  */
 public enum SensitiveType {
 	GLOBAL("全局", "(.{2}).*(.{2})", "$1****$2"),

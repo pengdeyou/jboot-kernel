@@ -7,8 +7,8 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import lombok.AllArgsConstructor;
-import org.jboot.kernel.tool.jackson.BladeJacksonProperties;
-import org.jboot.kernel.tool.jackson.BladeJavaTimeModule;
+import org.jboot.kernel.tool.jackson.JJacksonProperties;
+import org.jboot.kernel.tool.jackson.JJavaTimeModule;
 import org.jboot.kernel.tool.utils.DateUtil;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
@@ -33,7 +33,7 @@ import java.util.TimeZone;
 @AllArgsConstructor
 @ConditionalOnClass(ObjectMapper.class)
 @AutoConfigureBefore(JacksonAutoConfiguration.class)
-@EnableConfigurationProperties(BladeJacksonProperties.class)
+@EnableConfigurationProperties(JJacksonProperties.class)
 public class JacksonConfiguration {
 
 	@Bean
@@ -62,7 +62,7 @@ public class JacksonConfiguration {
 		//反序列化时，属性不存在的兼容处理
 		objectMapper.getDeserializationConfig().withoutFeatures(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES);
 		//日期格式化
-		objectMapper.registerModule(new BladeJavaTimeModule());
+		objectMapper.registerModule(new JJavaTimeModule());
 		//允许空字符串序列化为null对象
 		objectMapper.enable(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT);
 		objectMapper.findAndRegisterModules();

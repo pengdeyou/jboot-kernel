@@ -8,7 +8,7 @@ import io.minio.messages.DeleteObject;
 import lombok.AllArgsConstructor;
 import lombok.SneakyThrows;
 import org.jboot.kernel.oss.enums.PolicyType;
-import org.jboot.kernel.oss.model.BladeFile;
+import org.jboot.kernel.oss.model.JFile;
 import org.jboot.kernel.oss.model.OssFile;
 import org.jboot.kernel.oss.props.OssProperties;
 import org.jboot.kernel.oss.rule.OssRule;
@@ -176,31 +176,31 @@ public class MinioTemplate implements OssTemplate {
 
 	@Override
 	@SneakyThrows
-	public BladeFile putFile(MultipartFile file) {
+	public JFile putFile(MultipartFile file) {
 		return putFile(ossProperties.getBucketName(), file.getOriginalFilename(), file);
 	}
 
 	@Override
 	@SneakyThrows
-	public BladeFile putFile(String fileName, MultipartFile file) {
+	public JFile putFile(String fileName, MultipartFile file) {
 		return putFile(ossProperties.getBucketName(), fileName, file);
 	}
 
 	@Override
 	@SneakyThrows
-	public BladeFile putFile(String bucketName, String fileName, MultipartFile file) {
+	public JFile putFile(String bucketName, String fileName, MultipartFile file) {
 		return putFile(bucketName, file.getOriginalFilename(), file.getInputStream());
 	}
 
 	@Override
 	@SneakyThrows
-	public BladeFile putFile(String fileName, InputStream stream) {
+	public JFile putFile(String fileName, InputStream stream) {
 		return putFile(ossProperties.getBucketName(), fileName, stream);
 	}
 
 	@Override
 	@SneakyThrows
-	public BladeFile putFile(String bucketName, String fileName, InputStream stream) {
+	public JFile putFile(String bucketName, String fileName, InputStream stream) {
 		return putFile(bucketName, fileName, stream, "application/octet-stream");
 	}
 
@@ -211,10 +211,10 @@ public class MinioTemplate implements OssTemplate {
 	 * @param fileName    文件名
 	 * @param stream      输入流
 	 * @param contentType 文件类型
-	 * @return BladeFile 上传文件信息
+	 * @return JFile 上传文件信息
 	 */
 	@SneakyThrows
-	public BladeFile putFile(String bucketName, String fileName, InputStream stream, String contentType) {
+	public JFile putFile(String bucketName, String fileName, InputStream stream, String contentType) {
 		makeBucket(bucketName);
 		String originalName = fileName;
 		fileName = getFileName(fileName);
@@ -226,7 +226,7 @@ public class MinioTemplate implements OssTemplate {
 				.contentType(contentType)
 				.build()
 		);
-		BladeFile file = new BladeFile();
+		JFile file = new JFile();
 		file.setOriginalName(originalName);
 		file.setName(fileName);
 		file.setDomain(getOssHost(bucketName));

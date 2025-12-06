@@ -36,7 +36,7 @@ public class Splash {
 			"\n" +
 			".  which is opensource, easy to use,high-performance, with browser-based-designer,                     ." +
 			"\n" +
-			".  it has now been upgraded by BladeX to support jdk 17 and spring boot 3.                             ." +
+			".  it has now been upgraded by JBoot Kernel to support jdk 17 and spring boot 3.                             ." +
 			"\n" +
 			"........................................................................................................" +
 			"\n";

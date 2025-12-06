@@ -1,11 +1,11 @@
-/Users/dayu/project/jcloud/jboot-kernel/kernel-mybatis/src/main/java/org/jboot/kernel/mp/BladeMetaObjectHandler.java
+/Users/dayu/project/jcloud/jboot-kernel/kernel-mybatis/src/main/java/org/jboot/kernel/mp/JMetaObjectHandler.java
 /Users/dayu/project/jcloud/jboot-kernel/kernel-mybatis/src/main/java/org/jboot/kernel/mp/base/BaseEntity.java
 /Users/dayu/project/jcloud/jboot-kernel/kernel-mybatis/src/main/java/org/jboot/kernel/mp/base/BaseService.java
 /Users/dayu/project/jcloud/jboot-kernel/kernel-mybatis/src/main/java/org/jboot/kernel/mp/base/BaseServiceImpl.java
 /Users/dayu/project/jcloud/jboot-kernel/kernel-mybatis/src/main/java/org/jboot/kernel/mp/base/TenantEntity.java
 /Users/dayu/project/jcloud/jboot-kernel/kernel-mybatis/src/main/java/org/jboot/kernel/mp/config/MybatisPlusConfiguration.java
 /Users/dayu/project/jcloud/jboot-kernel/kernel-mybatis/src/main/java/org/jboot/kernel/mp/intercept/QueryInterceptor.java
-/Users/dayu/project/jcloud/jboot-kernel/kernel-mybatis/src/main/java/org/jboot/kernel/mp/plugins/BladePaginationInterceptor.java
+/Users/dayu/project/jcloud/jboot-kernel/kernel-mybatis/src/main/java/org/jboot/kernel/mp/plugins/JPaginationInterceptor.java
 /Users/dayu/project/jcloud/jboot-kernel/kernel-mybatis/src/main/java/org/jboot/kernel/mp/plugins/QueryInterceptorExecutor.java
 /Users/dayu/project/jcloud/jboot-kernel/kernel-mybatis/src/main/java/org/jboot/kernel/mp/plugins/SqlLogInterceptor.java
 /Users/dayu/project/jcloud/jboot-kernel/kernel-mybatis/src/main/java/org/jboot/kernel/mp/props/MybatisPlusProperties.java

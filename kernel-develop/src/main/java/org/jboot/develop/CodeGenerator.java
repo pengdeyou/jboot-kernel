@@ -2,7 +2,7 @@
 package org.jboot.develop;
 
 
-import org.jboot.develop.support.BladeCodeGenerator;
+import org.jboot.develop.support.JCodeGenerator;
 
 /**
  * 代码生成器
@@ -60,7 +60,7 @@ public class CodeGenerator {
 	 * RUN THIS
 	 */
 	public static void run() {
-		BladeCodeGenerator generator = new BladeCodeGenerator();
+		JCodeGenerator generator = new JCodeGenerator();
 		generator.setCodeName(CODE_NAME);
 		generator.setServiceName(SERVICE_NAME);
 		generator.setSystemName(SYSTEM_NAME);

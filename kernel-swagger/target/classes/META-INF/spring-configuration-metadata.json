@@ -77,7 +77,7 @@
       "type": "java.lang.String",
       "description": "描述",
       "sourceType": "org.jboot.kernel.swagger.SwaggerProperties",
-      "defaultValue": "SpringBlade 接口文档系统"
+      "defaultValue": "JBoot 接口文档系统"
     },
     {
       "name": "swagger.enabled",
@@ -110,7 +110,7 @@
       "type": "java.lang.String",
       "description": "许可证",
       "sourceType": "org.jboot.kernel.swagger.SwaggerProperties",
-      "defaultValue": "Powered By SpringBlade"
+      "defaultValue": "Powered By JBoot"
     },
     {
       "name": "swagger.license-url",
@@ -131,7 +131,7 @@
       "type": "java.lang.String",
       "description": "标题",
       "sourceType": "org.jboot.kernel.swagger.SwaggerProperties",
-      "defaultValue": "SpringBlade 接口文档系统"
+      "defaultValue": "JBoot 接口文档系统"
     },
     {
       "name": "swagger.version",

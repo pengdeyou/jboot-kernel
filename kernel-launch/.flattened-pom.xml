@@ -6,7 +6,7 @@
   <artifactId>kernel-launch</artifactId>
   <version>4.7.0</version>
   <name>kernel-launch</name>
-  <description>blade-tool is a powerful toolbox for SpringBlade</description>
+  <description>blade-tool is a powerful toolbox for JBoot</description>
   <url>https://github.com/chillzhuang/blade-tool/kernel-launch</url>
   <licenses>
     <license>

@@ -4,7 +4,7 @@ package org.jboot.kernel.tool.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AllArgsConstructor;
-import org.jboot.kernel.tool.jackson.BladeJacksonProperties;
+import org.jboot.kernel.tool.jackson.JJacksonProperties;
 import org.jboot.kernel.tool.jackson.MappingApiJackson2HttpMessageConverter;
 import org.jboot.kernel.tool.utils.Charsets;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
@@ -27,7 +27,7 @@ import java.util.List;
 public class MessageConfiguration implements WebMvcConfigurer {
 
 	private final ObjectMapper objectMapper;
-	private final BladeJacksonProperties properties;
+	private final JJacksonProperties properties;
 
 	/**
 	 * 使用 JACKSON 作为JSON MessageConverter

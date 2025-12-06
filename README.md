@@ -14,14 +14,14 @@
     <img src="https://img.shields.io/badge/Author-Small%20Chill-ff69b4.svg" alt="Downloads">
   </a>
   <a target="_blank" href="https://bladex.cn">
-    <img src="https://img.shields.io/badge/Copyright%20-@BladeX-%23ff3f59.svg" alt="Downloads">
+    <img src="https://img.shields.io/badge/Copyright%20-@JBoot Kernel-%23ff3f59.svg" alt="Downloads">
   </a>
 </p>  
 
-## SpringBlade微服务开发平台
+## JBoot微服务开发平台
 * 采用前后端分离的模式，前端开源两个框架：[Sword](https://gitee.com/smallc/Sword) (基于 React、Ant Design)、[Saber](https://gitee.com/smallc/Saber) (基于 Vue、Element-UI)
-* 后端采用SpringCloud全家桶，并同时对其基础组件做了高度的封装，单独开源出一个框架：[BladeTool](https://gitee.com/smallc/jboot-kernel)
-* [BladeTool](https://github.com/chillzhuang/jboot-kernel)已推送至Maven中央库，直接引入即可，减少了工程的臃肿，也可更注重于业务开发
+* 后端采用SpringCloud全家桶，并同时对其基础组件做了高度的封装，单独开源出一个框架：[JBoot Kernel](https://gitee.com/smallc/jboot-kernel)
+* [JBoot Kernel](https://github.com/chillzhuang/jboot-kernel)已推送至Maven中央库，直接引入即可，减少了工程的臃肿，也可更注重于业务开发
 * 集成Sentinel从流量控制、熔断降级、系统负载等多个维度保护服务的稳定性。
 * 注册中心、配置中心选型Nacos，为工程瘦身的同时加强各模块之间的联动。
 * 极简封装了多租户底层，用更少的代码换来拓展性更强的SaaS多租户系统。
@@ -82,7 +82,7 @@ jboot-kernel
 |------|-------------------------------------------------------------------------------|
 | 官网地址 | [https://bladex.cn](https://bladex.cn)                                        |
 | 问答社区 | [https://sns.bladex.cn](https://sns.bladex.cn)                                |
-| 会员计划 | [SpringBlade会员计划](https://gitee.com/smallc/SpringBlade/wikis/SpringBlade会员计划) |
+| 会员计划 | [JBoot会员计划](https://gitee.com/smallc/JBoot/wikis/JBoot会员计划) |
 | 交流一群 | `477853168` (满)                                                               |
 | 交流二群 | `751253339` (满)                                                               |
 | 交流三群 | `784729540` (满)                                                               |
@@ -95,10 +95,10 @@ jboot-kernel
 
 | 简介            | 演示地址                                                 |
 |---------------|------------------------------------------------------|
-| BladeX企业级开发平台 | [https://saber3.bladex.cn](https://saber3.bladex.cn) |
-| BladeX可视化数据大屏 | [https://data.bladex.cn](https://data.bladex.cn)     |
-| BladeX物联网开发平台 | [https://iot.bladex.cn](https://iot.bladex.cn)       |
-| BladeX大模型开发平台 | [https://ai.bladex.cn](https://ai.bladex.cn)        |
+| JBoot Kernel企业级开发平台 | [https://saber3.bladex.cn](https://saber3.bladex.cn) |
+| JBoot Kernel可视化数据大屏 | [https://data.bladex.cn](https://data.bladex.cn)     |
+| JBoot Kernel物联网开发平台 | [https://iot.bladex.cn](https://iot.bladex.cn)       |
+| JBoot Kernel大模型开发平台 | [https://ai.bladex.cn](https://ai.bladex.cn)        |
 
 ## 前端项目
 
@@ -112,23 +112,23 @@ jboot-kernel
 | 简介            | 地址                                                                                                 |
 |---------------|----------------------------------------------------------------------------------------------------|
 | 核心框架项目地址      | [https://gitee.com/smallc/jboot-kernel](https://gitee.com/smallc/jboot-kernel)                         |
-| 后端Gitee地址     | [https://gitee.com/smallc/SpringBlade](https://gitee.com/smallc/SpringBlade)                       |
-| 后端Github地址    | [https://github.com/chillzhuang/SpringBlade](https://github.com/chillzhuang/SpringBlade)           |
-| 后端SpringBoot版 | [https://gitee.com/smallc/SpringBlade/tree/boot/](https://gitee.com/smallc/SpringBlade/tree/boot/) |
+| 后端Gitee地址     | [https://gitee.com/smallc/JBoot](https://gitee.com/smallc/JBoot)                       |
+| 后端Github地址    | [https://github.com/chillzhuang/JBoot](https://github.com/chillzhuang/JBoot)           |
+| 后端SpringBoot版 | [https://gitee.com/smallc/JBoot/tree/boot/](https://gitee.com/smallc/JBoot/tree/boot/) |
 
 ## 安全手册
 | 简介        | 地址                                                                                                 |
 |-----------|----------------------------------------------------------------------------------------------------|
-| Blade安全手册 | [https://www.kancloud.cn/smallchill/blade-safety](https://www.kancloud.cn/smallchill/blade-safety) |
+| J安全手册 | [https://www.kancloud.cn/smallchill/blade-safety](https://www.kancloud.cn/smallchill/blade-safety) |
 
 ## 技术文档
 
 | 简介                        | 地址                                                                                                                       |
 |---------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| SpringBlade开发手册一览         | [https://gitee.com/smallc/SpringBlade/wikis/SpringBlade开发手册](https://gitee.com/smallc/SpringBlade/wikis/SpringBlade开发手册) |
-| SpringBlade常见问题集锦         | [https://sns.bladex.cn/article-14966.html](https://sns.bladex.cn/article-14966.html)                                     |
-| SpringBlade基于Kuboard部署K8S | [https://kuboard.cn/learning/k8s-practice/spring-blade/](https://kuboard.cn/learning/k8s-practice/spring-blade/)         |
-| SpringBlade基于Rainbond部署   | [https://www.rainbond.com/docs/micro-service/example/blade](https://www.rainbond.com/docs/micro-service/example/blade)   |
+| JBoot开发手册一览         | [https://gitee.com/smallc/JBoot/wikis/JBoot开发手册](https://gitee.com/smallc/JBoot/wikis/JBoot开发手册) |
+| JBoot常见问题集锦         | [https://sns.bladex.cn/article-14966.html](https://sns.bladex.cn/article-14966.html)                                     |
+| JBoot基于Kuboard部署K8S | [https://kuboard.cn/learning/k8s-practice/spring-blade/](https://kuboard.cn/learning/k8s-practice/spring-blade/)         |
+| JBoot基于Rainbond部署   | [https://www.rainbond.com/docs/micro-service/example/blade](https://www.rainbond.com/docs/micro-service/example/blade)   |
 
 
 ## 免费公开课

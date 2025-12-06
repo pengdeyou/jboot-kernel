@@ -18,7 +18,7 @@ package org.jboot.kernel.redis.pubsub;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.jboot.kernel.redis.cache.BladeRedis;
+import org.jboot.kernel.redis.cache.JRedis;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.data.redis.serializer.RedisSerializer;
 
@@ -30,7 +30,7 @@ import org.springframework.data.redis.serializer.RedisSerializer;
 @Slf4j
 @RequiredArgsConstructor
 public class RedisPubSubPublisher implements InitializingBean, RPubSubPublisher {
-	private final BladeRedis bladeRedis;
+	private final JRedis bladeRedis;
 	private final RedisSerializer<Object> redisSerializer;
 
 	@Override

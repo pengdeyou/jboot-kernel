@@ -7,7 +7,7 @@
   <version>4.7.0</version>
   <packaging>pom</packaging>
   <name>kernel-bom</name>
-  <description>blade-tool is a powerful toolbox for SpringBlade</description>
+  <description>blade-tool is a powerful toolbox for JBoot</description>
   <url>https://github.com/chillzhuang/blade-tool/kernel-bom</url>
   <licenses>
     <license>

@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * 敏感词分组枚举.
  *
- * @author BladeX
+ * @author JBoot Kernel
  */
 @Getter
 public enum SensitiveWord {

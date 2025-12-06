@@ -21,9 +21,9 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.ConnectionPool;
 import okhttp3.OkHttpClient;
-import org.jboot.kernel.cloud.header.BladeFeignAccountGetter;
+import org.jboot.kernel.cloud.header.JFeignAccountGetter;
 import org.jboot.kernel.cloud.http.client.OkHttp3ClientHttpRequestFactory;
-import org.jboot.kernel.cloud.props.BladeFeignHeadersProperties;
+import org.jboot.kernel.cloud.props.JFeignHeadersProperties;
 import org.jboot.kernel.tool.ssl.DisableValidationTrustManager;
 import org.jboot.kernel.tool.ssl.TrustAllHostNames;
 import org.jboot.kernel.tool.utils.Charsets;
@@ -63,7 +63,7 @@ import java.util.concurrent.TimeUnit;
 @ConditionalOnClass(OkHttpClient.class)
 @ConditionalOnProperty(value = "blade.http.enabled", matchIfMissing = true)
 public class RestTemplateConfiguration {
-	private final BladeHttpProperties properties;
+	private final JHttpProperties properties;
 
 	/**
 	 * okhttp3 请求日志拦截器
@@ -133,8 +133,8 @@ public class RestTemplateConfiguration {
 
 	@Bean
 	public RestTemplateHeaderInterceptor requestHeaderInterceptor(
-		@Autowired(required = false) @Nullable BladeFeignAccountGetter accountGetter,
-		BladeFeignHeadersProperties properties) {
+		@Autowired(required = false) @Nullable JFeignAccountGetter accountGetter,
+		JFeignHeadersProperties properties) {
 		return new RestTemplateHeaderInterceptor(accountGetter,properties);
 	}
 

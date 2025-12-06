@@ -1,7 +1,7 @@
-org/jboot/kernel/loadbalancer/props/BladeLoadBalancerProperties.class
 META-INF/spring-configuration-metadata.json
-org/jboot/kernel/loadbalancer/config/BladeLoadBalancerConfiguration.class
+org/jboot/kernel/loadbalancer/props/JLoadBalancerProperties.class
 META-INF/spring.factories
+org/jboot/kernel/loadbalancer/config/JLoadBalancerConfiguration.class
 org/jboot/kernel/loadbalancer/rule/GrayscaleEnvPostProcessor.class
 org/jboot/kernel/loadbalancer/rule/GrayscaleLoadBalancer.class
 org/jboot/kernel/loadbalancer/constant/LoadBalancerConstant.class

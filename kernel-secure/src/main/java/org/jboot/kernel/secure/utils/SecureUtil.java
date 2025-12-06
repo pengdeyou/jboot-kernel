@@ -8,11 +8,11 @@ import io.jsonwebtoken.security.Keys;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.SneakyThrows;
 import org.jboot.kernel.launch.constant.TokenConstant;
-import org.jboot.kernel.secure.BladeUser;
+import org.jboot.kernel.secure.JUser;
 import org.jboot.kernel.secure.TokenInfo;
 import org.jboot.kernel.secure.constant.SecureConstant;
 import org.jboot.kernel.secure.exception.SecureException;
-import org.jboot.kernel.secure.props.BladeTokenProperties;
+import org.jboot.kernel.secure.props.JTokenProperties;
 import org.jboot.kernel.secure.provider.IClientDetails;
 import org.jboot.kernel.secure.provider.IClientDetailsService;
 import org.jboot.kernel.tool.constant.RoleConstant;
@@ -42,7 +42,7 @@ public class SecureUtil {
 	private final static String CLIENT_ID = TokenConstant.CLIENT_ID;
 	private final static Integer AUTH_LENGTH = TokenConstant.AUTH_LENGTH;
 	private static IClientDetailsService CLIENT_DETAILS_SERVICE;
-	private static BladeTokenProperties TOKEN_PROPERTIES;
+	private static JTokenProperties TOKEN_PROPERTIES;
 	private static String BASE64_SECURITY;
 
 
@@ -63,9 +63,9 @@ public class SecureUtil {
 	 *
 	 * @return jwtProperties
 	 */
-	private static BladeTokenProperties getTokenProperties() {
+	private static JTokenProperties getTokenProperties() {
 		if (TOKEN_PROPERTIES == null) {
-			TOKEN_PROPERTIES = SpringUtil.getBean(BladeTokenProperties.class);
+			TOKEN_PROPERTIES = SpringUtil.getBean(JTokenProperties.class);
 		}
 		return TOKEN_PROPERTIES;
 	}
@@ -85,9 +85,9 @@ public class SecureUtil {
 	/**
 	 * 获取用户信息
 	 *
-	 * @return BladeUser
+	 * @return JUser
 	 */
-	public static BladeUser getUser() {
+	public static JUser getUser() {
 		HttpServletRequest request = WebUtil.getRequest();
 		if (request == null) {
 			return null;
@@ -101,16 +101,16 @@ public class SecureUtil {
 				request.setAttribute(BLADE_USER_REQUEST_ATTR, bladeUser);
 			}
 		}
-		return (BladeUser) bladeUser;
+		return (JUser) bladeUser;
 	}
 
 	/**
 	 * 获取用户信息
 	 *
 	 * @param auth auth
-	 * @return BladeUser
+	 * @return JUser
 	 */
-	public static BladeUser getUser(String auth) {
+	public static JUser getUser(String auth) {
 		return getUser(getClaims(auth));
 	}
 
@@ -118,9 +118,9 @@ public class SecureUtil {
 	 * 获取用户信息
 	 *
 	 * @param request request
-	 * @return BladeUser
+	 * @return JUser
 	 */
-	public static BladeUser getUser(HttpServletRequest request) {
+	public static JUser getUser(HttpServletRequest request) {
 		return getUser(getClaims(request));
 	}
 
@@ -128,9 +128,9 @@ public class SecureUtil {
 	 * 获取用户信息
 	 *
 	 * @param claims Claims
-	 * @return BladeUser
+	 * @return JUser
 	 */
-	public static BladeUser getUser(Claims claims) {
+	public static JUser getUser(Claims claims) {
 		if (claims == null) {
 			return null;
 		}
@@ -142,7 +142,7 @@ public class SecureUtil {
 		String account = Func.toStr(claims.get(SecureUtil.ACCOUNT));
 		String roleName = Func.toStr(claims.get(SecureUtil.ROLE_NAME));
 		String userName = Func.toStr(claims.get(SecureUtil.USER_NAME));
-		BladeUser bladeUser = new BladeUser();
+		JUser bladeUser = new JUser();
 		bladeUser.setClientId(clientId);
 		bladeUser.setUserId(userId);
 		bladeUser.setTenantId(tenantId);
@@ -169,7 +169,7 @@ public class SecureUtil {
 	 * @return userId
 	 */
 	public static Long getUserId() {
-		BladeUser user = getUser();
+		JUser user = getUser();
 		return (null == user) ? -1 : user.getUserId();
 	}
 
@@ -180,7 +180,7 @@ public class SecureUtil {
 	 * @return userId
 	 */
 	public static Long getUserId(HttpServletRequest request) {
-		BladeUser user = getUser(request);
+		JUser user = getUser(request);
 		return (null == user) ? -1 : user.getUserId();
 	}
 
@@ -190,7 +190,7 @@ public class SecureUtil {
 	 * @return userAccount
 	 */
 	public static String getUserAccount() {
-		BladeUser user = getUser();
+		JUser user = getUser();
 		return (null == user) ? StringPool.EMPTY : user.getAccount();
 	}
 
@@ -201,7 +201,7 @@ public class SecureUtil {
 	 * @return userAccount
 	 */
 	public static String getUserAccount(HttpServletRequest request) {
-		BladeUser user = getUser(request);
+		JUser user = getUser(request);
 		return (null == user) ? StringPool.EMPTY : user.getAccount();
 	}
 
@@ -211,7 +211,7 @@ public class SecureUtil {
 	 * @return userName
 	 */
 	public static String getUserName() {
-		BladeUser user = getUser();
+		JUser user = getUser();
 		return (null == user) ? StringPool.EMPTY : user.getUserName();
 	}
 
@@ -222,7 +222,7 @@ public class SecureUtil {
 	 * @return userName
 	 */
 	public static String getUserName(HttpServletRequest request) {
-		BladeUser user = getUser(request);
+		JUser user = getUser(request);
 		return (null == user) ? StringPool.EMPTY : user.getUserName();
 	}
 
@@ -232,7 +232,7 @@ public class SecureUtil {
 	 * @return userName
 	 */
 	public static String getUserRole() {
-		BladeUser user = getUser();
+		JUser user = getUser();
 		return (null == user) ? StringPool.EMPTY : user.getRoleName();
 	}
 
@@ -243,7 +243,7 @@ public class SecureUtil {
 	 * @return userName
 	 */
 	public static String getUserRole(HttpServletRequest request) {
-		BladeUser user = getUser(request);
+		JUser user = getUser(request);
 		return (null == user) ? StringPool.EMPTY : user.getRoleName();
 	}
 
@@ -253,7 +253,7 @@ public class SecureUtil {
 	 * @return tenantId
 	 */
 	public static String getTenantId() {
-		BladeUser user = getUser();
+		JUser user = getUser();
 		return (null == user) ? StringPool.EMPTY : user.getTenantId();
 	}
 
@@ -264,7 +264,7 @@ public class SecureUtil {
 	 * @return tenantId
 	 */
 	public static String getTenantId(HttpServletRequest request) {
-		BladeUser user = getUser(request);
+		JUser user = getUser(request);
 		return (null == user) ? StringPool.EMPTY : user.getTenantId();
 	}
 
@@ -274,7 +274,7 @@ public class SecureUtil {
 	 * @return tenantId
 	 */
 	public static String getClientId() {
-		BladeUser user = getUser();
+		JUser user = getUser();
 		return (null == user) ? StringPool.EMPTY : user.getClientId();
 	}
 
@@ -285,7 +285,7 @@ public class SecureUtil {
 	 * @return tenantId
 	 */
 	public static String getClientId(HttpServletRequest request) {
-		BladeUser user = getUser(request);
+		JUser user = getUser(request);
 		return (null == user) ? StringPool.EMPTY : user.getClientId();
 	}
 

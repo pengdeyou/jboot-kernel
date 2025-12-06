@@ -1,4 +1,4 @@
 org.jboot.kernel.launch.StartEventListener
-org.jboot.kernel.launch.config.BladeLaunchConfiguration
-org.jboot.kernel.launch.config.BladePropertyConfiguration
+org.jboot.kernel.launch.config.JLaunchConfiguration
+org.jboot.kernel.launch.config.JPropertyConfiguration
 org.jboot.kernel.launch.server.ServerInfo

@@ -19,7 +19,7 @@ import java.util.regex.Pattern;
  * 6. 支持泛型返回值
  * </p>
  *
- * @author BladeX
+ * @author JBoot Kernel
  */
 public class SensitiveUtil {
 	private static final String DEFAULT_REPLACEMENT = "******";

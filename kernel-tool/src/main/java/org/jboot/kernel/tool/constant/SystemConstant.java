@@ -5,7 +5,7 @@ package org.jboot.kernel.tool.constant;
 import lombok.Data;
 
 /**
- * Blade系统配置类
+ * J系统配置类
  *
  * @author Chill
  */

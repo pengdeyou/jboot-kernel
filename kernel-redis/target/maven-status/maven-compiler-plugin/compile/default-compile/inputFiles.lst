@@ -1,7 +1,7 @@
-/Users/dayu/project/jcloud/jboot-kernel/kernel-redis/src/main/java/org/jboot/kernel/redis/cache/BladeRedis.java
 /Users/dayu/project/jcloud/jboot-kernel/kernel-redis/src/main/java/org/jboot/kernel/redis/cache/CacheKey.java
 /Users/dayu/project/jcloud/jboot-kernel/kernel-redis/src/main/java/org/jboot/kernel/redis/cache/ICacheKey.java
-/Users/dayu/project/jcloud/jboot-kernel/kernel-redis/src/main/java/org/jboot/kernel/redis/config/BladeRedisCacheAutoConfiguration.java
+/Users/dayu/project/jcloud/jboot-kernel/kernel-redis/src/main/java/org/jboot/kernel/redis/cache/JRedis.java
+/Users/dayu/project/jcloud/jboot-kernel/kernel-redis/src/main/java/org/jboot/kernel/redis/config/JRedisCacheAutoConfiguration.java
 /Users/dayu/project/jcloud/jboot-kernel/kernel-redis/src/main/java/org/jboot/kernel/redis/config/ProtoStuffSerializerConfiguration.java
 /Users/dayu/project/jcloud/jboot-kernel/kernel-redis/src/main/java/org/jboot/kernel/redis/config/RedisAutoCacheManager.java
 /Users/dayu/project/jcloud/jboot-kernel/kernel-redis/src/main/java/org/jboot/kernel/redis/config/RedisCacheManagerConfig.java
