@@ -1,0 +1,5 @@
+org.jboot.kernel.oss.config.AliossConfiguration
+org.jboot.kernel.oss.config.MinioConfiguration
+org.jboot.kernel.oss.config.OssConfiguration
+org.jboot.kernel.oss.config.QiniuConfiguration
+org.jboot.kernel.oss.config.TencentCosConfiguration

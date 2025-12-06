@@ -1,0 +1,13 @@
+org/jboot/kernel/i18n/props/I18nProperties$MessageSource.class
+org/jboot/kernel/i18n/utils/LocaleParseUtil.class
+META-INF/spring-configuration-metadata.json
+org/jboot/kernel/i18n/utils/I18nUtil.class
+org/jboot/kernel/i18n/interceptor/I18nInterceptor.class
+META-INF/spring-devtools.properties
+META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports
+org/jboot/kernel/i18n/service/I18nService.class
+org/jboot/kernel/i18n/config/I18nAutoConfiguration.class
+org/jboot/kernel/i18n/props/I18nProperties.class
+org/jboot/kernel/i18n/resolver/I18nLocaleResolver.class
+META-INF/spring.factories
+org/jboot/kernel/i18n/config/I18nAutoConfiguration$1.class

@@ -1,0 +1,5 @@
+org.jboot.kernel.report.config.ReportAuthConfiguration
+org.jboot.kernel.report.config.ReportConfiguration
+org.jboot.kernel.report.endpoint.ReportBootEndpoint
+org.jboot.kernel.report.endpoint.ReportEndpoint
+org.jboot.kernel.report.service.impl.ReportFileServiceImpl

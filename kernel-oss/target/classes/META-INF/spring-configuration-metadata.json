@@ -1,0 +1,82 @@
+{
+  "groups": [
+    {
+      "name": "oss",
+      "type": "org.jboot.kernel.oss.props.OssProperties",
+      "sourceType": "org.jboot.kernel.oss.props.OssProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "oss.access-key",
+      "type": "java.lang.String",
+      "description": "Access key就像用户ID，可以唯一标识你的账户",
+      "sourceType": "org.jboot.kernel.oss.props.OssProperties"
+    },
+    {
+      "name": "oss.app-id",
+      "type": "java.lang.String",
+      "description": "应用ID TencentCOS需要",
+      "sourceType": "org.jboot.kernel.oss.props.OssProperties"
+    },
+    {
+      "name": "oss.args",
+      "type": "org.jboot.kernel.tool.support.Kv",
+      "description": "自定义属性",
+      "sourceType": "org.jboot.kernel.oss.props.OssProperties"
+    },
+    {
+      "name": "oss.bucket-name",
+      "type": "java.lang.String",
+      "description": "默认的存储桶名称",
+      "sourceType": "org.jboot.kernel.oss.props.OssProperties",
+      "defaultValue": "blade"
+    },
+    {
+      "name": "oss.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否启用",
+      "sourceType": "org.jboot.kernel.oss.props.OssProperties"
+    },
+    {
+      "name": "oss.endpoint",
+      "type": "java.lang.String",
+      "description": "对象存储服务的URL",
+      "sourceType": "org.jboot.kernel.oss.props.OssProperties"
+    },
+    {
+      "name": "oss.name",
+      "type": "java.lang.String",
+      "description": "对象存储名称",
+      "sourceType": "org.jboot.kernel.oss.props.OssProperties"
+    },
+    {
+      "name": "oss.region",
+      "type": "java.lang.String",
+      "description": "区域简称 TencentCOS\/Amazon S3 需要",
+      "sourceType": "org.jboot.kernel.oss.props.OssProperties"
+    },
+    {
+      "name": "oss.secret-key",
+      "type": "java.lang.String",
+      "description": "Secret key是你账户的密码",
+      "sourceType": "org.jboot.kernel.oss.props.OssProperties"
+    },
+    {
+      "name": "oss.tenant-mode",
+      "type": "java.lang.Boolean",
+      "description": "是否开启租户模式",
+      "sourceType": "org.jboot.kernel.oss.props.OssProperties"
+    },
+    {
+      "name": "oss.transform-endpoint",
+      "type": "java.lang.String",
+      "description": "转换外网地址的URL",
+      "sourceType": "org.jboot.kernel.oss.props.OssProperties"
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}

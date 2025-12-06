@@ -1,0 +1,12 @@
+/Users/dayu/project/jcloud/jboot-kernel/kernel-datascope/src/main/java/org/jboot/kernel/datascope/annotation/DataAuth.java
+/Users/dayu/project/jcloud/jboot-kernel/kernel-datascope/src/main/java/org/jboot/kernel/datascope/config/DataScopeConfiguration.java
+/Users/dayu/project/jcloud/jboot-kernel/kernel-datascope/src/main/java/org/jboot/kernel/datascope/constant/DataScopeConstant.java
+/Users/dayu/project/jcloud/jboot-kernel/kernel-datascope/src/main/java/org/jboot/kernel/datascope/enums/DataScopeEnum.java
+/Users/dayu/project/jcloud/jboot-kernel/kernel-datascope/src/main/java/org/jboot/kernel/datascope/exception/DataScopeException.java
+/Users/dayu/project/jcloud/jboot-kernel/kernel-datascope/src/main/java/org/jboot/kernel/datascope/handler/BladeDataScopeHandler.java
+/Users/dayu/project/jcloud/jboot-kernel/kernel-datascope/src/main/java/org/jboot/kernel/datascope/handler/BladeScopeModelHandler.java
+/Users/dayu/project/jcloud/jboot-kernel/kernel-datascope/src/main/java/org/jboot/kernel/datascope/handler/DataScopeHandler.java
+/Users/dayu/project/jcloud/jboot-kernel/kernel-datascope/src/main/java/org/jboot/kernel/datascope/handler/ScopeModelHandler.java
+/Users/dayu/project/jcloud/jboot-kernel/kernel-datascope/src/main/java/org/jboot/kernel/datascope/interceptor/DataScopeInterceptor.java
+/Users/dayu/project/jcloud/jboot-kernel/kernel-datascope/src/main/java/org/jboot/kernel/datascope/model/DataScopeModel.java
+/Users/dayu/project/jcloud/jboot-kernel/kernel-datascope/src/main/java/org/jboot/kernel/datascope/props/DataScopeProperties.java

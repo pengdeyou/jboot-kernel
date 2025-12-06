@@ -1,0 +1,47 @@
+{
+  "groups": [
+    {
+      "name": "blade.api.crypto",
+      "type": "org.jboot.kernel.api.crypto.config.ApiCryptoProperties",
+      "sourceType": "org.jboot.kernel.api.crypto.config.ApiCryptoProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "blade.api.crypto.aes-key",
+      "type": "java.lang.String",
+      "description": "aes 密钥",
+      "sourceType": "org.jboot.kernel.api.crypto.config.ApiCryptoProperties"
+    },
+    {
+      "name": "blade.api.crypto.des-key",
+      "type": "java.lang.String",
+      "description": "des 密钥",
+      "sourceType": "org.jboot.kernel.api.crypto.config.ApiCryptoProperties"
+    },
+    {
+      "name": "blade.api.crypto.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否开启 api 签名",
+      "sourceType": "org.jboot.kernel.api.crypto.config.ApiCryptoProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "blade.api.crypto.param-name",
+      "type": "java.lang.String",
+      "description": "url的参数签名，传递的参数名。例如：\/user?data=签名后的数据",
+      "sourceType": "org.jboot.kernel.api.crypto.config.ApiCryptoProperties",
+      "defaultValue": "data"
+    },
+    {
+      "name": "blade.api.crypto.rsa-private-key",
+      "type": "java.lang.String",
+      "description": "rsa 私钥",
+      "sourceType": "org.jboot.kernel.api.crypto.config.ApiCryptoProperties"
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "groups": [
+    {
+      "name": "blade.loadbalancer",
+      "type": "org.jboot.kernel.loadbalancer.props.BladeLoadBalancerProperties",
+      "sourceType": "org.jboot.kernel.loadbalancer.props.BladeLoadBalancerProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "blade.loadbalancer.enabled",
+      "type": "java.lang.Boolean",
+      "description": "是否开启自定义负载均衡",
+      "sourceType": "org.jboot.kernel.loadbalancer.props.BladeLoadBalancerProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "blade.loadbalancer.prior-ip-pattern",
+      "type": "java.util.List<java.lang.String>",
+      "description": "优先的ip列表，支持通配符，例如：10.20.0.8*、10.20.0.*",
+      "sourceType": "org.jboot.kernel.loadbalancer.props.BladeLoadBalancerProperties"
+    },
+    {
+      "name": "blade.loadbalancer.version",
+      "type": "java.lang.String",
+      "description": "灰度服务版本",
+      "sourceType": "org.jboot.kernel.loadbalancer.props.BladeLoadBalancerProperties"
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}

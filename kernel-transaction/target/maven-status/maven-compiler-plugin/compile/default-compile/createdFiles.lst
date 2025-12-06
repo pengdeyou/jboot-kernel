@@ -1,0 +1,5 @@
+org/jboot/kernel/transaction/config/DataSourceConfiguration.class
+org/jboot/kernel/transaction/annotation/SeataCloudApplication.class
+META-INF/spring.factories
+META-INF/spring-devtools.properties
+META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports

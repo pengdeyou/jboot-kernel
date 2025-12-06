@@ -1,0 +1,4 @@
+org.jboot.kernel.log.config.BladeErrorMvcAutoConfiguration
+org.jboot.kernel.log.config.BladeLogToolAutoConfiguration
+org.jboot.kernel.log.error.BladeRestExceptionTranslator
+org.jboot.kernel.log.feign.LogClientFallback

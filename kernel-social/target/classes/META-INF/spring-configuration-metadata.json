@@ -1,0 +1,40 @@
+{
+  "groups": [
+    {
+      "name": "social",
+      "type": "org.jboot.kernel.social.props.SocialProperties",
+      "sourceType": "org.jboot.kernel.social.props.SocialProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "social.alias",
+      "type": "java.util.Map<java.lang.String,java.lang.String>",
+      "description": "别名",
+      "sourceType": "org.jboot.kernel.social.props.SocialProperties"
+    },
+    {
+      "name": "social.domain",
+      "type": "java.lang.String",
+      "description": "域名地址",
+      "sourceType": "org.jboot.kernel.social.props.SocialProperties"
+    },
+    {
+      "name": "social.enabled",
+      "type": "java.lang.Boolean",
+      "description": "启用",
+      "sourceType": "org.jboot.kernel.social.props.SocialProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "social.oauth",
+      "type": "java.util.Map<me.zhyd.oauth.config.AuthDefaultSource,me.zhyd.oauth.config.AuthConfig>",
+      "description": "类型",
+      "sourceType": "org.jboot.kernel.social.props.SocialProperties"
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}

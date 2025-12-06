@@ -1,0 +1,73 @@
+{
+  "groups": [
+    {
+      "name": "report",
+      "type": "org.jboot.kernel.report.props.ReportProperties",
+      "sourceType": "org.jboot.kernel.report.props.ReportProperties"
+    },
+    {
+      "name": "report.database.provider",
+      "type": "org.jboot.kernel.report.props.ReportDatabaseProperties",
+      "sourceType": "org.jboot.kernel.report.props.ReportDatabaseProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "report.auth",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.jboot.kernel.report.props.ReportProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "report.database.provider.disabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.jboot.kernel.report.props.ReportDatabaseProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "report.database.provider.name",
+      "type": "java.lang.String",
+      "sourceType": "org.jboot.kernel.report.props.ReportDatabaseProperties",
+      "defaultValue": "数据库文件系统"
+    },
+    {
+      "name": "report.database.provider.prefix",
+      "type": "java.lang.String",
+      "sourceType": "org.jboot.kernel.report.props.ReportDatabaseProperties",
+      "defaultValue": "blade-"
+    },
+    {
+      "name": "report.debug",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.jboot.kernel.report.props.ReportProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "report.disable-file-provider",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.jboot.kernel.report.props.ReportProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "report.disable-http-session-report-cache",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.jboot.kernel.report.props.ReportProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "report.enabled",
+      "type": "java.lang.Boolean",
+      "sourceType": "org.jboot.kernel.report.props.ReportProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "report.file-store-dir",
+      "type": "java.lang.String",
+      "sourceType": "org.jboot.kernel.report.props.ReportProperties"
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}

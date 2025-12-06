@@ -1,0 +1,36 @@
+{
+  "groups": [
+    {
+      "name": "blade.log",
+      "type": "org.jboot.kernel.log.props.BladeLogProperties",
+      "sourceType": "org.jboot.kernel.log.props.BladeLogProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "blade.log.api",
+      "type": "java.lang.Boolean",
+      "description": "是否开启 api 日志",
+      "sourceType": "org.jboot.kernel.log.props.BladeLogProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "blade.log.error",
+      "type": "java.lang.Boolean",
+      "description": "是否开启 error 日志",
+      "sourceType": "org.jboot.kernel.log.props.BladeLogProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "blade.log.usual",
+      "type": "java.lang.Boolean",
+      "description": "是否开启 usual 日志",
+      "sourceType": "org.jboot.kernel.log.props.BladeLogProperties",
+      "defaultValue": true
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}

@@ -1,0 +1,54 @@
+
+package org.jboot.kernel.secure.registry;
+
+import lombok.Data;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+/**
+ * secure api放行配置
+ *
+ * @author Chill
+ */
+@Data
+public class SecureRegistry {
+
+	private boolean enabled = false;
+
+	private final List<String> defaultExcludePatterns = new ArrayList<>();
+
+	private final List<String> excludePatterns = new ArrayList<>();
+
+	public SecureRegistry() {
+		this.defaultExcludePatterns.add("/actuator/health/**");
+		this.defaultExcludePatterns.add("/v3/api-docs/**");
+		this.defaultExcludePatterns.add("/swagger-ui/**");
+		this.defaultExcludePatterns.add("/auth/**");
+		this.defaultExcludePatterns.add("/oauth/**");
+		this.defaultExcludePatterns.add("/token/**");
+		this.defaultExcludePatterns.add("/feign/client/**");
+		this.defaultExcludePatterns.add("/user/user-info");
+		this.defaultExcludePatterns.add("/user/user-info-by-id");
+		this.defaultExcludePatterns.add("/menu/auth-routes");
+		this.defaultExcludePatterns.add("/error/**");
+		this.defaultExcludePatterns.add("/assets/**");
+	}
+
+	/**
+	 * 设置放行api
+	 */
+	public SecureRegistry excludePathPatterns(String... patterns) {
+		return excludePathPatterns(Arrays.asList(patterns));
+	}
+
+	/**
+	 * 设置放行api
+	 */
+	public SecureRegistry excludePathPatterns(List<String> patterns) {
+		this.excludePatterns.addAll(patterns);
+		return this;
+	}
+
+}

@@ -1,0 +1,24 @@
+
+package org.jboot.develop.constant;
+
+/**
+ * 系统常量.
+ *
+ * @author zhuangqian
+ */
+public interface DevelopConstant {
+	/**
+	 * sword 系统名
+	 */
+	String SWORD_NAME = "sword";
+
+	/**
+	 * saber 系统名
+	 */
+	String SABER_NAME = "saber";
+
+	/**
+	 * saber3 系统名
+	 */
+	String SABER3_NAME = "saber3";
+}

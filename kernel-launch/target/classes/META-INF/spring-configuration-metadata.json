@@ -1,0 +1,45 @@
+{
+  "groups": [
+    {
+      "name": "blade",
+      "type": "org.jboot.kernel.launch.props.BladeProperties",
+      "sourceType": "org.jboot.kernel.launch.props.BladeProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "blade.env",
+      "type": "java.lang.String",
+      "description": "开发环境",
+      "sourceType": "org.jboot.kernel.launch.props.BladeProperties"
+    },
+    {
+      "name": "blade.environment",
+      "type": "org.springframework.core.env.Environment",
+      "sourceType": "org.jboot.kernel.launch.props.BladeProperties"
+    },
+    {
+      "name": "blade.is-local",
+      "type": "java.lang.Boolean",
+      "description": "判断是否为 本地开发环境",
+      "sourceType": "org.jboot.kernel.launch.props.BladeProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "blade.name",
+      "type": "java.lang.String",
+      "description": "服务名",
+      "sourceType": "org.jboot.kernel.launch.props.BladeProperties"
+    },
+    {
+      "name": "blade.prop",
+      "type": "java.util.Map<java.lang.String,java.lang.String>",
+      "description": "装载自定义配置blade.prop.xxx",
+      "sourceType": "org.jboot.kernel.launch.props.BladeProperties"
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}

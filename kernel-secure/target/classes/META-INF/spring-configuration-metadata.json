@@ -1,0 +1,59 @@
+{
+  "groups": [
+    {
+      "name": "blade.auth",
+      "type": "org.jboot.kernel.secure.props.BladeAuthProperties",
+      "sourceType": "org.jboot.kernel.secure.props.BladeAuthProperties"
+    },
+    {
+      "name": "blade.secure",
+      "type": "org.jboot.kernel.secure.props.BladeSecureProperties",
+      "sourceType": "org.jboot.kernel.secure.props.BladeSecureProperties"
+    },
+    {
+      "name": "blade.token",
+      "type": "org.jboot.kernel.secure.props.BladeTokenProperties",
+      "sourceType": "org.jboot.kernel.secure.props.BladeTokenProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "blade.auth.private-key",
+      "type": "java.lang.String",
+      "description": "sm2私钥",
+      "sourceType": "org.jboot.kernel.secure.props.BladeAuthProperties"
+    },
+    {
+      "name": "blade.auth.public-key",
+      "type": "java.lang.String",
+      "description": "sm2公钥",
+      "sourceType": "org.jboot.kernel.secure.props.BladeAuthProperties"
+    },
+    {
+      "name": "blade.secure.client",
+      "type": "java.util.List<org.jboot.kernel.secure.props.ClientSecure>",
+      "sourceType": "org.jboot.kernel.secure.props.BladeSecureProperties"
+    },
+    {
+      "name": "blade.secure.skip-url",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "org.jboot.kernel.secure.props.BladeSecureProperties"
+    },
+    {
+      "name": "blade.token.aes-key",
+      "type": "java.lang.String",
+      "description": "token签名",
+      "sourceType": "org.jboot.kernel.secure.props.BladeTokenProperties"
+    },
+    {
+      "name": "blade.token.sign-key",
+      "type": "java.lang.String",
+      "description": "token签名",
+      "sourceType": "org.jboot.kernel.secure.props.BladeTokenProperties"
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}
