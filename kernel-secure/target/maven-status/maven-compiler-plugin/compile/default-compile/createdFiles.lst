@@ -14,7 +14,6 @@ org/jboot/kernel/secure/props/JSecureProperties.class
 org/jboot/kernel/secure/registry/SecureRegistry.class
 org/jboot/kernel/secure/config/RegistryConfiguration.class
 META-INF/spring-configuration-metadata.json
-org/jboot/kernel/secure/JUser.class
 org/jboot/kernel/secure/config/SecureConfiguration.class
 org/jboot/kernel/secure/utils/SecureUtil.class
 org/jboot/kernel/secure/aspect/AuthAspect.class
@@ -24,4 +23,5 @@ org/jboot/kernel/secure/annotation/PreAuth.class
 META-INF/spring.factories
 org/jboot/kernel/secure/auth/AuthFun.class
 org/jboot/kernel/secure/provider/ClientDetails.class
+org/jboot/kernel/secure/AuthUser.class
 org/jboot/kernel/secure/AuthInfo.class

@@ -3,7 +3,7 @@ package org.jboot.kernel.secure.interceptor;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.jboot.kernel.secure.JUser;
+import org.jboot.kernel.secure.AuthUser;
 import org.jboot.kernel.secure.utils.SecureUtil;
 import org.jboot.kernel.tool.api.R;
 import org.jboot.kernel.tool.api.ResultCode;
@@ -32,7 +32,7 @@ public class ClientInterceptor implements AsyncHandlerInterceptor {
 
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
-		JUser user = SecureUtil.getUser();
+		AuthUser user = SecureUtil.getUser();
 		if (user != null && StringUtil.equals(clientId, SecureUtil.getClientIdFromHeader()) && StringUtil.equals(clientId, user.getClientId())) {
 			return true;
 		} else {

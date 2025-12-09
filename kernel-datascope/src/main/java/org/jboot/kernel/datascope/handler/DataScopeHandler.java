@@ -2,7 +2,7 @@
 package org.jboot.kernel.datascope.handler;
 
 import org.jboot.kernel.datascope.model.DataScopeModel;
-import org.jboot.kernel.secure.JUser;
+import org.jboot.kernel.secure.AuthUser;
 
 /**
  * 数据权限规则
@@ -20,6 +20,6 @@ public interface DataScopeHandler {
 	 * @param originalSql 原始Sql
 	 * @return sql
 	 */
-	String sqlCondition(String mapperId, DataScopeModel dataScope, JUser bladeUser, String originalSql);
+	String sqlCondition(String mapperId, DataScopeModel dataScope, AuthUser bladeUser, String originalSql);
 
 }

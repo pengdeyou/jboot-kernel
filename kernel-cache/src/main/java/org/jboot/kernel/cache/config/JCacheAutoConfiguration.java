@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018-2025, Chill Zhuang 庄骞 (bladejava@qq.com).
+ * Copyright (c) 2018-2025, Chill Zhuang 沙狐 (peng.deyou@gmail.com).
  * <p>
  * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE 3.0;
  * you may not use this file except in compliance with the License.

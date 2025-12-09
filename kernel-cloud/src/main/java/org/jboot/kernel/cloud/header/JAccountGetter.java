@@ -1,7 +1,7 @@
 
 package org.jboot.kernel.cloud.header;
 
-import org.jboot.kernel.secure.JUser;
+import org.jboot.kernel.secure.AuthUser;
 import org.jboot.kernel.secure.utils.SecureUtil;
 import org.jboot.kernel.tool.utils.Charsets;
 import org.jboot.kernel.tool.utils.UrlUtil;
@@ -17,7 +17,7 @@ public class JAccountGetter implements JFeignAccountGetter {
 
 	@Override
 	public String get(HttpServletRequest request) {
-		JUser account = SecureUtil.getUser();
+		AuthUser account = SecureUtil.getUser();
 		if (account == null) {
 			return null;
 		}

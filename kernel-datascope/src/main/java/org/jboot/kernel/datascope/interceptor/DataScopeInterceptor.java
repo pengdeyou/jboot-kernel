@@ -17,7 +17,7 @@ import org.jboot.kernel.datascope.handler.DataScopeHandler;
 import org.jboot.kernel.datascope.model.DataScopeModel;
 import org.jboot.kernel.datascope.props.DataScopeProperties;
 import org.jboot.kernel.mp.intercept.QueryInterceptor;
-import org.jboot.kernel.secure.JUser;
+import org.jboot.kernel.secure.AuthUser;
 import org.jboot.kernel.secure.utils.SecureUtil;
 import org.jboot.kernel.tool.utils.ClassUtil;
 import org.jboot.kernel.tool.utils.SpringUtil;
@@ -51,7 +51,7 @@ public class DataScopeInterceptor implements QueryInterceptor {
 		}
 
 		//未取到用户则放行
-		JUser bladeUser = SecureUtil.getUser();
+		AuthUser bladeUser = SecureUtil.getUser();
 		if (bladeUser == null) {
 			return;
 		}

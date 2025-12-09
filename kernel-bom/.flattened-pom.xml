@@ -7,8 +7,8 @@
   <version>4.7.0</version>
   <packaging>pom</packaging>
   <name>kernel-bom</name>
-  <description>blade-tool is a powerful toolbox for JBoot</description>
-  <url>https://github.com/chillzhuang/blade-tool/kernel-bom</url>
+  <description>jboot-kernel is a powerful toolbox for JBoot</description>
+  <url>https://github.com/pengdeyou/jboot-kernel/kernel-bom</url>
   <licenses>
     <license>
       <name>GNU LESSER GENERAL PUBLIC LICENSE</name>
@@ -17,9 +17,9 @@
   </licenses>
   <developers>
     <developer>
-      <id>smallchill</id>
-      <name>庄骞</name>
-      <email>bladejava@qq.com</email>
+      <id>corsak</id>
+      <name>沙狐</name>
+      <email>peng.deyou@gmail.com</email>
       <roles>
         <role>Java Development Engineer</role>
       </roles>
@@ -27,9 +27,9 @@
     </developer>
   </developers>
   <scm>
-    <connection>https://github.com/chillzhuang/jboot-kernel.git/kernel-bom</connection>
-    <developerConnection>https://github.com/chillzhuang/kernel-bom</developerConnection>
-    <url>https://github.com/chillzhuang/jboot-kernel.git/kernel-bom</url>
+    <connection>https://github.com/pengdeyou/jboot-kernel.git/kernel-bom</connection>
+    <developerConnection>https://github.com/pengdeyou/kernel-bom</developerConnection>
+    <url>https://github.com/pengdeyou/jboot-kernel.git/kernel-bom</url>
   </scm>
   <distributionManagement>
     <repository>

@@ -1,4 +1,3 @@
-
 package org.jboot.kernel.secure;
 
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -15,7 +14,7 @@ import static io.swagger.v3.oas.annotations.media.Schema.AccessMode.READ_ONLY;
  * @author Chill
  */
 @Data
-public class JUser implements Serializable {
+public class AuthUser implements Serializable {
 
 	@Serial
 	private static final long serialVersionUID = 1L;

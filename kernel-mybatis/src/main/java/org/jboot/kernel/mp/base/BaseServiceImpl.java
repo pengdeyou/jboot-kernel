@@ -11,7 +11,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.SneakyThrows;
 import org.jboot.kernel.mp.support.Condition;
-import org.jboot.kernel.secure.JUser;
+import org.jboot.kernel.secure.AuthUser;
 import org.jboot.kernel.secure.utils.SecureUtil;
 import org.jboot.kernel.tool.constant.JConstant;
 import org.jboot.kernel.tool.utils.DateUtil;
@@ -102,7 +102,7 @@ public class BaseServiceImpl<M extends BaseMapper<T>, T extends BaseEntity> exte
 
 	@SneakyThrows
 	private void resolveSave(T entity) {
-		JUser user = SecureUtil.getUser();
+		AuthUser user = SecureUtil.getUser();
 		if (user != null) {
 			entity.setCreateUser(user.getUserId());
 			entity.setCreateDept(Func.firstLong(user.getDeptId()));
@@ -119,7 +119,7 @@ public class BaseServiceImpl<M extends BaseMapper<T>, T extends BaseEntity> exte
 
 	@SneakyThrows
 	private void resolveUpdate(T entity) {
-		JUser user = SecureUtil.getUser();
+		AuthUser user = SecureUtil.getUser();
 		if (user != null) {
 			entity.setUpdateUser(user.getUserId());
 		}

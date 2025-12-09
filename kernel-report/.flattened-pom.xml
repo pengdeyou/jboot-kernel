@@ -6,8 +6,8 @@
   <artifactId>kernel-report</artifactId>
   <version>4.7.0</version>
   <name>kernel-report</name>
-  <description>blade-tool is a powerful toolbox for JBoot</description>
-  <url>https://github.com/chillzhuang/blade-tool/kernel-report</url>
+  <description>jboot-kernel is a powerful toolbox for JBoot</description>
+  <url>https://github.com/pengdeyou/jboot-kernel/kernel-report</url>
   <licenses>
     <license>
       <name>GNU LESSER GENERAL PUBLIC LICENSE</name>
@@ -16,9 +16,9 @@
   </licenses>
   <developers>
     <developer>
-      <id>smallchill</id>
-      <name>庄骞</name>
-      <email>bladejava@qq.com</email>
+      <id>corsak</id>
+      <name>沙狐</name>
+      <email>peng.deyou@gmail.com</email>
       <roles>
         <role>Java Development Engineer</role>
       </roles>
@@ -26,9 +26,9 @@
     </developer>
   </developers>
   <scm>
-    <connection>https://github.com/chillzhuang/jboot-kernel.git/kernel-report</connection>
-    <developerConnection>https://github.com/chillzhuang/kernel-report</developerConnection>
-    <url>https://github.com/chillzhuang/jboot-kernel.git/kernel-report</url>
+    <connection>https://github.com/pengdeyou/jboot-kernel.git/kernel-report</connection>
+    <developerConnection>https://github.com/pengdeyou/kernel-report</developerConnection>
+    <url>https://github.com/pengdeyou/jboot-kernel.git/kernel-report</url>
   </scm>
   <distributionManagement>
     <repository>

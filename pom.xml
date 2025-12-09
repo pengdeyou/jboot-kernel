@@ -3,19 +3,19 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jboot</groupId>
-    <artifactId>blade-tool</artifactId>
+    <artifactId>jboot-kernel</artifactId>
     <version>${revision}</version>
     <packaging>pom</packaging>
-    <name>blade-tool</name>
+    <name>jboot-kernel</name>
     <description>
-        blade-tool is a powerful toolbox for JBoot
+        jboot-kernel is a powerful toolbox for JBoot
     </description>
-    <url>https://github.com/chillzhuang/blade-tool</url>
+    <url>https://github.com/pengdeyou/jboot-kernel</url>
     <developers>
         <developer>
-            <id>smallchill</id>
-            <name>庄骞</name>
-            <email>bladejava@qq.com</email>
+            <id>corsak</id>
+            <name>沙狐</name>
+            <email>peng.deyou@gmail.com</email>
             <roles>
                 <role>Java Development Engineer</role>
             </roles>
@@ -29,9 +29,9 @@
         </license>
     </licenses>
     <scm>
-        <connection>https://github.com/chillzhuang/jboot-kernel.git</connection>
-        <developerConnection>https://github.com/chillzhuang</developerConnection>
-        <url>https://github.com/chillzhuang/jboot-kernel.git</url>
+        <connection>https://github.com/pengdeyou/jboot-kernel.git</connection>
+        <developerConnection>https://github.com/pengdeyou</developerConnection>
+        <url>https://github.com/pengdeyou/jboot-kernel.git</url>
     </scm>
 
     <properties>

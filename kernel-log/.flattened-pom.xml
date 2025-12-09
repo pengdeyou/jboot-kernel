@@ -6,8 +6,8 @@
   <artifactId>kernel-log</artifactId>
   <version>4.7.0</version>
   <name>kernel-log</name>
-  <description>blade-tool is a powerful toolbox for JBoot</description>
-  <url>https://github.com/chillzhuang/blade-tool/kernel-log</url>
+  <description>jboot-kernel is a powerful toolbox for JBoot</description>
+  <url>https://github.com/pengdeyou/jboot-kernel/kernel-log</url>
   <licenses>
     <license>
       <name>GNU LESSER GENERAL PUBLIC LICENSE</name>
@@ -16,9 +16,9 @@
   </licenses>
   <developers>
     <developer>
-      <id>smallchill</id>
-      <name>庄骞</name>
-      <email>bladejava@qq.com</email>
+      <id>corsak</id>
+      <name>沙狐</name>
+      <email>peng.deyou@gmail.com</email>
       <roles>
         <role>Java Development Engineer</role>
       </roles>
@@ -26,9 +26,9 @@
     </developer>
   </developers>
   <scm>
-    <connection>https://github.com/chillzhuang/jboot-kernel.git/kernel-log</connection>
-    <developerConnection>https://github.com/chillzhuang/kernel-log</developerConnection>
-    <url>https://github.com/chillzhuang/jboot-kernel.git/kernel-log</url>
+    <connection>https://github.com/pengdeyou/jboot-kernel.git/kernel-log</connection>
+    <developerConnection>https://github.com/pengdeyou/kernel-log</developerConnection>
+    <url>https://github.com/pengdeyou/jboot-kernel.git/kernel-log</url>
   </scm>
   <distributionManagement>
     <repository>

@@ -49,6 +49,6 @@ public class JFeignHeadersProperties {
 	/**
 	 * RestTemplate 和 Fegin 透传到下层的 Headers 名称列表
 	 */
-	private List<String> allowed = Arrays.asList("X-Real-IP", "x-forwarded-for", "authorization", "blade-auth", "Authorization", "J-Auth");
+	private List<String> allowed = Arrays.asList("X-Real-IP", "x-forwarded-for", "authorization", "token-auth", "Authorization");
 
 }

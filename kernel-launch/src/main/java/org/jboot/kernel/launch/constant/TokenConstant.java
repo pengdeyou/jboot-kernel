@@ -9,7 +9,7 @@ package org.jboot.kernel.launch.constant;
 public interface TokenConstant {
 
 	String AVATAR = "avatar";
-	String HEADER = "blade-auth";
+	String HEADER = "token-auth";
 	String BEARER = "bearer";
 	String CRYPTO = "crypto";
 	String ACCESS_TOKEN = "access_token";
@@ -26,8 +26,8 @@ public interface TokenConstant {
 	String OAUTH_ID = "oauth_id";
 	String CLIENT_ID = "client_id";
 	String LICENSE = "license";
-	String LICENSE_NAME = "powered by bladex";
-	String DEFAULT_AVATAR = "https://bladex.cn/images/logo-small.png";
+	String LICENSE_NAME = "powered by JBoot";
+	String DEFAULT_AVATAR = "https://jboot.cn/images/logo-small.png";
 	Integer AUTH_LENGTH = 7;
 
 	/**

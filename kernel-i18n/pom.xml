@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.jboot</groupId>
-        <artifactId>blade-tool</artifactId>
+        <artifactId>jboot-kernel</artifactId>
         <version>${revision}</version>
     </parent>
 

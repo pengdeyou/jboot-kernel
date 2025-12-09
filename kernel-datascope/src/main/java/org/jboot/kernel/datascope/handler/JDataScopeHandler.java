@@ -4,7 +4,7 @@ package org.jboot.kernel.datascope.handler;
 import lombok.RequiredArgsConstructor;
 import org.jboot.kernel.datascope.enums.DataScopeEnum;
 import org.jboot.kernel.datascope.model.DataScopeModel;
-import org.jboot.kernel.secure.JUser;
+import org.jboot.kernel.secure.AuthUser;
 import org.jboot.kernel.tool.constant.RoleConstant;
 import org.jboot.kernel.tool.utils.BeanUtil;
 import org.jboot.kernel.tool.utils.Func;
@@ -26,7 +26,7 @@ public class JDataScopeHandler implements DataScopeHandler {
 	private final ScopeModelHandler scopeModelHandler;
 
 	@Override
-	public String sqlCondition(String mapperId, DataScopeModel dataScope, JUser bladeUser, String originalSql) {
+	public String sqlCondition(String mapperId, DataScopeModel dataScope, AuthUser bladeUser, String originalSql) {
 
 		//数据权限资源编号
 		String code = dataScope.getResourceCode();

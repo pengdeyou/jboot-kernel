@@ -8,7 +8,7 @@ import io.jsonwebtoken.security.Keys;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.SneakyThrows;
 import org.jboot.kernel.launch.constant.TokenConstant;
-import org.jboot.kernel.secure.JUser;
+import org.jboot.kernel.secure.AuthUser;
 import org.jboot.kernel.secure.TokenInfo;
 import org.jboot.kernel.secure.constant.SecureConstant;
 import org.jboot.kernel.secure.exception.SecureException;
@@ -27,7 +27,7 @@ import java.util.*;
  * @author Chill
  */
 public class SecureUtil {
-	private static final String BLADE_USER_REQUEST_ATTR = "_BLADE_USER_REQUEST_ATTR_";
+	private static final String J_USER_REQUEST_ATTR = "_J_USER_REQUEST_ATTR_";
 
 	private final static String HEADER = TokenConstant.HEADER;
 	private final static String BEARER = TokenConstant.BEARER;
@@ -85,32 +85,32 @@ public class SecureUtil {
 	/**
 	 * 获取用户信息
 	 *
-	 * @return JUser
+	 * @return AuthUser
 	 */
-	public static JUser getUser() {
+	public static AuthUser getUser() {
 		HttpServletRequest request = WebUtil.getRequest();
 		if (request == null) {
 			return null;
 		}
 		// 优先从 request 中获取
-		Object bladeUser = request.getAttribute(BLADE_USER_REQUEST_ATTR);
-		if (bladeUser == null) {
-			bladeUser = getUser(request);
-			if (bladeUser != null) {
+		Object userInfo = request.getAttribute(J_USER_REQUEST_ATTR);
+		if (userInfo == null) {
+			userInfo = getUser(request);
+			if (userInfo != null) {
 				// 设置到 request 中
-				request.setAttribute(BLADE_USER_REQUEST_ATTR, bladeUser);
+				request.setAttribute(J_USER_REQUEST_ATTR, userInfo);
 			}
 		}
-		return (JUser) bladeUser;
+		return (AuthUser) userInfo;
 	}
 
 	/**
 	 * 获取用户信息
 	 *
 	 * @param auth auth
-	 * @return JUser
+	 * @return AuthUser
 	 */
-	public static JUser getUser(String auth) {
+	public static AuthUser getUser(String auth) {
 		return getUser(getClaims(auth));
 	}
 
@@ -118,9 +118,9 @@ public class SecureUtil {
 	 * 获取用户信息
 	 *
 	 * @param request request
-	 * @return JUser
+	 * @return AuthUser
 	 */
-	public static JUser getUser(HttpServletRequest request) {
+	public static AuthUser getUser(HttpServletRequest request) {
 		return getUser(getClaims(request));
 	}
 
@@ -128,9 +128,9 @@ public class SecureUtil {
 	 * 获取用户信息
 	 *
 	 * @param claims Claims
-	 * @return JUser
+	 * @return AuthUser
 	 */
-	public static JUser getUser(Claims claims) {
+	public static AuthUser getUser(Claims claims) {
 		if (claims == null) {
 			return null;
 		}
@@ -142,16 +142,16 @@ public class SecureUtil {
 		String account = Func.toStr(claims.get(SecureUtil.ACCOUNT));
 		String roleName = Func.toStr(claims.get(SecureUtil.ROLE_NAME));
 		String userName = Func.toStr(claims.get(SecureUtil.USER_NAME));
-		JUser bladeUser = new JUser();
-		bladeUser.setClientId(clientId);
-		bladeUser.setUserId(userId);
-		bladeUser.setTenantId(tenantId);
-		bladeUser.setAccount(account);
-		bladeUser.setRoleId(roleId);
-		bladeUser.setDeptId(deptId);
-		bladeUser.setRoleName(roleName);
-		bladeUser.setUserName(userName);
-		return bladeUser;
+		AuthUser userInfo = new AuthUser();
+		userInfo.setClientId(clientId);
+		userInfo.setUserId(userId);
+		userInfo.setTenantId(tenantId);
+		userInfo.setAccount(account);
+		userInfo.setRoleId(roleId);
+		userInfo.setDeptId(deptId);
+		userInfo.setRoleName(roleName);
+		userInfo.setUserName(userName);
+		return userInfo;
 	}
 
 	/**
@@ -169,7 +169,7 @@ public class SecureUtil {
 	 * @return userId
 	 */
 	public static Long getUserId() {
-		JUser user = getUser();
+		AuthUser user = getUser();
 		return (null == user) ? -1 : user.getUserId();
 	}
 
@@ -180,7 +180,7 @@ public class SecureUtil {
 	 * @return userId
 	 */
 	public static Long getUserId(HttpServletRequest request) {
-		JUser user = getUser(request);
+		AuthUser user = getUser(request);
 		return (null == user) ? -1 : user.getUserId();
 	}
 
@@ -190,7 +190,7 @@ public class SecureUtil {
 	 * @return userAccount
 	 */
 	public static String getUserAccount() {
-		JUser user = getUser();
+		AuthUser user = getUser();
 		return (null == user) ? StringPool.EMPTY : user.getAccount();
 	}
 
@@ -201,7 +201,7 @@ public class SecureUtil {
 	 * @return userAccount
 	 */
 	public static String getUserAccount(HttpServletRequest request) {
-		JUser user = getUser(request);
+		AuthUser user = getUser(request);
 		return (null == user) ? StringPool.EMPTY : user.getAccount();
 	}
 
@@ -211,7 +211,7 @@ public class SecureUtil {
 	 * @return userName
 	 */
 	public static String getUserName() {
-		JUser user = getUser();
+		AuthUser user = getUser();
 		return (null == user) ? StringPool.EMPTY : user.getUserName();
 	}
 
@@ -222,7 +222,7 @@ public class SecureUtil {
 	 * @return userName
 	 */
 	public static String getUserName(HttpServletRequest request) {
-		JUser user = getUser(request);
+		AuthUser user = getUser(request);
 		return (null == user) ? StringPool.EMPTY : user.getUserName();
 	}
 
@@ -232,7 +232,7 @@ public class SecureUtil {
 	 * @return userName
 	 */
 	public static String getUserRole() {
-		JUser user = getUser();
+		AuthUser user = getUser();
 		return (null == user) ? StringPool.EMPTY : user.getRoleName();
 	}
 
@@ -243,7 +243,7 @@ public class SecureUtil {
 	 * @return userName
 	 */
 	public static String getUserRole(HttpServletRequest request) {
-		JUser user = getUser(request);
+		AuthUser user = getUser(request);
 		return (null == user) ? StringPool.EMPTY : user.getRoleName();
 	}
 
@@ -253,7 +253,7 @@ public class SecureUtil {
 	 * @return tenantId
 	 */
 	public static String getTenantId() {
-		JUser user = getUser();
+		AuthUser user = getUser();
 		return (null == user) ? StringPool.EMPTY : user.getTenantId();
 	}
 
@@ -264,7 +264,7 @@ public class SecureUtil {
 	 * @return tenantId
 	 */
 	public static String getTenantId(HttpServletRequest request) {
-		JUser user = getUser(request);
+		AuthUser user = getUser(request);
 		return (null == user) ? StringPool.EMPTY : user.getTenantId();
 	}
 
@@ -274,7 +274,7 @@ public class SecureUtil {
 	 * @return tenantId
 	 */
 	public static String getClientId() {
-		JUser user = getUser();
+		AuthUser user = getUser();
 		return (null == user) ? StringPool.EMPTY : user.getClientId();
 	}
 
@@ -285,7 +285,7 @@ public class SecureUtil {
 	 * @return tenantId
 	 */
 	public static String getClientId(HttpServletRequest request) {
-		JUser user = getUser(request);
+		AuthUser user = getUser(request);
 		return (null == user) ? StringPool.EMPTY : user.getClientId();
 	}
 
@@ -384,11 +384,15 @@ public class SecureUtil {
 	 */
 	public static Claims parseJWT(String jsonWebToken) {
 		try {
-			return Jwts.parser()
+			System.out.println("JWT token: " + jsonWebToken);
+			Claims claims = Jwts.parser()
 				.verifyWith(Keys.hmacShaKeyFor(Base64.getDecoder().decode(getBase64Security()))).build()
 				.parseSignedClaims(jsonWebToken)
 				.getPayload();
+			System.out.println("JWT parsed successfully: " + claims);
+			return claims;
 		} catch (Exception ex) {
+			System.out.println("JWT parse error: " + ex.getMessage());
 			return null;
 		}
 	}

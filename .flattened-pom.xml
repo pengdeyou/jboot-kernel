@@ -3,12 +3,12 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jboot</groupId>
-  <artifactId>blade-tool</artifactId>
+  <artifactId>jboot-kernel</artifactId>
   <version>4.7.0</version>
   <packaging>pom</packaging>
-  <name>blade-tool</name>
-  <description>blade-tool is a powerful toolbox for JBoot</description>
-  <url>https://github.com/chillzhuang/blade-tool</url>
+  <name>jboot-kernel</name>
+  <description>jboot-kernel is a powerful toolbox for JBoot</description>
+  <url>https://github.com/pengdeyou/jboot-kernel</url>
   <licenses>
     <license>
       <name>GNU LESSER GENERAL PUBLIC LICENSE</name>
@@ -17,9 +17,9 @@
   </licenses>
   <developers>
     <developer>
-      <id>smallchill</id>
-      <name>庄骞</name>
-      <email>bladejava@qq.com</email>
+      <id>corsak</id>
+      <name>沙狐</name>
+      <email>peng.deyou@gmail.com</email>
       <roles>
         <role>Java Development Engineer</role>
       </roles>
@@ -27,9 +27,9 @@
     </developer>
   </developers>
   <scm>
-    <connection>https://github.com/chillzhuang/jboot-kernel.git</connection>
-    <developerConnection>https://github.com/chillzhuang</developerConnection>
-    <url>https://github.com/chillzhuang/jboot-kernel.git</url>
+    <connection>https://github.com/pengdeyou/jboot-kernel.git</connection>
+    <developerConnection>https://github.com/pengdeyou</developerConnection>
+    <url>https://github.com/pengdeyou/jboot-kernel.git</url>
   </scm>
   <distributionManagement>
     <repository>

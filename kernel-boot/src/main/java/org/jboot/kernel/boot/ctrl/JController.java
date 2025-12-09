@@ -3,7 +3,7 @@ package org.jboot.kernel.boot.ctrl;
 
 import org.jboot.kernel.boot.file.JFile;
 import org.jboot.kernel.boot.file.JFileUtil;
-import org.jboot.kernel.secure.JUser;
+import org.jboot.kernel.secure.AuthUser;
 import org.jboot.kernel.secure.utils.SecureUtil;
 import org.jboot.kernel.tool.api.R;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,9 +38,9 @@ public class JController {
 	/**
 	 * 获取当前用户
 	 *
-	 * @return JUser
+	 * @return AuthUser
 	 */
-	public JUser getUser() {
+	public AuthUser getUser() {
 		return SecureUtil.getUser();
 	}
 

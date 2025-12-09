@@ -56,7 +56,7 @@
       "type": "java.lang.String",
       "description": "联系人email",
       "sourceType": "org.jboot.kernel.swagger.SwaggerProperties$Contact",
-      "defaultValue": "bladejava@qq.com"
+      "defaultValue": "peng.deyou@gmail.com"
     },
     {
       "name": "swagger.contact.name",

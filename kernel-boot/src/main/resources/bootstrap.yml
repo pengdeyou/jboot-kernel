@@ -103,9 +103,9 @@ swagger:
   description: JBoot 接口文档系统
   version: 3.7.2
   license: Powered By JBoot
-  licenseUrl: https://bladex.vip
-  terms-of-service-url: https://bladex.vip
+  licenseUrl: https://jboot.cn
+  terms-of-service-url: https://jboot.cn
   contact:
     name: smallchill
-    email: bladejava@qq.com
+    email: peng.deyou@gmail.com
     url: https://gitee.com/smallc

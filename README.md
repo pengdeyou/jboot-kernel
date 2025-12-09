@@ -10,10 +10,10 @@
     <img src="https://img.shields.io/nexus/s/https/oss.sonatype.org/org.jboot/kernel-bom.svg?style=flat-square" alt="Downloads">
   </a>
   <br/>
-  <a target="_blank" href="https://bladex.cn">
+  <a target="_blank" href="https://jboot.org">
     <img src="https://img.shields.io/badge/Author-Small%20Chill-ff69b4.svg" alt="Downloads">
   </a>
-  <a target="_blank" href="https://bladex.cn">
+  <a target="_blank" href="https://jboot.org">
     <img src="https://img.shields.io/badge/Copyright%20-@JBoot Kernel-%23ff3f59.svg" alt="Downloads">
   </a>
 </p>  
@@ -21,7 +21,7 @@
 ## JBoot微服务开发平台
 * 采用前后端分离的模式，前端开源两个框架：[Sword](https://gitee.com/smallc/Sword) (基于 React、Ant Design)、[Saber](https://gitee.com/smallc/Saber) (基于 Vue、Element-UI)
 * 后端采用SpringCloud全家桶，并同时对其基础组件做了高度的封装，单独开源出一个框架：[JBoot Kernel](https://gitee.com/smallc/jboot-kernel)
-* [JBoot Kernel](https://github.com/chillzhuang/jboot-kernel)已推送至Maven中央库，直接引入即可，减少了工程的臃肿，也可更注重于业务开发
+* [JBoot Kernel](https://github.com/pengdeyou/jboot-kernel)已推送至Maven中央库，直接引入即可，减少了工程的臃肿，也可更注重于业务开发
 * 集成Sentinel从流量控制、熔断降级、系统负载等多个维度保护服务的稳定性。
 * 注册中心、配置中心选型Nacos，为工程瘦身的同时加强各模块之间的联动。
 * 极简封装了多租户底层，用更少的代码换来拓展性更强的SaaS多租户系统。
@@ -80,8 +80,8 @@ jboot-kernel
 
 | 简介   | 内容                                                                            |
 |------|-------------------------------------------------------------------------------|
-| 官网地址 | [https://bladex.cn](https://bladex.cn)                                        |
-| 问答社区 | [https://sns.bladex.cn](https://sns.bladex.cn)                                |
+| 官网地址 | [https://jboot.org](https://jboot.org)                                        |
+| 问答社区 | [https://sns.jboot.org](https://sns.jboot.org)                                |
 | 会员计划 | [JBoot会员计划](https://gitee.com/smallc/JBoot/wikis/JBoot会员计划) |
 | 交流一群 | `477853168` (满)                                                               |
 | 交流二群 | `751253339` (满)                                                               |
@@ -95,10 +95,10 @@ jboot-kernel
 
 | 简介            | 演示地址                                                 |
 |---------------|------------------------------------------------------|
-| JBoot Kernel企业级开发平台 | [https://saber3.bladex.cn](https://saber3.bladex.cn) |
-| JBoot Kernel可视化数据大屏 | [https://data.bladex.cn](https://data.bladex.cn)     |
-| JBoot Kernel物联网开发平台 | [https://iot.bladex.cn](https://iot.bladex.cn)       |
-| JBoot Kernel大模型开发平台 | [https://ai.bladex.cn](https://ai.bladex.cn)        |
+| JBoot Kernel企业级开发平台 | [https://saber3.jboot.org](https://saber3.jboot.org) |
+| JBoot Kernel可视化数据大屏 | [https://data.jboot.org](https://data.jboot.org)     |
+| JBoot Kernel物联网开发平台 | [https://iot.jboot.org](https://iot.jboot.org)       |
+| JBoot Kernel大模型开发平台 | [https://ai.jboot.org](https://ai.jboot.org)        |
 
 ## 前端项目
 
@@ -113,7 +113,7 @@ jboot-kernel
 |---------------|----------------------------------------------------------------------------------------------------|
 | 核心框架项目地址      | [https://gitee.com/smallc/jboot-kernel](https://gitee.com/smallc/jboot-kernel)                         |
 | 后端Gitee地址     | [https://gitee.com/smallc/JBoot](https://gitee.com/smallc/JBoot)                       |
-| 后端Github地址    | [https://github.com/chillzhuang/JBoot](https://github.com/chillzhuang/JBoot)           |
+| 后端Github地址    | [https://github.com/pengdeyou/JBoot](https://github.com/pengdeyou/JBoot)           |
 | 后端SpringBoot版 | [https://gitee.com/smallc/JBoot/tree/boot/](https://gitee.com/smallc/JBoot/tree/boot/) |
 
 ## 安全手册
@@ -126,7 +126,7 @@ jboot-kernel
 | 简介                        | 地址                                                                                                                       |
 |---------------------------|--------------------------------------------------------------------------------------------------------------------------|
 | JBoot开发手册一览         | [https://gitee.com/smallc/JBoot/wikis/JBoot开发手册](https://gitee.com/smallc/JBoot/wikis/JBoot开发手册) |
-| JBoot常见问题集锦         | [https://sns.bladex.cn/article-14966.html](https://sns.bladex.cn/article-14966.html)                                     |
+| JBoot常见问题集锦         | [https://sns.jboot.org/article-14966.html](https://sns.jboot.org/article-14966.html)                                     |
 | JBoot基于Kuboard部署K8S | [https://kuboard.cn/learning/k8s-practice/spring-blade/](https://kuboard.cn/learning/k8s-practice/spring-blade/)         |
 | JBoot基于Rainbond部署   | [https://www.rainbond.com/docs/micro-service/example/blade](https://www.rainbond.com/docs/micro-service/example/blade)   |
 
@@ -150,5 +150,5 @@ LGPL是GPL的一个为主要为类库使用设计的开源协议。和GPL要求�
 * 允许以引入不改源码的形式免费用于学习、毕设、公司项目、私活等。
 * 特殊情况修改代码，但仍然想闭源需经过作者同意。
 * 对未经过授权和不遵循 LGPL 协议二次开源或者商业化我们将追究到底。
-* 参考请注明：参考自 mica：https://github.com/lets-mica/mica ，jboot-kernel：https://github.com/chillzhuang/jboot-kernel 。另请遵循 LGPL 协议。
+* 参考请注明：参考自 mica：https://github.com/lets-mica/mica ，jboot-kernel：https://github.com/pengdeyou/jboot-kernel 。另请遵循 LGPL 协议。
 * `注意`：若禁止条款被发现有权追讨 **19999** 的授权费。

@@ -86,7 +86,7 @@ public class SwaggerProperties {
 		/**
 		 * 联系人email
 		 **/
-		private String email = "bladejava@qq.com";
+		private String email = "peng.deyou@gmail.com";
 		/**
 		 * 联系人url
 		 **/
