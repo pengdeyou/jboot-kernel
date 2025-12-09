@@ -1,0 +1,290 @@
+# Compiled class file
+*.class
+
+# Log files
+*.log
+logs/
+*.log.*
+system.log
+gateway.log
+application.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+replay_pid*
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+# Eclipse
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Mac
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+*.db
+*.sqlite
+*.sqlite3
+
+# Spring Boot
+spring-boot-*.log
+
+# Application specific
+application-*.properties
+application-*.yml
+temp/
+tmp/
+*.tmp
+*.temp
+
+# Database files
+*.sql.bak
+*.sql.backup
+db_backup/
+
+# Logs and backups
+logs/
+backup/
+backups/
+
+# IDE and editor files
+*.swp
+*.swo
+*~
+
+# Node.js (if using frontend tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Frontend build files
+dist/
+build/
+.nuxt/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# next.js build output
+.next
+
+# nuxt.js build output
+.nuxt
+
+# vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Application logs
+*.out
+logs/
+log/
+
+# JRebel
+rebel.xml
+
+# JProfiler config
+*.jprof
+
+# Sonar
+.sonar/
+
+# Backup files
+*.bak
+*.backup
+
+# OS generated files
+.DS_Store?
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# IDE workspace files
+*.code-workspace
+
+# Database
+*.h2.db
+*.h2.db.mv
+
+# Redis dump
+dump.rdb
+
+# Kubernetes
+*.kubeconfig
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Monitoring and profiling
+*.prof
+*.hprof
+
+# Lock files (keep these in git for Maven)
+# .mvn/wrapper/maven-wrapper.jar (don't ignore - needed for reproducible builds)
+
+# Application configuration overrides
+application-local.properties
+application-local.yml
+application-dev-secret.properties
+application-dev-secret.yml
+application-prod-secret.properties
+application-prod-secret.yml
+
+# Certificates and keys
+*.p12
+*.pem
+*.key
+*.crt
+*.cer
+keystore/
+truststore/
+
+# Local development files
+local/
+dev-local/
+test-local/
+
+# Generated documentation
+docs/generated/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Temporary build directories
+build-temp/
+target-temp/
+
+# Application runtime data
+runtime/
+temp/
+
+# Security files
+secrets/
+private/
+private-key
+*.key
+*.pem
+*.p12
+*.jks
