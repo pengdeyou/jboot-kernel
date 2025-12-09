@@ -1,5 +1,0 @@
-org.jboot.kernel.redis.config.JRedisCacheAutoConfiguration
-org.jboot.kernel.redis.config.ProtoStuffSerializerConfiguration
-org.jboot.kernel.redis.config.RedisCacheManagerConfig
-org.jboot.kernel.redis.config.RedisPubSubConfiguration
-org.jboot.kernel.redis.config.RedisTemplateConfiguration

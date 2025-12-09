@@ -1,4 +1,0 @@
-org.jboot.kernel.log.config.JErrorMvcAutoConfiguration
-org.jboot.kernel.log.config.JLogToolAutoConfiguration
-org.jboot.kernel.log.error.JRestExceptionTranslator
-org.jboot.kernel.log.feign.LogClientFallback

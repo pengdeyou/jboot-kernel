@@ -1,7 +1,0 @@
-/Users/dayu/project/saas/pisaas-backend/jboot-kernel/kernel-i18n/src/main/java/org/jboot/kernel/i18n/config/I18nAutoConfiguration.java
-/Users/dayu/project/saas/pisaas-backend/jboot-kernel/kernel-i18n/src/main/java/org/jboot/kernel/i18n/interceptor/I18nInterceptor.java
-/Users/dayu/project/saas/pisaas-backend/jboot-kernel/kernel-i18n/src/main/java/org/jboot/kernel/i18n/props/I18nProperties.java
-/Users/dayu/project/saas/pisaas-backend/jboot-kernel/kernel-i18n/src/main/java/org/jboot/kernel/i18n/resolver/I18nLocaleResolver.java
-/Users/dayu/project/saas/pisaas-backend/jboot-kernel/kernel-i18n/src/main/java/org/jboot/kernel/i18n/service/I18nService.java
-/Users/dayu/project/saas/pisaas-backend/jboot-kernel/kernel-i18n/src/main/java/org/jboot/kernel/i18n/utils/I18nUtil.java
-/Users/dayu/project/saas/pisaas-backend/jboot-kernel/kernel-i18n/src/main/java/org/jboot/kernel/i18n/utils/LocaleParseUtil.java

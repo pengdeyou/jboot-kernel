@@ -1,4 +1,0 @@
-org.jboot.kernel.cloud.config.JCloudAutoConfiguration
-org.jboot.kernel.cloud.http.JHttpConfiguration
-org.jboot.kernel.cloud.http.RestTemplateConfiguration
-org.jboot.kernel.cloud.version.VersionMappingAutoConfiguration

@@ -1,8 +1,0 @@
-org/jboot/kernel/social/config/SocialConfiguration.class
-META-INF/spring-configuration-metadata.json
-META-INF/spring.factories
-org/jboot/kernel/social/props/SocialProperties.class
-org/jboot/kernel/social/utils/SocialUtil.class
-org/jboot/kernel/social/utils/SocialUtil$1.class
-META-INF/spring-devtools.properties
-META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports

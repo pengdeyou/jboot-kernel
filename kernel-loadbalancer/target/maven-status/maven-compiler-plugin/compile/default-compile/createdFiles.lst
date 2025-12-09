@@ -1,9 +1,0 @@
-META-INF/spring-configuration-metadata.json
-org/jboot/kernel/loadbalancer/props/JLoadBalancerProperties.class
-META-INF/spring.factories
-org/jboot/kernel/loadbalancer/config/JLoadBalancerConfiguration.class
-org/jboot/kernel/loadbalancer/rule/GrayscaleEnvPostProcessor.class
-org/jboot/kernel/loadbalancer/rule/GrayscaleLoadBalancer.class
-org/jboot/kernel/loadbalancer/constant/LoadBalancerConstant.class
-META-INF/spring-devtools.properties
-META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports

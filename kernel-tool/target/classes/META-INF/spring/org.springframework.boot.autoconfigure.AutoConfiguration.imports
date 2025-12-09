@@ -1,5 +1,0 @@
-org.jboot.kernel.tool.config.JacksonConfiguration
-org.jboot.kernel.tool.config.MessageConfiguration
-org.jboot.kernel.tool.config.RedisConfiguration
-org.jboot.kernel.tool.config.RequestConfiguration
-org.jboot.kernel.tool.config.ToolConfiguration
