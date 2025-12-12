@@ -4,7 +4,7 @@ package org.jboot.kernel.launch.constant;
 /**
  * Token配置常量.
  *
- * @author Chill
+ * @author Corsak
  */
 public interface TokenConstant {
 
@@ -33,7 +33,7 @@ public interface TokenConstant {
 	/**
 	 * token签名
 	 */
-	String SIGN_KEY = "bladexisapowerfulmicroservicearchitectureupgradedandoptimizedfromacommercialproject";
+	String SIGN_KEY = "jbootisapowerfulmicroservicearchitectureupgradedandoptimizedfromacommercialproject";
 	/**
 	 * key安全长度，具体见：https://tools.ietf.org/html/rfc7518#section-3.2
 	 */

@@ -17,7 +17,7 @@ import java.net.URL;
 /**
  * 图片工具类
  *
- * @author Chill
+ * @author Corsak
  */
 @Slf4j
 @UtilityClass

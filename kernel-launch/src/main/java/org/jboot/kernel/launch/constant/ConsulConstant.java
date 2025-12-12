@@ -4,7 +4,7 @@ package org.jboot.kernel.launch.constant;
 /**
  * Consul常量.
  *
- * @author Chill
+ * @author Corsak
  */
 public interface ConsulConstant {
 

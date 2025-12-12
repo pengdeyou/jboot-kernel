@@ -14,7 +14,7 @@ import java.util.Date;
 /**
  * 文件代理类
  *
- * @author Chill
+ * @author Corsak
  */
 public class JFileProxyFactory implements IFileProxy {
 

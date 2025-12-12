@@ -18,7 +18,7 @@ import java.util.Objects;
 /**
  * 默认数据权限规则
  *
- * @author Chill
+ * @author Corsak
  */
 @RequiredArgsConstructor
 public class JDataScopeHandler implements DataScopeHandler {

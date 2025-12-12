@@ -9,7 +9,7 @@ import java.lang.annotation.*;
 /**
  * 数据权限定义
  *
- * @author Chill
+ * @author Corsak
  */
 @Target({ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)

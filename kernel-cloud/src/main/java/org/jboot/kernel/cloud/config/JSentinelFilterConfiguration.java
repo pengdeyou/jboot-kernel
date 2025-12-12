@@ -18,7 +18,7 @@ import java.util.Optional;
 /**
  * 处理sentinel2021兼容问题
  *
- * @author Chill
+ * @author Corsak
  */
 @RequiredArgsConstructor
 @ConditionalOnWebApplication(type = ConditionalOnWebApplication.Type.SERVLET)

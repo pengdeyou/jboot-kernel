@@ -13,7 +13,7 @@ import java.util.Map;
  * 基础业务接口
  *
  * @param <T>
- * @author Chill
+ * @author Corsak
  */
 public interface BaseService<T> extends IService<T> {
 

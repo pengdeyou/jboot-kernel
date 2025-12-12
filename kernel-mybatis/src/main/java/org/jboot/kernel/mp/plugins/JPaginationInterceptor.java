@@ -14,7 +14,7 @@ import org.jboot.kernel.mp.intercept.QueryInterceptor;
 /**
  * 拓展分页拦截器
  *
- * @author Chill
+ * @author Corsak
  */
 @Setter
 public class JPaginationInterceptor extends PaginationInnerInterceptor {

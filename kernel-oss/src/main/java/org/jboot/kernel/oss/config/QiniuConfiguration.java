@@ -22,7 +22,7 @@ import com.qiniu.util.Auth;
  * 用于配置七牛云存储的客户端组件及其模板类
  * 仅在配置文件中指定 oss.name=qiniu 时生效
  *
- * @author Chill
+ * @author Corsak
  */
 @AutoConfiguration(after = OssConfiguration.class)
 @ConditionalOnClass({Auth.class, UploadManager.class, BucketManager.class})

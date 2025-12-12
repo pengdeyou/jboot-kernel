@@ -4,7 +4,7 @@ package org.jboot.kernel.tool.constant;
 /**
  * 系统默认角色
  *
- * @author Chill
+ * @author Corsak
  */
 public class RoleConstant {
 

@@ -11,7 +11,7 @@ import static io.swagger.v3.oas.annotations.media.Schema.AccessMode.READ_ONLY;
 /**
  * 用户实体
  *
- * @author Chill
+ * @author Corsak
  */
 @Data
 public class AuthUser implements Serializable {

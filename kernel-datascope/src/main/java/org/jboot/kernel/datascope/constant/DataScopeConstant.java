@@ -6,7 +6,7 @@ import java.util.StringJoiner;
 /**
  * 数据权限常量
  *
- * @author Chill
+ * @author Corsak
  */
 public interface DataScopeConstant {
 

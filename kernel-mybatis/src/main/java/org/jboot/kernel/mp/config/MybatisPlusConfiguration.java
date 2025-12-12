@@ -31,7 +31,7 @@ import org.springframework.core.annotation.AnnotationAwareOrderComparator;
 /**
  * mybatis plus 配置
  *
- * @author Chill
+ * @author Corsak
  */
 @AutoConfiguration
 @AllArgsConstructor

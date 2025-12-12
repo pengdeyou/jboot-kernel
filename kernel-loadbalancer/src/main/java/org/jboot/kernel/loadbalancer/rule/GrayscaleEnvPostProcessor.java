@@ -11,7 +11,7 @@ import org.springframework.util.StringUtils;
 /**
  * 灰度版本 自动处理
  *
- * @author Chill
+ * @author Corsak
  */
 @AutoEnvPostProcessor
 public class GrayscaleEnvPostProcessor implements EnvironmentPostProcessor, Ordered {

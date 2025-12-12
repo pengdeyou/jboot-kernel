@@ -20,7 +20,7 @@ import lombok.SneakyThrows;
  * 用于配置MinIO客户端及其模板类
  * 仅在配置文件中指定 oss.name=minio 时生效
  *
- * @author Chill
+ * @author Corsak
  */
 @AutoConfiguration(after = OssConfiguration.class)
 @ConditionalOnClass({MinioClient.class})

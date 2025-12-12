@@ -12,7 +12,7 @@ import java.util.Map;
 /**
  * MultipartUtils
  *
- * @author Chill
+ * @author Corsak
  */
 public class MultipartUtil {
 	/**

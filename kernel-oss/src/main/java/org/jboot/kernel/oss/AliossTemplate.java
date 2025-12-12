@@ -31,7 +31,7 @@ import lombok.SneakyThrows;
 /**
  * AliossTemplate
  *
- * @author Chill
+ * @author Corsak
  */
 @AllArgsConstructor
 public class AliossTemplate implements OssTemplate {

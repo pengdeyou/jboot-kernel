@@ -19,7 +19,7 @@ import java.util.Date;
 /**
  * 基础实体类
  *
- * @author Chill
+ * @author Corsak
  */
 @Data
 public class BaseEntity implements Serializable {

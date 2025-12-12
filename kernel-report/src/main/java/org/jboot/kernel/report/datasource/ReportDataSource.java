@@ -12,7 +12,7 @@ import java.sql.SQLException;
 /**
  * UReport数据源配置
  *
- * @author Chill
+ * @author Corsak
  */
 @Slf4j
 @AllArgsConstructor

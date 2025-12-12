@@ -12,7 +12,7 @@ import java.io.Serializable;
 /**
  * 数据权限实体类
  *
- * @author Chill
+ * @author Corsak
  */
 @Data
 @NoArgsConstructor

@@ -4,7 +4,7 @@ package org.jboot.kernel.tool.support;
 /**
  * 图片操作类
  *
- * @author Chill
+ * @author Corsak
  */
 public class ImagePosition {
 

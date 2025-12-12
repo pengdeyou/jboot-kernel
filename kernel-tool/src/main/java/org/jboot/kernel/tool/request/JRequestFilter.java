@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * Request全局过滤
  *
- * @author Chill
+ * @author Corsak
  */
 @AllArgsConstructor
 public class JRequestFilter implements Filter {

@@ -26,7 +26,7 @@ import java.util.stream.Stream;
 /**
  * MinIOTemplate
  *
- * @author Chill
+ * @author Corsak
  */
 @AllArgsConstructor
 public class MinioTemplate implements OssTemplate {

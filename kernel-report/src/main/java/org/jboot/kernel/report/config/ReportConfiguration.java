@@ -22,7 +22,7 @@ import org.springframework.core.annotation.Order;
 /**
  * UReport配置类
  *
- * @author Chill
+ * @author Corsak
  */
 @Order
 @AutoConfiguration

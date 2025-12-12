@@ -13,7 +13,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 /**
  * 配置类
  *
- * @author Chill
+ * @author Corsak
  */
 @Slf4j
 @AutoConfiguration

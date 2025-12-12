@@ -11,7 +11,7 @@ import org.springframework.core.annotation.Order;
 /**
  * 配置类
  *
- * @author Chill
+ * @author Corsak
  */
 @AutoConfiguration
 @AllArgsConstructor

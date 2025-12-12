@@ -8,7 +8,7 @@ import java.util.Properties;
 /**
  * 配置工具类
  *
- * @author Chill
+ * @author Corsak
  */
 public class PropsUtil {
 

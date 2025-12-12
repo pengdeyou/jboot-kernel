@@ -9,7 +9,7 @@ import lombok.Data;
 /**
  * AuthInfo
  *
- * @author Chill
+ * @author Corsak
  */
 @Data
 @Schema(description = "认证信息")

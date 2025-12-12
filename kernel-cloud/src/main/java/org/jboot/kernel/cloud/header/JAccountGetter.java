@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpServletRequest;
 /**
  * 用户信息获取器
  *
- * @author Chill
+ * @author Corsak
  */
 public class JAccountGetter implements JFeignAccountGetter {
 

@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Bean;
  * OSS对象存储配置类
  * 用于配置通用的OSS规则和属性
  *
- * @author Chill
+ * @author Corsak
  */
 @AutoConfiguration
 @EnableConfigurationProperties(OssProperties.class)

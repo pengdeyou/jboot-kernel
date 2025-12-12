@@ -17,7 +17,7 @@ import java.util.function.Function;
 /**
  * 项目启动器，搞定环境变量问题
  *
- * @author Chill
+ * @author Corsak
  */
 public class JApplication {
 

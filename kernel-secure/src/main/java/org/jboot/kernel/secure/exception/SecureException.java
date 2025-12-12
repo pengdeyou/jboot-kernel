@@ -8,7 +8,7 @@ import org.jboot.kernel.tool.api.ResultCode;
 /**
  * Secure异常
  *
- * @author Chill
+ * @author Corsak
  */
 public class SecureException extends RuntimeException {
 	private static final long serialVersionUID = 2359767895161832954L;

@@ -7,7 +7,7 @@ import lombok.Data;
 /**
  * J系统配置类
  *
- * @author Chill
+ * @author Corsak
  */
 @Data
 public class SystemConstant {

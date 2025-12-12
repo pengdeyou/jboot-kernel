@@ -7,7 +7,7 @@ import java.lang.annotation.*;
 /**
  * Swagger配置开关
  *
- * @author Chill
+ * @author Corsak
  */
 @Documented
 @Target(ElementType.TYPE)

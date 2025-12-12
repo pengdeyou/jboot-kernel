@@ -4,7 +4,7 @@ package org.jboot.kernel.tool.constant;
 /**
  * 系统常量
  *
- * @author Chill
+ * @author Corsak
  */
 public interface JConstant {
 

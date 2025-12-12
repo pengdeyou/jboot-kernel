@@ -26,7 +26,7 @@ import java.util.List;
 /**
  * QiniuTemplate
  *
- * @author Chill
+ * @author Corsak
  */
 @AllArgsConstructor
 public class QiniuTemplate implements OssTemplate {

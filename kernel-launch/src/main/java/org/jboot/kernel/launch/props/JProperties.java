@@ -17,7 +17,7 @@ import java.util.Objects;
 /**
  * 配置文件
  *
- * @author Chill
+ * @author Corsak
  */
 @ConfigurationProperties("blade")
 public class JProperties implements EnvironmentAware, EnvironmentCapable {

@@ -143,7 +143,7 @@
                 <version>${mica.auto.version}</version>
                 <scope>provided</scope>
             </dependency>
-            <!-- blade tool -->
+            <!-- JBootKernel -->
             <dependency>
                 <groupId>org.jboot</groupId>
                 <artifactId>kernel-launch</artifactId>

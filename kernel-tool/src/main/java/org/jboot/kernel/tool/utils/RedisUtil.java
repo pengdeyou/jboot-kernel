@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Redis工具类
  *
- * @author Chill
+ * @author Corsak
  * @deprecated in favor of {org.jboot.kernel.redis.cache.JRedis}.
  */
 @Deprecated

@@ -22,7 +22,7 @@ import com.aliyun.oss.common.auth.DefaultCredentialProvider;
  * 用于配置阿里云OSS客户端及其模板类
  * 仅在配置文件中指定 oss.name=alioss 时生效
  *
- * @author Chill
+ * @author Corsak
  */
 @AutoConfiguration(after = OssConfiguration.class)
 @EnableConfigurationProperties(OssProperties.class)

@@ -18,7 +18,7 @@ import static org.jboot.kernel.tool.utils.CacheUtil.SYS_CACHE;
 /**
  * JScopeModelHandler
  *
- * @author Chill
+ * @author Corsak
  */
 @RequiredArgsConstructor
 public class JScopeModelHandler implements ScopeModelHandler {

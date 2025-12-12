@@ -16,7 +16,7 @@ import jakarta.servlet.DispatcherType;
 /**
  * 过滤器配置类
  *
- * @author Chill
+ * @author Corsak
  */
 @AutoConfiguration
 @AllArgsConstructor

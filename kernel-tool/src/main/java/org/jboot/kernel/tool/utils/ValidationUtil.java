@@ -7,7 +7,7 @@ import java.util.function.Supplier;
 /**
  * 校验通用工具类
  *
- * @author Chill
+ * @author Corsak
  */
 public class ValidationUtil {
 

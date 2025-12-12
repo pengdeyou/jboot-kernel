@@ -7,7 +7,7 @@ import org.jboot.kernel.report.entity.ReportFileEntity;
 /**
  * UReport Service
  *
- * @author Chill
+ * @author Corsak
  */
 public interface IReportFileService extends IService<ReportFileEntity> {
 }

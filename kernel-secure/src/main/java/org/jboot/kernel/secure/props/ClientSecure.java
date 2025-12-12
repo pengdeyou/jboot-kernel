@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * 客户端令牌认证信息
  *
- * @author Chill
+ * @author Corsak
  */
 @Data
 public class ClientSecure {

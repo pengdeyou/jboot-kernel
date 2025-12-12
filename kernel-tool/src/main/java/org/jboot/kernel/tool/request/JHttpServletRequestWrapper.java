@@ -17,7 +17,7 @@ import java.io.InputStreamReader;
 /**
  * 全局Request包装
  *
- * @author Chill
+ * @author Corsak
  */
 public class JHttpServletRequestWrapper extends HttpServletRequestWrapper {
 

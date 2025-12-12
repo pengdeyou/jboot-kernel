@@ -10,7 +10,7 @@ import java.io.Serializable;
 /**
  * 校验规则类
  *
- * @author Chill
+ * @author Corsak
  */
 @Data
 @AllArgsConstructor

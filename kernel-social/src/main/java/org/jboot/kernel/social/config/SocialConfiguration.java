@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Bean;
 /**
  * SocialConfiguration
  *
- * @author Chill
+ * @author Corsak
  */
 @AutoConfiguration
 @EnableConfigurationProperties(SocialProperties.class)

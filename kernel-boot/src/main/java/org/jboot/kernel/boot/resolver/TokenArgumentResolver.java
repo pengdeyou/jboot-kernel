@@ -13,7 +13,7 @@ import org.springframework.web.method.support.ModelAndViewContainer;
 /**
  * Token转化AuthUser
  *
- * @author Chill
+ * @author Corsak
  */
 @Slf4j
 public class TokenArgumentResolver implements HandlerMethodArgumentResolver {

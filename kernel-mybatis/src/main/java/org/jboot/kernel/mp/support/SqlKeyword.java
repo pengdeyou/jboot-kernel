@@ -15,7 +15,7 @@ import java.util.regex.Pattern;
 /**
  * 定义常用的 sql关键字
  *
- * @author Chill
+ * @author Corsak
  */
 public class SqlKeyword {
 	/**

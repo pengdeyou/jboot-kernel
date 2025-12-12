@@ -4,7 +4,7 @@ package org.jboot.kernel.loadbalancer.constant;
 /**
  * LoadBalancer 常量
  *
- * @author Chill
+ * @author Corsak
  */
 public interface LoadBalancerConstant {
 

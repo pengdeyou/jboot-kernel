@@ -20,7 +20,7 @@ import org.springframework.context.annotation.Scope;
 /**
  * blade cloud 增强配置
  *
- * @author Chill
+ * @author Corsak
  */
 @AutoConfiguration
 @Import(JSentinelFilterConfiguration.class)

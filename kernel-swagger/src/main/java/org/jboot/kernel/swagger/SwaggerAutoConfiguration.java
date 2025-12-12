@@ -28,7 +28,7 @@ import java.util.List;
 /**
  * swagger配置
  *
- * @author Chill
+ * @author Corsak
  */
 @Slf4j
 @EnableSwagger

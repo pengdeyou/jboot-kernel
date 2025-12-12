@@ -28,7 +28,7 @@ import java.util.Map;
  *
  * @param <M> mapper
  * @param <T> model
- * @author Chill
+ * @author Corsak
  */
 @Validated
 public class BaseServiceImpl<M extends BaseMapper<T>, T extends BaseEntity> extends ServiceImpl<M, T> implements BaseService<T> {

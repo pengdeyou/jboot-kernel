@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * MybatisPlus配置类
  *
- * @author Chill
+ * @author Corsak
  */
 @Data
 @ConfigurationProperties(prefix = "blade.mybatis-plus")

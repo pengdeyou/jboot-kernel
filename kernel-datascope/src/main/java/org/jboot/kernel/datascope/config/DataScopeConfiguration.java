@@ -18,7 +18,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 /**
  * 数据权限配置类
  *
- * @author Chill
+ * @author Corsak
  */
 @AutoConfiguration
 @AllArgsConstructor

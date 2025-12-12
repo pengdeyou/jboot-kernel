@@ -13,7 +13,7 @@ import org.springframework.util.StringUtils;
 /**
  * 项目启动事件通知
  *
- * @author Chill
+ * @author Corsak
  */
 @Slf4j
 @AutoConfiguration

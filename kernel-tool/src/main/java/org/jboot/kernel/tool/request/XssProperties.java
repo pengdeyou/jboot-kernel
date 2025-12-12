@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Xss配置类
  *
- * @author Chill
+ * @author Corsak
  */
 @Data
 @ConfigurationProperties("blade.xss")

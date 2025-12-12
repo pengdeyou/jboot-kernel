@@ -11,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 /**
  * swagger资源配置
  *
- * @author Chill
+ * @author Corsak
  */
 @AutoConfiguration
 @EnableConfigurationProperties(SwaggerProperties.class)

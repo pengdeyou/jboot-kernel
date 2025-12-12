@@ -4,7 +4,7 @@ package org.jboot.kernel.oss.rule;
 /**
  * Oss通用规则
  *
- * @author Chill
+ * @author Corsak
  */
 public interface OssRule {
 

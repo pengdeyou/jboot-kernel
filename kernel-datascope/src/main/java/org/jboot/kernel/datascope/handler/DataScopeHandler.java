@@ -7,7 +7,7 @@ import org.jboot.kernel.secure.AuthUser;
 /**
  * 数据权限规则
  *
- * @author Chill
+ * @author Corsak
  */
 public interface DataScopeHandler {
 

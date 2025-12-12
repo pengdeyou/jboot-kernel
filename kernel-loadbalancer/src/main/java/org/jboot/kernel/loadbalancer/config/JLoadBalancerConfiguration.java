@@ -20,7 +20,7 @@ import org.springframework.core.env.Environment;
 /**
  * blade 负载均衡策略
  *
- * @author Chill
+ * @author Corsak
  */
 @AutoConfiguration
 @AutoConfigureBefore(LoadBalancerClientConfiguration.class)

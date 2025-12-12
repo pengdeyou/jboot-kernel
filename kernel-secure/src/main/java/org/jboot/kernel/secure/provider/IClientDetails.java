@@ -6,7 +6,7 @@ import java.io.Serializable;
 /**
  * 多终端详情接口
  *
- * @author Chill
+ * @author Corsak
  */
 public interface IClientDetails extends Serializable {
 

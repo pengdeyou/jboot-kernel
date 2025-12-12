@@ -12,7 +12,7 @@ import java.util.Objects;
 /**
  * SocialUtil
  *
- * @author Chill
+ * @author Corsak
  */
 public class SocialUtil {
 

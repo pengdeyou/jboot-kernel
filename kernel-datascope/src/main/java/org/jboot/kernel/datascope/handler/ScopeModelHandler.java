@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * 获取数据权限模型统一接口
  *
- * @author Chill
+ * @author Corsak
  */
 public interface ScopeModelHandler {
 

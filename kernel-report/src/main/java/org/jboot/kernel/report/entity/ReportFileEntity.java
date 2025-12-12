@@ -16,7 +16,7 @@ import java.util.Date;
 /**
  * UReport实体类
  *
- * @author Chill
+ * @author Corsak
  */
 @Data
 @TableName("tb_report_file")

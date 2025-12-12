@@ -12,7 +12,7 @@ import org.springframework.core.annotation.Order;
 /**
  * secure注册默认配置
  *
- * @author Chill
+ * @author Corsak
  */
 @Order
 @AutoConfiguration

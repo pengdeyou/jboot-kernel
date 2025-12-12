@@ -12,7 +12,7 @@ import java.lang.annotation.*;
 /**
  * 开启Feign注解
  *
- * @author Chill
+ * @author Corsak
  */
 @Documented
 @Target(ElementType.TYPE)

@@ -4,7 +4,7 @@ package org.jboot.kernel.launch.constant;
 /**
  * 系统常量
  *
- * @author Chill
+ * @author Corsak
  */
 public interface AppConstant {
 

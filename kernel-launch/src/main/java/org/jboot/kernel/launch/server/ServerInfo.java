@@ -11,7 +11,7 @@ import org.springframework.boot.autoconfigure.web.ServerProperties;
 /**
  * 服务器信息
  *
- * @author Chill
+ * @author Corsak
  */
 @Getter
 @AutoConfiguration

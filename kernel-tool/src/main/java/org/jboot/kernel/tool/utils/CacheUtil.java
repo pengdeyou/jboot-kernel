@@ -10,7 +10,7 @@ import java.util.concurrent.Callable;
 /**
  * 缓存工具类
  *
- * @author Chill
+ * @author Corsak
  * @deprecated in favor of {org.jboot.kernel.cache.utils.CacheUtil}.
  */
 @Deprecated

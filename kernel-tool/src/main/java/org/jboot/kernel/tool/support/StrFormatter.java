@@ -6,7 +6,7 @@ import org.jboot.kernel.tool.utils.StringPool;
 /**
  * 字符串格式化
  *
- * @author Chill
+ * @author Corsak
  */
 public class StrFormatter {
 

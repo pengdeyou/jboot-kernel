@@ -6,7 +6,7 @@ import java.io.Serial;
 /**
  * Excel异常处理类
  *
- * @author Chill
+ * @author Corsak
  */
 public class ExcelException extends RuntimeException {
 	@Serial

@@ -25,7 +25,7 @@ import static org.jboot.kernel.loadbalancer.constant.LoadBalancerConstant.VERSIO
 /**
  * LoadBalancer 负载规则
  *
- * @author Chill
+ * @author Corsak
  */
 @Slf4j
 @RequiredArgsConstructor

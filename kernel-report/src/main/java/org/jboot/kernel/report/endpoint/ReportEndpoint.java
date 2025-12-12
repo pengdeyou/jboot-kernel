@@ -17,7 +17,7 @@ import java.util.Map;
 /**
  * UReport API端点
  *
- * @author Chill
+ * @author Corsak
  */
 @Hidden
 @RestController

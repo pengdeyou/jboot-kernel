@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * OssTemplate抽象API
  *
- * @author Chill
+ * @author Corsak
  */
 public interface OssTemplate {
 

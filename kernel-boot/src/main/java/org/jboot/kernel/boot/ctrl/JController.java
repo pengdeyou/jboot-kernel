@@ -15,7 +15,7 @@ import java.util.List;
 /**
  * J控制器封装类
  *
- * @author Chill
+ * @author Corsak
  */
 public class JController {
 

@@ -18,7 +18,7 @@ import org.springframework.data.redis.serializer.RedisSerializer;
 /**
  * RedisTemplate 配置
  *
- * @author Chill
+ * @author Corsak
  */
 @EnableCaching
 @AutoConfiguration

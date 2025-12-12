@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * LoadBalancer 配置
  *
- * @author Chill
+ * @author Corsak
  */
 @Getter
 @Setter

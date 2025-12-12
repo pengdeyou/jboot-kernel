@@ -8,7 +8,7 @@ import java.util.Date;
 /**
  * OssFile
  *
- * @author Chill
+ * @author Corsak
  */
 @Data
 public class OssFile {

@@ -31,7 +31,7 @@ import java.util.Properties;
 /**
  * 代码生成器配置类
  *
- * @author Chill
+ * @author Corsak
  */
 @Data
 @Slf4j

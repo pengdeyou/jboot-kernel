@@ -7,7 +7,7 @@ import org.jboot.kernel.report.entity.ReportFileEntity;
 /**
  * UReport Mapper
  *
- * @author Chill
+ * @author Corsak
  */
 public interface ReportFileMapper extends BaseMapper<ReportFileEntity> {
 }

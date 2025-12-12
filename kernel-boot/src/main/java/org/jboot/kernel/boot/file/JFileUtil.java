@@ -10,7 +10,7 @@ import java.util.*;
 /**
  * 文件工具类
  *
- * @author Chill
+ * @author Corsak
  */
 public class JFileUtil {
 

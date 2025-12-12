@@ -11,7 +11,7 @@ import java.lang.annotation.*;
 /**
  * Cloud启动注解配置
  *
- * @author Chill
+ * @author Corsak
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

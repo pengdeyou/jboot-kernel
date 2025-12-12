@@ -10,7 +10,7 @@ import java.util.List;
 /**
  * Request配置类
  *
- * @author Chill
+ * @author Corsak
  */
 @Data
 @ConfigurationProperties("blade.request")

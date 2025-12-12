@@ -26,7 +26,7 @@ import java.lang.reflect.Method;
 /**
  * AOP 鉴权
  *
- * @author Chill
+ * @author Corsak
  */
 @Aspect
 public class AuthAspect implements ApplicationContextAware {

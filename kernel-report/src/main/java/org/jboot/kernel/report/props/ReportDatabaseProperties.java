@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * UReport配置类
  *
- * @author Chill
+ * @author Corsak
  */
 @Data
 @ConfigurationProperties(prefix = "report.database.provider")

@@ -26,7 +26,7 @@ import org.springframework.context.annotation.Bean;
 /**
  * Cache自动配置
  *
- * @author Chill
+ * @author Corsak
  */
 @AutoConfiguration
 @ConditionalOnClass(name = "net.sf.ehcache.CacheManager")

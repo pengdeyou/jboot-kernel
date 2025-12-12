@@ -13,7 +13,7 @@ import java.util.Map;
 /**
  * SocialProperties
  *
- * @author Chill
+ * @author Corsak
  */
 @Getter
 @Setter

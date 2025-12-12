@@ -12,7 +12,7 @@ import org.springframework.http.MediaType;
 /**
  * Sentinel统一限流策略
  *
- * @author Chill
+ * @author Corsak
  */
 public class JBlockExceptionHandler implements BlockExceptionHandler {
 	@Override

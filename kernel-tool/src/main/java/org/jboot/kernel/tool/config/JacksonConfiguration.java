@@ -27,7 +27,7 @@ import java.util.TimeZone;
 /**
  * Jackson配置类
  *
- * @author Chill
+ * @author Corsak
  */
 @AutoConfiguration
 @AllArgsConstructor

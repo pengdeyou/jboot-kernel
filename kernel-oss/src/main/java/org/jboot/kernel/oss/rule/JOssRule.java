@@ -10,7 +10,7 @@ import org.jboot.kernel.tool.utils.StringUtil;
 /**
  * 默认存储桶生成规则
  *
- * @author Chill
+ * @author Corsak
  */
 @AllArgsConstructor
 public class JOssRule implements OssRule {

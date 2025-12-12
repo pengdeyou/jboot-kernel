@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * Excel统一导入接口
  *
- * @author Chill
+ * @author Corsak
  */
 public interface ExcelImporter<T> {
 

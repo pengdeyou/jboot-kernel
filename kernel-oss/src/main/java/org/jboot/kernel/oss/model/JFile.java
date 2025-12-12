@@ -6,7 +6,7 @@ import lombok.Data;
 /**
  * JFile
  *
- * @author Chill
+ * @author Corsak
  */
 @Data
 public class JFile {

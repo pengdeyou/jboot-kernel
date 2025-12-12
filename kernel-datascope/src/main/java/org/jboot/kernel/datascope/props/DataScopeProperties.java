@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * 数据权限参数配置类
  *
- * @author Chill
+ * @author Corsak
  */
 @Data
 @ConfigurationProperties(prefix = "blade.data-scope")

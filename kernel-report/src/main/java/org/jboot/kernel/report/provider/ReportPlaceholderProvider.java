@@ -9,7 +9,7 @@ import java.util.Properties;
 /**
  * UReport自定义配置
  *
- * @author Chill
+ * @author Corsak
  */
 public class ReportPlaceholderProvider extends UReportPropertyPlaceholderConfigurer {
 

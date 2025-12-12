@@ -4,7 +4,7 @@ package org.jboot.kernel.secure.provider;
 /**
  * 多终端注册接口
  *
- * @author Chill
+ * @author Corsak
  */
 public interface IClientDetailsService {
 

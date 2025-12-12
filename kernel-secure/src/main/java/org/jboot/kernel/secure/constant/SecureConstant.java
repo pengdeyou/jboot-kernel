@@ -4,7 +4,7 @@ package org.jboot.kernel.secure.constant;
 /**
  * 授权校验常量
  *
- * @author Chill
+ * @author Corsak
  */
 public interface SecureConstant {
 

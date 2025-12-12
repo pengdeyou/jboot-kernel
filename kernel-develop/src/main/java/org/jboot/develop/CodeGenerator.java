@@ -7,7 +7,7 @@ import org.jboot.develop.support.JCodeGenerator;
 /**
  * 代码生成器
  *
- * @author Chill
+ * @author Corsak
  */
 public class CodeGenerator {
 

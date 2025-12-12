@@ -10,7 +10,7 @@ import io.swagger.v3.oas.annotations.Hidden;
 /**
  * UReport Boot版 API端点
  *
- * @author Chill
+ * @author Corsak
  */
 @Hidden
 @RestController

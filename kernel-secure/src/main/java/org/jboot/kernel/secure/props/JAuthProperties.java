@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * secure放行额外配置
  *
- * @author Chill
+ * @author Corsak
  */
 @Data
 @ConfigurationProperties("blade.auth")

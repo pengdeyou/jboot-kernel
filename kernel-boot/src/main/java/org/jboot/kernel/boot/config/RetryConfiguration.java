@@ -11,7 +11,7 @@ import org.springframework.retry.interceptor.RetryOperationsInterceptor;
 /**
  * 重试机制
  *
- * @author Chill
+ * @author Corsak
  */
 @Slf4j
 @AutoConfiguration

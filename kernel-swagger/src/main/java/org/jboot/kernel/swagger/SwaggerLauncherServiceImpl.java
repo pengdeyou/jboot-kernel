@@ -11,7 +11,7 @@ import java.util.Properties;
 /**
  * 初始化Swagger配置
  *
- * @author Chill
+ * @author Corsak
  */
 public class SwaggerLauncherServiceImpl implements LauncherService {
 	@Override

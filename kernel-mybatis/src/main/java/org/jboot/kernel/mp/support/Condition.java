@@ -16,7 +16,7 @@ import java.util.Map;
 /**
  * 分页工具
  *
- * @author Chill
+ * @author Corsak
  */
 public class Condition {
 

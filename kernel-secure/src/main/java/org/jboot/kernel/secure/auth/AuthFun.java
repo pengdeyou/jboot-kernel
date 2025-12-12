@@ -15,7 +15,7 @@ import java.util.Objects;
 /**
  * 权限判断
  *
- * @author Chill
+ * @author Corsak
  */
 public class AuthFun {
 

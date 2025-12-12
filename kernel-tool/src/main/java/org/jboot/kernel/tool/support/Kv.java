@@ -13,7 +13,7 @@ import java.util.Map;
 /**
  * 链式map
  *
- * @author Chill
+ * @author Corsak
  */
 public class Kv extends LinkedCaseInsensitiveMap<Object> {
 
