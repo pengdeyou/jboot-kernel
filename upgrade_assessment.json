@@ -1,0 +1,36 @@
+{
+  "current_versions": {
+    "boot": "3.5.6",
+    "version>([^<]+)</spring": "6.2.11"
+  },
+  "pom_files_count": 24,
+  "java_files_count": 381,
+  "javax_imports_count": 32,
+  "unique_javax_packages": 24,
+  "javax_imports": [
+    "import javax.xml.xpath.XPathExpressionException;",
+    "import javax.net.ssl.SSLSocketFactory;",
+    "import javax.imageio.ImageIO;",
+    "import javax.xml.xpath.XPathFactory;",
+    "import javax.xml.xpath.XPath;",
+    "import javax.xml.parsers.DocumentBuilder;",
+    "import javax.net.ssl.X509TrustManager;",
+    "import javax.xml.xpath.XPathConstants;",
+    "import javax.xml.parsers.ParserConfigurationException;",
+    "import javax.imageio.stream.MemoryCacheImageOutputStream;",
+    "import javax.crypto.spec.IvParameterSpec;",
+    "import javax.crypto.SecretKey;",
+    "import javax.net.ssl.SSLContext;",
+    "import javax.crypto.Mac;",
+    "import javax.crypto.SecretKeyFactory;",
+    "import javax.sql.DataSource;",
+    "import javax.xml.namespace.QName;",
+    "import javax.net.ssl.HostnameVerifier;",
+    "import javax.net.ssl.TrustManager;",
+    "import javax.crypto.spec.DESKeySpec;",
+    "import javax.crypto.Cipher;",
+    "import javax.net.ssl.SSLSession;",
+    "import javax.xml.parsers.DocumentBuilderFactory;",
+    "import javax.crypto.spec.SecretKeySpec;"
+  ]
+}

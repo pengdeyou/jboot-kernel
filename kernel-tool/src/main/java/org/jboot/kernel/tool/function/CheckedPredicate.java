@@ -21,7 +21,7 @@ import java.io.Serializable;
 /**
  * 受检的 Predicate
  *
- * @author L.cm
+ * @author Corsak
  */
 @FunctionalInterface
 public interface CheckedPredicate<T> extends Serializable {

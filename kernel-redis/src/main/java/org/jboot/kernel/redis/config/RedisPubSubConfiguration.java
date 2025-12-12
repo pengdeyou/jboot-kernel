@@ -33,7 +33,7 @@ import org.springframework.data.redis.serializer.RedisSerializer;
 /**
  * Redisson pub/sub 发布配置
  *
- * @author L.cm
+ * @author Corsak
  */
 @AutoConfiguration
 public class RedisPubSubConfiguration {

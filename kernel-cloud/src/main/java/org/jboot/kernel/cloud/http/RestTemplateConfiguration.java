@@ -55,7 +55,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Http RestTemplateHeaderInterceptor 配置
  *
- * @author L.cm
+ * @author Corsak
  */
 @Slf4j
 @RequiredArgsConstructor

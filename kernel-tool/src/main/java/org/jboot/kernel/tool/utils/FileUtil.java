@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * 文件工具类
  *
- * @author L.cm
+ * @author Corsak
  */
 @UtilityClass
 public class FileUtil extends org.springframework.util.FileCopyUtils {
@@ -40,7 +40,7 @@ public class FileUtil extends org.springframework.util.FileCopyUtils {
 	/**
 	 * 默认为true
 	 *
-	 * @author L.cm
+	 * @author Corsak
 	 */
 	public static class TrueFilter implements FileFilter, Serializable {
 		private static final long serialVersionUID = -6420452043795072619L;

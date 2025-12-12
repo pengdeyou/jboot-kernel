@@ -26,7 +26,7 @@ import org.springframework.core.Ordered;
 /**
  * 自定义 mybatis plus 查询拦截器
  *
- * @author L.cm
+ * @author Corsak
  */
 @SuppressWarnings({"rawtypes"})
 public interface QueryInterceptor extends Ordered {

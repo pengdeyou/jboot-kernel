@@ -31,7 +31,7 @@ import java.util.concurrent.ConcurrentMap;
 /**
  * mybatis 数据权限拦截器
  *
- * @author L.cm, Chill
+ * @author Corsak, Chill
  */
 @Slf4j
 @RequiredArgsConstructor

@@ -25,7 +25,7 @@ import org.springframework.data.redis.serializer.RedisSerializer;
 /**
  * Redisson pub/sub 发布器
  *
- * @author L.cm
+ * @author Corsak
  */
 @Slf4j
 @RequiredArgsConstructor

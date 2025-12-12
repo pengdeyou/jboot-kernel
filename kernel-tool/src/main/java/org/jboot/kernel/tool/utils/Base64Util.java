@@ -21,7 +21,7 @@ import java.util.Base64;
 /**
  * Base64工具
  *
- * @author L.cm
+ * @author Corsak
  */
 public class Base64Util {
 	public static final Base64.Encoder ENCODER = Base64.getEncoder();

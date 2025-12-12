@@ -27,7 +27,7 @@ import org.springframework.data.redis.serializer.SerializationException;
 /**
  * ProtoStuff 序列化
  *
- * @author L.cm
+ * @author Corsak
  */
 public class ProtoStuffSerializer implements RedisSerializer<Object> {
 	private final Schema<BytesWrapper> schema;

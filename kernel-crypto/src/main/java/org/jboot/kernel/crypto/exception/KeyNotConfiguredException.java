@@ -4,7 +4,7 @@ package org.jboot.kernel.crypto.exception;
 /**
  * <p>未配置KEY运行时异常</p>
  *
- * @author licoy.cn, L.cm
+ * @author licoy.cn, Corsak
  */
 public class KeyNotConfiguredException extends RuntimeException {
 

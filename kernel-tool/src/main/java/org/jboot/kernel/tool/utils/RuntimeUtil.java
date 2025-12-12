@@ -24,7 +24,7 @@ import java.util.List;
 /**
  * 运行时工具类
  *
- * @author L.cm
+ * @author Corsak
  */
 public class RuntimeUtil {
 	private static volatile int pId = -1;

@@ -24,7 +24,7 @@ import lombok.ToString;
 /**
  * 基于 redis pub sub 事件对象
  *
- * @author L.cm
+ * @author Corsak
  */
 @Getter
 @ToString

@@ -31,7 +31,7 @@ import java.util.stream.Stream;
 /**
  * 继承自Spring util的工具类，减少jar依赖
  *
- * @author L.cm
+ * @author Corsak
  */
 public class StringUtil extends org.springframework.util.StringUtils {
 
@@ -299,7 +299,7 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	/**
 	 * 将字符串中特定模式的字符转换成map中对应的值
 	 * <p>
-	 * use: format("my name is ${name}, and i like ${like}!", {"name":"L.cm", "like": "Java"})
+	 * use: format("my name is ${name}, and i like ${like}!", {"name":"Corsak", "like": "Java"})
 	 *
 	 * @param message 需要转换的字符串
 	 * @param params  转换所需的键值对集合
@@ -331,7 +331,7 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	/**
 	 * 同 log 格式的 format 规则
 	 * <p>
-	 * use: format("my name is {}, and i like {}!", "L.cm", "Java")
+	 * use: format("my name is {}, and i like {}!", "Corsak", "Java")
 	 *
 	 * @param message   需要转换的字符串
 	 * @param arguments 需要替换的变量

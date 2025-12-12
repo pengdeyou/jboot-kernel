@@ -16,7 +16,7 @@ import org.jboot.kernel.tool.utils.ObjectUtil;
  * 目的：抽取此方法是为了后期方便同步更新 {@link JPaginationInterceptor}
  * </p>
  *
- * @author L.cm
+ * @author Corsak
  */
 @SuppressWarnings({"rawtypes"})
 public class QueryInterceptorExecutor {

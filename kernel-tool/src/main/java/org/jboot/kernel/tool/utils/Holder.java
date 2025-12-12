@@ -22,7 +22,7 @@ import java.util.Random;
 /**
  * 一些常用的单利对象
  *
- * @author L.cm
+ * @author Corsak
  */
 public class Holder {
 

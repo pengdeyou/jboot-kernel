@@ -22,7 +22,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * jackson 配置
  *
- * @author L.cm
+ * @author Corsak
  */
 @Getter
 @Setter

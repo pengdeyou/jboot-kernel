@@ -8,7 +8,7 @@ import java.lang.annotation.*;
 /**
  * <p>加密{@link org.springframework.web.bind.annotation.ResponseBody}响应数据，可用于整个控制类或者某个控制器上</p>
  *
- * @author licoy.cn, L.cm
+ * @author licoy.cn, Corsak
  */
 @Target({ElementType.METHOD, ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)

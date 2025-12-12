@@ -18,7 +18,7 @@ package org.jboot.kernel.tool.utils;
 /**
  * 静态 String 池
  *
- * @author L.cm
+ * @author Corsak
  */
 public interface StringPool {
 

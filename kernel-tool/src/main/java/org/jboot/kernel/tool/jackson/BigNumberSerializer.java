@@ -25,7 +25,7 @@ import java.io.IOException;
 /**
  * 大数值序列化，避免超过js的精度，造成精度丢失
  *
- * @author L.cm
+ * @author Corsak
  */
 @JacksonStdImpl
 public class BigNumberSerializer extends NumberSerializer {

@@ -21,7 +21,7 @@ import java.io.Serializable;
 /**
  * 受检的 runnable
  *
- * @author L.cm
+ * @author Corsak
  */
 @FunctionalInterface
 public interface CheckedRunnable extends Serializable {

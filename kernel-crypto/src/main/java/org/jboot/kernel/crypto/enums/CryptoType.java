@@ -3,7 +3,7 @@ package org.jboot.kernel.crypto.enums;
 /**
  * <p>加密方式</p>
  *
- * @author licoy.cn, L.cm
+ * @author licoy.cn, Corsak
  */
 public enum CryptoType {
 

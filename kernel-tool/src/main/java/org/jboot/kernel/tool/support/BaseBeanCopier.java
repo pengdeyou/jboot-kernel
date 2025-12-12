@@ -35,7 +35,7 @@ import java.util.Map;
  *     2. 自定义的 BeanCopier 解决 spring boot 和 cglib ClassLoader classLoader 不一致的问题
  * </p>
  *
- * @author L.cm
+ * @author Corsak
  */
 public abstract class BaseBeanCopier {
 	private static final String BEAN_NAME_PREFIX = BaseBeanCopier.class.getName();
@@ -107,7 +107,7 @@ public abstract class BaseBeanCopier {
 
 		@Override
 		protected ClassLoader getDefaultClassLoader() {
-			// L.cm 保证 和 返回使用同一个 ClassLoader
+			// Corsak 保证 和 返回使用同一个 ClassLoader
 			return target.getClassLoader();
 		}
 
@@ -135,7 +135,7 @@ public abstract class BaseBeanCopier {
 			EmitUtils.null_constructor(ce);
 			CodeEmitter e = ce.begin_method(Constants.ACC_PUBLIC, COPY, null);
 
-			// 2018.12.27 by L.cm 支持链式 bean
+			// 2018.12.27 by Corsak 支持链式 bean
 			PropertyDescriptor[] getters = BeanUtil.getBeanGetters(source);
 			PropertyDescriptor[] setters = BeanUtil.getBeanSetters(target);
 			Map<String, Object> names = new HashMap<>(16);
@@ -171,7 +171,7 @@ public abstract class BaseBeanCopier {
 						e.unbox_or_zero(setterType);
 						e.invoke(write);
 					} else if (compatible(getter, setter)) {
-						// 2018.12.27 by L.cm 支持链式 bean
+						// 2018.12.27 by Corsak 支持链式 bean
 						e.load_local(targetLocal);
 						e.load_local(sourceLocal);
 						e.invoke(read);

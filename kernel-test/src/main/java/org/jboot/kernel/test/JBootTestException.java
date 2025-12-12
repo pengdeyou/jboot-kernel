@@ -19,7 +19,7 @@ package org.jboot.kernel.test;
 /**
  * jboot test 异常
  *
- * @author L.cm
+ * @author Corsak
  */
 class JBootTestException extends RuntimeException {
 

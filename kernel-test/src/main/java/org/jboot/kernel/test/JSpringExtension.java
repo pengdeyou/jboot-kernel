@@ -33,7 +33,7 @@ import java.util.*;
 /**
  * 设置启动参数
  *
- * @author L.cm
+ * @author Corsak
  */
 public class JSpringExtension extends SpringExtension {
 

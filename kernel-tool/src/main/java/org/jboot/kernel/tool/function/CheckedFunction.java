@@ -23,7 +23,7 @@ import java.io.Serializable;
 /**
  * 受检的 function
  *
- * @author L.cm
+ * @author Corsak
  */
 @FunctionalInterface
 public interface CheckedFunction<T, R> extends Serializable {

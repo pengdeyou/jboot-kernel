@@ -28,7 +28,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
  * 或者控制类上含有<strong>{@link org.springframework.web.bind.annotation.RestController}</strong>
  * 以及package为<strong><code>org.jboot.kernel.api.signature.annotation.encrypt</code></strong>下的注解有效
  *
- * @author licoy.cn, L.cm
+ * @author licoy.cn, Corsak
  * @see ResponseBodyAdvice
  */
 @Slf4j

@@ -30,7 +30,7 @@ import java.lang.reflect.Method;
 /**
  * 类操作工具
  *
- * @author L.cm
+ * @author Corsak
  */
 public class ClassUtil extends org.springframework.util.ClassUtils {
 

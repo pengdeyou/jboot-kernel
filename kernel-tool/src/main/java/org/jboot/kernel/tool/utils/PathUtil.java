@@ -23,7 +23,7 @@ import java.net.URL;
 /**
  * 用来获取各种目录
  *
- * @author L.cm
+ * @author Corsak
  */
 public class PathUtil {
 	public static final String FILE_PROTOCOL = "file";

@@ -20,7 +20,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * OkHttp Slf4j logger
  *
- * @author L.cm
+ * @author Corsak
  */
 @Slf4j
 public class OkHttpSlf4jLogger implements HttpLoggingInterceptor.Logger {

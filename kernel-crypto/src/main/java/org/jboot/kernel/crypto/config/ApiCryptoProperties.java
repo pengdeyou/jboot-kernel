@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * api 签名配置类
  *
- * @author licoy.cn, L.cm
+ * @author licoy.cn, Corsak
  */
 @Getter
 @Setter

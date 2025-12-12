@@ -24,7 +24,7 @@ import lombok.Setter;
 /**
  * redis序列化辅助类.单纯的泛型无法定义通用schema，原因是无法通过泛型T得到Class
  *
- * @author L.cm
+ * @author Corsak
  */
 @Getter
 @Setter

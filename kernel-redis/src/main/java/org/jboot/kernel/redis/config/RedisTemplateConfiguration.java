@@ -34,7 +34,7 @@ import org.springframework.data.redis.serializer.RedisSerializer;
 /**
  * RedisTemplate  配置
  *
- * @author L.cm
+ * @author Corsak
  */
 @EnableCaching
 @AutoConfiguration(before = {RedisConfiguration.class, RedisAutoConfiguration.class})

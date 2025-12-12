@@ -24,7 +24,7 @@ import org.springframework.cloud.openfeign.FallbackFactory;
  * 默认 Fallback，避免写过多fallback类
  *
  * @param <T> 泛型标记
- * @author L.cm
+ * @author Corsak
  */
 @AllArgsConstructor
 public class JFallbackFactory<T> implements FallbackFactory<T> {

@@ -21,7 +21,7 @@ import java.lang.annotation.*;
 /**
  * 基于 Redisson 的消息监听器
  *
- * @author L.cm
+ * @author Corsak
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)

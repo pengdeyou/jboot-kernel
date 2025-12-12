@@ -36,7 +36,7 @@ import java.util.function.Supplier;
  * Redis 工具类
  * 封装了常用的 Redis 操作，包括字符串、哈希、列表、集合、有序集合等数据结构的操作。
  *
- * @author L.cm
+ * @author Corsak
  */
 @Getter
 @SuppressWarnings("unchecked")

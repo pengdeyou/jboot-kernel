@@ -25,7 +25,7 @@ import java.io.OutputStream;
 /**
  * IoUtil
  *
- * @author L.cm
+ * @author Corsak
  */
 public class IoUtil extends org.springframework.util.StreamUtils {
 

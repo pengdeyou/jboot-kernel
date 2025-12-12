@@ -25,7 +25,7 @@ import org.springframework.data.redis.listener.Topic;
 /**
  * channel 工具类
  *
- * @author L.cm
+ * @author Corsak
  */
 @UtilityClass
 class ChannelUtil {

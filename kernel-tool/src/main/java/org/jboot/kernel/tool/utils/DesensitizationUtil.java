@@ -26,7 +26,7 @@ import java.util.Arrays;
  * 脱敏工具类
  *
  * @author Katrel（同事）
- * @author L.cm
+ * @author Corsak
  */
 public class DesensitizationUtil {
 

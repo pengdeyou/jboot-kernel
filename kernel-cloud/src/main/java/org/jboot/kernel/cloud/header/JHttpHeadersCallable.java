@@ -25,7 +25,7 @@ import java.util.concurrent.Callable;
  * HttpHeaders hystrix Callable
  *
  * @param <V> 泛型标记
- * @author L.cm
+ * @author Corsak
  */
 public class JHttpHeadersCallable<V> implements Callable<V> {
 	private final Callable<V> delegate;

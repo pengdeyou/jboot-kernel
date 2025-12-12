@@ -18,7 +18,7 @@ package org.jboot.kernel.datascope.exception;
 /**
  * 数据权限异常
  *
- * @author L.cm
+ * @author Corsak
  */
 public class DataScopeException extends RuntimeException {
 

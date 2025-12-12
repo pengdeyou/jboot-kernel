@@ -21,7 +21,7 @@ import java.io.Serializable;
 /**
  * 受检的 Comparator
  *
- * @author L.cm
+ * @author Corsak
  */
 @FunctionalInterface
 public interface CheckedComparator<T> extends Serializable {

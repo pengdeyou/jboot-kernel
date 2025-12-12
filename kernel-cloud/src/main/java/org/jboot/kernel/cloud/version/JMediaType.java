@@ -26,7 +26,7 @@ import org.springframework.http.MediaType;
  * https://developer.github.com/v3/media/
  * </p>
  *
- * @author L.cm
+ * @author Corsak
  */
 @Getter
 public class JMediaType {

@@ -36,7 +36,7 @@ import java.util.concurrent.TimeUnit;
  * this class should not be considered stable and may change slightly between releases. If you need
  * a stable logging format, use your own interceptor.
  *
- * @author L.cm
+ * @author Corsak
  */
 public final class HttpLoggingInterceptor implements Interceptor {
 	private static final Charset UTF8 = StandardCharsets.UTF_8;

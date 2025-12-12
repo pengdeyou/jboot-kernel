@@ -7,7 +7,7 @@ import org.jboot.kernel.crypto.enums.CryptoType;
 /**
  * <p>加密注解信息</p>
  *
- * @author licoy.cn, L.cm
+ * @author licoy.cn, Corsak
  */
 @Getter
 @RequiredArgsConstructor

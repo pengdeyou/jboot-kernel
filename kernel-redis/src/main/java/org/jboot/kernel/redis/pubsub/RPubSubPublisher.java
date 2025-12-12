@@ -19,7 +19,7 @@ package org.jboot.kernel.redis.pubsub;
 /**
  * 基于 Redisson 的消息发布器
  *
- * @author L.cm
+ * @author Corsak
  */
 public interface RPubSubPublisher {
 

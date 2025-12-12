@@ -43,7 +43,7 @@ import java.util.*;
 /**
  * 自定义资源文件读取，优先级最低
  *
- * @author L.cm
+ * @author Corsak
  */
 @Slf4j
 public class JPropertySourcePostProcessor implements BeanFactoryPostProcessor, InitializingBean, Ordered {

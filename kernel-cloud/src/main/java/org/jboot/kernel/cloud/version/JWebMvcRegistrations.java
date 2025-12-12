@@ -23,7 +23,7 @@ import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandl
 /**
  * url版本号处理
  *
- * @author L.cm
+ * @author Corsak
  */
 public class JWebMvcRegistrations implements WebMvcRegistrations {
 	@Override

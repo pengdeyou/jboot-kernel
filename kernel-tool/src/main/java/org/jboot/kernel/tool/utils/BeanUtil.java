@@ -33,7 +33,7 @@ import java.util.Map;
 /**
  * 实体工具类
  *
- * @author L.cm
+ * @author Corsak
  */
 public class BeanUtil extends org.springframework.beans.BeanUtils {
 

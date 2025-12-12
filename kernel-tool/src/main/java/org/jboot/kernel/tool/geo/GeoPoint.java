@@ -10,7 +10,7 @@ import java.io.Serializable;
 /**
  * 坐标点
  *
- * @author JourWon、hutool、L.cm
+ * @author JourWon、hutool、Corsak
  */
 @Data
 @NoArgsConstructor

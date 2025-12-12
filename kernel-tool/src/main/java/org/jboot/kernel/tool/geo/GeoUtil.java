@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
 /**
  * 位置工具类
  *
- * @author JourWon、hutool、L.cm
+ * @author JourWon、hutool、Corsak
  */
 public class GeoUtil {
 	/**

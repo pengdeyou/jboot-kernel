@@ -29,7 +29,7 @@ import java.lang.annotation.*;
  *     2. Accept 版本：application/vnd.jboot.kernel.VERSION+json
  * </p>
  *
- * @author L.cm
+ * @author Corsak
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

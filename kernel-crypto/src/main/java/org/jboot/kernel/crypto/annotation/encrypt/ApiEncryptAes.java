@@ -8,7 +8,7 @@ import java.lang.annotation.*;
 /**
  * aes 加密
  *
- * @author licoy.cn, L.cm
+ * @author licoy.cn, Corsak
  * @see ApiEncrypt
  */
 @Target({ElementType.METHOD, ElementType.TYPE})

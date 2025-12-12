@@ -10,7 +10,7 @@ import java.io.InputStream;
 /**
  * <p>解密信息输入流</p>
  *
- * @author licoy.cn, L.cm
+ * @author licoy.cn, Corsak
  */
 @Getter
 @RequiredArgsConstructor

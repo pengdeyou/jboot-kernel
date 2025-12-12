@@ -43,7 +43,7 @@ import lombok.RequiredArgsConstructor;
  * 搜狐搜狗地图API 搜狗坐标
  * 图吧MapBar地图API 图吧坐标
  *
- * @author JourWon、hutool、L.cm
+ * @author JourWon、hutool、Corsak
  */
 @Getter
 @RequiredArgsConstructor

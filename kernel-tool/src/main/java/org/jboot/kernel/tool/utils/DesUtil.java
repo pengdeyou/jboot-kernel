@@ -25,7 +25,7 @@ import java.util.Objects;
 /**
  * DES加解密处理工具
  *
- * @author L.cm
+ * @author Corsak
  */
 public class DesUtil {
 	/**

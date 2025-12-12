@@ -31,7 +31,7 @@ import java.io.IOException;
 /**
  * RestTemplateHeaderInterceptor 传递Request header
  *
- * @author L.cm
+ * @author Corsak
  */
 @AllArgsConstructor
 public class RestTemplateHeaderInterceptor implements ClientHttpRequestInterceptor {

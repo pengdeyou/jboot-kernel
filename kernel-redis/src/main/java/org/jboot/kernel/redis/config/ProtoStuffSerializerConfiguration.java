@@ -26,7 +26,7 @@ import org.springframework.data.redis.serializer.RedisSerializer;
 /**
  * ProtoStuff 序列化配置
  *
- * @author L.cm
+ * @author Corsak
  */
 @AutoConfiguration(before = RedisTemplateConfiguration.class)
 @ConditionalOnClass(name = "io.protostuff.Schema")

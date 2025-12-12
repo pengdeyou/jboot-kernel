@@ -30,7 +30,7 @@ import java.math.BigInteger;
  * decimal.js 库： https://github.com/MikeMcl/decimal.js
  * </p>
  *
- * @author L.cm
+ * @author Corsak
  */
 public class JNumberModule extends SimpleModule {
 	public static final JNumberModule INSTANCE = new JNumberModule();

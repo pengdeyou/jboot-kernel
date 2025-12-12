@@ -18,7 +18,7 @@ package org.jboot.kernel.tool.utils;
 /**
  * 生成的随机数类型
  *
- * @author L.cm
+ * @author Corsak
  */
 public enum RandomType {
 	/**

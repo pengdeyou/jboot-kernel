@@ -26,7 +26,7 @@ import java.time.Duration;
 /**
  * cache key 封装
  *
- * @author L.cm
+ * @author Corsak
  */
 @Getter
 @ToString

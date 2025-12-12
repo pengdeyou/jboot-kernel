@@ -23,7 +23,7 @@ import jakarta.servlet.http.HttpServletRequest;
 /**
  * J 用户信息获取器，用于请求头传递
  *
- * @author L.cm
+ * @author Corsak
  */
 public interface JFeignAccountGetter {
 

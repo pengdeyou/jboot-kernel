@@ -37,7 +37,7 @@ import java.util.List;
  *
  * @see org.jboot.kernel.cloud.annotation.UrlVersion
  * @see org.jboot.kernel.cloud.annotation.ApiVersion
- * @author L.cm
+ * @author Corsak
  */
 public class JSpringMvcContract extends SpringMvcContract {
 

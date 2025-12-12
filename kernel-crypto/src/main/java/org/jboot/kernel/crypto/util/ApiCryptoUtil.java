@@ -18,7 +18,7 @@ import org.springframework.lang.Nullable;
 /**
  * <p>辅助检测工具类</p>
  *
- * @author licoy.cn, L.cm
+ * @author licoy.cn, Corsak
  */
 public class ApiCryptoUtil {
 

@@ -42,7 +42,7 @@ import java.util.List;
  * array []
  * Object {}
  *
- * @author L.cm
+ * @author Corsak
  */
 public class JBeanSerializerModifier extends BeanSerializerModifier {
     @Override

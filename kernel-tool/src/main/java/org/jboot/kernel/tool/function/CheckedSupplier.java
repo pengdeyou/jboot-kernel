@@ -23,7 +23,7 @@ import java.io.Serializable;
 /**
  * 受检的 Supplier
  *
- * @author L.cm
+ * @author Corsak
  */
 @FunctionalInterface
 public interface CheckedSupplier<T> extends Serializable {

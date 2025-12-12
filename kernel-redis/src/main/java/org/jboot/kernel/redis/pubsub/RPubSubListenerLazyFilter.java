@@ -28,7 +28,7 @@ import java.util.List;
 /**
  * mqtt 客户端订阅延迟加载排除
  *
- * @author L.cm
+ * @author Corsak
  */
 public class RPubSubListenerLazyFilter implements LazyInitializationExcludeFilter {
 

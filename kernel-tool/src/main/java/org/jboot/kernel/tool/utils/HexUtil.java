@@ -22,7 +22,7 @@ import java.nio.charset.Charset;
 /**
  * hex 工具，编解码全用 byte
  *
- * @author L.cm
+ * @author Corsak
  */
 public class HexUtil {
 	public static final Charset DEFAULT_CHARSET = Charsets.UTF_8;

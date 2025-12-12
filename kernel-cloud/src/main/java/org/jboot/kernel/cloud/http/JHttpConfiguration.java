@@ -22,7 +22,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 /**
  * http 配置
  *
- * @author L.cm
+ * @author Corsak
  */
 @AutoConfiguration
 @EnableConfigurationProperties({JHttpProperties.class, JFeignHeadersProperties.class})

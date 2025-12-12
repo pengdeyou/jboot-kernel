@@ -18,7 +18,7 @@ package org.jboot.kernel.tool.utils;
 /**
  * char 常量池
  *
- * @author L.cm
+ * @author Corsak
  */
 public interface CharPool {
 	// @formatter:off

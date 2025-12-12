@@ -26,7 +26,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * http 配置
  *
- * @author L.cm
+ * @author Corsak
  */
 @Getter
 @Setter

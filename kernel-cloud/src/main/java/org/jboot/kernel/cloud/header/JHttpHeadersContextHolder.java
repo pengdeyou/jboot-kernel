@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * HttpHeadersContext
  *
- * @author L.cm
+ * @author Corsak
  */
 public class JHttpHeadersContextHolder {
 	private static final ThreadLocal<HttpHeaders> HTTP_HEADERS_HOLDER = new NamedThreadLocal<>("J Feign HttpHeaders");

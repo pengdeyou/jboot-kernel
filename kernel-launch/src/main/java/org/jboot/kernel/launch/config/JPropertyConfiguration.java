@@ -27,7 +27,7 @@ import org.springframework.core.annotation.Order;
 /**
  * jboot property config
  *
- * @author L.cm
+ * @author Corsak
  */
 @AutoConfiguration
 @Order(Ordered.HIGHEST_PRECEDENCE)

@@ -30,7 +30,7 @@ import java.lang.reflect.Type;
  * 本类只对控制器参数中含有<strong>{@link org.springframework.web.bind.annotation.RequestBody}</strong>
  * 以及package为<strong><code>org.jboot.kernel.api.signature.annotation.decrypt</code></strong>下的注解有效
  *
- * @author licoy.cn, L.cm
+ * @author licoy.cn, Corsak
  * @see RequestBodyAdvice
  */
 @Slf4j

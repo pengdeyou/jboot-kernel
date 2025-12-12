@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * api 签名自动配置
  *
- * @author L.cm
+ * @author Corsak
  */
 @AutoConfiguration
 @RequiredArgsConstructor
