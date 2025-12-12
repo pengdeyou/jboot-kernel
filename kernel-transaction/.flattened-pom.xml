@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jboot</groupId>
   <artifactId>kernel-transaction</artifactId>
-  <version>4.7.0</version>
+  <version>4.7.1</version>
   <name>kernel-transaction</name>
   <description>jboot-kernel is a powerful toolbox for JBoot</description>
   <url>https://github.com/pengdeyou/jboot-kernel/kernel-transaction</url>
@@ -46,13 +46,13 @@
     <dependency>
       <groupId>org.jboot</groupId>
       <artifactId>kernel-mybatis</artifactId>
-      <version>4.7.0</version>
+      <version>4.7.1</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.jboot</groupId>
       <artifactId>kernel-cloud</artifactId>
-      <version>4.7.0</version>
+      <version>4.7.1</version>
       <scope>compile</scope>
     </dependency>
     <dependency>

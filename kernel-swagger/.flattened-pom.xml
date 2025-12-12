@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jboot</groupId>
   <artifactId>kernel-swagger</artifactId>
-  <version>4.7.0</version>
+  <version>4.7.1</version>
   <name>kernel-swagger</name>
   <description>jboot-kernel is a powerful toolbox for JBoot</description>
   <url>https://github.com/pengdeyou/jboot-kernel/kernel-swagger</url>
@@ -46,7 +46,7 @@
     <dependency>
       <groupId>org.jboot</groupId>
       <artifactId>kernel-tool</artifactId>
-      <version>4.7.0</version>
+      <version>4.7.1</version>
       <scope>compile</scope>
     </dependency>
     <dependency>

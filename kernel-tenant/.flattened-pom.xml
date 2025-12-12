@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jboot</groupId>
   <artifactId>kernel-tenant</artifactId>
-  <version>4.7.0</version>
+  <version>4.7.1</version>
   <name>kernel-tenant</name>
   <description>jboot-kernel is a powerful toolbox for JBoot</description>
   <url>https://github.com/pengdeyou/jboot-kernel/kernel-tenant</url>
@@ -46,19 +46,19 @@
     <dependency>
       <groupId>org.jboot</groupId>
       <artifactId>kernel-launch</artifactId>
-      <version>4.7.0</version>
+      <version>4.7.1</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.jboot</groupId>
       <artifactId>kernel-tool</artifactId>
-      <version>4.7.0</version>
+      <version>4.7.1</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.jboot</groupId>
       <artifactId>kernel-mybatis</artifactId>
-      <version>4.7.0</version>
+      <version>4.7.1</version>
       <scope>compile</scope>
     </dependency>
     <dependency>

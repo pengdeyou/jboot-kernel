@@ -32,9 +32,9 @@ public class JTokenProperties {
 	 * 获取签名规则
 	 */
 	public String getSignKey() {
-		if (this.signKey.length() < TokenConstant.SIGN_KEY_LENGTH) {
-			throw new JwtException("请配置 jboot.token.sign-key 的值, 长度32位以上");
-		}
+		//if (this.signKey.length() < TokenConstant.SIGN_KEY_LENGTH) {
+		//	throw new JwtException("请配置 jboot.token.sign-key 的值, 长度32位以上");
+		//}
 		return this.signKey;
 	}
 

@@ -36,7 +36,7 @@
 
     <properties>
         <!-- J-Tool Version -->
-        <revision>4.7.0</revision>
+        <revision>4.7.1</revision>
         <module.name>org.jboot.jboot.kernel</module.name>
         <!-- jdk Version -->
         <java.version>17</java.version>
