@@ -26,13 +26,13 @@ public class JDataScopeHandler implements DataScopeHandler {
 	private final ScopeModelHandler scopeModelHandler;
 
 	@Override
-	public String sqlCondition(String mapperId, DataScopeModel dataScope, AuthUser bladeUser, String originalSql) {
+	public String sqlCondition(String mapperId, DataScopeModel dataScope, AuthUser jbootUser, String originalSql) {
 
 		//数据权限资源编号
 		String code = dataScope.getResourceCode();
 
 		//根据mapperId从数据库中获取对应模型
-		DataScopeModel dataScopeDb = scopeModelHandler.getDataScopeByMapper(mapperId, bladeUser.getRoleId());
+		DataScopeModel dataScopeDb = scopeModelHandler.getDataScopeByMapper(mapperId, jbootUser.getRoleId());
 
 		//mapperId配置未取到则从数据库中根据资源编号获取
 		if (dataScopeDb == null && StringUtil.isNotBlank(code)) {
@@ -47,16 +47,16 @@ public class JDataScopeHandler implements DataScopeHandler {
 		DataScopeEnum scopeTypeEnum = DataScopeEnum.of(scopeRule);
 		List<Long> ids = new ArrayList<>();
 		String whereSql = "where scope.{} in ({})";
-		if (DataScopeEnum.ALL == scopeTypeEnum || StringUtil.containsAny(bladeUser.getRoleName(), RoleConstant.ADMIN)) {
+		if (DataScopeEnum.ALL == scopeTypeEnum || StringUtil.containsAny(jbootUser.getRoleName(), RoleConstant.ADMIN)) {
 			return null;
 		} else if (DataScopeEnum.CUSTOM == scopeTypeEnum) {
-			whereSql = PlaceholderUtil.getDefaultResolver().resolveByMap(dataScope.getScopeValue(), BeanUtil.toMap(bladeUser));
+			whereSql = PlaceholderUtil.getDefaultResolver().resolveByMap(dataScope.getScopeValue(), BeanUtil.toMap(jbootUser));
 		} else if (DataScopeEnum.OWN == scopeTypeEnum) {
-			ids.add(bladeUser.getUserId());
+			ids.add(jbootUser.getUserId());
 		} else if (DataScopeEnum.OWN_DEPT == scopeTypeEnum) {
-			ids.addAll(Func.toLongList(bladeUser.getDeptId()));
+			ids.addAll(Func.toLongList(jbootUser.getDeptId()));
 		} else if (DataScopeEnum.OWN_DEPT_CHILD == scopeTypeEnum) {
-			List<Long> deptIds = Func.toLongList(bladeUser.getDeptId());
+			List<Long> deptIds = Func.toLongList(jbootUser.getDeptId());
 			ids.addAll(deptIds);
 			deptIds.forEach(deptId -> {
 				List<Long> deptIdList = scopeModelHandler.getDeptAncestors(deptId);

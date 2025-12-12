@@ -31,7 +31,7 @@ import static org.jboot.kernel.loadbalancer.constant.LoadBalancerConstant.VERSIO
 @RequiredArgsConstructor
 public class GrayscaleLoadBalancer implements ReactorServiceInstanceLoadBalancer {
 	private final ObjectProvider<ServiceInstanceListSupplier> serviceInstanceListSupplierProvider;
-	private final JLoadBalancerProperties bladeLoadBalancerProperties;
+	private final JLoadBalancerProperties jLoadBalancerProperties;
 
 	@Override
 	public Mono<Response<ServiceInstance>> choose(Request request) {
@@ -50,7 +50,7 @@ public class GrayscaleLoadBalancer implements ReactorServiceInstanceLoadBalancer
 			return new EmptyResponse();
 		}
 		// 指定ip则返回满足ip的服务
-		List<String> priorIpPattern = bladeLoadBalancerProperties.getPriorIpPattern();
+		List<String> priorIpPattern = jLoadBalancerProperties.getPriorIpPattern();
 		if (!priorIpPattern.isEmpty()) {
 			String[] priorIpPatterns = priorIpPattern.toArray(new String[0]);
 			List<ServiceInstance> priorIpInstances = instances.stream().filter(

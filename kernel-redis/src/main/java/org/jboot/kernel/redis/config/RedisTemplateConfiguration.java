@@ -73,7 +73,7 @@ public class RedisTemplateConfiguration {
 	}
 
 	@Bean
-	public JRedis bladeRedis(RedisTemplate<String, Object> redisTemplate, StringRedisTemplate stringRedisTemplate) {
+	public JRedis jRedis(RedisTemplate<String, Object> redisTemplate, StringRedisTemplate stringRedisTemplate) {
 		return new JRedis(redisTemplate, stringRedisTemplate);
 	}
 

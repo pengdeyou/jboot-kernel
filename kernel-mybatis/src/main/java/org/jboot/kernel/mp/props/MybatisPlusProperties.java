@@ -10,7 +10,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @author Corsak
  */
 @Data
-@ConfigurationProperties(prefix = "blade.mybatis-plus")
+@ConfigurationProperties(prefix = "jboot.kernel.mybatis-plus")
 public class MybatisPlusProperties {
 
 	/**

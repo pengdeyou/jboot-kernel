@@ -16,7 +16,7 @@ import java.util.concurrent.Callable;
 @Deprecated
 public class CacheUtil {
 
-	public static final String SYS_CACHE = "blade:sys";
+	public static final String SYS_CACHE = "jboot:sys";
 
 	private static CacheManager cacheManager;
 

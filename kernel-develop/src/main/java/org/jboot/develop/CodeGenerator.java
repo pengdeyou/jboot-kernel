@@ -18,7 +18,7 @@ public class CodeGenerator {
 	/**
 	 * 代码所在服务名
 	 */
-	public static String SERVICE_NAME = "blade-system";
+	public static String SERVICE_NAME = "jboot-system";
 	/**
 	 * 代码生成的包名
 	 */

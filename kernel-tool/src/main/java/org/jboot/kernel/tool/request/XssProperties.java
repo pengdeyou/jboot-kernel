@@ -13,7 +13,7 @@ import java.util.List;
  * @author Corsak
  */
 @Data
-@ConfigurationProperties("blade.xss")
+@ConfigurationProperties("jboot.kernel.xss")
 public class XssProperties {
 
 	/**

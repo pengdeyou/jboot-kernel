@@ -32,12 +32,12 @@ public class RequestConfiguration {
 	 * @return 自定义过滤器
 	 */
 	@Bean
-	public FilterRegistrationBean<JRequestFilter> bladeFilterRegistration() {
+	public FilterRegistrationBean<JRequestFilter> jFilterRegistration() {
 		FilterRegistrationBean<JRequestFilter> registration = new FilterRegistrationBean<>();
 		registration.setDispatcherTypes(DispatcherType.REQUEST);
 		registration.setFilter(new JRequestFilter(requestProperties, xssProperties));
 		registration.addUrlPatterns("/*");
-		registration.setName("bladeRequestFilter");
+		registration.setName("jRequestFilter");
 		registration.setOrder(Ordered.LOWEST_PRECEDENCE);
 		return registration;
 	}

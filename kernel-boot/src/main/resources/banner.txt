@@ -5,4 +5,4 @@ ${AnsiColor.BRIGHT_CYAN}     |    | |    |  _/ /   |   \  /   |   \|    |
 ${AnsiColor.BRIGHT_CYAN} /\__|    | |    |   \/    |    \/    |    \    |   
 ${AnsiColor.BRIGHT_CYAN} \________| |______  /\_______  /\_______  /____|   
 ${AnsiColor.BRIGHT_CYAN}                   \/         \/         \/         
-${AnsiColor.BLUE}:: jcloud :: ${spring.application.name}:${AnsiColor.RED}${blade.env}${AnsiColor.BLUE} :: Running SpringBoot ${spring-boot.version} :: ${AnsiColor.BRIGHT_BLACK}
+${AnsiColor.BLUE}:: jcloud :: ${spring.application.name}:${AnsiColor.RED}${jboot.kernel.env}${AnsiColor.BLUE} :: Running SpringBoot ${spring-boot.version} :: ${AnsiColor.BRIGHT_BLACK}

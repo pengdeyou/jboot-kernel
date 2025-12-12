@@ -13,7 +13,7 @@ import java.util.List;
  * @author Corsak
  */
 @Data
-@ConfigurationProperties("blade.request")
+@ConfigurationProperties("jboot.kernel.request")
 public class RequestProperties {
 
 	/**

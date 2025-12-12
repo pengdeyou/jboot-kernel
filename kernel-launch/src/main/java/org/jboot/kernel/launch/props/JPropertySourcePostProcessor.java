@@ -134,7 +134,7 @@ public class JPropertySourcePostProcessor implements BeanFactoryPostProcessor, I
 										   PropertySourceLoader loader,
 										   List<PropertySource> sourceList) {
 		if (resource.exists()) {
-			String name = "bladePropertySource: [" + location + ']';
+			String name = "jPropertySource: [" + location + ']';
 			try {
 				sourceList.addAll(loader.load(name, resource));
 			} catch (IOException e) {

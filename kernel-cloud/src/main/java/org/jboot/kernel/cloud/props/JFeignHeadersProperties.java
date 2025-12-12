@@ -32,11 +32,11 @@ import java.util.List;
 @Getter
 @Setter
 @RefreshScope
-@ConfigurationProperties("blade.feign.headers")
+@ConfigurationProperties("jboot.kernel.feign.headers")
 public class JFeignHeadersProperties {
 
 	/**
-	 * 用于 聚合层 向调用层传递用户信息 的请求头，默认：x-blade-account
+	 * 用于 聚合层 向调用层传递用户信息 的请求头，默认：x-j-account
 	 */
 	private String account = "X-J-Account";
 

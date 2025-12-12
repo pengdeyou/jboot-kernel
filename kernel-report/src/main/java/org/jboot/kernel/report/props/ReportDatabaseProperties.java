@@ -13,6 +13,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties(prefix = "report.database.provider")
 public class ReportDatabaseProperties {
 	private String name = "数据库文件系统";
-	private String prefix = "blade-";
+	private String prefix = "tb-";
 	private boolean disabled = false;
 }

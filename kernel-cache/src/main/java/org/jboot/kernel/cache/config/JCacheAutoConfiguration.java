@@ -30,7 +30,7 @@ import org.springframework.context.annotation.Bean;
  */
 @AutoConfiguration
 @ConditionalOnClass(name = "net.sf.ehcache.CacheManager")
-@ConditionalOnProperty(value = "blade.cache.enabled", havingValue = "true", matchIfMissing = true)
+@ConditionalOnProperty(value = "jboot.kernel.cache.enabled", havingValue = "true", matchIfMissing = true)
 @EnableCaching
 public class JCacheAutoConfiguration {
 

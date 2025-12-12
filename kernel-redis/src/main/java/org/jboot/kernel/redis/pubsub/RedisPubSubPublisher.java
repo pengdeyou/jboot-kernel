@@ -30,12 +30,12 @@ import org.springframework.data.redis.serializer.RedisSerializer;
 @Slf4j
 @RequiredArgsConstructor
 public class RedisPubSubPublisher implements InitializingBean, RPubSubPublisher {
-	private final JRedis bladeRedis;
+	private final JRedis jRedis;
 	private final RedisSerializer<Object> redisSerializer;
 
 	@Override
 	public <T> Long publish(String channel, T message) {
-		return bladeRedis.publish(channel, message, redisSerializer::serialize);
+		return jRedis.publish(channel, message, redisSerializer::serialize);
 	}
 
 	@Override

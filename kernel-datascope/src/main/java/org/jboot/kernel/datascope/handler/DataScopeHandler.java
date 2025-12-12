@@ -16,10 +16,10 @@ public interface DataScopeHandler {
 	 *
 	 * @param mapperId    数据查询类
 	 * @param dataScope   数据权限类
-	 * @param bladeUser   当前用户信息
+	 * @param jbootUser   当前用户信息
 	 * @param originalSql 原始Sql
 	 * @return sql
 	 */
-	String sqlCondition(String mapperId, DataScopeModel dataScope, AuthUser bladeUser, String originalSql);
+	String sqlCondition(String mapperId, DataScopeModel dataScope, AuthUser jbootUser, String originalSql);
 
 }

@@ -13,7 +13,7 @@ import java.util.List;
  * @author Corsak
  */
 @Data
-@ConfigurationProperties("blade.secure")
+@ConfigurationProperties("jboot.kernel.secure")
 public class JSecureProperties {
 
 	private final List<ClientSecure> client = new ArrayList<>();

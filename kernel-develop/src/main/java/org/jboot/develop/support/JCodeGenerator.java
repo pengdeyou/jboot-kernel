@@ -47,7 +47,7 @@ public class JCodeGenerator {
 	/**
 	 * 代码所在服务名
 	 */
-	private String serviceName = "blade-service";
+	private String serviceName = "jboot-service";
 	/**
 	 * 代码生成的包名
 	 */
@@ -270,7 +270,7 @@ public class JCodeGenerator {
 	 * @return outputDir
 	 */
 	public String getOutputDir() {
-		return (Func.isBlank(packageDir) ? System.getProperty("user.dir") + "/blade-ops/blade-develop" : packageDir) + "/src/main/java";
+		return (Func.isBlank(packageDir) ? System.getProperty("user.dir") + "/jboot-ops/jboot-develop" : packageDir) + "/src/main/java";
 	}
 
 	/**

@@ -14,7 +14,7 @@
     <packaging>jar</packaging>
 
     <properties>
-        <module.name>org.jboot.blade.core.test</module.name>
+        <module.name>org.jboot.kernel.test</module.name>
     </properties>
 
     <dependencies>

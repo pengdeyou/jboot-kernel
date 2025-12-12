@@ -19,7 +19,7 @@ import java.util.Objects;
  *
  * @author Corsak
  */
-@ConfigurationProperties("blade")
+@ConfigurationProperties("jboot")
 public class JProperties implements EnvironmentAware, EnvironmentCapable {
 	@Nullable
 	private Environment environment;
@@ -46,7 +46,7 @@ public class JProperties implements EnvironmentAware, EnvironmentCapable {
 	private Boolean isLocal = Boolean.FALSE;
 
 	/**
-	 * 装载自定义配置blade.prop.xxx
+	 * 装载自定义配置jboot.kernel.prop.xxx
 	 */
 	@Getter
 	private final Map<String, String> prop = new HashMap<>();

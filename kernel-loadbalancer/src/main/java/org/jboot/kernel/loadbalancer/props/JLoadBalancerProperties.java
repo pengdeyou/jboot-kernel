@@ -17,7 +17,7 @@ import java.util.List;
 @Setter
 @ConfigurationProperties(JLoadBalancerProperties.PROPERTIES_PREFIX)
 public class JLoadBalancerProperties {
-	public static final String PROPERTIES_PREFIX = "blade.loadbalancer";
+	public static final String PROPERTIES_PREFIX = "jboot.kernel.loadbalancer";
 
 	/**
 	 * 是否开启自定义负载均衡

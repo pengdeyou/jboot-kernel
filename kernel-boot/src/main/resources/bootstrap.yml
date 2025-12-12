@@ -50,7 +50,7 @@ spring:
       min-evictable-idle-time-millis: 300000
       stat-view-servlet:
         enabled: true
-        login-username: blade
+        login-username: jboot
         login-password: 1qaz@WSX
       web-stat-filter:
         enabled: true
@@ -68,7 +68,7 @@ spring:
 
 #配置日志地址
 logging:
-  config: classpath:log/logback_${blade.env}.xml
+  config: classpath:log/logback_${jboot.kernel.env}.xml
 
 # mybatis
 mybatis-plus:

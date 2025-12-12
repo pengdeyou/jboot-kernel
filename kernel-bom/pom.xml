@@ -15,7 +15,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <module.name>org.jboot.blade.core.bom</module.name>
+        <module.name>org.jboot.kernel.bom</module.name>
     </properties>
 
     <build>

@@ -16,7 +16,7 @@ import java.util.List;
 @Data
 @ConfigurationProperties(prefix = I18nProperties.PREFIX)
 public class I18nProperties {
-	public static final String PREFIX = "blade.i18n";
+	public static final String PREFIX = "jboot.kernel.i18n";
 
 	/**
 	 * 是否启用i18n

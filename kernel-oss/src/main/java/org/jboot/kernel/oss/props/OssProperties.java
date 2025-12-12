@@ -52,7 +52,7 @@ public class OssProperties {
 	/**
 	 * 默认的存储桶名称
 	 */
-	private String bucketName = "blade";
+	private String bucketName = "jboot";
 
 	/**
 	 * 应用ID TencentCOS需要

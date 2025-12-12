@@ -31,7 +31,7 @@ import org.springframework.context.annotation.Bean;
 @ConditionalOnWebApplication
 public class VersionMappingAutoConfiguration {
 	@Bean
-	public WebMvcRegistrations bladeWebMvcRegistrations() {
+	public WebMvcRegistrations jbootWebMvcRegistrations() {
 		return new JWebMvcRegistrations();
 	}
 }

@@ -62,7 +62,7 @@ jboot-kernel
 ├── kernel-secure      -- 安全认证封装模块，JWT Token、权限控制等
 ├── kernel-test        -- 单元测试封装模块，集成测试工具和配置
 ├── kernel-tool        -- 核心工具封装模块，通用工具类、常量、配置等
-├── kernel-api-crypto  -- API接口加密解密模块
+├── kernel-crypto  -- API接口加密解密模块
 ├── kernel-cache       -- 缓存抽象封装模块
 ├── kernel-datascope   -- 数据权限封装模块，支持行级权限控制
 ├── kernel-develop     -- 代码生成封装模块，支持多种模板生成

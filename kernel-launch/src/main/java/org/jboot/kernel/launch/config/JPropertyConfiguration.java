@@ -25,7 +25,7 @@ import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 
 /**
- * blade property config
+ * jboot property config
  *
  * @author L.cm
  */
@@ -35,7 +35,7 @@ import org.springframework.core.annotation.Order;
 public class JPropertyConfiguration {
 
 	@Bean
-	public JPropertySourcePostProcessor bladePropertySourcePostProcessor() {
+	public JPropertySourcePostProcessor jPropertySourcePostProcessor() {
 		return new JPropertySourcePostProcessor();
 	}
 

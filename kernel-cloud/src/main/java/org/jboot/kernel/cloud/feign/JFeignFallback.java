@@ -31,7 +31,7 @@ import java.lang.reflect.Method;
 import java.util.Objects;
 
 /**
- * blade fallBack 代理处理
+ * jboot fallBack 代理处理
  *
  * @author L.cm
  */

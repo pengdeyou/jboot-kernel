@@ -15,7 +15,7 @@
     <packaging>jar</packaging>
 
     <properties>
-        <module.name>org.jboot.blade.core.secure</module.name>
+        <module.name>org.jboot.kernel.secure</module.name>
     </properties>
 
     <dependencies>

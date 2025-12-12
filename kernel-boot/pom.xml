@@ -15,7 +15,7 @@
     <packaging>jar</packaging>
 
     <properties>
-        <module.name>org.jboot.blade.core.boot</module.name>
+        <module.name>org.jboot.kernel.boot</module.name>
     </properties>
 
     <dependencies>

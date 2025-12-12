@@ -33,7 +33,7 @@ import java.lang.reflect.Method;
 import java.util.List;
 
 /**
- * 支持 blade-boot 的 版本 处理
+ * 支持 jboot-boot 的 版本 处理
  *
  * @see org.jboot.kernel.cloud.annotation.UrlVersion
  * @see org.jboot.kernel.cloud.annotation.ApiVersion

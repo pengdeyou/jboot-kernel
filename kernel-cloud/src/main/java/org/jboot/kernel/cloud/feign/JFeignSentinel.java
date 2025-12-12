@@ -91,8 +91,8 @@ public class JFeignSentinel {
 						return new JSentinelInvocationHandler(target, dispatch, fallbackFactoryInstance);
 					}
 					// 默认fallbackFactory
-					JFallbackFactory bladeFallbackFactory = new JFallbackFactory(target);
-					return new JSentinelInvocationHandler(target, dispatch, bladeFallbackFactory);
+					JFallbackFactory jFallbackFactory = new JFallbackFactory(target);
+					return new JSentinelInvocationHandler(target, dispatch, jFallbackFactory);
 				}
 
 				private Object getFromContext(String name, String type, Class fallbackType, Class targetType) {

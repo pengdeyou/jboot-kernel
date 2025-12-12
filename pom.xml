@@ -82,7 +82,7 @@
         <module>kernel-secure</module>
         <module>kernel-test</module>
         <module>kernel-tool</module>
-        <module>kernel-api-crypto</module>
+        <module>kernel-crypto</module>
         <module>kernel-datascope</module>
         <module>kernel-develop</module>
         <module>kernel-excel</module>
@@ -251,7 +251,7 @@
             </dependency>
             <dependency>
                 <groupId>org.jboot</groupId>
-                <artifactId>kernel-api-crypto</artifactId>
+                <artifactId>kernel-crypto</artifactId>
                 <version>${revision}</version>
             </dependency>
             <!-- http -->

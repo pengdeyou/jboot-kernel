@@ -14,7 +14,7 @@ import java.util.List;
  * @author Corsak
  */
 @Data
-@ConfigurationProperties(prefix = "blade.data-scope")
+@ConfigurationProperties(prefix = "jboot.kernel.data-scope")
 public class DataScopeProperties {
 
 	/**

@@ -39,13 +39,13 @@ public @interface JBootTest {
 	 * @return appName
 	 */
 	@AliasFor("appName")
-	String value() default "blade-test";
+	String value() default "jboot-test";
 	/**
 	 * 服务名：appName
 	 * @return appName
 	 */
 	@AliasFor("value")
-	String appName() default "blade-test";
+	String appName() default "jboot-test";
 	/**
 	 * profile
 	 * @return profile

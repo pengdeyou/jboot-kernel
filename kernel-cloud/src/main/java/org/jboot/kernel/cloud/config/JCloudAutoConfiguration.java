@@ -18,7 +18,7 @@ import org.springframework.context.annotation.Scope;
 
 
 /**
- * blade cloud 增强配置
+ * jboot cloud 增强配置
  *
  * @author Corsak
  */

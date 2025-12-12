@@ -47,9 +47,9 @@ public class RedisPubSubConfiguration {
 	}
 
 	@Bean
-	public RPubSubPublisher topicEventPublisher(JRedis bladeRedis,
+	public RPubSubPublisher topicEventPublisher(JRedis jRedis,
 												RedisSerializer<Object> redisSerializer) {
-		return new RedisPubSubPublisher(bladeRedis, redisSerializer);
+		return new RedisPubSubPublisher(jRedis, redisSerializer);
 	}
 
 	@Bean

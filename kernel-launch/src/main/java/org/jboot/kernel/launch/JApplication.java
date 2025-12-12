@@ -81,11 +81,11 @@ public class JApplication {
 		props.setProperty("spring.profiles.active", profile);
 		props.setProperty("info.version", AppConstant.APPLICATION_VERSION);
 		props.setProperty("info.desc", appName);
-		props.setProperty("blade.env", profile);
-		props.setProperty("blade.name", appName);
-		props.setProperty("blade.is-local", String.valueOf(isLocalDev()));
-		props.setProperty("blade.dev-mode", profile.equals(AppConstant.PROD_CODE) ? "false" : "true");
-		props.setProperty("blade.service.version", AppConstant.APPLICATION_VERSION);
+		props.setProperty("jboot.kernel.env", profile);
+		props.setProperty("jboot.kernel.name", appName);
+		props.setProperty("jboot.kernel.is-local", String.valueOf(isLocalDev()));
+		props.setProperty("jboot.kernel.dev-mode", profile.equals(AppConstant.PROD_CODE) ? "false" : "true");
+		props.setProperty("jboot.kernel.service.version", AppConstant.APPLICATION_VERSION);
 		props.setProperty("spring.main.allow-bean-definition-overriding", "true");
 		props.setProperty("spring.cloud.sentinel.transport.dashboard", SentinelConstant.SENTINEL_ADDR);
 		props.setProperty("spring.cloud.alibaba.seata.tx-service-group", appName.concat(NacosConstant.NACOS_GROUP_SUFFIX));

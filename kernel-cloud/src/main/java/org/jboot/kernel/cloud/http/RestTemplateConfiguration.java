@@ -61,7 +61,7 @@ import java.util.concurrent.TimeUnit;
 @RequiredArgsConstructor
 @AutoConfiguration
 @ConditionalOnClass(OkHttpClient.class)
-@ConditionalOnProperty(value = "blade.http.enabled", matchIfMissing = true)
+@ConditionalOnProperty(value = "jboot.kernel.http.enabled", matchIfMissing = true)
 public class RestTemplateConfiguration {
 	private final JHttpProperties properties;
 
@@ -141,7 +141,7 @@ public class RestTemplateConfiguration {
 	@AutoConfiguration
 	@RequiredArgsConstructor
 	@ConditionalOnClass(OkHttpClient.class)
-	@ConditionalOnProperty(value = "blade.http.rest-template.enable")
+	@ConditionalOnProperty(value = "jboot.kernel.http.rest-template.enable")
 	public static class RestTemplateAutoConfiguration {
 		private final ApplicationContext context;
 
@@ -164,7 +164,7 @@ public class RestTemplateConfiguration {
 	@AutoConfiguration
 	@RequiredArgsConstructor
 	@ConditionalOnClass(OkHttpClient.class)
-	@ConditionalOnProperty(value = "blade.http.lb-rest-template.enable")
+	@ConditionalOnProperty(value = "jboot.kernel.http.lb-rest-template.enable")
 	public static class LbRestTemplateAutoConfiguration {
 		private final ApplicationContext context;
 

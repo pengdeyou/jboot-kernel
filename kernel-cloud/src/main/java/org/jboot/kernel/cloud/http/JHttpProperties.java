@@ -31,7 +31,7 @@ import java.util.concurrent.TimeUnit;
 @Getter
 @Setter
 @RefreshScope
-@ConfigurationProperties("blade.http")
+@ConfigurationProperties("jboot.kernel.http")
 public class JHttpProperties {
 	/**
 	 * 最大连接数，默认：200

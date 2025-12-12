@@ -15,7 +15,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  */
 @Slf4j
 @Data
-@ConfigurationProperties("blade.token")
+@ConfigurationProperties("jboot.kernel.token")
 public class JTokenProperties {
 
 	/**
@@ -33,7 +33,7 @@ public class JTokenProperties {
 	 */
 	public String getSignKey() {
 		if (this.signKey.length() < TokenConstant.SIGN_KEY_LENGTH) {
-			throw new JwtException("请配置 blade.token.sign-key 的值, 长度32位以上");
+			throw new JwtException("请配置 jboot.kernel.token.sign-key 的值, 长度32位以上");
 		}
 		return this.signKey;
 	}

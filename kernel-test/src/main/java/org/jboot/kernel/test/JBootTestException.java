@@ -17,7 +17,7 @@
 package org.jboot.kernel.test;
 
 /**
- * blade test 异常
+ * jboot test 异常
  *
  * @author L.cm
  */

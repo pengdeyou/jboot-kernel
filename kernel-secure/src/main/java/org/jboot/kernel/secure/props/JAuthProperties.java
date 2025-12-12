@@ -10,7 +10,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
  * @author Corsak
  */
 @Data
-@ConfigurationProperties("blade.auth")
+@ConfigurationProperties("jboot.kernel.auth")
 public class JAuthProperties {
 
 	/**

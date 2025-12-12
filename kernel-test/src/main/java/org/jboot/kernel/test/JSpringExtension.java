@@ -45,19 +45,19 @@ public class JSpringExtension extends SpringExtension {
 
 	private void setUpTestClass(ExtensionContext context) {
 		Class<?> clazz = context.getRequiredTestClass();
-		JBootTest bladeBootTest = AnnotationUtils.getAnnotation(clazz, JBootTest.class);
-		if (bladeBootTest == null) {
+		JBootTest jBootTest = AnnotationUtils.getAnnotation(clazz, JBootTest.class);
+		if (jBootTest == null) {
 			throw new JBootTestException(String.format("%s must be @JBootTest .", clazz));
 		}
-		String appName = bladeBootTest.appName();
-		String profile = bladeBootTest.profile();
+		String appName = jBootTest.appName();
+		String profile = jBootTest.profile();
 		boolean isLocalDev = JApplication.isLocalDev();
 		Properties props = System.getProperties();
-		props.setProperty("blade.env", profile);
-		props.setProperty("blade.name", appName);
-		props.setProperty("blade.is-local", String.valueOf(isLocalDev));
-		props.setProperty("blade.dev-mode", profile.equals(AppConstant.PROD_CODE) ? "false" : "true");
-		props.setProperty("blade.service.version", AppConstant.APPLICATION_VERSION);
+		props.setProperty("jboot.kernel.env", profile);
+		props.setProperty("jboot.kernel.name", appName);
+		props.setProperty("jboot.kernel.is-local", String.valueOf(isLocalDev));
+		props.setProperty("jboot.kernel.dev-mode", profile.equals(AppConstant.PROD_CODE) ? "false" : "true");
+		props.setProperty("jboot.kernel.service.version", AppConstant.APPLICATION_VERSION);
 		props.setProperty("spring.application.name", appName);
 		props.setProperty("spring.profiles.active", profile);
 		props.setProperty("info.version", AppConstant.APPLICATION_VERSION);
@@ -69,7 +69,7 @@ public class JSpringExtension extends SpringExtension {
 		props.setProperty("spring.cloud.sentinel.transport.dashboard", SentinelConstant.SENTINEL_ADDR);
 		props.setProperty("spring.main.allow-bean-definition-overriding", "true");
 		// 加载自定义组件
-		if (bladeBootTest.enableLoader()) {
+		if (jBootTest.enableLoader()) {
 			List<LauncherService> launcherList = new ArrayList<>();
 			SpringApplicationBuilder builder = new SpringApplicationBuilder(clazz);
 			ServiceLoader.load(LauncherService.class).forEach(launcherList::add);

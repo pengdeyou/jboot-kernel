@@ -71,8 +71,8 @@ public class JRequestFilter implements Filter {
 		}
 		// 默认 Request 包装
 		else if (!xssProperties.getEnabled() || isXssSkip(path)) {
-			JHttpServletRequestWrapper bladeRequest = new JHttpServletRequestWrapper((HttpServletRequest) request);
-			chain.doFilter(bladeRequest, response);
+			JHttpServletRequestWrapper jRequest = new JHttpServletRequestWrapper((HttpServletRequest) request);
+			chain.doFilter(jRequest, response);
 		}
 		// Xss Request 包装
 		else {

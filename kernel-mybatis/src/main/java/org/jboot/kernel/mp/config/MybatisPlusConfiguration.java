@@ -89,7 +89,7 @@ public class MybatisPlusConfiguration {
 	 * @return SqlLogInterceptor
 	 */
 	@Bean
-	@ConditionalOnProperty(value = "blade.mybatis-plus.sql-log", matchIfMissing = true)
+	@ConditionalOnProperty(value = "jboot.kernel.mybatis-plus.sql-log", matchIfMissing = true)
 	public SqlLogInterceptor sqlLogInterceptor(MybatisPlusProperties properties) {
 		return new SqlLogInterceptor(properties);
 	}

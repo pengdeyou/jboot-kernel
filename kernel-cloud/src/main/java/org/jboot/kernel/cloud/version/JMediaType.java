@@ -20,7 +20,7 @@ import lombok.Getter;
 import org.springframework.http.MediaType;
 
 /**
- * blade Media Types，application/vnd.github.VERSION+json
+ * jboot Media Types，application/vnd.github.VERSION+json
  *
  * <p>
  * https://developer.github.com/v3/media/
@@ -32,7 +32,7 @@ import org.springframework.http.MediaType;
 public class JMediaType {
 	private static final String MEDIA_TYPE_TEMP = "application/vnd.%s.%s+json";
 
-	private final String appName = "blade";
+	private final String appName = "jboot";
 	private final String version;
 	private final MediaType mediaType;
 

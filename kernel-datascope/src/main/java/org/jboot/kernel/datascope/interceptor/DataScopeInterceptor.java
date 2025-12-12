@@ -51,8 +51,8 @@ public class DataScopeInterceptor implements QueryInterceptor {
 		}
 
 		//未取到用户则放行
-		AuthUser bladeUser = SecureUtil.getUser();
-		if (bladeUser == null) {
+		AuthUser jbootUser = SecureUtil.getUser();
+		if (jbootUser == null) {
 			return;
 		}
 
@@ -89,7 +89,7 @@ public class DataScopeInterceptor implements QueryInterceptor {
 		}
 
 		//获取数据权限规则对应的筛选Sql
-		String sqlCondition = dataScopeHandler.sqlCondition(mapperId, dataScope, bladeUser, originalSql);
+		String sqlCondition = dataScopeHandler.sqlCondition(mapperId, dataScope, jbootUser, originalSql);
 		if (!StringUtil.isBlank(sqlCondition)) {
 			PluginUtils.MPBoundSql mpBoundSql = PluginUtils.mpBoundSql(boundSql);
 			mpBoundSql.sql(sqlCondition);

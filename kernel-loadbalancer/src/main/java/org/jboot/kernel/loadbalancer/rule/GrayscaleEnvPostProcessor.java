@@ -15,7 +15,7 @@ import org.springframework.util.StringUtils;
  */
 @AutoEnvPostProcessor
 public class GrayscaleEnvPostProcessor implements EnvironmentPostProcessor, Ordered {
-	private static final String GREYSCALE_KEY = "blade.loadbalancer.version";
+	private static final String GREYSCALE_KEY = "jboot.kernel.loadbalancer.version";
 	private static final String METADATA_KEY = "spring.cloud.nacos.discovery.metadata.version";
 
 	@Override

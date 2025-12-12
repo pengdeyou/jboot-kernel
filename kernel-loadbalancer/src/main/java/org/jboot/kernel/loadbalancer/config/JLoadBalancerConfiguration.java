@@ -18,7 +18,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.core.env.Environment;
 
 /**
- * blade 负载均衡策略
+ * jboot 负载均衡策略
  *
  * @author Corsak
  */
@@ -33,14 +33,14 @@ public class JLoadBalancerConfiguration {
 	@Bean
 	public ReactorLoadBalancer<ServiceInstance> reactorServiceInstanceLoadBalancer(Environment environment,
 																				   LoadBalancerClientFactory loadBalancerClientFactory,
-																				   JLoadBalancerProperties bladeLoadBalancerProperties) {
+																				   JLoadBalancerProperties jLoadBalancerProperties) {
 		String name = environment.getProperty(LoadBalancerClientFactory.PROPERTY_NAME);
-		return new GrayscaleLoadBalancer(loadBalancerClientFactory.getLazyProvider(name, ServiceInstanceListSupplier.class), bladeLoadBalancerProperties);
+		return new GrayscaleLoadBalancer(loadBalancerClientFactory.getLazyProvider(name, ServiceInstanceListSupplier.class), jLoadBalancerProperties);
 	}
 
 	@Bean
 	public LoadBalancerClientSpecification loadBalancerClientSpecification() {
-		return new LoadBalancerClientSpecification("default.bladeLoadBalancerConfiguration",
+		return new LoadBalancerClientSpecification("default.jLoadBalancerConfiguration",
 			new Class[]{JLoadBalancerConfiguration.class});
 	}
 

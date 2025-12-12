@@ -26,7 +26,7 @@ import java.lang.annotation.*;
  *
  * <p>
  *     1. url 版本号：添加到 url 前
- *     2. Accept 版本：application/vnd.blade.VERSION+json
+ *     2. Accept 版本：application/vnd.jboot.kernel.VERSION+json
  * </p>
  *
  * @author L.cm
