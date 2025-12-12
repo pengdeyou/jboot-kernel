@@ -37,9 +37,6 @@ JBoot Kernel是一个企业级微服务开发平台的底层核心框架，基�
 - **国际化**: 提供I18n多语言支持
 - **负载均衡**: 支持灰度发布与自定义负载策略
 
-## 🏗️ 技术架构
-
-![架构图](https://xbladex.oss-cn-hangzhou.aliyuncs.com/upload/jboot-framework.png)
 
 ## 🛠️ 核心技术栈
 
@@ -115,15 +112,4 @@ jboot-kernel
 | 类别 | 内容 |
 |------|------|
 | 官网地址 | [https://jboot.org](https://jboot.org) |
-| 问答社区 | [https://sns.jboot.org](https://sns.jboot.org) |
-| 会员计划 | [JBoot会员计划](https://gitee.com/smallc/JBoot/wikis/JBoot会员计划) |
-| 交流群 | `298061704` |
-
-## 💼 官方产品
-
-| 产品 | 演示地址 |
-|------|----------|
-| JBoot Kernel企业级开发平台 | [https://saber3.jboot.org](https://saber3.jboot.org) |
-| JBoot Kernel可视化数据大屏 | [https://data.jboot.org](https://data.jboot.org) |
-| JBoot Kernel物联网开发平台 | [https://iot.jboot.org](https://iot.jboot.org) |
-| JBoot Kernel大模型开发平台 | [https://ai.jboot.org](https://ai.jboot.org) |
+| 会员计划 | [JBoot会员计划](https://gitee.com/pengdeyou/jboot/wikis/JBoot会员计划) |
