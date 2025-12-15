@@ -44,6 +44,8 @@ public class AliossTemplate implements OssTemplate {
 	public void makeBucket(String bucketName) {
 		if (!bucketExists(bucketName)) {
 			ossClient.createBucket(getBucketName(bucketName));
+			// 设置bucket为公开读权限
+			ossClient.setBucketAcl(getBucketName(bucketName), com.aliyun.oss.model.CannedAccessControlList.PublicRead);
 		}
 	}
 
@@ -164,11 +166,8 @@ public class AliossTemplate implements OssTemplate {
 			ossClient.putObject(getBucketName(bucketName), key, stream);
 		} else {
 			PutObjectResult response = ossClient.putObject(getBucketName(bucketName), key, stream);
-			int retry = 0;
-			int retryCount = 5;
-			while (StringUtils.isEmpty(response.getETag()) && retry < retryCount) {
-				response = ossClient.putObject(getBucketName(bucketName), key, stream);
-				retry++;
+			if (StringUtils.isEmpty(response.getETag())) {
+				throw new RuntimeException("OSS上传失败：ETag为空");
 			}
 		}
 		JFile file = new JFile();
