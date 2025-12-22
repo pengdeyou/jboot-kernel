@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jboot</groupId>
   <artifactId>kernel-tenant</artifactId>
-  <version>4.7.1</version>
+  <version>3.7.1</version>
   <name>kernel-tenant</name>
   <description>jboot-kernel is a powerful toolbox for JBoot</description>
   <url>https://github.com/pengdeyou/jboot-kernel/kernel-tenant</url>
@@ -46,19 +46,19 @@
     <dependency>
       <groupId>org.jboot</groupId>
       <artifactId>kernel-launch</artifactId>
-      <version>4.7.1</version>
+      <version>3.7.1</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.jboot</groupId>
       <artifactId>kernel-tool</artifactId>
-      <version>4.7.1</version>
+      <version>3.7.1</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.jboot</groupId>
       <artifactId>kernel-mybatis</artifactId>
-      <version>4.7.1</version>
+      <version>3.7.1</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
@@ -131,4 +131,14 @@
       <url>https://packages.aliyun.com/676e232cc2681cbfb7c0beb7/maven/2511544-snapshot-lzle6r</url>
     </repository>
   </repositories>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.sonatype.plugins</groupId>
+        <artifactId>nexus-staging-maven-plugin</artifactId>
+        <version>1.7.0</version>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
+  </build>
 </project>

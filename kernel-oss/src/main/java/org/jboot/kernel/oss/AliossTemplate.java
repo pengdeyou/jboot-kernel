@@ -45,7 +45,7 @@ public class AliossTemplate implements OssTemplate {
 		if (!bucketExists(bucketName)) {
 			ossClient.createBucket(getBucketName(bucketName));
 			// 设置bucket为公开读权限
-			ossClient.setBucketAcl(getBucketName(bucketName), com.aliyun.oss.model.CannedAccessControlList.PublicRead);
+			//ossClient.setBucketAcl(getBucketName(bucketName), com.aliyun.oss.model.CannedAccessControlList.PublicRead);
 		}
 	}
 

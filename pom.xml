@@ -36,8 +36,8 @@
 
     <properties>
         <!-- J-Tool Version -->
-        <revision>4.7.1</revision>
-        <module.name>org.jboot.jboot.kernel</module.name>
+        <revision>3.7.1</revision>
+        <module.name>org.jboot.kernel</module.name>
         <!-- jdk Version -->
         <java.version>17</java.version>
         <maven.plugin.version>3.14.1</maven.plugin.version>
@@ -645,6 +645,25 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
                 <version>3.12.0</version>
+                <configuration>
+                    <doclint>none</doclint>
+                    <encoding>UTF-8</encoding>
+                    <charset>UTF-8</charset>
+                    <additionalOptions>
+                        <additionalOption>--ignore-source-errors</additionalOption>
+                        <additionalOption>-quiet</additionalOption>
+                    </additionalOptions>
+                    <failOnError>false</failOnError>
+                    <source>17</source>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -652,6 +671,43 @@
                 <version>3.5.4</version>
                 <configuration>
                     <skipTests>true</skipTests>
+                </configuration>
+            </plugin>
+            <!-- GPG Plugin for artifact signing -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <gpgArguments>
+                        <arg>--pinentry-mode</arg>
+                        <arg>loopback</arg>
+                    </gpgArguments>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- Nexus Staging Plugin for Sonatype Central deployment -->
+            <plugin>
+                <groupId>org.sonatype.plugins</groupId>
+                <artifactId>nexus-staging-maven-plugin</artifactId>
+                <version>1.7.0</version>
+                <extensions>true</extensions>
+                <configuration>
+                    <serverId>jboot-ossrh-release</serverId>
+                    <nexusUrl>https://ossrh-staging-api.central.sonatype.com</nexusUrl>
+                    <autoReleaseAfterClose>false</autoReleaseAfterClose>
+                    <sslAllowAll>true</sslAllowAll>
+                    <stagingProgressPauseDurationSeconds>20</stagingProgressPauseDurationSeconds>
+                    <stagingProgressTimeoutMinutes>20</stagingProgressTimeoutMinutes>
+                    <detectBuildFailures>true</detectBuildFailures>
                 </configuration>
             </plugin>
         </plugins>
@@ -684,6 +740,7 @@
         </repository>
     </repositories>
     
+    <!-- Default distributionManagement (Aliyun) -->
     <distributionManagement>
         <repository>
             <id>2511544-release-wEhsn1</id>
@@ -696,4 +753,100 @@
             <url>https://packages.aliyun.com/676e232cc2681cbfb7c0beb7/maven/2511544-snapshot-lzle6r</url>
         </snapshotRepository>
     </distributionManagement>
+
+    <profiles>
+        <!-- Release profile for Sonatype Central deployment -->
+        <profile>
+            <id>sonatype-release</id>
+            <distributionManagement>
+                <repository>
+                    <id>jboot-ossrh-release</id>
+                    <name>Sonatype Central Release</name>
+                    <url>https://ossrh-staging-api.central.sonatype.com/service/local/staging/deploy/maven2/</url>
+                </repository>
+                <snapshotRepository>
+                    <id>jboot-ossrh-snapshot</id>
+                    <name>Sonatype Central Snapshot</name>
+                    <url>https://ossrh-staging-api.central.sonatype.com/content/repositories/snapshots</url>
+                </snapshotRepository>
+            </distributionManagement>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-source-plugin</artifactId>
+                        <version>3.3.1</version>
+                        <executions>
+                            <execution>
+                                <id>attach-sources</id>
+                                <goals>
+                                    <goal>jar-no-fork</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId>
+                        <version>3.12.0</version>
+                        <configuration>
+                            <doclint>none</doclint>
+                            <encoding>UTF-8</encoding>
+                            <charset>UTF-8</charset>
+                            <additionalOptions>
+                                <additionalOption>--ignore-source-errors</additionalOption>
+                                <additionalOption>-quiet</additionalOption>
+                            </additionalOptions>
+                            <failOnError>false</failOnError>
+                            <source>17</source>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>attach-javadocs</id>
+                                <goals>
+                                    <goal>jar</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>3.1.0</version>
+                        <configuration>
+                            <gpgArguments>
+                                <arg>--pinentry-mode</arg>
+                                <arg>loopback</arg>
+                            </gpgArguments>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.sonatype.plugins</groupId>
+                        <artifactId>nexus-staging-maven-plugin</artifactId>
+                        <version>1.7.0</version>
+                        <extensions>true</extensions>
+                        <configuration>
+                            <serverId>jboot-ossrh-release</serverId>
+                            <nexusUrl>https://ossrh-staging-api.central.sonatype.com</nexusUrl>
+                            <autoReleaseAfterClose>false</autoReleaseAfterClose>
+                            <sslAllowAll>true</sslAllowAll>
+                            <stagingProgressPauseDurationSeconds>20</stagingProgressPauseDurationSeconds>
+                            <stagingProgressTimeoutMinutes>20</stagingProgressTimeoutMinutes>
+                            <detectBuildFailures>true</detectBuildFailures>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+
+        </profile>
+    </profiles>
 </project>

@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jboot</groupId>
   <artifactId>kernel-bom</artifactId>
-  <version>4.7.1</version>
+  <version>3.7.1</version>
   <packaging>pom</packaging>
   <name>kernel-bom</name>
   <description>jboot-kernel is a powerful toolbox for JBoot</description>
@@ -54,112 +54,112 @@
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-launch</artifactId>
-        <version>4.7.1</version>
+        <version>3.7.1</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-boot</artifactId>
-        <version>4.7.1</version>
+        <version>3.7.1</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-cloud</artifactId>
-        <version>4.7.1</version>
+        <version>3.7.1</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-tool</artifactId>
-        <version>4.7.1</version>
+        <version>3.7.1</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-develop</artifactId>
-        <version>4.7.1</version>
+        <version>3.7.1</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-excel</artifactId>
-        <version>4.7.1</version>
+        <version>3.7.1</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-secure</artifactId>
-        <version>4.7.1</version>
+        <version>3.7.1</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-social</artifactId>
-        <version>4.7.1</version>
+        <version>3.7.1</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-log</artifactId>
-        <version>4.7.1</version>
+        <version>3.7.1</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-test</artifactId>
-        <version>4.7.1</version>
+        <version>3.7.1</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-swagger</artifactId>
-        <version>4.7.1</version>
+        <version>3.7.1</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-mybatis</artifactId>
-        <version>4.7.1</version>
+        <version>3.7.1</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-oss</artifactId>
-        <version>4.7.1</version>
+        <version>3.7.1</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-redis</artifactId>
-        <version>4.7.1</version>
+        <version>3.7.1</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-tenant</artifactId>
-        <version>4.7.1</version>
+        <version>3.7.1</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-transaction</artifactId>
-        <version>4.7.1</version>
+        <version>3.7.1</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-i18n</artifactId>
-        <version>4.7.1</version>
+        <version>3.7.1</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-loadbalancer</artifactId>
-        <version>4.7.1</version>
+        <version>3.7.1</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-report</artifactId>
-        <version>4.7.1</version>
+        <version>3.7.1</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-cache</artifactId>
-        <version>4.7.1</version>
+        <version>3.7.1</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-datascope</artifactId>
-        <version>4.7.1</version>
+        <version>3.7.1</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-crypto</artifactId>
-        <version>4.7.1</version>
+        <version>3.7.1</version>
       </dependency>
       <dependency>
         <groupId>com.squareup.okhttp3</groupId>
@@ -10120,4 +10120,14 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.sonatype.plugins</groupId>
+        <artifactId>nexus-staging-maven-plugin</artifactId>
+        <version>1.7.0</version>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
+  </build>
 </project>

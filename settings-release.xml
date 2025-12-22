@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Maven Settings for JBoot Kernel Sonatype Central Release
+    
+    Usage:
+    1. Copy this file to ~/.m2/settings.xml
+    2. Replace the placeholders with your actual credentials:
+       - your-sonatype-username: Your Sonatype JIRA username
+       - your-sonatype-password: Your Sonatype JIRA password
+       - your-gpg-key-id: Your GPG key ID (use `gpg --list-secret-keys` to get)
+       - your-gpg-passphrase: Your GPG key passphrase
+    
+    For SNAPSHOT versions (ending with -SNAPSHOT):
+    mvn clean deploy -DskipTests
+    
+    For RELEASE versions:
+    mvn clean deploy -P release -DskipTests
+    # Or manually release after staging:
+    # mvn nexus-staging:release -P release
+-->
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 
+                              http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    
+    <!-- Local repository (optional) -->
+    <localRepository>${user.home}/.m2/repository</localRepository>
+    
+    <servers>
+        <!-- Aliyun Repository (existing) -->
+        <server>
+            <id>2511544-release-wEhsn1</id>
+            <username>your-aliyun-username</username>
+            <password>your-aliyun-password</password>
+        </server>
+        <server>
+            <id>2511544-snapshot-LzLE6R</id>
+            <username>your-aliyun-username</username>
+            <password>your-aliyun-password</password>
+        </server>
+        
+        <!-- Sonatype Central Repository -->
+        <server>
+            <id>jboot-ossrh-snapshot</id>
+            <username>your-sonatype-username</username>
+            <password>your-sonatype-password</password>
+        </server>
+        <server>
+            <id>jboot-ossrh-release</id>
+            <username>your-sonatype-username</username>
+            <password>your-sonatype-password</password>
+        </server>
+    </servers>
+    
+    <profiles>
+        <!-- Profile for Sonatype Central Release -->
+        <profile>
+            <id>sonatype-release</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <properties>
+                <!-- GPG Configuration -->
+                <gpg.executable>gpg</gpg.executable>
+                <gpg.keyname>your-gpg-key-id</gpg.keyname>
+                <gpg.passphrase>your-gpg-passphrase</gpg.passphrase>
+                
+                <!-- JVM Options for large builds -->
+                <maven.compiler.fork>true</maven.compiler.fork>
+                <maven.compiler.maxmem>1024m</maven.compiler.maxmem>
+                <maven.compiler.meminitial>512m</maven.compiler.meminitial>
+            </properties>
+        </profile>
+    </profiles>
+    
+    <!-- Active profiles -->
+    <activeProfiles>
+        <activeProfile>sonatype-release</activeProfile>
+    </activeProfiles>
+</settings>
