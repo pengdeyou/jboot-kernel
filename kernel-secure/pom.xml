@@ -31,7 +31,7 @@
         <!--J-->
         <dependency>
             <groupId>org.jboot</groupId>
-            <artifactId>kernel-tool</artifactId>
+            <artifactId>kernel-toolkit</artifactId>
         </dependency>
         <!--Jdbc-->
         <dependency>

@@ -61,7 +61,7 @@ jboot-kernel
 ├── kernel-launch      -- 基础启动模块，提供应用启动的核心功能
 ├── kernel-secure      -- 安全认证封装模块，JWT Token、权限控制等
 ├── kernel-test        -- 单元测试封装模块，集成测试工具和配置
-├── kernel-tool        -- 核心工具封装模块，通用工具类、常量、配置等
+├── kernel-toolkit        -- 核心工具封装模块，通用工具类、常量、配置等
 ├── kernel-crypto  -- API接口加密解密模块
 ├── kernel-cache       -- 缓存抽象封装模块
 ├── kernel-datascope   -- 数据权限封装模块，支持行级权限控制

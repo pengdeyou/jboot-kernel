@@ -81,7 +81,7 @@
         <module>kernel-launch</module>
         <module>kernel-secure</module>
         <module>kernel-test</module>
-        <module>kernel-tool</module>
+        <module>kernel-toolkit</module>
         <module>kernel-crypto</module>
         <module>kernel-datascope</module>
         <module>kernel-develop</module>
@@ -161,7 +161,7 @@
             </dependency>
             <dependency>
                 <groupId>org.jboot</groupId>
-                <artifactId>kernel-tool</artifactId>
+                <artifactId>kernel-toolkit</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>
@@ -649,12 +649,16 @@
                     <doclint>none</doclint>
                     <encoding>UTF-8</encoding>
                     <charset>UTF-8</charset>
-                    <additionalOptions>
-                        <additionalOption>--ignore-source-errors</additionalOption>
-                        <additionalOption>-quiet</additionalOption>
-                    </additionalOptions>
+                    <additionalJOptions>
+                        <additionalJOption>-Xdoclint:none</additionalJOption>
+                        <additionalJOption>--ignore-source-errors</additionalJOption>
+                        <additionalJOption>-quiet</additionalJOption>
+                    </additionalJOptions>
                     <failOnError>false</failOnError>
                     <source>17</source>
+                    <detectJavaApiLink>false</detectJavaApiLink>
+                    <detectOfflineLinks>false</detectOfflineLinks>
+                    <legacyMode>true</legacyMode>
                 </configuration>
                 <executions>
                     <execution>
@@ -793,12 +797,16 @@
                             <doclint>none</doclint>
                             <encoding>UTF-8</encoding>
                             <charset>UTF-8</charset>
-                            <additionalOptions>
-                                <additionalOption>--ignore-source-errors</additionalOption>
-                                <additionalOption>-quiet</additionalOption>
-                            </additionalOptions>
+                            <additionalJOptions>
+                                <additionalJOption>-Xdoclint:none</additionalJOption>
+                                <additionalJOption>--ignore-source-errors</additionalJOption>
+                                <additionalJOption>-quiet</additionalJOption>
+                            </additionalJOptions>
                             <failOnError>false</failOnError>
                             <source>17</source>
+                            <detectJavaApiLink>false</detectJavaApiLink>
+                            <detectOfflineLinks>false</detectOfflineLinks>
+                            <legacyMode>true</legacyMode>
                         </configuration>
                         <executions>
                             <execution>

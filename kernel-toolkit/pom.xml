@@ -10,12 +10,12 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>kernel-tool</artifactId>
+    <artifactId>kernel-toolkit</artifactId>
     <name>${project.artifactId}</name>
     <packaging>jar</packaging>
 
     <properties>
-        <module.name>org.jboot.kernel.tool</module.name>
+        <module.name>org.jboot.kernel.toolkit</module.name>
     </properties>
 
     <dependencies>

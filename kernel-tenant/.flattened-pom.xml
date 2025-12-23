@@ -51,7 +51,7 @@
     </dependency>
     <dependency>
       <groupId>org.jboot</groupId>
-      <artifactId>kernel-tool</artifactId>
+      <artifactId>kernel-toolkit</artifactId>
       <version>3.7.1</version>
       <scope>compile</scope>
     </dependency>
