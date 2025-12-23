@@ -3,11 +3,11 @@ package org.jboot.kernel.secure.auth;
 
 import org.jboot.kernel.launch.constant.TokenConstant;
 import org.jboot.kernel.secure.utils.SecureUtil;
-import org.jboot.kernel.tool.constant.RoleConstant;
-import org.jboot.kernel.tool.utils.CollectionUtil;
-import org.jboot.kernel.tool.utils.Func;
-import org.jboot.kernel.tool.utils.StringUtil;
-import org.jboot.kernel.tool.utils.WebUtil;
+import org.jboot.kernel.toolkit.constant.RoleConstant;
+import org.jboot.kernel.toolkit.utils.CollectionUtil;
+import org.jboot.kernel.toolkit.utils.Func;
+import org.jboot.kernel.toolkit.utils.StringUtil;
+import org.jboot.kernel.toolkit.utils.WebUtil;
 
 import jakarta.servlet.http.HttpServletRequest;
 import java.util.Objects;

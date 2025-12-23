@@ -8,10 +8,10 @@ import org.jboot.kernel.crypto.enums.CryptoType;
 import org.jboot.kernel.crypto.exception.EncryptBodyFailException;
 import org.jboot.kernel.crypto.exception.EncryptMethodNotFoundException;
 import org.jboot.kernel.crypto.exception.KeyNotConfiguredException;
-import org.jboot.kernel.tool.utils.AesUtil;
-import org.jboot.kernel.tool.utils.ClassUtil;
-import org.jboot.kernel.tool.utils.DesUtil;
-import org.jboot.kernel.tool.utils.StringUtil;
+import org.jboot.kernel.toolkit.utils.AesUtil;
+import org.jboot.kernel.toolkit.utils.ClassUtil;
+import org.jboot.kernel.toolkit.utils.DesUtil;
+import org.jboot.kernel.toolkit.utils.StringUtil;
 import org.springframework.core.MethodParameter;
 import org.springframework.lang.Nullable;
 

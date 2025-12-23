@@ -7,7 +7,7 @@ import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.session.ResultHandler;
 import org.apache.ibatis.session.RowBounds;
 import org.jboot.kernel.mp.intercept.QueryInterceptor;
-import org.jboot.kernel.tool.utils.ObjectUtil;
+import org.jboot.kernel.toolkit.utils.ObjectUtil;
 
 /**
  * 查询拦截器执行器

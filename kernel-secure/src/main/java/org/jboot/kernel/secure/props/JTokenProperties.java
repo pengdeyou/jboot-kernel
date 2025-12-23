@@ -5,7 +5,7 @@ import io.jsonwebtoken.JwtException;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.jboot.kernel.launch.constant.TokenConstant;
-import org.jboot.kernel.tool.utils.StringPool;
+import org.jboot.kernel.toolkit.utils.StringPool;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**

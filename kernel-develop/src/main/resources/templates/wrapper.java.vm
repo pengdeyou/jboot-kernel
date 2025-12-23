@@ -18,7 +18,7 @@ package $!{wrapperPackage};
 
 import lombok.AllArgsConstructor;
 import org.jboot.kernel.mp.support.BaseEntityWrapper;
-import org.jboot.kernel.tool.utils.BeanUtil;
+import org.jboot.kernel.toolkit.utils.BeanUtil;
 import $!{package.Entity}.$!{entity};
 #set($voPackage=$package.Entity.replace("entity","vo"))
 import $!{voPackage}.$!{entity}VO;

@@ -11,7 +11,7 @@ import io.swagger.v3.oas.models.security.SecurityRequirement;
 import io.swagger.v3.oas.models.security.SecurityScheme;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.jboot.kernel.tool.utils.CollectionUtil;
+import org.jboot.kernel.toolkit.utils.CollectionUtil;
 import org.springdoc.core.configuration.SpringDocConfiguration;
 import org.springdoc.core.customizers.GlobalOpenApiCustomizer;
 import org.springdoc.core.models.GroupedOpenApi;

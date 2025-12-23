@@ -5,11 +5,11 @@ import lombok.RequiredArgsConstructor;
 import org.jboot.kernel.datascope.enums.DataScopeEnum;
 import org.jboot.kernel.datascope.model.DataScopeModel;
 import org.jboot.kernel.secure.AuthUser;
-import org.jboot.kernel.tool.constant.RoleConstant;
-import org.jboot.kernel.tool.utils.BeanUtil;
-import org.jboot.kernel.tool.utils.Func;
-import org.jboot.kernel.tool.utils.PlaceholderUtil;
-import org.jboot.kernel.tool.utils.StringUtil;
+import org.jboot.kernel.toolkit.constant.RoleConstant;
+import org.jboot.kernel.toolkit.utils.BeanUtil;
+import org.jboot.kernel.toolkit.utils.Func;
+import org.jboot.kernel.toolkit.utils.PlaceholderUtil;
+import org.jboot.kernel.toolkit.utils.StringUtil;
 
 import java.util.ArrayList;
 import java.util.List;

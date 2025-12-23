@@ -19,9 +19,9 @@ import org.jboot.kernel.datascope.props.DataScopeProperties;
 import org.jboot.kernel.mp.intercept.QueryInterceptor;
 import org.jboot.kernel.secure.AuthUser;
 import org.jboot.kernel.secure.utils.SecureUtil;
-import org.jboot.kernel.tool.utils.ClassUtil;
-import org.jboot.kernel.tool.utils.SpringUtil;
-import org.jboot.kernel.tool.utils.StringUtil;
+import org.jboot.kernel.toolkit.utils.ClassUtil;
+import org.jboot.kernel.toolkit.utils.SpringUtil;
+import org.jboot.kernel.toolkit.utils.StringUtil;
 
 import java.lang.reflect.Method;
 import java.util.concurrent.ConcurrentHashMap;

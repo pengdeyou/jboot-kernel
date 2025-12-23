@@ -4,7 +4,7 @@ package org.jboot.kernel.boot.config;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.jboot.kernel.launch.props.JProperties;
-import org.jboot.kernel.tool.constant.SystemConstant;
+import org.jboot.kernel.toolkit.constant.SystemConstant;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;

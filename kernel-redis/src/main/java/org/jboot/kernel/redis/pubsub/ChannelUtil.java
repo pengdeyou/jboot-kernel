@@ -17,7 +17,7 @@
 package org.jboot.kernel.redis.pubsub;
 
 import lombok.experimental.UtilityClass;
-import org.jboot.kernel.tool.utils.CharPool;
+import org.jboot.kernel.toolkit.utils.CharPool;
 import org.springframework.data.redis.listener.ChannelTopic;
 import org.springframework.data.redis.listener.PatternTopic;
 import org.springframework.data.redis.listener.Topic;

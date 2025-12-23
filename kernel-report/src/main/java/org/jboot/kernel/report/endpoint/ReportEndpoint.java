@@ -7,8 +7,8 @@ import org.jboot.kernel.mp.support.Condition;
 import org.jboot.kernel.mp.support.Query;
 import org.jboot.kernel.report.entity.ReportFileEntity;
 import org.jboot.kernel.report.service.IReportFileService;
-import org.jboot.kernel.tool.api.R;
-import org.jboot.kernel.tool.utils.Func;
+import org.jboot.kernel.toolkit.api.R;
+import org.jboot.kernel.toolkit.utils.Func;
 import org.springframework.web.bind.annotation.*;
 import io.swagger.v3.oas.annotations.Hidden;
 

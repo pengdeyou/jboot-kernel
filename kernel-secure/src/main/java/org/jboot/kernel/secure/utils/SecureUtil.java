@@ -15,8 +15,8 @@ import org.jboot.kernel.secure.exception.SecureException;
 import org.jboot.kernel.secure.props.JTokenProperties;
 import org.jboot.kernel.secure.provider.IClientDetails;
 import org.jboot.kernel.secure.provider.IClientDetailsService;
-import org.jboot.kernel.tool.constant.RoleConstant;
-import org.jboot.kernel.tool.utils.*;
+import org.jboot.kernel.toolkit.constant.RoleConstant;
+import org.jboot.kernel.toolkit.utils.*;
 
 import javax.crypto.SecretKey;
 import java.util.*;

@@ -3,10 +3,10 @@ package org.jboot.kernel.mp.support;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import lombok.SneakyThrows;
-import org.jboot.kernel.tool.utils.DateUtil;
-import org.jboot.kernel.tool.utils.Func;
-import org.jboot.kernel.tool.utils.StringPool;
-import org.jboot.kernel.tool.utils.StringUtil;
+import org.jboot.kernel.toolkit.utils.DateUtil;
+import org.jboot.kernel.toolkit.utils.Func;
+import org.jboot.kernel.toolkit.utils.StringPool;
+import org.jboot.kernel.toolkit.utils.StringUtil;
 
 import java.sql.SQLException;
 import java.util.Map;

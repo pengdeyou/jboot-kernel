@@ -4,8 +4,8 @@ package org.jboot.kernel.i18n.utils;
 import lombok.experimental.UtilityClass;
 import lombok.extern.slf4j.Slf4j;
 import org.jboot.kernel.i18n.service.I18nService;
-import org.jboot.kernel.tool.utils.SpringUtil;
-import org.jboot.kernel.tool.utils.StringPool;
+import org.jboot.kernel.toolkit.utils.SpringUtil;
+import org.jboot.kernel.toolkit.utils.StringPool;
 
 import java.util.List;
 import java.util.Locale;

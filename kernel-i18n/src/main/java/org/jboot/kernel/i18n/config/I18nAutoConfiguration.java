@@ -8,7 +8,7 @@ import org.jboot.kernel.i18n.interceptor.I18nInterceptor;
 import org.jboot.kernel.i18n.props.I18nProperties;
 import org.jboot.kernel.i18n.resolver.I18nLocaleResolver;
 import org.jboot.kernel.i18n.service.I18nService;
-import org.jboot.kernel.tool.utils.Func;
+import org.jboot.kernel.toolkit.utils.Func;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;

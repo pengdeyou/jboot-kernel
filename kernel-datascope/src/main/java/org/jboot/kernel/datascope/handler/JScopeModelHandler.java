@@ -4,7 +4,7 @@ package org.jboot.kernel.datascope.handler;
 import lombok.RequiredArgsConstructor;
 import org.jboot.kernel.datascope.constant.DataScopeConstant;
 import org.jboot.kernel.datascope.model.DataScopeModel;
-import org.jboot.kernel.tool.utils.*;
+import org.jboot.kernel.toolkit.utils.*;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 
@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import static org.jboot.kernel.tool.utils.CacheUtil.SYS_CACHE;
+import static org.jboot.kernel.toolkit.utils.CacheUtil.SYS_CACHE;
 
 
 /**

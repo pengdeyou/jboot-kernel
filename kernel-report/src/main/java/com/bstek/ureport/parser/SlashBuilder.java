@@ -21,7 +21,7 @@ import com.bstek.ureport.definition.value.Slash;
 import com.bstek.ureport.definition.value.SlashValue;
 import com.bstek.ureport.exception.ReportComputeException;
 import com.bstek.ureport.utils.UnitUtils;
-import org.jboot.kernel.tool.utils.Base64Util;
+import org.jboot.kernel.toolkit.utils.Base64Util;
 
 import javax.imageio.ImageIO;
 import javax.imageio.stream.MemoryCacheImageOutputStream;

@@ -8,8 +8,8 @@ import lombok.AllArgsConstructor;
 import org.jboot.kernel.report.entity.ReportFileEntity;
 import org.jboot.kernel.report.props.ReportDatabaseProperties;
 import org.jboot.kernel.report.service.IReportFileService;
-import org.jboot.kernel.tool.constant.JConstant;
-import org.jboot.kernel.tool.utils.DateUtil;
+import org.jboot.kernel.toolkit.constant.JConstant;
+import org.jboot.kernel.toolkit.utils.DateUtil;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;

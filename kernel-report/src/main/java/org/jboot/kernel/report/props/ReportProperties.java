@@ -2,7 +2,7 @@
 package org.jboot.kernel.report.props;
 
 import lombok.Data;
-import org.jboot.kernel.tool.utils.StringPool;
+import org.jboot.kernel.toolkit.utils.StringPool;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**

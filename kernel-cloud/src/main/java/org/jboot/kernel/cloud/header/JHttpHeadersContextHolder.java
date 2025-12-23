@@ -16,8 +16,8 @@
 package org.jboot.kernel.cloud.header;
 
 import org.jboot.kernel.cloud.props.JFeignHeadersProperties;
-import org.jboot.kernel.tool.utils.StringUtil;
-import org.jboot.kernel.tool.utils.WebUtil;
+import org.jboot.kernel.toolkit.utils.StringUtil;
+import org.jboot.kernel.toolkit.utils.WebUtil;
 import org.springframework.core.NamedThreadLocal;
 import org.springframework.http.HttpHeaders;
 import org.springframework.lang.Nullable;

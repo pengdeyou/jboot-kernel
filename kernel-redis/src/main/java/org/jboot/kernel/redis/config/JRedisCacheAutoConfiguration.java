@@ -16,7 +16,7 @@
 
 package org.jboot.kernel.redis.config;
 
-import org.jboot.kernel.tool.config.RedisConfiguration;
+import org.jboot.kernel.toolkit.config.RedisConfiguration;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.cache.CacheManagerCustomizers;

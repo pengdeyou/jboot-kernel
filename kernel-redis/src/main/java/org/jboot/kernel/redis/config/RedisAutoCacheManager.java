@@ -16,8 +16,8 @@
 
 package org.jboot.kernel.redis.config;
 
-import org.jboot.kernel.tool.utils.StringPool;
-import org.jboot.kernel.tool.utils.StringUtil;
+import org.jboot.kernel.toolkit.utils.StringPool;
+import org.jboot.kernel.toolkit.utils.StringUtil;
 import org.springframework.boot.convert.DurationStyle;
 import org.springframework.data.redis.cache.RedisCache;
 import org.springframework.data.redis.cache.RedisCacheConfiguration;

@@ -27,7 +27,7 @@ import com.alibaba.druid.util.StringUtils;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.jboot.kernel.mp.props.MybatisPlusProperties;
-import org.jboot.kernel.tool.utils.StringUtil;
+import org.jboot.kernel.toolkit.utils.StringUtil;
 
 import java.sql.SQLException;
 import java.time.temporal.TemporalAccessor;

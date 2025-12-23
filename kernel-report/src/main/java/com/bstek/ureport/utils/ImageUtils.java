@@ -21,7 +21,7 @@ import com.bstek.ureport.image.ImageProcessor;
 import com.bstek.ureport.image.ImageType;
 import com.bstek.ureport.image.StaticImageProcessor;
 import org.apache.commons.io.IOUtils;
-import org.jboot.kernel.tool.utils.Base64Util;
+import org.jboot.kernel.toolkit.utils.Base64Util;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

@@ -17,8 +17,8 @@ package org.jboot.kernel.cloud.version;
 
 import org.jboot.kernel.cloud.annotation.ApiVersion;
 import org.jboot.kernel.cloud.annotation.UrlVersion;
-import org.jboot.kernel.tool.utils.StringPool;
-import org.jboot.kernel.tool.utils.StringUtil;
+import org.jboot.kernel.toolkit.utils.StringPool;
+import org.jboot.kernel.toolkit.utils.StringUtil;
 import org.springframework.core.annotation.AnnotatedElementUtils;
 import org.springframework.lang.Nullable;
 import org.springframework.web.method.HandlerMethod;

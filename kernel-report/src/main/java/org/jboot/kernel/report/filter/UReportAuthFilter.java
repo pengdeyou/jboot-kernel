@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
 import org.jboot.kernel.secure.utils.AuthUtil;
-import org.jboot.kernel.tool.utils.WebUtil;
+import org.jboot.kernel.toolkit.utils.WebUtil;
 
 import java.io.IOException;
 import java.io.PrintWriter;

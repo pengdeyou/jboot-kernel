@@ -3,8 +3,8 @@ package org.jboot.kernel.cloud.header;
 
 import org.jboot.kernel.secure.AuthUser;
 import org.jboot.kernel.secure.utils.SecureUtil;
-import org.jboot.kernel.tool.utils.Charsets;
-import org.jboot.kernel.tool.utils.UrlUtil;
+import org.jboot.kernel.toolkit.utils.Charsets;
+import org.jboot.kernel.toolkit.utils.UrlUtil;
 
 import jakarta.servlet.http.HttpServletRequest;
 

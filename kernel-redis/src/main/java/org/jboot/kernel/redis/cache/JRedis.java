@@ -17,8 +17,8 @@
 package org.jboot.kernel.redis.cache;
 
 import lombok.Getter;
-import org.jboot.kernel.tool.utils.CollectionUtil;
-import org.jboot.kernel.tool.utils.NumberUtil;
+import org.jboot.kernel.toolkit.utils.CollectionUtil;
+import org.jboot.kernel.toolkit.utils.NumberUtil;
 import org.springframework.data.redis.connection.RedisKeyCommands;
 import org.springframework.data.redis.core.*;
 import org.springframework.data.redis.serializer.RedisSerializer;

@@ -2,7 +2,7 @@
 package org.jboot.kernel.oss.props;
 
 import lombok.Data;
-import org.jboot.kernel.tool.support.Kv;
+import org.jboot.kernel.toolkit.support.Kv;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**

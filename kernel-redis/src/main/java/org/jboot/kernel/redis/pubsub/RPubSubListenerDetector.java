@@ -18,7 +18,7 @@ package org.jboot.kernel.redis.pubsub;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.jboot.kernel.tool.utils.ReflectUtil;
+import org.jboot.kernel.toolkit.utils.ReflectUtil;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.ApplicationContext;
