@@ -89,7 +89,7 @@
         <module>kernel-i18n</module>
         <module>kernel-loadbalancer</module>
         <module>kernel-log</module>
-        <module>kernel-mybatis</module>
+        <module>kernel-mp</module>
         <module>kernel-oss</module>
         <module>kernel-redis</module>
         <module>kernel-report</module>
@@ -201,7 +201,7 @@
             </dependency>
             <dependency>
                 <groupId>org.jboot</groupId>
-                <artifactId>kernel-mybatis</artifactId>
+                <artifactId>kernel-mp</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>

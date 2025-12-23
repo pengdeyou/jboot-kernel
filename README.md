@@ -70,7 +70,7 @@ jboot-kernel
 ├── kernel-i18n        -- I18n国际化封装模块
 ├── kernel-loadbalancer -- 负载均衡与灰度发布封装模块
 ├── kernel-log         -- 日志封装模块，统一日志处理和存储 
-├── kernel-mybatis     -- MyBatis Plus增强封装模块
+├── kernel-mp     -- MyBatis Plus增强封装模块
 ├── kernel-oss         -- 对象存储封装模块，支持多种云存储
 ├── kernel-redis       -- Redis缓存封装模块，提供缓存操作工具
 ├── kernel-report      -- 报表封装模块，支持多种报表生成

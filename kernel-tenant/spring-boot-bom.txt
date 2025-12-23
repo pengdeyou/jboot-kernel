@@ -75,7 +75,7 @@ The following files have been resolved:
    org.springframework:spring-oxm:jar:6.2.11:compile[36m -- module spring.oxm[0;1m [auto][m
    org.springframework:spring-context-support:jar:6.2.11:compile[36m -- module spring.context.support[0;1m [auto][m
    org.bouncycastle:bcprov-jdk18on:jar:1.82:compile[36m -- module org.bouncycastle.provider[m
-   org.jboot:kernel-mybatis:jar:3.7.1:compile[36m -- module org.jboot.kernel.mybatis[0;1m [auto][m
+   org.jboot:kernel-mp:jar:3.7.1:compile[36m -- module org.jboot.kernel.mybatis[0;1m [auto][m
    org.mybatis:mybatis:jar:3.5.19:compile[36m -- module org.mybatis[0;1m [auto][m
    org.mybatis:mybatis-spring:jar:3.0.5:compile[36m -- module org.mybatis.spring[0;1m [auto][m
    com.baomidou:mybatis-plus:jar:3.5.14:compile[36m -- module com.baomidou.mybatis.plus[0;1m [auto][m

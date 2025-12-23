@@ -21,7 +21,7 @@
         <!--Mybatis-->
         <dependency>
             <groupId>org.jboot</groupId>
-            <artifactId>kernel-mybatis</artifactId>
+            <artifactId>kernel-mp</artifactId>
         </dependency>
         <!--Jdbc-->
         <dependency>

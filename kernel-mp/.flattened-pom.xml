@@ -3,11 +3,11 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jboot</groupId>
-  <artifactId>kernel-mybatis</artifactId>
+  <artifactId>kernel-mp</artifactId>
   <version>3.7.1</version>
-  <name>kernel-mybatis</name>
+  <name>kernel-mp</name>
   <description>jboot-kernel is a powerful toolbox for JBoot</description>
-  <url>https://github.com/pengdeyou/jboot-kernel/kernel-mybatis</url>
+  <url>https://github.com/pengdeyou/jboot-kernel/kernel-mp</url>
   <licenses>
     <license>
       <name>GNU LESSER GENERAL PUBLIC LICENSE</name>
@@ -26,9 +26,9 @@
     </developer>
   </developers>
   <scm>
-    <connection>https://github.com/pengdeyou/jboot-kernel.git/kernel-mybatis</connection>
-    <developerConnection>https://github.com/pengdeyou/kernel-mybatis</developerConnection>
-    <url>https://github.com/pengdeyou/jboot-kernel.git/kernel-mybatis</url>
+    <connection>https://github.com/pengdeyou/jboot-kernel.git/kernel-mp</connection>
+    <developerConnection>https://github.com/pengdeyou/kernel-mp</developerConnection>
+    <url>https://github.com/pengdeyou/jboot-kernel.git/kernel-mp</url>
   </scm>
   <distributionManagement>
     <repository>

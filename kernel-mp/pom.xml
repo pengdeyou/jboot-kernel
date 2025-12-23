@@ -10,7 +10,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>kernel-mybatis</artifactId>
+    <artifactId>kernel-mp</artifactId>
     <name>${project.artifactId}</name>
     <packaging>jar</packaging>
 

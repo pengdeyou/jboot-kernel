@@ -140,7 +140,7 @@ The `kernel-boot` module integrates with several other JBoot-Kernel modules:
 - **kernel-cache**: Caching functionality
 - **kernel-log**: Logging and monitoring
 - **kernel-swagger**: API documentation
-- **kernel-mybatis**: Database access with MyBatis Plus
+- **kernel-mp**: Database access with MyBatis Plus
 
 ## Advanced Features
 

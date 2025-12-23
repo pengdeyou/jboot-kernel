@@ -179,7 +179,7 @@ The following files have been resolved:
    org.webjars:webjars-locator-lite:jar:1.1.0:compile[36m -- module webjars.locator.lite[0;1;33m (auto)[m
    org.jboot:kernel-tenant:jar:3.7.1:compile[36m -- module org.jboot.kernel.tenant[0;1m [auto][m
    org.jboot:kernel-redis:jar:3.7.1:compile[36m -- module org.jboot.kernel.redis[0;1m [auto][m
-   org.jboot:kernel-mybatis:jar:3.7.1:compile[36m -- module org.jboot.kernel.mybatis[0;1m [auto][m
+   org.jboot:kernel-mp:jar:3.7.1:compile[36m -- module org.jboot.kernel.mybatis[0;1m [auto][m
    org.mybatis:mybatis:jar:3.5.19:compile[36m -- module org.mybatis[0;1m [auto][m
    org.mybatis:mybatis-spring:jar:3.0.5:compile[36m -- module org.mybatis.spring[0;1m [auto][m
    com.baomidou:mybatis-plus-jsqlparser:jar:3.5.14:compile[36m -- module com.baomidou.mybatis.plus.jsqlparser[0;1m [auto][m

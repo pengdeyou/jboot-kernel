@@ -28,7 +28,7 @@ export default defineUserConfig({
         { text: 'kernel-i18n', link: '/modules/kernel-i18n/' },
         { text: 'kernel-loadbalancer', link: '/modules/kernel-loadbalancer/' },
         { text: 'kernel-log', link: '/modules/kernel-log/' },
-        { text: 'kernel-mybatis', link: '/modules/kernel-mybatis/' },
+        { text: 'kernel-mp', link: '/modules/kernel-mp/' },
         { text: 'kernel-oss', link: '/modules/kernel-oss/' },
         { text: 'kernel-redis', link: '/modules/kernel-redis/' },
         { text: 'kernel-report', link: '/modules/kernel-report/' },

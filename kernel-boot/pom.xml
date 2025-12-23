@@ -74,7 +74,7 @@
         <!--MyBatis-->
         <dependency>
             <groupId>org.jboot</groupId>
-            <artifactId>kernel-mybatis</artifactId>
+            <artifactId>kernel-mp</artifactId>
         </dependency>
         <dependency>
             <groupId>com.baomidou</groupId>

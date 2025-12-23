@@ -19,7 +19,7 @@ JBoot-Kernel 采用模块化设计，将不同的功能拆分为独立的模块�
 - **kernel-i18n**: 国际化模块，支持多语言切换
 - **kernel-loadbalancer**: 负载均衡模块，提供自定义负载均衡策略
 - **kernel-log**: 日志模块，统一日志处理
-- **kernel-mybatis**: MyBatis 增强模块，简化数据库操作
+- **kernel-mp**: MyBatis 增强模块，简化数据库操作
 
 ## 集成模块
 
