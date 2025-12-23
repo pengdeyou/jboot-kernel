@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jboot</groupId>
   <artifactId>kernel-cache</artifactId>
-  <version>3.7.1</version>
+  <version>3.7.2-RELEASE</version>
   <name>kernel-cache</name>
   <description>jboot-kernel is a powerful toolbox for JBoot</description>
   <url>https://github.com/pengdeyou/jboot-kernel/kernel-cache</url>
@@ -46,7 +46,7 @@
     <dependency>
       <groupId>org.jboot</groupId>
       <artifactId>kernel-toolkit</artifactId>
-      <version>3.7.1</version>
+      <version>3.7.2-RELEASE</version>
       <scope>compile</scope>
     </dependency>
     <dependency>

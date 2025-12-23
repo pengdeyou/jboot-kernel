@@ -66,7 +66,7 @@ The following files have been resolved:
    org.springframework:spring-jcl:jar:6.2.11:compile[36m -- module spring.jcl[0;1m [auto][m
    io.micrometer:micrometer-observation:jar:1.15.4:compile[36m -- module micrometer.observation[0;1m [auto][m
    org.springframework:spring-webflux:jar:6.2.11:provided[36m -- module spring.webflux[0;1m [auto][m
-   io.projectreactor:reactor-core:jar:3.7.11:compile[36m -- module reactor.core[0;1m [auto][m
+   io.projectreactor:reactor-core:jar:3.7.2-RELEASE1:compile[36m -- module reactor.core[0;1m [auto][m
    org.reactivestreams:reactive-streams:jar:1.0.4:compile[36m -- module org.reactivestreams[0;1m [auto][m
    org.springframework.boot:spring-boot-starter-aop:jar:3.5.6:compile[36m -- module spring.boot.starter.aop[0;1m [auto][m
    org.springframework.boot:spring-boot-starter:jar:3.5.6:compile[36m -- module spring.boot.starter[0;1m [auto][m

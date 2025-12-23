@@ -6,8 +6,8 @@ The following files have been resolved:
    com.fasterxml.jackson.core:jackson-databind:jar:2.19.2:compile[36m -- module com.fasterxml.jackson.databind[m
    com.fasterxml.jackson.core:jackson-annotations:jar:2.19.2:compile[36m -- module com.fasterxml.jackson.annotation[m
    com.fasterxml.jackson.core:jackson-core:jar:2.19.2:compile[36m -- module com.fasterxml.jackson.core[m
-   org.jboot:kernel-toolkit:jar:3.7.1:compile[36m -- module org.jboot.kernel.tool[0;1m [auto][m
-   org.jboot:kernel-launch:jar:3.7.1:compile[36m -- module org.jboot.kernel.launch[0;1m [auto][m
+   org.jboot:kernel-toolkit:jar:3.7.2-RELEASE:compile[36m -- module org.jboot.kernel.tool[0;1m [auto][m
+   org.jboot:kernel-launch:jar:3.7.2-RELEASE:compile[36m -- module org.jboot.kernel.launch[0;1m [auto][m
    org.springframework.boot:spring-boot-starter-web:jar:3.5.6:compile[36m -- module spring.boot.starter.web[0;1m [auto][m
    org.springframework.boot:spring-boot-starter-json:jar:3.5.6:compile[36m -- module spring.boot.starter.json[0;1m [auto][m
    com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.19.2:compile[36m -- module com.fasterxml.jackson.datatype.jdk8[m
@@ -68,7 +68,7 @@ The following files have been resolved:
    io.netty:netty-transport-native-unix-common:jar:4.1.127.Final:compile[36m -- module io.netty.transport.unix.common[0;1m [auto][m
    io.netty:netty-codec:jar:4.1.127.Final:compile[36m -- module io.netty.codec[0;1m [auto][m
    io.netty:netty-transport:jar:4.1.127.Final:compile[36m -- module io.netty.transport[0;1m [auto][m
-   io.projectreactor:reactor-core:jar:3.7.11:compile[36m -- module reactor.core[0;1m [auto][m
+   io.projectreactor:reactor-core:jar:3.7.2-RELEASE1:compile[36m -- module reactor.core[0;1m [auto][m
    org.reactivestreams:reactive-streams:jar:1.0.4:compile[36m -- module org.reactivestreams[0;1m [auto][m
    org.springframework.data:spring-data-redis:jar:3.5.4:compile[36m -- module spring.data.redis[0;1m [auto][m
    org.springframework.data:spring-data-keyvalue:jar:3.5.4:compile[36m -- module spring.data.keyvalue[0;1m [auto][m

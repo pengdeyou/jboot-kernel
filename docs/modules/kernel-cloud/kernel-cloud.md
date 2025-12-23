@@ -64,7 +64,7 @@ Add the following dependency to your `pom.xml`:
 <dependency>
     <groupId>org.jboot</groupId>
     <artifactId>kernel-cloud</artifactId>
-    <version>3.7.1</version>
+    <version>3.7.2-RELEASE</version>
 </dependency>
 ```
 
