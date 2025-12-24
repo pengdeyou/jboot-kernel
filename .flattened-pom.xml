@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jboot</groupId>
   <artifactId>jboot-kernel</artifactId>
-  <version>3.7.2-RELEASE</version>
+  <version>3.7.3-RELEASE</version>
   <packaging>pom</packaging>
   <name>jboot-kernel</name>
   <description>jboot-kernel is a powerful toolbox for JBoot</description>
