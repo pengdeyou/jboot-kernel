@@ -1,34 +1,10 @@
-/**
- * Copyright (c) 2018-2099, DreamLu 卢春梦 (qq596392912@gmail.com).
- * <p>
- * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE 3.0;
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.gnu.org/licenses/lgpl.html
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package org.jboot.kernel.toolkit.utils;
-
 import org.springframework.core.io.*;
 import org.springframework.util.Assert;
-
 import java.io.IOException;
-
-/**
- * 资源工具类
- *
- * @author Corsak
- */
 public class ResourceUtil extends org.springframework.util.ResourceUtils {
 	public static final String HTTP_REGEX = "^https?:.+$";
 	public static final String FTP_URL_PREFIX = "ftp:";
-
 	/**
 	 * 获取资源
 	 * <p>
@@ -62,7 +38,6 @@ public class ResourceUtil extends org.springframework.util.ResourceUtils {
 		}
 		return new FileSystemResource(resourceLocation);
 	}
-
 	/**
 	 * 读取资源文件为字符串
 	 *
@@ -77,5 +52,4 @@ public class ResourceUtil extends org.springframework.util.ResourceUtils {
 			throw Exceptions.unchecked(e);
 		}
 	}
-
 }

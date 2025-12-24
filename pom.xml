@@ -72,6 +72,7 @@
         <fastexcel.version>1.3.0</fastexcel.version>
         <poi.version>5.4.1</poi.version>
         <poi.ooxl.version>1.4</poi.ooxl.version>
+        <jbatis.rds.version>3.0.4-RELEASE</jbatis.rds.version>
     </properties>
 
     <modules>
@@ -90,6 +91,7 @@
         <module>kernel-loadbalancer</module>
         <module>kernel-log</module>
         <module>kernel-mp</module>
+        <module>kernel-rds</module>
         <module>kernel-oss</module>
         <module>kernel-redis</module>
         <module>kernel-report</module>
@@ -202,6 +204,11 @@
             <dependency>
                 <groupId>org.jboot</groupId>
                 <artifactId>kernel-mp</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jboot</groupId>
+                <artifactId>kernel-rds</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>
@@ -320,6 +327,42 @@
                 <groupId>org.mybatis</groupId>
                 <artifactId>mybatis-typehandlers-jsr310</artifactId>
                 <version>1.0.2</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jbatis</groupId>
+                <artifactId>jbatis-rds-kernel</artifactId>
+                <version>${jbatis.rds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jbatis</groupId>
+                <artifactId>jbatis-rds</artifactId>
+                <version>${jbatis.rds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jbatis</groupId>
+                <artifactId>jbatis-rds-annotation</artifactId>
+                <version>${jbatis.rds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jbatis</groupId>
+                <artifactId>jbatis-rds-extension</artifactId>
+                <version>${jbatis.rds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jbatis</groupId>
+                <artifactId>jbatis-rds-generator</artifactId>
+                <version>${jbatis.rds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jbatis</groupId>
+                <artifactId>jbatis-rds-spring-boot-autoconfigure</artifactId>
+                <version>${jbatis.rds.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jbatis</groupId>
+                <artifactId>jbatis-rds-spring-boot3-starter</artifactId>
+                <version>${jbatis.rds.version}</version>
             </dependency>
             <!-- NacosClient -->
             <dependency>

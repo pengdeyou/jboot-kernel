@@ -1,42 +1,14 @@
-/**
- * Copyright (c) 2018-2099, DreamLu 卢春梦 (qq596392912@gmail.com).
- * <p>
- * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE 3.0;
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.gnu.org/licenses/lgpl.html
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package org.jboot.kernel.toolkit.support;
-
 import org.jboot.kernel.toolkit.utils.BeanUtil;
 import org.springframework.asm.ClassVisitor;
 import org.springframework.asm.Type;
 import org.springframework.cglib.core.*;
-
 import java.beans.PropertyDescriptor;
 import java.lang.invoke.MethodHandles;
 import java.lang.reflect.Modifier;
 import java.security.ProtectionDomain;
 import java.util.HashMap;
 import java.util.Map;
-
-/**
- * spring cglib 魔改
- *
- * <p>
- *     1. 支持链式 bean
- *     2. 自定义的 BeanCopier 解决 spring boot 和 cglib ClassLoader classLoader 不一致的问题
- * </p>
- *
- * @author Corsak
- */
 public abstract class BaseBeanCopier {
 	private static final String BEAN_NAME_PREFIX = BaseBeanCopier.class.getName();
 	private static final BeanCopierKey KEY_FACTORY = (BeanCopierKey) KeyFactory.create(BeanCopierKey.class);
@@ -44,7 +16,6 @@ public abstract class BaseBeanCopier {
 	private static final Type BEAN_COPIER = TypeUtils.parseType(BEAN_NAME_PREFIX);
 	private static final Signature COPY = new Signature("copy", Type.VOID_TYPE, new Type[]{Constants.TYPE_OBJECT, Constants.TYPE_OBJECT, CONVERTER});
 	private static final Signature CONVERT = TypeUtils.parseSignature("Object convert(Object, Class, Object)");
-
 	interface BeanCopierKey {
 		/**
 		 * 实例化
@@ -55,7 +26,6 @@ public abstract class BaseBeanCopier {
 		 */
 		Object newInstance(String source, String target, boolean useConverter);
 	}
-
 	public static BaseBeanCopier create(Class source, Class target, boolean useConverter) {
 		Object key = KEY_FACTORY.newInstance(source.getName(), target.getName(), useConverter);
 		Generator gen = new Generator(key);
@@ -65,7 +35,6 @@ public abstract class BaseBeanCopier {
 		gen.setUseCache(true);
 		return gen.create();
 	}
-
 	/**
 	 * 拷贝
 	 * @param from 源
@@ -73,7 +42,6 @@ public abstract class BaseBeanCopier {
 	 * @param converter 转换器
 	 */
 	abstract public void copy(Object from, Object to, Converter converter);
-
 	public static class Generator extends AbstractClassGenerator {
 		private static final Source SOURCE = new Source(BEAN_NAME_PREFIX);
 		private final Object key;
@@ -81,45 +49,37 @@ public abstract class BaseBeanCopier {
 		private Class target;
 		private boolean useConverter;
 		private String className;
-
 		Generator(Object key) {
 			super(SOURCE);
 			this.key = key;
 		}
-
 		public void setSource(Class source) {
 			if (!Modifier.isPublic(source.getModifiers())) {
 				setNamePrefix(source.getName());
 			}
 			this.source = source;
 		}
-
 		public void setTarget(Class target) {
 			if (!Modifier.isPublic(target.getModifiers())) {
 				setNamePrefix(target.getName());
 			}
 			this.target = target;
 		}
-
 		public void setUseConverter(boolean useConverter) {
 			this.useConverter = useConverter;
 		}
-
 		@Override
 		protected ClassLoader getDefaultClassLoader() {
 			// Corsak 保证 和 返回使用同一个 ClassLoader
 			return target.getClassLoader();
 		}
-
 		@Override
 		protected ProtectionDomain getProtectionDomain() {
 			return ReflectUtils.getProtectionDomain(source);
 		}
-
 		public BaseBeanCopier create() {
 			return (BaseBeanCopier) super.create(key);
 		}
-
 		@Override
 		public void generateClass(ClassVisitor v) {
 			Type sourceType = Type.getType(source);
@@ -131,10 +91,8 @@ public abstract class BaseBeanCopier {
 				BEAN_COPIER,
 				null,
 				Constants.SOURCE_FILE);
-
 			EmitUtils.null_constructor(ce);
 			CodeEmitter e = ce.begin_method(Constants.ACC_PUBLIC, COPY, null);
-
 			// 2018.12.27 by Corsak 支持链式 bean
 			PropertyDescriptor[] getters = BeanUtil.getBeanGetters(source);
 			PropertyDescriptor[] setters = BeanUtil.getBeanSetters(target);
@@ -142,7 +100,6 @@ public abstract class BaseBeanCopier {
 			for (PropertyDescriptor getter : getters) {
 				names.put(getter.getName(), getter);
 			}
-
 			Local targetLocal = e.make_local();
 			Local sourceLocal = e.make_local();
 			e.load_arg(1);
@@ -151,7 +108,6 @@ public abstract class BaseBeanCopier {
 			e.load_arg(0);
 			e.checkcast(sourceType);
 			e.store_local(sourceLocal);
-
 			for (int i = 0; i < setters.length; i++) {
 				PropertyDescriptor setter = setters[i];
 				PropertyDescriptor getter = (PropertyDescriptor) names.get(setter.getName());
@@ -183,21 +139,17 @@ public abstract class BaseBeanCopier {
 			e.end_method();
 			ce.end_class();
 		}
-
 		private static boolean compatible(PropertyDescriptor getter, PropertyDescriptor setter) {
 			return setter.getPropertyType().isAssignableFrom(getter.getPropertyType());
 		}
-
 		@Override
 		protected Object firstInstance(Class type) {
 			return ReflectUtils.newInstance(type);
 		}
-
 		@Override
 		protected Object nextInstance(Object instance) {
 			return instance;
 		}
-
 		@Override
 		protected Class generate(ClassLoaderData data) {
 			// 生成类名
@@ -210,11 +162,9 @@ public abstract class BaseBeanCopier {
 				throw new CodeGenerationException(ex);
 			}
 		}
-
 		private String generateClassName(Predicate nameTestPredicate) {
 			this.className = DefaultNamingPolicy.INSTANCE.getClassName(BEAN_NAME_PREFIX, BEAN_NAME_PREFIX, key, nameTestPredicate);
 			return this.className;
 		}
-
 	}
 }

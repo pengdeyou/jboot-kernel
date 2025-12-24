@@ -1,7 +1,7 @@
 
 package org.jboot.kernel.log.error;
 
-import org.jboot.kernel.tool.jackson.JsonUtil;
+import org.jboot.kernel.toolkit.jackson.JsonUtil;
 import org.springframework.boot.autoconfigure.web.ErrorProperties;
 import org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController;
 import org.springframework.boot.web.error.ErrorAttributeOptions;

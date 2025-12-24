@@ -1,38 +1,14 @@
-/**
- * Copyright (c) 2018-2099, DreamLu 卢春梦 (qq596392912@gmail.com).
- * <p>
- * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE 3.0;
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.gnu.org/licenses/lgpl.html
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package org.jboot.kernel.toolkit.utils;
-
 import org.springframework.lang.Nullable;
-
 import javax.crypto.Cipher;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESKeySpec;
 import java.util.Objects;
-
-/**
- * DES加解密处理工具
- *
- * @author Corsak
- */
 public class DesUtil {
 	/**
 	 * 数字签名，密钥算法
 	 */
 	public static final String DES_ALGORITHM = "DES";
-
 	/**
 	 * 生成 des 密钥
 	 *
@@ -41,7 +17,6 @@ public class DesUtil {
 	public static String genDesKey() {
 		return StringUtil.random(16);
 	}
-
 	/**
 	 * DES加密
 	 *
@@ -52,7 +27,6 @@ public class DesUtil {
 	public static String encryptToHex(byte[] data, String password) {
 		return HexUtil.encodeToString(encrypt(data, password));
 	}
-
 	/**
 	 * DES加密
 	 *
@@ -68,7 +42,6 @@ public class DesUtil {
 		byte[] dataBytes = data.getBytes(Charsets.UTF_8);
 		return encryptToHex(dataBytes, password);
 	}
-
 	/**
 	 * DES解密
 	 *
@@ -84,7 +57,6 @@ public class DesUtil {
 		byte[] hexBytes = HexUtil.decode(data);
 		return new String(decrypt(hexBytes, password), Charsets.UTF_8);
 	}
-
 	/**
 	 * DES加密
 	 *
@@ -95,7 +67,6 @@ public class DesUtil {
 	public static String encryptToBase64(byte[] data, String password) {
 		return Base64Util.encodeToString(encrypt(data, password));
 	}
-
 	/**
 	 * DES加密
 	 *
@@ -111,7 +82,6 @@ public class DesUtil {
 		byte[] dataBytes = data.getBytes(Charsets.UTF_8);
 		return encryptToBase64(dataBytes, password);
 	}
-
 	/**
 	 * DES解密
 	 *
@@ -123,7 +93,6 @@ public class DesUtil {
 		byte[] dataBytes = Base64Util.decode(data);
 		return decrypt(dataBytes, password);
 	}
-
 	/**
 	 * DES解密
 	 *
@@ -139,7 +108,6 @@ public class DesUtil {
 		byte[] dataBytes = Base64Util.decodeFromString(data);
 		return new String(decrypt(dataBytes, password), Charsets.UTF_8);
 	}
-
 	/**
 	 * DES加密
 	 *
@@ -150,7 +118,6 @@ public class DesUtil {
 	public static byte[] encrypt(byte[] data, byte[] desKey) {
 		return des(data, desKey, Cipher.ENCRYPT_MODE);
 	}
-
 	/**
 	 * DES加密
 	 *
@@ -161,7 +128,6 @@ public class DesUtil {
 	public static byte[] encrypt(byte[] data, String desKey) {
 		return encrypt(data, Objects.requireNonNull(desKey).getBytes(Charsets.UTF_8));
 	}
-
 	/**
 	 * DES解密
 	 *
@@ -172,7 +138,6 @@ public class DesUtil {
 	public static byte[] decrypt(byte[] data, byte[] desKey) {
 		return des(data, desKey, Cipher.DECRYPT_MODE);
 	}
-
 	/**
 	 * DES解密
 	 *
@@ -183,7 +148,6 @@ public class DesUtil {
 	public static byte[] decrypt(byte[] data, String desKey) {
 		return decrypt(data, Objects.requireNonNull(desKey).getBytes(Charsets.UTF_8));
 	}
-
 	/**
 	 * DES加密/解密公共方法
 	 *
@@ -203,5 +167,4 @@ public class DesUtil {
 			throw Exceptions.unchecked(e);
 		}
 	}
-
 }

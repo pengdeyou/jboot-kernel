@@ -2,8 +2,8 @@
 package org.jboot.kernel.log.exception;
 
 import lombok.Getter;
-import org.jboot.kernel.tool.api.IResultCode;
-import org.jboot.kernel.tool.api.ResultCode;
+import org.jboot.kernel.toolkit.api.IResultCode;
+import org.jboot.kernel.toolkit.api.ResultCode;
 
 
 /**

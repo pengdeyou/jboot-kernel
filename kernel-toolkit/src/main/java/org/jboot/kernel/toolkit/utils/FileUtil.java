@@ -1,42 +1,17 @@
-/**
- * Copyright (c) 2018-2099, DreamLu 卢春梦 (qq596392912@gmail.com).
- * <p>
- * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE 3.0;
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.gnu.org/licenses/lgpl.html
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package org.jboot.kernel.toolkit.utils;
-
 import lombok.experimental.UtilityClass;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 import org.springframework.util.FileSystemUtils;
 import org.springframework.util.PatternMatchUtils;
 import org.springframework.web.multipart.MultipartFile;
-
 import java.io.*;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
-
-/**
- * 文件工具类
- *
- * @author Corsak
- */
 @UtilityClass
 public class FileUtil extends org.springframework.util.FileCopyUtils {
-
 	/**
 	 * 默认为true
 	 *
@@ -44,15 +19,12 @@ public class FileUtil extends org.springframework.util.FileCopyUtils {
 	 */
 	public static class TrueFilter implements FileFilter, Serializable {
 		private static final long serialVersionUID = -6420452043795072619L;
-
 		public final static TrueFilter TRUE = new TrueFilter();
-
 		@Override
 		public boolean accept(File pathname) {
 			return true;
 		}
 	}
-
 	/**
 	 * 扫描目录下的文件
 	 *
@@ -63,7 +35,6 @@ public class FileUtil extends org.springframework.util.FileCopyUtils {
 		File file = new File(path);
 		return list(file, TrueFilter.TRUE);
 	}
-
 	/**
 	 * 扫描目录下的文件
 	 *
@@ -78,7 +49,6 @@ public class FileUtil extends org.springframework.util.FileCopyUtils {
 			return PatternMatchUtils.simpleMatch(fileNamePattern, fileName);
 		});
 	}
-
 	/**
 	 * 扫描目录下的文件
 	 *
@@ -90,7 +60,6 @@ public class FileUtil extends org.springframework.util.FileCopyUtils {
 		File file = new File(path);
 		return list(file, filter);
 	}
-
 	/**
 	 * 扫描目录下的文件
 	 *
@@ -101,7 +70,6 @@ public class FileUtil extends org.springframework.util.FileCopyUtils {
 		List<File> fileList = new ArrayList<>();
 		return list(file, fileList, TrueFilter.TRUE);
 	}
-
 	/**
 	 * 扫描目录下的文件
 	 *
@@ -116,7 +84,6 @@ public class FileUtil extends org.springframework.util.FileCopyUtils {
 			return PatternMatchUtils.simpleMatch(fileNamePattern, fileName);
 		});
 	}
-
 	/**
 	 * 扫描目录下的文件
 	 *
@@ -128,7 +95,6 @@ public class FileUtil extends org.springframework.util.FileCopyUtils {
 		List<File> fileList = new ArrayList<>();
 		return list(file, fileList, filter);
 	}
-
 	/**
 	 * 扫描目录下的文件
 	 *
@@ -153,7 +119,6 @@ public class FileUtil extends org.springframework.util.FileCopyUtils {
 		}
 		return fileList;
 	}
-
 	/**
 	 * 获取文件后缀名
 	 * @param fullName 文件全名
@@ -165,7 +130,6 @@ public class FileUtil extends org.springframework.util.FileCopyUtils {
 		int dotIndex = fileName.lastIndexOf('.');
 		return (dotIndex == -1) ? "" : fileName.substring(dotIndex + 1);
 	}
-
 	/**
 	 * 获取文件名，去除后缀名
 	 * @param file 文件
@@ -177,7 +141,6 @@ public class FileUtil extends org.springframework.util.FileCopyUtils {
 		int dotIndex = fileName.lastIndexOf(CharPool.DOT);
 		return (dotIndex == -1) ? fileName : fileName.substring(0, dotIndex);
 	}
-
 	/**
 	 * Returns the path to the system temporary directory.
 	 *
@@ -186,7 +149,6 @@ public class FileUtil extends org.springframework.util.FileCopyUtils {
 	public static String getTempDirPath() {
 		return System.getProperty("java.io.tmpdir");
 	}
-
 	/**
 	 * Returns a {@link File} representing the system temporary directory.
 	 *
@@ -195,7 +157,6 @@ public class FileUtil extends org.springframework.util.FileCopyUtils {
 	public static File getTempDir() {
 		return new File(getTempDirPath());
 	}
-
 	/**
 	 * Reads the contents of a file into a String.
 	 * The file is always closed.
@@ -206,7 +167,6 @@ public class FileUtil extends org.springframework.util.FileCopyUtils {
 	public static String readToString(final File file) {
 		return readToString(file, Charsets.UTF_8);
 	}
-
 	/**
 	 * Reads the contents of a file into a String.
 	 * The file is always closed.
@@ -222,7 +182,6 @@ public class FileUtil extends org.springframework.util.FileCopyUtils {
 			throw Exceptions.unchecked(e);
 		}
 	}
-
 	/**
 	 * Reads the contents of a file into a String.
 	 * The file is always closed.
@@ -237,7 +196,6 @@ public class FileUtil extends org.springframework.util.FileCopyUtils {
 			throw Exceptions.unchecked(e);
 		}
 	}
-
 	/**
 	 * Writes a String to a file creating the file if it does not exist.
 	 *
@@ -247,7 +205,6 @@ public class FileUtil extends org.springframework.util.FileCopyUtils {
 	public static void writeToFile(final File file, final String data) {
 		writeToFile(file, data, Charsets.UTF_8, false);
 	}
-
 	/**
 	 * Writes a String to a file creating the file if it does not exist.
 	 *
@@ -259,7 +216,6 @@ public class FileUtil extends org.springframework.util.FileCopyUtils {
 	public static void writeToFile(final File file, final String data, final boolean append){
 		writeToFile(file, data, Charsets.UTF_8, append);
 	}
-
 	/**
 	 * Writes a String to a file creating the file if it does not exist.
 	 *
@@ -270,7 +226,6 @@ public class FileUtil extends org.springframework.util.FileCopyUtils {
 	public static void writeToFile(final File file, final String data, final Charset encoding) {
 		writeToFile(file, data, encoding, false);
 	}
-
 	/**
 	 * Writes a String to a file creating the file if it does not exist.
 	 *
@@ -287,7 +242,6 @@ public class FileUtil extends org.springframework.util.FileCopyUtils {
 			throw Exceptions.unchecked(e);
 		}
 	}
-
 	/**
 	 * 转成file
 	 * @param multipartFile MultipartFile
@@ -300,7 +254,6 @@ public class FileUtil extends org.springframework.util.FileCopyUtils {
 			throw Exceptions.unchecked(e);
 		}
 	}
-
 	/**
 	 * 转成file
 	 * @param in InputStream
@@ -313,7 +266,6 @@ public class FileUtil extends org.springframework.util.FileCopyUtils {
 			throw Exceptions.unchecked(e);
 		}
 	}
-
 	/**
 	 * Moves a file.
 	 * <p>
@@ -349,7 +301,6 @@ public class FileUtil extends org.springframework.util.FileCopyUtils {
 			}
 		}
 	}
-
 	/**
 	 * Deletes a file, never throwing an exception. If file is a directory, delete it and all sub-directories.
 	 * <p>
@@ -373,12 +324,10 @@ public class FileUtil extends org.springframework.util.FileCopyUtils {
 			}
 		} catch (final Exception ignored) {
 		}
-
 		try {
 			return file.delete();
 		} catch (final Exception ignored) {
 			return false;
 		}
 	}
-
 }

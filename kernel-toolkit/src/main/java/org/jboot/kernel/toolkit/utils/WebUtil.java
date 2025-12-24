@@ -1,20 +1,4 @@
-/**
- * Copyright (c) 2018-2099, DreamLu 卢春梦 (qq596392912@gmail.com).
- * <p>
- * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE 3.0;
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.gnu.org/licenses/lgpl.html
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package org.jboot.kernel.toolkit.utils;
-
 import lombok.extern.slf4j.Slf4j;
 import org.jboot.kernel.toolkit.jackson.JsonUtil;
 import org.springframework.http.MediaType;
@@ -25,7 +9,6 @@ import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.method.HandlerMethod;
-
 import jakarta.servlet.ServletInputStream;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
@@ -36,20 +19,10 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.Enumeration;
-
-
-/**
- * Miscellaneous utilities for web applications.
- *
- * @author Corsak
- */
 @Slf4j
 public class WebUtil extends org.springframework.web.util.WebUtils {
-
 	public static final String USER_AGENT_HEADER = "user-agent";
-
 	public static final String UN_KNOWN = "unknown";
-
 	/**
 	 * 判断是否ajax请求
 	 * spring ajax 返回含有 ResponseBody 或者 RestController注解
@@ -61,7 +34,6 @@ public class WebUtil extends org.springframework.web.util.WebUtils {
 		ResponseBody responseBody = ClassUtil.getAnnotation(handlerMethod, ResponseBody.class);
 		return responseBody != null;
 	}
-
 	/**
 	 * 读取cookie
 	 *
@@ -74,7 +46,6 @@ public class WebUtil extends org.springframework.web.util.WebUtils {
 		Assert.notNull(request, "request from RequestContextHolder is null");
 		return getCookieVal(request, name);
 	}
-
 	/**
 	 * 读取cookie
 	 *
@@ -87,7 +58,6 @@ public class WebUtil extends org.springframework.web.util.WebUtils {
 		Cookie cookie = getCookie(request, name);
 		return cookie != null ? cookie.getValue() : null;
 	}
-
 	/**
 	 * 清除 某个指定的cookie
 	 *
@@ -97,7 +67,6 @@ public class WebUtil extends org.springframework.web.util.WebUtils {
 	public static void removeCookie(HttpServletResponse response, String key) {
 		setCookie(response, key, null, 0);
 	}
-
 	/**
 	 * 设置cookie
 	 *
@@ -113,7 +82,6 @@ public class WebUtil extends org.springframework.web.util.WebUtils {
 		cookie.setHttpOnly(true);
 		response.addCookie(cookie);
 	}
-
 	/**
 	 * 获取 HttpServletRequest
 	 *
@@ -123,7 +91,6 @@ public class WebUtil extends org.springframework.web.util.WebUtils {
 		RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
 		return (requestAttributes == null) ? null : ((ServletRequestAttributes) requestAttributes).getRequest();
 	}
-
 	/**
 	 * 获取 RequestUri
 	 *
@@ -136,7 +103,6 @@ public class WebUtil extends org.springframework.web.util.WebUtils {
 		}
 		return request.getRequestURI();
 	}
-
 	/**
 	 * 返回json
 	 *
@@ -146,7 +112,6 @@ public class WebUtil extends org.springframework.web.util.WebUtils {
 	public static void renderJson(HttpServletResponse response, Object result) {
 		renderJson(response, result, MediaType.APPLICATION_JSON_VALUE);
 	}
-
 	/**
 	 * 返回json
 	 *
@@ -163,7 +128,6 @@ public class WebUtil extends org.springframework.web.util.WebUtils {
 			log.error(e.getMessage(), e);
 		}
 	}
-
 	/**
 	 * 获取ip
 	 *
@@ -172,7 +136,6 @@ public class WebUtil extends org.springframework.web.util.WebUtils {
 	public static String getIP() {
 		return getIP(WebUtil.getRequest());
 	}
-
 	/**
 	 * 获取ip
 	 *
@@ -203,8 +166,6 @@ public class WebUtil extends org.springframework.web.util.WebUtils {
 		}
 		return StringUtil.isBlank(ip) ? null : ip.split(",")[0];
 	}
-
-
 	/***
 	 * 获取 request 中 json 字符串的内容
 	 *
@@ -218,7 +179,6 @@ public class WebUtil extends org.springframework.web.util.WebUtils {
 			return StringPool.EMPTY;
 		}
 	}
-
 	/**
 	 * 获取 request 请求内容
 	 *
@@ -233,7 +193,6 @@ public class WebUtil extends org.springframework.web.util.WebUtils {
 		}
 		return getRequestStr(request, getRequestBytes(request));
 	}
-
 	/**
 	 * 获取 request 请求的 byte[] 数组
 	 *
@@ -248,7 +207,6 @@ public class WebUtil extends org.springframework.web.util.WebUtils {
 		}
 		byte[] buffer = new byte[contentLength];
 		for (int i = 0; i < contentLength; ) {
-
 			int readlen = request.getInputStream().read(buffer, i, contentLength - i);
 			if (readlen == -1) {
 				break;
@@ -257,7 +215,6 @@ public class WebUtil extends org.springframework.web.util.WebUtils {
 		}
 		return buffer;
 	}
-
 	/**
 	 * 获取 request 请求内容
 	 *
@@ -284,7 +241,6 @@ public class WebUtil extends org.springframework.web.util.WebUtils {
 		}
 		return str.replaceAll("&amp;", "&");
 	}
-
 	/**
 	 * 获取 request 请求体
 	 *
@@ -320,7 +276,6 @@ public class WebUtil extends org.springframework.web.util.WebUtils {
 		}
 		return sb.toString();
 	}
-
 	/**
 	 * 获取 request 请求内容
 	 *
@@ -355,7 +310,4 @@ public class WebUtil extends org.springframework.web.util.WebUtils {
 			return StringPool.EMPTY;
 		}
 	}
-
-
 }
-

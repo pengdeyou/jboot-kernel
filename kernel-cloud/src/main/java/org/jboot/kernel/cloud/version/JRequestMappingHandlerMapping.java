@@ -1,20 +1,4 @@
-/**
- * Copyright (c) 2018-2099, DreamLu 卢春梦 (qq596392912@gmail.com).
- * <p>
- * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE 3.0;
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.gnu.org/licenses/lgpl.html
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package org.jboot.kernel.cloud.version;
-
 import org.jboot.kernel.cloud.annotation.ApiVersion;
 import org.jboot.kernel.cloud.annotation.UrlVersion;
 import org.jboot.kernel.toolkit.utils.StringPool;
@@ -24,24 +8,9 @@ import org.springframework.lang.Nullable;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.mvc.method.RequestMappingInfo;
 import org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping;
-
 import java.lang.reflect.Method;
 import java.util.Map;
-
-/**
- * url版本号处理 和 header 版本处理
- *
- * <p>
- *     url: /v1/user/{id}
- *     header: Accept application/vnd.jboot.kernel.VERSION+json
- * </p>
- *
- * 注意：c 代表客户端版本
- *
- * @author Corsak
- */
 public class JRequestMappingHandlerMapping extends RequestMappingHandlerMapping {
-
 	@Nullable
 	@Override
 	protected RequestMappingInfo getMappingForMethod(Method method, Class<?> handlerType) {
@@ -52,7 +21,6 @@ public class JRequestMappingHandlerMapping extends RequestMappingHandlerMapping 
 		}
 		return null;
 	}
-
 	@Nullable
 	private RequestMappingInfo getApiVersionMappingInfo(Method method, Class<?> handlerType) {
 		// url 上的版本，优先获取方法上的版本
@@ -87,7 +55,6 @@ public class JRequestMappingHandlerMapping extends RequestMappingHandlerMapping 
 		}
 		return mappingInfoBuilder.build();
 	}
-
 	@Override
 	protected void handlerMethodsInitialized(Map<RequestMappingInfo, HandlerMethod> handlerMethods) {
 		// 打印路由信息 spring boot 2.1 去掉了这个 日志的打印

@@ -32,7 +32,7 @@ The following files have been resolved:
    org.eclipse.angus:angus-activation:jar:2.0.2:runtime[36m -- module org.eclipse.angus.activation[m
    com.sun.xml.bind:jaxb-impl:jar:4.0.6:compile[36m -- module com.sun.xml.bind[m
    jakarta.activation:jakarta.activation-api:jar:2.1.4:compile[36m -- module jakarta.activation[m
-   org.jboot:kernel-toolkit:jar:3.7.2-RELEASE:compile[36m -- module org.jboot.kernel.tool[0;1m [auto][m
+   org.jboot:kernel-toolkit:jar:3.7.2-RELEASE:compile[36m -- module org.jboot.kernel.toolkit[0;1m [auto][m
    com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.19.2:compile[36m -- module com.fasterxml.jackson.datatype.jsr310[m
    com.fasterxml.jackson.core:jackson-annotations:jar:2.19.2:compile[36m -- module com.fasterxml.jackson.annotation[m
    com.fasterxml.jackson.core:jackson-core:jar:2.19.2:compile[36m -- module com.fasterxml.jackson.core[m

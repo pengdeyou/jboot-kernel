@@ -1,20 +1,4 @@
-/**
- * Copyright (c) 2018-2099, yangkai.shen.
- * <p>
- * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE 3.0;
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.gnu.org/licenses/lgpl.html
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package org.jboot.kernel.oss;
-
 import com.qcloud.cos.COSClient;
 import com.qcloud.cos.model.CannedAccessControlList;
 import com.qcloud.cos.model.ObjectMetadata;
@@ -29,34 +13,22 @@ import org.jboot.kernel.toolkit.utils.StringPool;
 import org.jboot.kernel.toolkit.utils.StringUtil;
 import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
-
 import java.io.InputStream;
 import java.util.List;
-
-/**
- * <p>
- * 腾讯云 COS 操作
- * </p>
- *
- * @author yangkai.shen
- */
 @AllArgsConstructor
 public class TencentCosTemplate implements OssTemplate {
 	/**
 	 * 腾讯云 COS 客户端
 	 */
 	private final COSClient cosClient;
-
 	/**
 	 * OSS配置属性
 	 */
 	private final OssProperties ossProperties;
-
 	/**
 	 * OSS规则对象
 	 */
 	private final OssRule ossRule;
-
 	@Override
 	@SneakyThrows
 	public void makeBucket(String bucketName) {
@@ -66,37 +38,31 @@ public class TencentCosTemplate implements OssTemplate {
 			cosClient.setBucketAcl(getBucketName(bucketName), CannedAccessControlList.PublicRead);
 		}
 	}
-
 	@Override
 	@SneakyThrows
 	public void removeBucket(String bucketName) {
 		cosClient.deleteBucket(getBucketName(bucketName));
 	}
-
 	@Override
 	@SneakyThrows
 	public boolean bucketExists(String bucketName) {
 		return cosClient.doesBucketExist(getBucketName(bucketName));
 	}
-
 	@Override
 	@SneakyThrows
 	public void copyFile(String bucketName, String fileName, String destBucketName) {
 		cosClient.copyObject(getBucketName(bucketName), fileName, getBucketName(destBucketName), fileName);
 	}
-
 	@Override
 	@SneakyThrows
 	public void copyFile(String bucketName, String fileName, String destBucketName, String destFileName) {
 		cosClient.copyObject(getBucketName(bucketName), fileName, getBucketName(destBucketName), destFileName);
 	}
-
 	@Override
 	@SneakyThrows
 	public OssFile statFile(String fileName) {
 		return statFile(ossProperties.getBucketName(), fileName);
 	}
-
 	@Override
 	@SneakyThrows
 	public OssFile statFile(String bucketName, String fileName) {
@@ -110,31 +76,26 @@ public class TencentCosTemplate implements OssTemplate {
 		ossFile.setContentType(stat.getContentType());
 		return ossFile;
 	}
-
 	@Override
 	@SneakyThrows
 	public String filePath(String fileName) {
 		return getOssHost().concat(StringPool.SLASH).concat(fileName);
 	}
-
 	@Override
 	@SneakyThrows
 	public String filePath(String bucketName, String fileName) {
 		return getOssHost(bucketName).concat(StringPool.SLASH).concat(fileName);
 	}
-
 	@Override
 	@SneakyThrows
 	public String fileLink(String fileName) {
 		return getOssHost().concat(StringPool.SLASH).concat(fileName);
 	}
-
 	@Override
 	@SneakyThrows
 	public String fileLink(String bucketName, String fileName) {
 		return getOssHost(bucketName).concat(StringPool.SLASH).concat(fileName);
 	}
-
 	/**
 	 * 文件对象
 	 *
@@ -146,7 +107,6 @@ public class TencentCosTemplate implements OssTemplate {
 	public JFile putFile(MultipartFile file) {
 		return putFile(ossProperties.getBucketName(), file.getOriginalFilename(), file);
 	}
-
 	/**
 	 * @param fileName 上传文件名
 	 * @param file     上传文件类
@@ -157,25 +117,21 @@ public class TencentCosTemplate implements OssTemplate {
 	public JFile putFile(String fileName, MultipartFile file) {
 		return putFile(ossProperties.getBucketName(), fileName, file);
 	}
-
 	@Override
 	@SneakyThrows
 	public JFile putFile(String bucketName, String fileName, MultipartFile file) {
 		return putFile(bucketName, fileName, file.getInputStream());
 	}
-
 	@Override
 	@SneakyThrows
 	public JFile putFile(String fileName, InputStream stream) {
 		return putFile(ossProperties.getBucketName(), fileName, stream);
 	}
-
 	@Override
 	@SneakyThrows
 	public JFile putFile(String bucketName, String fileName, InputStream stream) {
 		return put(bucketName, stream, fileName, false);
 	}
-
 	/**
 	 * 上传文件到腾讯云COS
 	 *
@@ -210,31 +166,26 @@ public class TencentCosTemplate implements OssTemplate {
 		file.setLink(fileLink(bucketName, key));
 		return file;
 	}
-
 	@Override
 	@SneakyThrows
 	public void removeFile(String fileName) {
 		cosClient.deleteObject(getBucketName(), fileName);
 	}
-
 	@Override
 	@SneakyThrows
 	public void removeFile(String bucketName, String fileName) {
 		cosClient.deleteObject(getBucketName(bucketName), fileName);
 	}
-
 	@Override
 	@SneakyThrows
 	public void removeFiles(List<String> fileNames) {
 		fileNames.forEach(this::removeFile);
 	}
-
 	@Override
 	@SneakyThrows
 	public void removeFiles(String bucketName, List<String> fileNames) {
 		fileNames.forEach(fileName -> removeFile(getBucketName(bucketName), fileName));
 	}
-
 	/**
 	 * 获取默认存储桶名称
 	 *
@@ -243,7 +194,6 @@ public class TencentCosTemplate implements OssTemplate {
 	private String getBucketName() {
 		return getBucketName(ossProperties.getBucketName());
 	}
-
 	/**
 	 * 根据规则生成存储桶名称
 	 *
@@ -253,7 +203,6 @@ public class TencentCosTemplate implements OssTemplate {
 	private String getBucketName(String bucketName) {
 		return ossRule.bucketName(bucketName).concat(StringPool.DASH).concat(ossProperties.getAppId());
 	}
-
 	/**
 	 * 根据规则生成文件名称
 	 *
@@ -263,7 +212,6 @@ public class TencentCosTemplate implements OssTemplate {
 	private String getFileName(String originalFilename) {
 		return ossRule.fileName(originalFilename);
 	}
-
 	/**
 	 * 获取指定存储桶的访问域名
 	 *
@@ -274,7 +222,6 @@ public class TencentCosTemplate implements OssTemplate {
 		String prefix = getEndpoint().contains("https://") ? "https://" : "http://";
 		return prefix + cosClient.getClientConfig().getEndpointBuilder().buildGeneralApiEndpoint(getBucketName(bucketName));
 	}
-
 	/**
 	 * 获取默认存储桶的访问域名
 	 *
@@ -283,7 +230,6 @@ public class TencentCosTemplate implements OssTemplate {
 	public String getOssHost() {
 		return getOssHost(ossProperties.getBucketName());
 	}
-
 	/**
 	 * 获取腾讯云COS服务的Endpoint
 	 *
@@ -295,5 +241,4 @@ public class TencentCosTemplate implements OssTemplate {
 		}
 		return StringUtil.removeSuffix(ossProperties.getTransformEndpoint(), StringPool.SLASH);
 	}
-
 }

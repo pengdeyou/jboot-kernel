@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>jboot-kernel</artifactId>
+        <groupId>org.jboot</groupId>
+        <version>${revision}</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>kernel-rds</artifactId>
+    <name>${project.artifactId}</name>
+    <packaging>jar</packaging>
+
+    <properties>
+        <module.name>org.jboot.kernel.rds</module.name>
+    </properties>
+
+    <dependencies>
+        <!--Jbatis RDS - 使用可用版本-->
+        <dependency>
+            <groupId>org.jbatis</groupId>
+            <artifactId>jbatis-rds-kernel</artifactId>
+            <version>${jbatis.rds.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jbatis</groupId>
+            <artifactId>jbatis-rds-extension</artifactId>
+            <version>${jbatis.rds.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jbatis</groupId>
+            <artifactId>jbatis-rds-springboot-autoconfigure</artifactId>
+            <version>${jbatis.rds.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jbatis</groupId>
+            <artifactId>jbatis-rds-springboot3-starter</artifactId>
+            <version>${jbatis.rds.version}</version>
+        </dependency>
+        <!--Mybatis作为后备-->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-typehandlers-jsr310</artifactId>
+        </dependency>
+        <!--Druid-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-3-starter</artifactId>
+        </dependency>
+        <!--J-->
+        <dependency>
+            <groupId>org.jboot</groupId>
+            <artifactId>kernel-secure</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

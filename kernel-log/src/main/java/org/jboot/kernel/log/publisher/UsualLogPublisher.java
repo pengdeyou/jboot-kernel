@@ -7,8 +7,8 @@ import org.jboot.kernel.log.event.UsualLogEvent;
 import org.jboot.kernel.log.entity.LogAbstract;
 import org.jboot.kernel.log.entity.LogUsual;
 import org.jboot.kernel.log.utils.LogAbstractUtil;
-import org.jboot.kernel.tool.utils.SpringUtil;
-import org.jboot.kernel.tool.utils.WebUtil;
+import org.jboot.kernel.toolkit.utils.SpringUtil;
+import org.jboot.kernel.toolkit.utils.WebUtil;
 
 import jakarta.servlet.http.HttpServletRequest;
 import java.util.HashMap;

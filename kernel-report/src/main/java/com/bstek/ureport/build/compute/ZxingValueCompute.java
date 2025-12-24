@@ -35,7 +35,7 @@ import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.jboot.kernel.tool.utils.Base64Util;
+import org.jboot.kernel.toolkit.utils.Base64Util;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;

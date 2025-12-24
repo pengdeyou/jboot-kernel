@@ -1,43 +1,16 @@
-/**
- * Copyright (c) 2018-2099, DreamLu 卢春梦 (qq596392912@gmail.com).
- * <p>
- * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE 3.0;
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.gnu.org/licenses/lgpl.html
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package org.jboot.kernel.redis.cache;
-
-
 import org.jboot.kernel.toolkit.utils.ObjectUtil;
 import org.jboot.kernel.toolkit.utils.StringPool;
 import org.jboot.kernel.toolkit.utils.StringUtil;
 import org.springframework.lang.Nullable;
-
 import java.time.Duration;
-
-/**
- * cache key
- *
- * @author Corsak
- */
 public interface ICacheKey {
-
 	/**
 	 * 获取前缀
 	 *
 	 * @return key 前缀
 	 */
 	String getPrefix();
-
 	/**
 	 * 超时时间
 	 *
@@ -47,7 +20,6 @@ public interface ICacheKey {
 	default Duration getExpire() {
 		return null;
 	}
-
 	/**
 	 * 组装 cache key
 	 *
@@ -66,5 +38,4 @@ public interface ICacheKey {
 		Duration expire = this.getExpire();
 		return expire == null ? new CacheKey(key) : new CacheKey(key, expire);
 	}
-
 }

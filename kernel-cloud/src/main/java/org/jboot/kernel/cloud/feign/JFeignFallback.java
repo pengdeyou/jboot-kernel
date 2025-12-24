@@ -1,20 +1,4 @@
-/**
- * Copyright (c) 2018-2099, DreamLu 卢春梦 (qq596392912@gmail.com).
- * <p>
- * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE 3.0;
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.gnu.org/licenses/lgpl.html
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package org.jboot.kernel.cloud.feign;
-
 import com.fasterxml.jackson.databind.JsonNode;
 import feign.FeignException;
 import lombok.AllArgsConstructor;
@@ -26,15 +10,8 @@ import org.jboot.kernel.toolkit.utils.ObjectUtil;
 import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;
 import org.springframework.lang.Nullable;
-
 import java.lang.reflect.Method;
 import java.util.Objects;
-
-/**
- * jboot fallBack 代理处理
- *
- * @author Corsak
- */
 @Slf4j
 @AllArgsConstructor
 public class JFeignFallback<T> implements MethodInterceptor {
@@ -42,7 +19,6 @@ public class JFeignFallback<T> implements MethodInterceptor {
 	private final String targetName;
 	private final Throwable cause;
 	private final static String CODE = "code";
-
 	@Nullable
 	@Override
 	public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
@@ -71,7 +47,6 @@ public class JFeignFallback<T> implements MethodInterceptor {
 		}
 		return R.fail(resultNode.toString());
 	}
-
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) {
@@ -83,7 +58,6 @@ public class JFeignFallback<T> implements MethodInterceptor {
 		JFeignFallback<?> that = (JFeignFallback<?>) o;
 		return targetType.equals(that.targetType);
 	}
-
 	@Override
 	public int hashCode() {
 		return Objects.hash(targetType);

@@ -1,46 +1,21 @@
-/**
- * Copyright (c) 2018-2099, DreamLu 卢春梦 (qq596392912@gmail.com).
- * <p>
- * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE 3.0;
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.gnu.org/licenses/lgpl.html
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package org.jboot.kernel.toolkit.utils;
-
 import org.jboot.kernel.toolkit.support.StrSpliter;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 import org.springframework.web.util.HtmlUtils;
-
 import java.io.StringReader;
 import java.io.StringWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.stream.Stream;
-
-/**
- * 继承自Spring util的工具类，减少jar依赖
- *
- * @author Corsak
- */
 public class StringUtil extends org.springframework.util.StringUtils {
-
 	public static final int INDEX_NOT_FOUND = -1;
 	/**
 	 * <p>The maximum size to which the padding constant(s) can expand.</p>
 	 */
 	private static final int PAD_LIMIT = 8192;
-
 	/**
 	 * Check whether the given {@code CharSequence} contains actual <em>text</em>.
 	 * <p>More specifically, this method returns {@code true} if the
@@ -62,7 +37,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static boolean isBlank(final CharSequence cs) {
 		return !StringUtil.hasText(cs);
 	}
-
 	/**
 	 * <p>Checks if a CharSequence is not empty (""), not null and not whitespace only.</p>
 	 * <pre>
@@ -81,7 +55,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static boolean isNotBlank(final CharSequence cs) {
 		return StringUtil.hasText(cs);
 	}
-
 	/**
 	 * 有 任意 一个 Blank
 	 *
@@ -94,7 +67,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return Stream.of(css).anyMatch(StringUtil::isBlank);
 	}
-
 	/**
 	 * 是否全非 Blank
 	 *
@@ -107,7 +79,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return Stream.of(css).allMatch(StringUtil::isNotBlank);
 	}
-
 	/**
 	 * 判断一个字符串是否是数字
 	 *
@@ -126,7 +97,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return true;
 	}
-
 	/**
 	 * Convert a {@code Collection} into a delimited {@code String} (e.g., CSV).
 	 * <p>Useful for {@code toString()} implementations.
@@ -137,7 +107,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static String join(Collection<?> coll) {
 		return StringUtil.collectionToCommaDelimitedString(coll);
 	}
-
 	/**
 	 * Convert a {@code Collection} into a delimited {@code String} (e.g. CSV).
 	 * <p>Useful for {@code toString()} implementations.
@@ -149,7 +118,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static String join(Collection<?> coll, String delim) {
 		return StringUtil.collectionToDelimitedString(coll, delim);
 	}
-
 	/**
 	 * Convert a {@code String} array into a comma delimited {@code String}
 	 * (i.e., CSV).
@@ -161,7 +129,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static String join(Object[] arr) {
 		return StringUtil.arrayToCommaDelimitedString(arr);
 	}
-
 	/**
 	 * Convert a {@code String} array into a delimited {@code String} (e.g. CSV).
 	 * <p>Useful for {@code toString()} implementations.
@@ -173,7 +140,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static String join(Object[] arr, String delim) {
 		return StringUtil.arrayToDelimitedString(arr, delim);
 	}
-
 	/**
 	 * 生成uuid
 	 *
@@ -182,7 +148,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static String randomUUID() {
 		return getId(ThreadLocalRandom.current(), 32, 16);
 	}
-
 	/**
 	 * 获取一个快速生成的随机 id，包含数字，大小写，同长度比 uuid 冲突概率更小得多
 	 *
@@ -192,7 +157,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static String getFastId(int len) {
 		return getId(ThreadLocalRandom.current(), len, 62);
 	}
-
 	/**
 	 * 获取一个安全的随机 id，包含数字，大小写，同长度比 uuid 冲突概率更小得多
 	 *
@@ -202,7 +166,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static String getSafeId(int len) {
 		return getId(Holder.SECURE_RANDOM, len, 62);
 	}
-
 	/**
 	 * 获取一个生成的随机 id，同长度比 uuid 冲突概率更小得多
 	 *
@@ -213,7 +176,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static String getId(Random random, int len) {
 		return getId(random, len, 62);
 	}
-
 	/**
 	 * 获取一个生成的随机 id，同长度比 uuid 冲突概率更小得多
 	 *
@@ -234,7 +196,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return new String(randomBytes, StandardCharsets.ISO_8859_1);
 	}
-
 	/**
 	 * 转义HTML用于安全过滤
 	 *
@@ -244,7 +205,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static String escapeHtml(String html) {
 		return StringUtil.isBlank(html) ? StringPool.EMPTY : HtmlUtils.htmlEscape(html);
 	}
-
 	/**
 	 * 清理字符串，清理出某些不可见字符
 	 *
@@ -254,12 +214,9 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static String cleanChars(String txt) {
 		return txt.replaceAll("[ 　`·•�\\f\\t\\v\\s]", "");
 	}
-
-
 	private static final String S_INT = "0123456789";
 	private static final String S_STR = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	private static final String S_ALL = S_INT + S_STR;
-
 	/**
 	 * 随机数生成
 	 *
@@ -269,7 +226,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static String random(int count) {
 		return StringUtil.random(count, RandomType.ALL);
 	}
-
 	/**
 	 * 随机数生成
 	 *
@@ -295,7 +251,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return new String(buffer);
 	}
-
 	/**
 	 * 将字符串中特定模式的字符转换成map中对应的值
 	 * <p>
@@ -327,7 +282,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		sb.append(message.substring(cursor));
 		return sb.toString();
 	}
-
 	/**
 	 * 同 log 格式的 format 规则
 	 * <p>
@@ -359,7 +313,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		sb.append(message.substring(cursor));
 		return sb.toString();
 	}
-
 	/**
 	 * 格式化执行时间，单位为 ms 和 s，保留三位小数
 	 *
@@ -378,7 +331,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 			return String.format("%.3fms", millis);
 		}
 	}
-
 	/**
 	 * 获取标识符，用于参数清理
 	 *
@@ -399,7 +351,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return paramBuilder.toString();
 	}
-
 	/**
 	 * 切分字符串，不去除切分后每个元素两边的空白符，不去除空白项
 	 *
@@ -411,7 +362,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static List<String> split(CharSequence str, char separator, int limit) {
 		return split(str, separator, limit, false, false);
 	}
-
 	/**
 	 * 切分字符串，去除切分后每个元素两边的空白符，去除空白项
 	 *
@@ -423,7 +373,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static List<String> splitTrim(CharSequence str, char separator) {
 		return splitTrim(str, separator, -1);
 	}
-
 	/**
 	 * 切分字符串，去除切分后每个元素两边的空白符，去除空白项
 	 *
@@ -435,7 +384,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static List<String> splitTrim(CharSequence str, CharSequence separator) {
 		return splitTrim(str, separator, -1);
 	}
-
 	/**
 	 * 切分字符串，去除切分后每个元素两边的空白符，去除空白项
 	 *
@@ -448,7 +396,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static List<String> splitTrim(CharSequence str, char separator, int limit) {
 		return split(str, separator, limit, true, true);
 	}
-
 	/**
 	 * 切分字符串，去除切分后每个元素两边的空白符，去除空白项
 	 *
@@ -461,7 +408,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static List<String> splitTrim(CharSequence str, CharSequence separator, int limit) {
 		return split(str, separator, limit, true, true);
 	}
-
 	/**
 	 * 切分字符串，不限制分片数量
 	 *
@@ -475,7 +421,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static List<String> split(CharSequence str, char separator, boolean isTrim, boolean ignoreEmpty) {
 		return split(str, separator, 0, isTrim, ignoreEmpty);
 	}
-
 	/**
 	 * 切分字符串
 	 *
@@ -493,7 +438,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return StrSpliter.split(str.toString(), separator, limit, isTrim, ignoreEmpty);
 	}
-
 	/**
 	 * 切分字符串
 	 *
@@ -512,7 +456,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		final String separatorStr = (null == separator) ? null : separator.toString();
 		return StrSpliter.split(str.toString(), separatorStr, limit, isTrim, ignoreEmpty);
 	}
-
 	/**
 	 * 切分字符串
 	 *
@@ -524,11 +467,9 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		if (str == null) {
 			return new String[]{};
 		}
-
 		final String separatorStr = (null == separator) ? null : separator.toString();
 		return StrSpliter.splitToArray(str.toString(), separatorStr, 0, false, false);
 	}
-
 	/**
 	 * 根据给定长度，将给定字符串截取为多个部分
 	 *
@@ -543,7 +484,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return StrSpliter.splitByLength(str.toString(), len);
 	}
-
 	/**
 	 * 指定字符是否在字符串中出现过
 	 *
@@ -555,7 +495,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static boolean contains(CharSequence str, char searchChar) {
 		return indexOf(str, searchChar) > -1;
 	}
-
 	/**
 	 * 查找指定字符串是否包含指定字符串列表中的任意一个字符串
 	 *
@@ -567,7 +506,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static boolean containsAny(CharSequence str, CharSequence... testStrs) {
 		return null != getContainsStr(str, testStrs);
 	}
-
 	/**
 	 * 查找指定字符串是否包含指定字符串列表中的任意一个字符串，如果包含返回找到的第一个字符串
 	 *
@@ -587,7 +525,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return null;
 	}
-
 	/**
 	 * 是否包含特定字符，忽略大小写，如果给定两个参数都为<code>null</code>，返回true
 	 *
@@ -602,7 +539,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return str.toString().toLowerCase().contains(testStr.toString().toLowerCase());
 	}
-
 	/**
 	 * 查找指定字符串是否包含指定字符串列表中的任意一个字符串<br>
 	 * 忽略大小写
@@ -615,7 +551,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static boolean containsAnyIgnoreCase(CharSequence str, CharSequence... testStrs) {
 		return null != getContainsStrIgnoreCase(str, testStrs);
 	}
-
 	/**
 	 * 查找指定字符串是否包含指定字符串列表中的任意一个字符串，如果包含返回找到的第一个字符串<br>
 	 * 忽略大小写
@@ -636,7 +571,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return null;
 	}
-
 	/**
 	 * 改进JDK subString<br>
 	 * index从0开始计算，最后一个字符为-1<br>
@@ -656,7 +590,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 			return StringPool.EMPTY;
 		}
 		int len = str.length();
-
 		if (fromIndex < 0) {
 			fromIndex = len + fromIndex;
 			if (fromIndex < 0) {
@@ -665,7 +598,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		} else if (fromIndex > len) {
 			fromIndex = len;
 		}
-
 		if (toIndex < 0) {
 			toIndex = len + toIndex;
 			if (toIndex < 0) {
@@ -674,21 +606,16 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		} else if (toIndex > len) {
 			toIndex = len;
 		}
-
 		if (toIndex < fromIndex) {
 			int tmp = fromIndex;
 			fromIndex = toIndex;
 			toIndex = tmp;
 		}
-
 		if (fromIndex == toIndex) {
 			return StringPool.EMPTY;
 		}
-
 		return str.toString().substring(fromIndex, toIndex);
 	}
-
-
 	/**
 	 * 截取分隔字符串之前的字符串，不包括分隔字符串<br>
 	 * 如果给定的字符串为空串（null或""）或者分隔字符串为null，返回原字符串<br>
@@ -717,7 +644,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		if (isEmpty(string) || separator == null) {
 			return null == string ? null : string.toString();
 		}
-
 		final String str = string.toString();
 		final String sep = separator.toString();
 		if (sep.isEmpty()) {
@@ -729,7 +655,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return str.substring(0, pos);
 	}
-
 	/**
 	 * 截取分隔字符串之后的字符串，不包括分隔字符串<br>
 	 * 如果给定的字符串为空串（null或""），返回原字符串<br>
@@ -769,7 +694,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return str.substring(pos + separator.length());
 	}
-
 	/**
 	 * 截取指定字符串中间部分，不包括标识字符串<br>
 	 * <p>
@@ -798,11 +722,9 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		if (str == null || before == null || after == null) {
 			return null;
 		}
-
 		final String str2 = str.toString();
 		final String before2 = before.toString();
 		final String after2 = after.toString();
-
 		final int start = str2.indexOf(before2);
 		if (start != INDEX_NOT_FOUND) {
 			final int end = str2.indexOf(after2, start + before2.length());
@@ -812,7 +734,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return null;
 	}
-
 	/**
 	 * 截取指定字符串中间部分，不包括标识字符串<br>
 	 * <p>
@@ -835,7 +756,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static String subBetween(CharSequence str, CharSequence beforeAndAfter) {
 		return subBetween(str, beforeAndAfter, beforeAndAfter);
 	}
-
 	/**
 	 * 去掉指定前缀
 	 *
@@ -847,14 +767,12 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		if (isEmpty(str) || isEmpty(prefix)) {
 			return StringPool.EMPTY;
 		}
-
 		final String str2 = str.toString();
 		if (str2.startsWith(prefix.toString())) {
 			return subSuf(str2, prefix.length());
 		}
 		return str2;
 	}
-
 	/**
 	 * 忽略大小写去掉指定前缀
 	 *
@@ -866,14 +784,12 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		if (isEmpty(str) || isEmpty(prefix)) {
 			return StringPool.EMPTY;
 		}
-
 		final String str2 = str.toString();
 		if (str2.toLowerCase().startsWith(prefix.toString().toLowerCase())) {
 			return subSuf(str2, prefix.length());
 		}
 		return str2;
 	}
-
 	/**
 	 * 去掉指定后缀
 	 *
@@ -885,14 +801,12 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		if (isEmpty(str) || isEmpty(suffix)) {
 			return StringPool.EMPTY;
 		}
-
 		final String str2 = str.toString();
 		if (str2.endsWith(suffix.toString())) {
 			return subPre(str2, str2.length() - suffix.length());
 		}
 		return str2;
 	}
-
 	/**
 	 * 去掉指定后缀，并小写首字母
 	 *
@@ -903,7 +817,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static String removeSufAndLowerFirst(CharSequence str, CharSequence suffix) {
 		return lowerFirst(removeSuffix(str, suffix));
 	}
-
 	/**
 	 * 忽略大小写去掉指定后缀
 	 *
@@ -915,14 +828,12 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		if (isEmpty(str) || isEmpty(suffix)) {
 			return StringPool.EMPTY;
 		}
-
 		final String str2 = str.toString();
 		if (str2.toLowerCase().endsWith(suffix.toString().toLowerCase())) {
 			return subPre(str2, str2.length() - suffix.length());
 		}
 		return str2;
 	}
-
 	/**
 	 * 首字母变小写
 	 *
@@ -938,7 +849,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return str;
 	}
-
 	/**
 	 * 首字母变大写
 	 *
@@ -954,7 +864,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return str;
 	}
-
 	/**
 	 * 切割指定位置之前部分的字符串
 	 *
@@ -965,7 +874,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static String subPre(CharSequence string, int toIndex) {
 		return sub(string, 0, toIndex);
 	}
-
 	/**
 	 * 切割指定位置之后部分的字符串
 	 *
@@ -979,7 +887,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return sub(string, fromIndex, string.length());
 	}
-
 	/**
 	 * 指定范围内查找指定字符
 	 *
@@ -990,7 +897,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static int indexOf(final CharSequence str, char searchChar) {
 		return indexOf(str, searchChar, 0);
 	}
-
 	/**
 	 * 指定范围内查找指定字符
 	 *
@@ -1006,7 +912,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 			return indexOf(str, searchChar, start, -1);
 		}
 	}
-
 	/**
 	 * 指定范围内查找指定字符
 	 *
@@ -1031,7 +936,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return -1;
 	}
-
 	/**
 	 * 指定范围内查找字符串，忽略大小写<br>
 	 *
@@ -1057,7 +961,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static int indexOfIgnoreCase(final CharSequence str, final CharSequence searchStr) {
 		return indexOfIgnoreCase(str, searchStr, 0);
 	}
-
 	/**
 	 * 指定范围内查找字符串
 	 *
@@ -1084,7 +987,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static int indexOfIgnoreCase(final CharSequence str, final CharSequence searchStr, int fromIndex) {
 		return indexOf(str, searchStr, fromIndex, true);
 	}
-
 	/**
 	 * 指定范围内反向查找字符串
 	 *
@@ -1102,7 +1004,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		if (fromIndex < 0) {
 			fromIndex = 0;
 		}
-
 		final int endLimit = str.length() - searchStr.length() + 1;
 		if (fromIndex > endLimit) {
 			return INDEX_NOT_FOUND;
@@ -1110,12 +1011,10 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		if (searchStr.length() == 0) {
 			return fromIndex;
 		}
-
 		if (false == ignoreCase) {
 			// 不忽略大小写调用JDK方法
 			return str.toString().indexOf(searchStr.toString(), fromIndex);
 		}
-
 		for (int i = fromIndex; i < endLimit; i++) {
 			if (isSubEquals(str, i, searchStr, 0, searchStr.length(), true)) {
 				return i;
@@ -1123,7 +1022,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return INDEX_NOT_FOUND;
 	}
-
 	/**
 	 * 指定范围内查找字符串，忽略大小写<br>
 	 *
@@ -1135,7 +1033,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static int lastIndexOfIgnoreCase(final CharSequence str, final CharSequence searchStr) {
 		return lastIndexOfIgnoreCase(str, searchStr, str.length());
 	}
-
 	/**
 	 * 指定范围内查找字符串，忽略大小写<br>
 	 *
@@ -1148,7 +1045,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static int lastIndexOfIgnoreCase(final CharSequence str, final CharSequence searchStr, int fromIndex) {
 		return lastIndexOf(str, searchStr, fromIndex, true);
 	}
-
 	/**
 	 * 指定范围内查找字符串<br>
 	 *
@@ -1167,16 +1063,13 @@ public class StringUtil extends org.springframework.util.StringUtils {
 			fromIndex = 0;
 		}
 		fromIndex = Math.min(fromIndex, str.length());
-
 		if (searchStr.length() == 0) {
 			return fromIndex;
 		}
-
 		if (false == ignoreCase) {
 			// 不忽略大小写调用JDK方法
 			return str.toString().lastIndexOf(searchStr.toString(), fromIndex);
 		}
-
 		for (int i = fromIndex; i > 0; i--) {
 			if (isSubEquals(str, i, searchStr, 0, searchStr.length(), true)) {
 				return i;
@@ -1184,7 +1077,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return INDEX_NOT_FOUND;
 	}
-
 	/**
 	 * 返回字符串 searchStr 在字符串 str 中第 ordinal 次出现的位置。<br>
 	 * 此方法来自：Apache-Commons-Lang
@@ -1229,7 +1121,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		} while (found < ordinal);
 		return index;
 	}
-
 	/**
 	 * 截取两个字符串的不同部分（长度一致），判断截取的子串是否相同<br>
 	 * 任意一个字符串为null返回false
@@ -1247,10 +1138,8 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		if (null == str1 || null == str2) {
 			return false;
 		}
-
 		return str1.toString().regionMatches(ignoreCase, start1, str2.toString(), start2, length);
 	}
-
 	/**
 	 * 比较两个字符串（大小写敏感）。
 	 *
@@ -1269,7 +1158,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static boolean equals(CharSequence str1, CharSequence str2) {
 		return equals(str1, str2, false);
 	}
-
 	/**
 	 * 比较两个字符串（大小写不敏感）。
 	 *
@@ -1288,7 +1176,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static boolean equalsIgnoreCase(CharSequence str1, CharSequence str2) {
 		return equals(str1, str2, true);
 	}
-
 	/**
 	 * 比较两个字符串是否相等。
 	 *
@@ -1307,14 +1194,12 @@ public class StringUtil extends org.springframework.util.StringUtils {
 			// 字符串2空，字符串1非空，直接false
 			return false;
 		}
-
 		if (ignoreCase) {
 			return str1.toString().equalsIgnoreCase(str2.toString());
 		} else {
 			return str1.equals(str2);
 		}
 	}
-
 	/**
 	 * 创建StringBuilder对象
 	 *
@@ -1323,7 +1208,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static StringBuilder builder() {
 		return new StringBuilder();
 	}
-
 	/**
 	 * 创建StringBuilder对象
 	 *
@@ -1333,7 +1217,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static StringBuilder builder(int capacity) {
 		return new StringBuilder(capacity);
 	}
-
 	/**
 	 * 创建StringBuilder对象
 	 *
@@ -1347,7 +1230,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return sb;
 	}
-
 	/**
 	 * 创建StringBuilder对象
 	 *
@@ -1361,7 +1243,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return sb;
 	}
-
 	/**
 	 * 获得StringReader
 	 *
@@ -1374,7 +1255,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return new StringReader(str.toString());
 	}
-
 	/**
 	 * 获得StringWriter
 	 *
@@ -1383,7 +1263,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static StringWriter getWriter() {
 		return new StringWriter();
 	}
-
 	/**
 	 * 统计指定内容中包含指定字符串的数量<br>
 	 * 参数为 {@code null} 或者 "" 返回 {@code 0}.
@@ -1406,7 +1285,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		if (Func.hasEmpty(content, strForSearch) || strForSearch.length() > content.length()) {
 			return 0;
 		}
-
 		int count = 0;
 		int idx = 0;
 		final String content2 = content.toString();
@@ -1417,7 +1295,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return count;
 	}
-
 	/**
 	 * 统计指定内容中包含指定字符的数量
 	 *
@@ -1438,7 +1315,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return count;
 	}
-
 	/**
 	 * 下划线转驼峰
 	 *
@@ -1458,7 +1334,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return result.toString();
 	}
-
 	/**
 	 * 驼峰转下划线
 	 *
@@ -1477,7 +1352,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return sb.toString().toLowerCase();
 	}
-
 	/**
 	 * 横线转驼峰
 	 *
@@ -1497,7 +1371,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return result.toString();
 	}
-
 	/**
 	 * 驼峰转横线
 	 *
@@ -1516,8 +1389,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return sb.toString().toLowerCase();
 	}
-
-
 	/**
 	 * 首字母变小写
 	 *
@@ -1533,7 +1404,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return str;
 	}
-
 	/**
 	 * 首字母变大写
 	 *
@@ -1549,8 +1419,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return str;
 	}
-
-
 	/**
 	 * 参考自 commons lang 微调
 	 *
@@ -1580,7 +1448,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		Arrays.fill(buf, ch);
 		return new String(buf);
 	}
-
 	/**
 	 * 参考自 commons lang 微调
 	 *
@@ -1616,7 +1483,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return str.substring(0, len);
 	}
-
 	/**
 	 * 参考自 commons lang 微调
 	 *
@@ -1653,7 +1519,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return str.substring(length - len);
 	}
-
 	/**
 	 * 参考自 commons lang 微调
 	 *
@@ -1679,7 +1544,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static String rightPad(@Nullable final String str, final int size) {
 		return rightPad(str, size, CharPool.SPACE);
 	}
-
 	/**
 	 * 参考自 commons lang 微调
 	 *
@@ -1717,7 +1581,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return str.concat(repeat(padChar, pads));
 	}
-
 	/**
 	 * 参考自 commons lang 微调
 	 *
@@ -1774,7 +1637,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 			return str.concat(new String(padding));
 		}
 	}
-
 	/**
 	 * 参考自 commons lang 微调
 	 *
@@ -1800,7 +1662,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 	public static String leftPad(@Nullable final String str, final int size) {
 		return leftPad(str, size, CharPool.SPACE);
 	}
-
 	/**
 	 * 参考自 commons lang 微调
 	 *
@@ -1839,7 +1700,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return repeat(padChar, pads).concat(str);
 	}
-
 	/**
 	 * 参考自 commons lang 微调
 	 *
@@ -1896,7 +1756,6 @@ public class StringUtil extends org.springframework.util.StringUtils {
 			return new String(padding).concat(str);
 		}
 	}
-
 	/**
 	 * 参考自 commons lang 微调
 	 *
@@ -1941,6 +1800,4 @@ public class StringUtil extends org.springframework.util.StringUtils {
 		}
 		return str.substring(pos, pos + len);
 	}
-
 }
-

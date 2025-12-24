@@ -17,7 +17,7 @@ public class JLogProperties {
 	/**
 	 * 前缀
 	 */
-	public static final String PREFIX = "blade.log";
+	public static final String PREFIX = "jboot.log";
 
 	/**
 	 * 是否开启 api 日志

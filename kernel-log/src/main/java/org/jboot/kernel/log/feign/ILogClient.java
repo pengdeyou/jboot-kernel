@@ -5,7 +5,7 @@ import org.jboot.kernel.launch.constant.AppConstant;
 import org.jboot.kernel.log.entity.LogApi;
 import org.jboot.kernel.log.entity.LogUsual;
 import org.jboot.kernel.log.entity.LogError;
-import org.jboot.kernel.tool.api.R;
+import org.jboot.kernel.toolkit.api.R;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

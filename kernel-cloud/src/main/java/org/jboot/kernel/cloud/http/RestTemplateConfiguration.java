@@ -1,21 +1,4 @@
-/**
- * Copyright (c) 2018-2099, DreamLu 卢春梦 (qq596392912@gmail.com).
- * <p>
- * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE 3.0;
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.gnu.org/licenses/lgpl.html
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package org.jboot.kernel.cloud.http;
-
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -42,7 +25,6 @@ import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
 import org.springframework.lang.Nullable;
 import org.springframework.web.client.RestTemplate;
-
 import javax.net.ssl.SSLContext;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.TrustManager;
@@ -51,12 +33,6 @@ import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
-/**
- * Http RestTemplateHeaderInterceptor 配置
- *
- * @author Corsak
- */
 @Slf4j
 @RequiredArgsConstructor
 @AutoConfiguration
@@ -64,7 +40,6 @@ import java.util.concurrent.TimeUnit;
 @ConditionalOnProperty(value = "jboot.kernel.http.enabled", matchIfMissing = true)
 public class RestTemplateConfiguration {
 	private final JHttpProperties properties;
-
 	/**
 	 * okhttp3 请求日志拦截器
 	 *
@@ -76,7 +51,6 @@ public class RestTemplateConfiguration {
 		interceptor.setLevel(properties.getLevel());
 		return interceptor;
 	}
-
 	/**
 	 * okhttp3 链接池配置
 	 *
@@ -90,7 +64,6 @@ public class RestTemplateConfiguration {
 		TimeUnit ttlUnit = properties.getTimeUnit();
 		return new ConnectionPool(maxTotalConnections, timeToLive, ttlUnit);
 	}
-
 	/**
 	 * 配置OkHttpClient
 	 *
@@ -112,7 +85,6 @@ public class RestTemplateConfiguration {
 			.addInterceptor(interceptor)
 			.build();
 	}
-
 	private OkHttpClient.Builder createBuilder(boolean disableSslValidation) {
 		OkHttpClient.Builder builder = new OkHttpClient.Builder();
 		if (disableSslValidation) {
@@ -130,21 +102,18 @@ public class RestTemplateConfiguration {
 		}
 		return builder;
 	}
-
 	@Bean
 	public RestTemplateHeaderInterceptor requestHeaderInterceptor(
 		@Autowired(required = false) @Nullable JFeignAccountGetter accountGetter,
 		JFeignHeadersProperties properties) {
 		return new RestTemplateHeaderInterceptor(accountGetter,properties);
 	}
-
 	@AutoConfiguration
 	@RequiredArgsConstructor
 	@ConditionalOnClass(OkHttpClient.class)
 	@ConditionalOnProperty(value = "jboot.kernel.http.rest-template.enable")
 	public static class RestTemplateAutoConfiguration {
 		private final ApplicationContext context;
-
 		/**
 		 * 普通的 RestTemplate，不透传请求头，一般只做外部 http 调用
 		 *
@@ -160,14 +129,12 @@ public class RestTemplateConfiguration {
 			return restTemplate;
 		}
 	}
-
 	@AutoConfiguration
 	@RequiredArgsConstructor
 	@ConditionalOnClass(OkHttpClient.class)
 	@ConditionalOnProperty(value = "jboot.kernel.http.lb-rest-template.enable")
 	public static class LbRestTemplateAutoConfiguration {
 		private final ApplicationContext context;
-
 		/**
 		 * 支持负载均衡的 LbRestTemplate
 		 *
@@ -185,7 +152,6 @@ public class RestTemplateConfiguration {
 			return restTemplate;
 		}
 	}
-
 	private static void configMessageConverters(ApplicationContext context, List<HttpMessageConverter<?>> converters) {
 		converters.removeIf(x -> x instanceof StringHttpMessageConverter || x instanceof MappingJackson2HttpMessageConverter);
 		converters.add(new StringHttpMessageConverter(Charsets.UTF_8));

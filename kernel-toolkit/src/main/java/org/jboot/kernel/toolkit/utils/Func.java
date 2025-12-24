@@ -1,20 +1,4 @@
-/**
- * Copyright (c) 2018-2099, DreamLu 卢春梦 (qq596392912@gmail.com).
- * <p>
- * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE 3.0;
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.gnu.org/licenses/lgpl.html
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package org.jboot.kernel.toolkit.utils;
-
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -25,7 +9,6 @@ import org.springframework.core.annotation.AnnotatedElementUtils;
 import org.springframework.lang.Nullable;
 import org.springframework.util.StringUtils;
 import org.springframework.web.method.HandlerMethod;
-
 import java.io.Closeable;
 import java.io.InputStream;
 import java.lang.annotation.Annotation;
@@ -39,14 +22,7 @@ import java.time.temporal.Temporal;
 import java.time.temporal.TemporalAccessor;
 import java.util.*;
 import java.util.function.Supplier;
-
-/**
- * 工具包集合，只做简单的调用，不删除原有工具类
- *
- * @author Corsak
- */
 public class Func {
-
 	/**
 	 * Checks that the specified object reference is not {@code null}. This
 	 * method is designed primarily for doing parameter validation in methods
@@ -65,7 +41,6 @@ public class Func {
 	public static <T> T requireNotNull(T obj) {
 		return Objects.requireNonNull(obj);
 	}
-
 	/**
 	 * Checks that the specified object reference is not {@code null} and
 	 * throws a customized {@link NullPointerException} if it is. This method
@@ -88,7 +63,6 @@ public class Func {
 	public static <T> T requireNotNull(T obj, String message) {
 		return Objects.requireNonNull(obj, message);
 	}
-
 	/**
 	 * Checks that the specified object reference is not {@code null} and
 	 * throws a customized {@link NullPointerException} if it is.
@@ -112,7 +86,6 @@ public class Func {
 	public static <T> T requireNotNull(T obj, Supplier<String> messageSupplier) {
 		return Objects.requireNonNull(obj, messageSupplier);
 	}
-
 	/**
 	 * Returns {@code true} if the provided reference is {@code null} otherwise
 	 * returns {@code false}.
@@ -129,7 +102,6 @@ public class Func {
 	public static boolean isNull(@Nullable Object obj) {
 		return Objects.isNull(obj);
 	}
-
 	/**
 	 * Returns {@code true} if the provided reference is non-{@code null}
 	 * otherwise returns {@code false}.
@@ -146,7 +118,6 @@ public class Func {
 	public static boolean notNull(@Nullable Object obj) {
 		return Objects.nonNull(obj);
 	}
-
 	/**
 	 * 首字母变小写
 	 *
@@ -156,7 +127,6 @@ public class Func {
 	public static String firstCharToLower(String str) {
 		return StringUtil.lowerFirst(str);
 	}
-
 	/**
 	 * 首字母变大写
 	 *
@@ -166,7 +136,6 @@ public class Func {
 	public static String firstCharToUpper(String str) {
 		return StringUtil.upperFirst(str);
 	}
-
 	/**
 	 * Check whether the given {@code CharSequence} contains actual <em>text</em>.
 	 * <p>More specifically, this method returns {@code true} if the
@@ -188,7 +157,6 @@ public class Func {
 	public static boolean isBlank(@Nullable final CharSequence cs) {
 		return StringUtil.isBlank(cs);
 	}
-
 	/**
 	 * <p>Checks if a CharSequence is not empty (""), not null and not whitespace only.</p>
 	 * <pre>
@@ -207,7 +175,6 @@ public class Func {
 	public static boolean isNotBlank(@Nullable final CharSequence cs) {
 		return StringUtil.isNotBlank(cs);
 	}
-
 	/**
 	 * 有 任意 一个 Blank
 	 *
@@ -217,7 +184,6 @@ public class Func {
 	public static boolean isAnyBlank(final CharSequence... css) {
 		return StringUtil.isAnyBlank(css);
 	}
-
 	/**
 	 * 是否全非 Blank
 	 *
@@ -227,7 +193,6 @@ public class Func {
 	public static boolean isNoneBlank(final CharSequence... css) {
 		return StringUtil.isNoneBlank(css);
 	}
-
 	/**
 	 * Determine whether the given object is an array:
 	 * either an Object array or a primitive array.
@@ -238,7 +203,6 @@ public class Func {
 	public static boolean isArray(@Nullable Object obj) {
 		return ObjectUtil.isArray(obj);
 	}
-
 	/**
 	 * Determine whether the given object is empty:
 	 * i.e. {@code null} or of zero length.
@@ -249,7 +213,6 @@ public class Func {
 	public static boolean isEmpty(@Nullable Object obj) {
 		return ObjectUtil.isEmpty(obj);
 	}
-
 	/**
 	 * Determine whether the given object is not empty:
 	 * i.e. {@code null} or of zero length.
@@ -260,7 +223,6 @@ public class Func {
 	public static boolean isNotEmpty(@Nullable Object obj) {
 		return !ObjectUtil.isEmpty(obj);
 	}
-
 	/**
 	 * Determine whether the given array is empty:
 	 * i.e. {@code null} or of zero length.
@@ -271,7 +233,6 @@ public class Func {
 	public static boolean isEmpty(@Nullable Object[] array) {
 		return ObjectUtil.isEmpty(array);
 	}
-
 	/**
 	 * 判断数组不为空
 	 *
@@ -281,7 +242,6 @@ public class Func {
 	public static boolean isNotEmpty(@Nullable Object[] array) {
 		return ObjectUtil.isNotEmpty(array);
 	}
-
 	/**
 	 * 对象组中是否存在 Empty Object
 	 *
@@ -296,7 +256,6 @@ public class Func {
 		}
 		return false;
 	}
-
 	/**
 	 * 对象组中是否全是 Empty Object
 	 *
@@ -311,7 +270,6 @@ public class Func {
 		}
 		return true;
 	}
-
 	/**
 	 * 比较两个对象是否相等。<br>
 	 * 相同的条件有两个，满足其一即可：<br>
@@ -323,7 +281,6 @@ public class Func {
 	public static boolean equals(Object obj1, Object obj2) {
 		return Objects.equals(obj1, obj2);
 	}
-
 	/**
 	 * Determine if the given objects are equal, returning {@code true} if
 	 * both are {@code null} or {@code false} if only one is {@code null}.
@@ -339,7 +296,6 @@ public class Func {
 	public static boolean equalsSafe(@Nullable Object o1, @Nullable Object o2) {
 		return ObjectUtil.nullSafeEquals(o1, o2);
 	}
-
 	/**
 	 * Check whether the given Array contains the given element.
 	 *
@@ -351,7 +307,6 @@ public class Func {
 	public static <T> boolean contains(@Nullable T[] array, final T element) {
 		return CollectionUtil.contains(array, element);
 	}
-
 	/**
 	 * Check whether the given Iterator contains the given element.
 	 *
@@ -362,7 +317,6 @@ public class Func {
 	public static boolean contains(@Nullable Iterator<?> iterator, Object element) {
 		return CollectionUtil.contains(iterator, element);
 	}
-
 	/**
 	 * Check whether the given Enumeration contains the given element.
 	 *
@@ -373,7 +327,6 @@ public class Func {
 	public static boolean contains(@Nullable Enumeration<?> enumeration, Object element) {
 		return CollectionUtil.contains(enumeration, element);
 	}
-
 	/**
 	 * 强转string,并去掉多余空格
 	 *
@@ -383,7 +336,6 @@ public class Func {
 	public static String toStr(Object str) {
 		return toStr(str, "");
 	}
-
 	/**
 	 * 强转string,并去掉多余空格
 	 *
@@ -397,7 +349,6 @@ public class Func {
 		}
 		return String.valueOf(str);
 	}
-
 	/**
 	 * 强转string(包含空字符串),并去掉多余空格
 	 *
@@ -411,7 +362,6 @@ public class Func {
 		}
 		return String.valueOf(str);
 	}
-
 	/**
 	 * 判断一个字符串是否是数字
 	 *
@@ -421,7 +371,6 @@ public class Func {
 	public static boolean isNumeric(final CharSequence cs) {
 		return StringUtil.isNumeric(cs);
 	}
-
 	/**
 	 * <p>Convert a <code>String</code> to an <code>int</code>, returning
 	 * <code>zero</code> if the conversion fails.</p>
@@ -441,7 +390,6 @@ public class Func {
 	public static int toInt(final Object value) {
 		return NumberUtil.toInt(String.valueOf(value));
 	}
-
 	/**
 	 * <p>Convert a <code>String</code> to an <code>int</code>, returning a
 	 * default value if the conversion fails.</p>
@@ -461,7 +409,6 @@ public class Func {
 	public static int toInt(final Object value, final int defaultValue) {
 		return NumberUtil.toInt(String.valueOf(value), defaultValue);
 	}
-
 	/**
 	 * <p>Convert a <code>String</code> to a <code>long</code>, returning
 	 * <code>zero</code> if the conversion fails.</p>
@@ -481,7 +428,6 @@ public class Func {
 	public static long toLong(final Object value) {
 		return NumberUtil.toLong(String.valueOf(value));
 	}
-
 	/**
 	 * <p>Convert a <code>String</code> to a <code>long</code>, returning a
 	 * default value if the conversion fails.</p>
@@ -501,7 +447,6 @@ public class Func {
 	public static long toLong(final Object value, final long defaultValue) {
 		return NumberUtil.toLong(String.valueOf(value), defaultValue);
 	}
-
 	/**
 	 * <p>Convert a <code>String</code> to an <code>Double</code>, returning a
 	 * default value if the conversion fails.</p>
@@ -520,7 +465,6 @@ public class Func {
 	public static Double toDouble(Object value) {
 		return toDouble(String.valueOf(value), -1.00);
 	}
-
 	/**
 	 * <p>Convert a <code>String</code> to an <code>Double</code>, returning a
 	 * default value if the conversion fails.</p>
@@ -540,7 +484,6 @@ public class Func {
 	public static Double toDouble(Object value, Double defaultValue) {
 		return NumberUtil.toDouble(String.valueOf(value), defaultValue);
 	}
-
 	/**
 	 * <p>Convert a <code>String</code> to an <code>Float</code>, returning a
 	 * default value if the conversion fails.</p>
@@ -559,7 +502,6 @@ public class Func {
 	public static Float toFloat(Object value) {
 		return toFloat(String.valueOf(value), -1.0f);
 	}
-
 	/**
 	 * <p>Convert a <code>String</code> to an <code>Float</code>, returning a
 	 * default value if the conversion fails.</p>
@@ -579,7 +521,6 @@ public class Func {
 	public static Float toFloat(Object value, Float defaultValue) {
 		return NumberUtil.toFloat(String.valueOf(value), defaultValue);
 	}
-
 	/**
 	 * <p>Convert a <code>String</code> to an <code>Boolean</code>, returning a
 	 * default value if the conversion fails.</p>
@@ -598,7 +539,6 @@ public class Func {
 	public static Boolean toBoolean(Object value) {
 		return toBoolean(value, null);
 	}
-
 	/**
 	 * <p>Convert a <code>String</code> to an <code>Boolean</code>, returning a
 	 * default value if the conversion fails.</p>
@@ -623,7 +563,6 @@ public class Func {
 		}
 		return defaultValue;
 	}
-
 	/**
 	 * 转换为Integer数组<br>
 	 *
@@ -633,7 +572,6 @@ public class Func {
 	public static Integer[] toIntArray(String str) {
 		return toIntArray(",", str);
 	}
-
 	/**
 	 * 转换为Integer数组<br>
 	 *
@@ -653,7 +591,6 @@ public class Func {
 		}
 		return ints;
 	}
-
 	/**
 	 * 转换为Integer集合<br>
 	 *
@@ -663,7 +600,6 @@ public class Func {
 	public static List<Integer> toIntList(String str) {
 		return Arrays.asList(toIntArray(str));
 	}
-
 	/**
 	 * 转换为Integer集合<br>
 	 *
@@ -674,7 +610,6 @@ public class Func {
 	public static List<Integer> toIntList(String split, String str) {
 		return Arrays.asList(toIntArray(split, str));
 	}
-
 	/**
 	 * 转换为Long数组<br>
 	 *
@@ -684,7 +619,6 @@ public class Func {
 	public static Long[] toLongArray(String str) {
 		return toLongArray(",", str);
 	}
-
 	/**
 	 * 转换为Long数组<br>
 	 *
@@ -704,7 +638,6 @@ public class Func {
 		}
 		return longs;
 	}
-
 	/**
 	 * 转换为Long集合<br>
 	 *
@@ -714,7 +647,6 @@ public class Func {
 	public static List<Long> toLongList(String str) {
 		return Arrays.asList(toLongArray(str));
 	}
-
 	/**
 	 * 转换为Long集合<br>
 	 *
@@ -725,7 +657,6 @@ public class Func {
 	public static List<Long> toLongList(String split, String str) {
 		return Arrays.asList(toLongArray(split, str));
 	}
-
 	/**
 	 * 获取第一位Long数值
 	 *
@@ -735,7 +666,6 @@ public class Func {
 	public static Long firstLong(String str) {
 		return firstLong(",", str);
 	}
-
 	/**
 	 * 获取第一位Long数值
 	 *
@@ -751,7 +681,6 @@ public class Func {
 			return longs.get(0);
 		}
 	}
-
 	/**
 	 * 转换为String数组<br>
 	 *
@@ -761,7 +690,6 @@ public class Func {
 	public static String[] toStrArray(String str) {
 		return toStrArray(",", str);
 	}
-
 	/**
 	 * 转换为String数组<br>
 	 *
@@ -775,7 +703,6 @@ public class Func {
 		}
 		return str.split(split);
 	}
-
 	/**
 	 * 转换为String集合<br>
 	 *
@@ -785,7 +712,6 @@ public class Func {
 	public static List<String> toStrList(String str) {
 		return Arrays.asList(toStrArray(str));
 	}
-
 	/**
 	 * 转换为String集合<br>
 	 *
@@ -796,7 +722,6 @@ public class Func {
 	public static List<String> toStrList(String split, String str) {
 		return Arrays.asList(toStrArray(split, str));
 	}
-
 	/**
 	 * 将 long 转短字符串 为 62 进制
 	 *
@@ -806,7 +731,6 @@ public class Func {
 	public static String to62String(long num) {
 		return NumberUtil.to62String(num);
 	}
-
 	/**
 	 * Convert a {@code Collection} into a delimited {@code String} (e.g., CSV).
 	 * <p>Useful for {@code toString()} implementations.
@@ -817,7 +741,6 @@ public class Func {
 	public static String join(Collection<?> coll) {
 		return StringUtil.join(coll);
 	}
-
 	/**
 	 * Convert a {@code Collection} into a delimited {@code String} (e.g. CSV).
 	 * <p>Useful for {@code toString()} implementations.
@@ -829,7 +752,6 @@ public class Func {
 	public static String join(Collection<?> coll, String delim) {
 		return StringUtil.join(coll, delim);
 	}
-
 	/**
 	 * Convert a {@code String} array into a comma delimited {@code String}
 	 * (i.e., CSV).
@@ -841,7 +763,6 @@ public class Func {
 	public static String join(Object[] arr) {
 		return StringUtil.join(arr);
 	}
-
 	/**
 	 * Convert a {@code String} array into a delimited {@code String} (e.g. CSV).
 	 * <p>Useful for {@code toString()} implementations.
@@ -853,7 +774,6 @@ public class Func {
 	public static String join(Object[] arr, String delim) {
 		return StringUtil.join(arr, delim);
 	}
-
 	/**
 	 * 生成uuid
 	 *
@@ -862,7 +782,6 @@ public class Func {
 	public static String randomUUID() {
 		return StringUtil.randomUUID();
 	}
-
 	/**
 	 * 转义HTML用于安全过滤
 	 *
@@ -872,7 +791,6 @@ public class Func {
 	public static String escapeHtml(String html) {
 		return StringUtil.escapeHtml(html);
 	}
-
 	/**
 	 * 随机数生成
 	 *
@@ -882,7 +800,6 @@ public class Func {
 	public static String random(int count) {
 		return StringUtil.random(count);
 	}
-
 	/**
 	 * 随机数生成
 	 *
@@ -893,7 +810,6 @@ public class Func {
 	public static String random(int count, RandomType randomType) {
 		return StringUtil.random(count, randomType);
 	}
-
 	/**
 	 * Calculates the MD5 digest and returns the value as a 32 character hex string.
 	 *
@@ -903,7 +819,6 @@ public class Func {
 	public static String md5Hex(final String data) {
 		return DigestUtil.md5Hex(data);
 	}
-
 	/**
 	 * Return a hexadecimal string representation of the MD5 digest of the given bytes.
 	 *
@@ -913,23 +828,18 @@ public class Func {
 	public static String md5Hex(final byte[] bytes) {
 		return DigestUtil.md5Hex(bytes);
 	}
-
 	public static String sha1(String srcStr) {
 		return DigestUtil.sha1(srcStr);
 	}
-
 	public static String sha256(String srcStr) {
 		return DigestUtil.sha256(srcStr);
 	}
-
 	public static String sha384(String srcStr) {
 		return DigestUtil.sha384(srcStr);
 	}
-
 	public static String sha512(String srcStr) {
 		return DigestUtil.sha512(srcStr);
 	}
-
 	/**
 	 * 自定义加密 先MD5再SHA1
 	 *
@@ -939,7 +849,6 @@ public class Func {
 	public static String encrypt(String data) {
 		return DigestUtil.encrypt(data);
 	}
-
 	/**
 	 * 编码
 	 *
@@ -949,7 +858,6 @@ public class Func {
 	public static String encodeBase64(String value) {
 		return Base64Util.encode(value);
 	}
-
 	/**
 	 * 编码
 	 *
@@ -960,7 +868,6 @@ public class Func {
 	public static String encodeBase64(String value, Charset charset) {
 		return Base64Util.encode(value, charset);
 	}
-
 	/**
 	 * 编码URL安全
 	 *
@@ -970,7 +877,6 @@ public class Func {
 	public static String encodeBase64UrlSafe(String value) {
 		return Base64Util.encodeUrlSafe(value);
 	}
-
 	/**
 	 * 编码URL安全
 	 *
@@ -981,7 +887,6 @@ public class Func {
 	public static String encodeBase64UrlSafe(String value, Charset charset) {
 		return Base64Util.encodeUrlSafe(value, charset);
 	}
-
 	/**
 	 * 解码
 	 *
@@ -991,7 +896,6 @@ public class Func {
 	public static String decodeBase64(String value) {
 		return Base64Util.decode(value);
 	}
-
 	/**
 	 * 解码
 	 *
@@ -1002,7 +906,6 @@ public class Func {
 	public static String decodeBase64(String value, Charset charset) {
 		return Base64Util.decode(value, charset);
 	}
-
 	/**
 	 * 解码URL安全
 	 *
@@ -1012,7 +915,6 @@ public class Func {
 	public static String decodeBase64UrlSafe(String value) {
 		return Base64Util.decodeUrlSafe(value);
 	}
-
 	/**
 	 * 解码URL安全
 	 *
@@ -1023,7 +925,6 @@ public class Func {
 	public static String decodeBase64UrlSafe(String value, Charset charset) {
 		return Base64Util.decodeUrlSafe(value, charset);
 	}
-
 	/**
 	 * closeQuietly
 	 *
@@ -1032,7 +933,6 @@ public class Func {
 	public static void closeQuietly(@Nullable Closeable closeable) {
 		IoUtil.closeQuietly(closeable);
 	}
-
 	/**
 	 * InputStream to String utf-8
 	 *
@@ -1043,7 +943,6 @@ public class Func {
 	public static String toString(InputStream input) {
 		return IoUtil.toString(input);
 	}
-
 	/**
 	 * InputStream to String
 	 *
@@ -1055,11 +954,9 @@ public class Func {
 	public static String toString(@Nullable InputStream input, Charset charset) {
 		return IoUtil.toString(input, charset);
 	}
-
 	public static byte[] toByteArray(@Nullable InputStream input) {
 		return IoUtil.toByteArray(input);
 	}
-
 	/**
 	 * 将对象序列化成json字符串
 	 *
@@ -1069,7 +966,6 @@ public class Func {
 	public static String toJson(Object object) {
 		return JsonUtil.toJson(object);
 	}
-
 	/**
 	 * 将对象序列化成 json byte 数组
 	 *
@@ -1079,7 +975,6 @@ public class Func {
 	public static byte[] toJsonAsBytes(Object object) {
 		return JsonUtil.toJsonAsBytes(object);
 	}
-
 	/**
 	 * 将json字符串转成 JsonNode
 	 *
@@ -1089,7 +984,6 @@ public class Func {
 	public static JsonNode readTree(String jsonString) {
 		return JsonUtil.readTree(jsonString);
 	}
-
 	/**
 	 * 将json字符串转成 JsonNode
 	 *
@@ -1099,7 +993,6 @@ public class Func {
 	public static JsonNode readTree(InputStream in) {
 		return JsonUtil.readTree(in);
 	}
-
 	/**
 	 * 将json字符串转成 JsonNode
 	 *
@@ -1109,7 +1002,6 @@ public class Func {
 	public static JsonNode readTree(byte[] content) {
 		return JsonUtil.readTree(content);
 	}
-
 	/**
 	 * 将json字符串转成 JsonNode
 	 *
@@ -1119,7 +1011,6 @@ public class Func {
 	public static JsonNode readTree(JsonParser jsonParser) {
 		return JsonUtil.readTree(jsonParser);
 	}
-
 	/**
 	 * 将json byte 数组反序列化成对象
 	 *
@@ -1131,7 +1022,6 @@ public class Func {
 	public static <T> T parse(byte[] bytes, Class<T> valueType) {
 		return JsonUtil.parse(bytes, valueType);
 	}
-
 	/**
 	 * 将json反序列化成对象
 	 *
@@ -1143,7 +1033,6 @@ public class Func {
 	public static <T> T parse(String jsonString, Class<T> valueType) {
 		return JsonUtil.parse(jsonString, valueType);
 	}
-
 	/**
 	 * 将json反序列化成对象
 	 *
@@ -1155,7 +1044,6 @@ public class Func {
 	public static <T> T parse(InputStream in, Class<T> valueType) {
 		return JsonUtil.parse(in, valueType);
 	}
-
 	/**
 	 * 将json反序列化成对象
 	 *
@@ -1167,7 +1055,6 @@ public class Func {
 	public static <T> T parse(byte[] bytes, TypeReference<T> typeReference) {
 		return JsonUtil.parse(bytes, typeReference);
 	}
-
 	/**
 	 * 将json反序列化成对象
 	 *
@@ -1179,7 +1066,6 @@ public class Func {
 	public static <T> T parse(String jsonString, TypeReference<T> typeReference) {
 		return JsonUtil.parse(jsonString, typeReference);
 	}
-
 	/**
 	 * 将json反序列化成对象
 	 *
@@ -1191,7 +1077,6 @@ public class Func {
 	public static <T> T parse(InputStream in, TypeReference<T> typeReference) {
 		return JsonUtil.parse(in, typeReference);
 	}
-
 	/**
 	 * Encode all characters that are either illegal, or have any reserved
 	 * meaning, anywhere within a URI, as defined in
@@ -1205,7 +1090,6 @@ public class Func {
 	public static String encode(String source) {
 		return UrlUtil.encode(source, Charsets.UTF_8);
 	}
-
 	/**
 	 * Encode all characters that are either illegal, or have any reserved
 	 * meaning, anywhere within a URI, as defined in
@@ -1220,7 +1104,6 @@ public class Func {
 	public static String encode(String source, Charset charset) {
 		return UrlUtil.encode(source, charset);
 	}
-
 	/**
 	 * Decode the given encoded URI component.
 	 * <p>See {@link StringUtils#uriDecode(String, Charset)} for the decoding rules.
@@ -1234,7 +1117,6 @@ public class Func {
 	public static String decode(String source) {
 		return StringUtils.uriDecode(source, Charsets.UTF_8);
 	}
-
 	/**
 	 * Decode the given encoded URI component.
 	 * <p>See {@link StringUtils#uriDecode(String, Charset)} for the decoding rules.
@@ -1249,7 +1131,6 @@ public class Func {
 	public static String decode(String source, Charset charset) {
 		return StringUtils.uriDecode(source, charset);
 	}
-
 	/**
 	 * 日期时间格式化
 	 *
@@ -1259,7 +1140,6 @@ public class Func {
 	public static String formatDateTime(Date date) {
 		return DateUtil.formatDateTime(date);
 	}
-
 	/**
 	 * 日期格式化
 	 *
@@ -1269,7 +1149,6 @@ public class Func {
 	public static String formatDate(Date date) {
 		return DateUtil.formatDate(date);
 	}
-
 	/**
 	 * 时间格式化
 	 *
@@ -1279,7 +1158,6 @@ public class Func {
 	public static String formatTime(Date date) {
 		return DateUtil.formatTime(date);
 	}
-
 	/**
 	 * 日期格式化
 	 *
@@ -1290,7 +1168,6 @@ public class Func {
 	public static String format(Date date, String pattern) {
 		return DateUtil.format(date, pattern);
 	}
-
 	/**
 	 * 将字符串转换为时间
 	 *
@@ -1301,7 +1178,6 @@ public class Func {
 	public static Date parseDate(String dateStr, String pattern) {
 		return DateUtil.parse(dateStr, pattern);
 	}
-
 	/**
 	 * 将字符串转换为时间
 	 *
@@ -1312,7 +1188,6 @@ public class Func {
 	public static Date parse(String dateStr, ConcurrentDateFormat format) {
 		return DateUtil.parse(dateStr, format);
 	}
-
 	/**
 	 * 日期时间格式化
 	 *
@@ -1322,7 +1197,6 @@ public class Func {
 	public static String formatDateTime(TemporalAccessor temporal) {
 		return DateTimeUtil.formatDateTime(temporal);
 	}
-
 	/**
 	 * 日期时间格式化
 	 *
@@ -1332,7 +1206,6 @@ public class Func {
 	public static String formatDate(TemporalAccessor temporal) {
 		return DateTimeUtil.formatDate(temporal);
 	}
-
 	/**
 	 * 时间格式化
 	 *
@@ -1342,7 +1215,6 @@ public class Func {
 	public static String formatTime(TemporalAccessor temporal) {
 		return DateTimeUtil.formatTime(temporal);
 	}
-
 	/**
 	 * 日期格式化
 	 *
@@ -1353,7 +1225,6 @@ public class Func {
 	public static String format(TemporalAccessor temporal, String pattern) {
 		return DateTimeUtil.format(temporal, pattern);
 	}
-
 	/**
 	 * 将字符串转换为时间
 	 *
@@ -1364,7 +1235,6 @@ public class Func {
 	public static TemporalAccessor parse(String dateStr, String pattern) {
 		return DateTimeUtil.parse(dateStr, pattern);
 	}
-
 	/**
 	 * 将字符串转换为时间
 	 *
@@ -1375,7 +1245,6 @@ public class Func {
 	public static TemporalAccessor parse(String dateStr, DateTimeFormatter formatter) {
 		return DateTimeUtil.parse(dateStr, formatter);
 	}
-
 	/**
 	 * 时间比较
 	 *
@@ -1386,7 +1255,6 @@ public class Func {
 	public static Duration between(Temporal startInclusive, Temporal endExclusive) {
 		return Duration.between(startInclusive, endExclusive);
 	}
-
 	/**
 	 * 获取方法参数信息
 	 *
@@ -1397,7 +1265,6 @@ public class Func {
 	public static MethodParameter getMethodParameter(Constructor<?> constructor, int parameterIndex) {
 		return ClassUtil.getMethodParameter(constructor, parameterIndex);
 	}
-
 	/**
 	 * 获取方法参数信息
 	 *
@@ -1408,7 +1275,6 @@ public class Func {
 	public static MethodParameter getMethodParameter(Method method, int parameterIndex) {
 		return ClassUtil.getMethodParameter(method, parameterIndex);
 	}
-
 	/**
 	 * 获取Annotation
 	 *
@@ -1421,7 +1287,6 @@ public class Func {
 	public static <A extends Annotation> A getAnnotation(AnnotatedElement annotatedElement, Class<A> annotationType) {
 		return AnnotatedElementUtils.findMergedAnnotation(annotatedElement, annotationType);
 	}
-
 	/**
 	 * 获取Annotation
 	 *
@@ -1434,7 +1299,6 @@ public class Func {
 	public static <A extends Annotation> A getAnnotation(Method method, Class<A> annotationType) {
 		return ClassUtil.getAnnotation(method, annotationType);
 	}
-
 	/**
 	 * 获取Annotation
 	 *
@@ -1447,7 +1311,6 @@ public class Func {
 	public static <A extends Annotation> A getAnnotation(HandlerMethod handlerMethod, Class<A> annotationType) {
 		return ClassUtil.getAnnotation(handlerMethod, annotationType);
 	}
-
 	/**
 	 * 实例化对象
 	 *
@@ -1459,7 +1322,6 @@ public class Func {
 	public static <T> T newInstance(Class<?> clazz) {
 		return (T) BeanUtil.instantiateClass(clazz);
 	}
-
 	/**
 	 * 实例化对象
 	 *
@@ -1470,7 +1332,6 @@ public class Func {
 	public static <T> T newInstance(String clazzStr) {
 		return BeanUtil.newInstance(clazzStr);
 	}
-
 	/**
 	 * 获取Bean的属性
 	 *
@@ -1481,7 +1342,6 @@ public class Func {
 	public static Object getProperty(Object bean, String propertyName) {
 		return BeanUtil.getProperty(bean, propertyName);
 	}
-
 	/**
 	 * 设置Bean属性
 	 *
@@ -1492,7 +1352,6 @@ public class Func {
 	public static void setProperty(Object bean, String propertyName, Object value) {
 		BeanUtil.setProperty(bean, propertyName, value);
 	}
-
 	/**
 	 * 深复制
 	 * <p>
@@ -1505,7 +1364,6 @@ public class Func {
 	public static <T> T clone(T source) {
 		return BeanUtil.clone(source);
 	}
-
 	/**
 	 * copy 对象属性到另一个对象，默认不使用Convert
 	 * <p>
@@ -1519,7 +1377,6 @@ public class Func {
 	public static <T> T copy(Object source, Class<T> clazz) {
 		return BeanUtil.copyProperties(source, clazz);
 	}
-
 	/**
 	 * 拷贝对象
 	 * <p>
@@ -1531,7 +1388,6 @@ public class Func {
 	public static void copy(Object source, Object targetBean) {
 		BeanUtil.copyProperties(source, targetBean);
 	}
-
 	/**
 	 * Copy the property values of the given source bean into the target class.
 	 * <p>Note: The source and target classes do not have to match or even be derived
@@ -1548,7 +1404,6 @@ public class Func {
 	public static <T> T copyProperties(Object source, Class<T> clazz) throws BeansException {
 		return BeanUtil.copyProperties(source, clazz);
 	}
-
 	/**
 	 * 将对象装成map形式
 	 *
@@ -1558,7 +1413,6 @@ public class Func {
 	public static Map<String, Object> toMap(Object bean) {
 		return BeanUtil.toMap(bean);
 	}
-
 	/**
 	 * 将map 转为 bean
 	 *
@@ -1570,5 +1424,4 @@ public class Func {
 	public static <T> T toBean(Map<String, Object> beanMap, Class<T> valueType) {
 		return BeanUtil.toBean(beanMap, valueType);
 	}
-
 }

@@ -1,36 +1,12 @@
-/**
- * Copyright (c) 2018-2099, DreamLu 卢春梦 (qq596392912@gmail.com).
- * <p>
- * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE 3.0;
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.gnu.org/licenses/lgpl.html
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package org.jboot.kernel.toolkit.utils;
-
 import io.protostuff.LinkedBuffer;
 import io.protostuff.ProtostuffIOUtil;
 import io.protostuff.Schema;
 import io.protostuff.runtime.RuntimeSchema;
-
 import java.util.Map;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentHashMap;
-
-/**
- * Protostuff 工具类
- *
- * @author Corsak
- */
 public class ProtostuffUtil {
-
 	/**
 	 * 避免每次序列化都重新申请Buffer空间
 	 */
@@ -39,7 +15,6 @@ public class ProtostuffUtil {
 	 * 缓存Schema
 	 */
 	private static final Map<Class<?>, Schema<?>> schemaCache = new ConcurrentHashMap<>();
-
 	/**
 	 * 序列化方法，把指定对象序列化成字节数组
 	 *
@@ -59,7 +34,6 @@ public class ProtostuffUtil {
 		}
 		return data;
 	}
-
 	/**
 	 * 反序列化方法，将字节数组反序列化成指定Class类型
 	 *
@@ -74,7 +48,6 @@ public class ProtostuffUtil {
 		ProtostuffIOUtil.mergeFrom(data, obj, schema);
 		return obj;
 	}
-
 	/**
 	 * 获取Schema
 	 * @param clazz clazz
@@ -94,5 +67,4 @@ public class ProtostuffUtil {
 		}
 		return schema;
 	}
-
 }

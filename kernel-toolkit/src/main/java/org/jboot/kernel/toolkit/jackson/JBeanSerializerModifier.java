@@ -1,49 +1,16 @@
-/**
- * Copyright (c) 2018-2099, DreamLu 卢春梦 (qq596392912@gmail.com).
- * <p>
- * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE 3.0;
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.gnu.org/licenses/lgpl.html
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package org.jboot.kernel.toolkit.jackson;
-
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.*;
 import com.fasterxml.jackson.databind.ser.BeanPropertyWriter;
 import com.fasterxml.jackson.databind.ser.BeanSerializerModifier;
 import org.jboot.kernel.toolkit.utils.StringUtil;
 import org.jboot.kernel.toolkit.utils.StringPool;
-
 import java.io.IOException;
 import java.time.OffsetDateTime;
 import java.time.temporal.TemporalAccessor;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
-
-/**
- * jackson 默认值为 null 时的处理
- *
- * 主要是为了避免 app 端出现null导致闪退
- *
- * 规则：
- * number -1
- * string ""
- * date ""
- * boolean false
- * array []
- * Object {}
- *
- * @author Corsak
- */
 public class JBeanSerializerModifier extends BeanSerializerModifier {
     @Override
     public List<BeanPropertyWriter> changeProperties(
@@ -77,30 +44,25 @@ public class JBeanSerializerModifier extends BeanSerializerModifier {
         });
         return super.changeProperties(config, beanDesc, beanProperties);
     }
-
     public interface NullJsonSerializers {
-
         JsonSerializer<Object> STRING_JSON_SERIALIZER = new JsonSerializer<Object>() {
             @Override
             public void serialize(Object value, JsonGenerator gen, SerializerProvider serializers) throws IOException {
                 gen.writeString(StringPool.EMPTY);
             }
         };
-
         JsonSerializer<Object> NUMBER_JSON_SERIALIZER = new JsonSerializer<Object>() {
             @Override
             public void serialize(Object value, JsonGenerator gen, SerializerProvider serializers) throws IOException {
                 gen.writeNumber(StringUtil.INDEX_NOT_FOUND);
             }
         };
-
         JsonSerializer<Object> BOOLEAN_JSON_SERIALIZER = new JsonSerializer<Object>() {
             @Override
             public void serialize(Object value, JsonGenerator gen, SerializerProvider serializers) throws IOException {
                 gen.writeObject(Boolean.FALSE);
             }
         };
-
         JsonSerializer<Object> ARRAY_JSON_SERIALIZER = new JsonSerializer<Object>() {
             @Override
             public void serialize(Object value, JsonGenerator gen, SerializerProvider serializers) throws IOException {
@@ -108,7 +70,6 @@ public class JBeanSerializerModifier extends BeanSerializerModifier {
                 gen.writeEndArray();
             }
         };
-
         JsonSerializer<Object> OBJECT_JSON_SERIALIZER = new JsonSerializer<Object>() {
             @Override
             public void serialize(Object value, JsonGenerator gen, SerializerProvider serializers) throws IOException {
@@ -116,7 +77,5 @@ public class JBeanSerializerModifier extends BeanSerializerModifier {
                 gen.writeEndObject();
             }
         };
-
     }
-
 }

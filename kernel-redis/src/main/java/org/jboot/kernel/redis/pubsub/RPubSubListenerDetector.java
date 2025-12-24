@@ -1,21 +1,4 @@
-/**
- * Copyright (c) 2018-2099, DreamLu 卢春梦 (qq596392912@gmail.com).
- * <p>
- * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE 3.0;
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.gnu.org/licenses/lgpl.html
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package org.jboot.kernel.redis.pubsub;
-
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.jboot.kernel.toolkit.utils.ReflectUtil;
@@ -29,19 +12,11 @@ import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.util.Assert;
 import org.springframework.util.ClassUtils;
 import org.springframework.util.ReflectionUtils;
-
 import java.lang.reflect.Method;
-
-/**
- * Redisson 监听器
- *
- * @author Corsak
- */
 @Slf4j
 @RequiredArgsConstructor
 public class RPubSubListenerDetector implements BeanPostProcessor {
 	private final ApplicationContext applicationContext;
-
 	@Override
 	public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
 		Class<?> userClass = ClassUtils.getUserClass(bean);
@@ -51,7 +26,6 @@ public class RPubSubListenerDetector implements BeanPostProcessor {
 				String channel = listener.value();
 				Assert.hasText(channel, "@RPubSubListener value channel must not be empty.");
 				log.info("Found @RPubSubListener on bean:{} method:{}", beanName, method);
-
 				// 校验 method，method 入参数大于等于1
 				int paramCount = method.getParameterCount();
 				if (paramCount > 1) {
@@ -72,7 +46,6 @@ public class RPubSubListenerDetector implements BeanPostProcessor {
 		}, ReflectionUtils.USER_DECLARED_METHODS);
 		return bean;
 	}
-
 	private static void invokeMethod(Object bean, Method method, int paramCount, RPubSubEvent<Object> topicEvent) {
 		// 支持没有参数的方法
 		if (paramCount == 0) {
@@ -81,11 +54,9 @@ public class RPubSubListenerDetector implements BeanPostProcessor {
 			ReflectUtil.invokeMethod(method, bean, topicEvent);
 		}
 	}
-
 	private RedisMessageListenerContainer getRedisMessageListenerContainer() {
 		return applicationContext.getBean(RedisMessageListenerContainer.class);
 	}
-
 	private RedisSerializer<?> getRedisSerializer() {
 		return applicationContext.getBean(RedisSerializer.class);
 	}

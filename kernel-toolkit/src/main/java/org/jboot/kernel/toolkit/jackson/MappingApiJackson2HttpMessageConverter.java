@@ -1,45 +1,15 @@
-/**
- * Copyright (c) 2018-2099, DreamLu 卢春梦 (qq596392912@gmail.com).
- * <p>
- * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE 3.0;
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.gnu.org/licenses/lgpl.html
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package org.jboot.kernel.toolkit.jackson;
-
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 import org.springframework.lang.Nullable;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
-/**
- * 针对 api 服务对 android 和 ios 和 web 处理的 分读写的 jackson 处理
- *
- * <p>
- * 1. app 端上报数据是 使用 readObjectMapper
- * 2. 返回给 app 端的数据使用 writeObjectMapper
- * </p>
- *
- * @author Corsak
- */
 public class MappingApiJackson2HttpMessageConverter extends AbstractReadWriteJackson2HttpMessageConverter {
-
 	@Nullable
 	private String jsonPrefix;
-
 	/**
 	 * Construct a new {@link MappingApiJackson2HttpMessageConverter} with a custom {@link ObjectMapper}.
 	 * You can use {@link Jackson2ObjectMapperBuilder} to build it easily.
@@ -51,7 +21,6 @@ public class MappingApiJackson2HttpMessageConverter extends AbstractReadWriteJac
 	public MappingApiJackson2HttpMessageConverter(ObjectMapper objectMapper, JJacksonProperties properties) {
 		super(objectMapper, initWriteObjectMapper(objectMapper, properties), initMediaType(properties));
 	}
-
 	private static List<MediaType> initMediaType(JJacksonProperties properties) {
 		List<MediaType> supportedMediaTypes = new ArrayList<>();
 		supportedMediaTypes.add(MediaType.APPLICATION_JSON);
@@ -62,7 +31,6 @@ public class MappingApiJackson2HttpMessageConverter extends AbstractReadWriteJac
 		}
 		return supportedMediaTypes;
 	}
-
 	private static ObjectMapper initWriteObjectMapper(ObjectMapper readObjectMapper, JJacksonProperties properties) {
 		// 拷贝 readObjectMapper
 		ObjectMapper writeObjectMapper = readObjectMapper.copy();
@@ -77,7 +45,6 @@ public class MappingApiJackson2HttpMessageConverter extends AbstractReadWriteJac
 		}
 		return writeObjectMapper;
 	}
-
 	/**
 	 * Specify a custom prefix to use for this view's JSON output.
 	 * Default is none.
@@ -88,7 +55,6 @@ public class MappingApiJackson2HttpMessageConverter extends AbstractReadWriteJac
 	public void setJsonPrefix(String jsonPrefix) {
 		this.jsonPrefix = jsonPrefix;
 	}
-
 	/**
 	 * Indicate whether the JSON output by this view should be prefixed with ")]}', ". Default is false.
 	 * <p>Prefixing the JSON string in this manner is used to help prevent JSON Hijacking.
@@ -101,12 +67,10 @@ public class MappingApiJackson2HttpMessageConverter extends AbstractReadWriteJac
 	public void setPrefixJson(boolean prefixJson) {
 		this.jsonPrefix = (prefixJson ? ")]}', " : null);
 	}
-
 	@Override
 	protected void writePrefix(JsonGenerator generator, Object object) throws IOException {
 		if (this.jsonPrefix != null) {
 			generator.writeRaw(this.jsonPrefix);
 		}
 	}
-
 }

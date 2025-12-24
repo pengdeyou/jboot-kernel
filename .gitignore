@@ -288,3 +288,4 @@ private-key
 *.pem
 *.p12
 *.jks
+/.metadata/

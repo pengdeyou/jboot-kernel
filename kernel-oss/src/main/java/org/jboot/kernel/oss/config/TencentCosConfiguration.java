@@ -1,20 +1,4 @@
-/**
- * Copyright (c) 2018-2099, yangkai.shen.
- * <p>
- * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE 3.0;
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.gnu.org/licenses/lgpl.html
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package org.jboot.kernel.oss.config;
-
 import org.jboot.kernel.oss.TencentCosTemplate;
 import org.jboot.kernel.oss.props.OssProperties;
 import org.jboot.kernel.oss.rule.OssRule;
@@ -25,39 +9,26 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
-
 import com.qcloud.cos.COSClient;
 import com.qcloud.cos.ClientConfig;
 import com.qcloud.cos.auth.BasicCOSCredentials;
 import com.qcloud.cos.auth.COSCredentials;
 import com.qcloud.cos.region.Region;
-
 import lombok.AllArgsConstructor;
-
-/**
- * <p>
- * 腾讯云 COS 自动装配
- * </p>
- *
- * @author yangkai.shen
- */
 @AllArgsConstructor
 @AutoConfiguration(after = OssConfiguration.class)
 @ConditionalOnClass({COSClient.class})
 @EnableConfigurationProperties(OssProperties.class)
 @ConditionalOnProperty(value = "oss.name", havingValue = "tencentcos")
 public class TencentCosConfiguration {
-
 	/**
 	 * OSS配置属性
 	 */
 	private final OssProperties ossProperties;
-
 	/**
 	 * OSS规则对象
 	 */
 	private final OssRule ossRule;
-
 	/**
 	 * 配置腾讯云COS客户端
 	 * 当容器中不存在 COSClient 类型的Bean时生效
@@ -90,7 +61,6 @@ public class TencentCosConfiguration {
 		clientConfig.setConnectionRequestTimeout(1000);
 		return new COSClient(credentials, clientConfig);
 	}
-
 	/**
 	 * 配置腾讯云COS操作模板
 	 * 需要容器中存在 COSClient 的Bean，且不存在 TencentCosTemplate 的Bean时生效
@@ -104,5 +74,4 @@ public class TencentCosConfiguration {
 	public TencentCosTemplate tencentCosTemplate(COSClient cosClient) {
 		return new TencentCosTemplate(cosClient, ossProperties, ossRule);
 	}
-
 }

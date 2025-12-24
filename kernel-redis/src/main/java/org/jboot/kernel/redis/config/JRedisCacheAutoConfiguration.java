@@ -1,21 +1,4 @@
-/**
- * Copyright (c) 2018-2099, DreamLu 卢春梦 (qq596392912@gmail.com).
- * <p>
- * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE 3.0;
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.gnu.org/licenses/lgpl.html
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package org.jboot.kernel.redis.config;
-
 import org.jboot.kernel.toolkit.config.RedisConfiguration;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
@@ -31,20 +14,12 @@ import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.serializer.RedisSerializationContext;
 import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.lang.Nullable;
-
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-
-/**
- * 扩展redis-cache支持注解cacheName添加超时时间
- *
- * @author Corsak
- */
 @AutoConfiguration(before = RedisConfiguration.class)
 @EnableConfigurationProperties(CacheProperties.class)
 public class JRedisCacheAutoConfiguration {
-
 	/**
 	 * 序列化方式
 	 */
@@ -53,7 +28,6 @@ public class JRedisCacheAutoConfiguration {
 	private final CacheManagerCustomizers customizerInvoker;
 	@Nullable
 	private final RedisCacheConfiguration redisCacheConfiguration;
-
 	JRedisCacheAutoConfiguration(RedisSerializer<Object> redisSerializer,
 									 CacheProperties cacheProperties,
 									 CacheManagerCustomizers customizerInvoker,
@@ -63,7 +37,6 @@ public class JRedisCacheAutoConfiguration {
 		this.customizerInvoker = customizerInvoker;
 		this.redisCacheConfiguration = redisCacheConfiguration.getIfAvailable();
 	}
-
 	@Primary
 	@Bean("redisCacheManager")
 	public RedisCacheManager redisCacheManager(RedisConnectionFactory connectionFactory) {
@@ -82,7 +55,6 @@ public class JRedisCacheAutoConfiguration {
 		cacheManager.setTransactionAware(enableTransactions);
 		return this.customizerInvoker.customize(cacheManager);
 	}
-
 	private RedisCacheConfiguration determineConfiguration() {
 		if (this.redisCacheConfiguration != null) {
 			return this.redisCacheConfiguration;
@@ -93,19 +65,15 @@ public class JRedisCacheAutoConfiguration {
 			if (redisProperties.getTimeToLive() != null) {
 				config = config.entryTtl(redisProperties.getTimeToLive());
 			}
-
 			if (redisProperties.getKeyPrefix() != null) {
 				config = config.prefixCacheNameWith(redisProperties.getKeyPrefix());
 			}
-
 			if (!redisProperties.isCacheNullValues()) {
 				config = config.disableCachingNullValues();
 			}
-
 			if (!redisProperties.isUseKeyPrefix()) {
 				config = config.disableKeyPrefix();
 			}
-
 			return config;
 		}
 	}

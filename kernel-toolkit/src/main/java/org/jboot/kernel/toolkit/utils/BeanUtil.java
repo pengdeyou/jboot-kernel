@@ -1,21 +1,4 @@
-/**
- * Copyright (c) 2018-2099, DreamLu 卢春梦 (qq596392912@gmail.com).
- * <p>
- * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE 3.0;
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.gnu.org/licenses/lgpl.html
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package org.jboot.kernel.toolkit.utils;
-
-
 import org.jboot.kernel.toolkit.jackson.JsonUtil;
 import org.jboot.kernel.toolkit.support.BeanProperty;
 import org.jboot.kernel.toolkit.support.BaseBeanCopier;
@@ -24,19 +7,11 @@ import org.springframework.cglib.beans.BeanGenerator;
 import org.springframework.cglib.beans.BeanMap;
 import org.springframework.cglib.core.CodeGenerationException;
 import org.springframework.util.Assert;
-
 import java.beans.PropertyDescriptor;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
-/**
- * 实体工具类
- *
- * @author Corsak
- */
 public class BeanUtil extends org.springframework.beans.BeanUtils {
-
 	/**
 	 * 实例化对象
 	 * @param clazz 类
@@ -47,7 +22,6 @@ public class BeanUtil extends org.springframework.beans.BeanUtils {
 	public static <T> T newInstance(Class<?> clazz) {
 		return (T) instantiateClass(clazz);
 	}
-
 	/**
 	 * 实例化对象
 	 * @param clazzStr 类名
@@ -62,7 +36,6 @@ public class BeanUtil extends org.springframework.beans.BeanUtils {
 			throw new RuntimeException(e);
 		}
 	}
-
 	/**
 	 * 获取Bean的属性
 	 * @param bean bean
@@ -73,7 +46,6 @@ public class BeanUtil extends org.springframework.beans.BeanUtils {
 		Assert.notNull(bean, "bean Could not null");
 		return BeanMap.create(bean).get(propertyName);
 	}
-
 	/**
 	 * 设置Bean属性
 	 * @param bean bean
@@ -84,7 +56,6 @@ public class BeanUtil extends org.springframework.beans.BeanUtils {
 		Assert.notNull(bean, "bean Could not null");
 		BeanMap.create(bean).put(propertyName, value);
 	}
-
 	/**
 	 * 深复制
 	 *
@@ -98,7 +69,6 @@ public class BeanUtil extends org.springframework.beans.BeanUtils {
 	public static <T> T clone(T source) {
 		return (T) BeanUtil.copy(source, source.getClass());
 	}
-
 	/**
 	 * copy 对象属性到另一个对象，默认不使用Convert
 	 *
@@ -111,12 +81,10 @@ public class BeanUtil extends org.springframework.beans.BeanUtils {
 	 */
 	public static <T> T copy(Object source, Class<T> clazz) {
 		BaseBeanCopier copier = BaseBeanCopier.create(source.getClass(), clazz, false);
-
 		T to = newInstance(clazz);
 		copier.copy(source, to, null);
 		return to;
 	}
-
 	/**
 	 * 拷贝对象
 	 *
@@ -128,10 +96,8 @@ public class BeanUtil extends org.springframework.beans.BeanUtils {
 	public static void copy(Object source, Object targetBean) {
 		BaseBeanCopier copier = BaseBeanCopier
 			.create(source.getClass(), targetBean.getClass(), false);
-
 		copier.copy(source, targetBean, null);
 	}
-
 	/**
 	 * Copy the property values of the given source bean into the target class.
 	 * <p>Note: The source and target classes do not have to match or even be derived
@@ -149,7 +115,6 @@ public class BeanUtil extends org.springframework.beans.BeanUtils {
 		BeanUtil.copyProperties(source, to);
 		return to;
 	}
-
 	/**
 	 * 将对象装成map形式
 	 * @param bean 源对象
@@ -158,7 +123,6 @@ public class BeanUtil extends org.springframework.beans.BeanUtils {
 	public static Map<String, Object> toMap(Object bean) {
 		return JsonUtil.convertValue(bean, JsonUtil.getMapType(Object.class));
 	}
-
 	/**
 	 * 将map 转为 bean
 	 * @param beanMap map
@@ -169,7 +133,6 @@ public class BeanUtil extends org.springframework.beans.BeanUtils {
 	public static <T> T toBean(Map<String, Object> beanMap, Class<T> valueType) {
 		return JsonUtil.convertValue(beanMap, valueType);
 	}
-
 	/**
 	 * 给一个Bean添加字段
 	 * @param superBean 父级Bean
@@ -182,7 +145,6 @@ public class BeanUtil extends org.springframework.beans.BeanUtils {
 		BeanUtil.copy(superBean, genBean);
 		return genBean;
 	}
-
 	/**
 	 * 给一个class添加字段
 	 * @param superclass 父级
@@ -198,7 +160,6 @@ public class BeanUtil extends org.springframework.beans.BeanUtils {
 		}
 		return generator.create();
 	}
-
 	/**
 	 * 获取 Bean 的所有 get方法
 	 * @param type 类
@@ -207,7 +168,6 @@ public class BeanUtil extends org.springframework.beans.BeanUtils {
 	public static PropertyDescriptor[] getBeanGetters(Class type) {
 		return getPropertiesHelper(type, true, false);
 	}
-
 	/**
 	 * 获取 Bean 的所有 set方法
 	 * @param type 类
@@ -216,7 +176,6 @@ public class BeanUtil extends org.springframework.beans.BeanUtils {
 	public static PropertyDescriptor[] getBeanSetters(Class type) {
 		return getPropertiesHelper(type, false, true);
 	}
-
 	private static PropertyDescriptor[] getPropertiesHelper(Class type, boolean read, boolean write) {
 		try {
 			PropertyDescriptor[] all = BeanUtil.getPropertyDescriptors(type);
@@ -237,5 +196,4 @@ public class BeanUtil extends org.springframework.beans.BeanUtils {
 			throw new CodeGenerationException(ex);
 		}
 	}
-
 }

@@ -1,20 +1,4 @@
-/**
- * Copyright (c) 2018-2099, DreamLu 卢春梦 (qq596392912@gmail.com).
- * <p>
- * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE 3.0;
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.gnu.org/licenses/lgpl.html
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package org.jboot.kernel.cloud.version;
-
 import feign.MethodMetadata;
 import org.jboot.kernel.cloud.annotation.ApiVersion;
 import org.jboot.kernel.cloud.annotation.UrlVersion;
@@ -27,24 +11,13 @@ import org.springframework.core.convert.ConversionService;
 import org.springframework.http.HttpHeaders;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 import java.util.List;
-
-/**
- * 支持 jboot-boot 的 版本 处理
- *
- * @see org.jboot.kernel.cloud.annotation.UrlVersion
- * @see org.jboot.kernel.cloud.annotation.ApiVersion
- * @author Corsak
- */
 public class JSpringMvcContract extends SpringMvcContract {
-
 	public JSpringMvcContract(List<AnnotatedParameterProcessor> annotatedParameterProcessors, ConversionService conversionService) {
 		super(annotatedParameterProcessors, conversionService);
 	}
-
 	@Override
 	protected void processAnnotationOnMethod(MethodMetadata data, Annotation methodAnnotation, Method method) {
 		if (RequestMapping.class.isInstance(methodAnnotation) || methodAnnotation.annotationType().isAnnotationPresent(RequestMapping.class)) {
@@ -59,10 +32,8 @@ public class JSpringMvcContract extends SpringMvcContract {
 				String versionUrl = "/" + urlVersion.value();
 				data.template().uri(versionUrl);
 			}
-
 			// 注意：在父类之前 添加 url版本，在父类之后，处理 Media Types 版本
 			super.processAnnotationOnMethod(data, methodAnnotation, method);
-
 			// 处理 Media Types 版本信息
 			ApiVersion apiVersion = AnnotatedElementUtils.findMergedAnnotation(method, ApiVersion.class);
 			// 再次尝试类上的版本
@@ -75,7 +46,6 @@ public class JSpringMvcContract extends SpringMvcContract {
 			}
 		}
 	}
-
 	/**
 	 * 参考：https://gist.github.com/rmfish/0ed59a9af6c05157be2a60c9acea2a10
 	 * @param annotations 注解

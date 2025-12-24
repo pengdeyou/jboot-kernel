@@ -1,21 +1,4 @@
-/**
- * Copyright (c) 2018-2099, DreamLu 卢春梦 (qq596392912@gmail.com).
- * <p>
- * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE 3.0;
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.gnu.org/licenses/lgpl.html
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
 package org.jboot.kernel.redis.cache;
-
 import lombok.Getter;
 import org.jboot.kernel.toolkit.utils.CollectionUtil;
 import org.jboot.kernel.toolkit.utils.NumberUtil;
@@ -24,20 +7,12 @@ import org.springframework.data.redis.core.*;
 import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;
-
 import java.time.Duration;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
-
-/**
- * Redis 工具类
- * 封装了常用的 Redis 操作，包括字符串、哈希、列表、集合、有序集合等数据结构的操作。
- *
- * @author Corsak
- */
 @Getter
 @SuppressWarnings("unchecked")
 public class JRedis {
@@ -48,7 +23,6 @@ public class JRedis {
 	private final ListOperations<String, Object> listOps; // 列表操作接口
 	private final SetOperations<String, Object> setOps; // 集合操作接口
 	private final ZSetOperations<String, Object> zSetOps; // 有序集合操作接口
-
 	/**
 	 * 构造函数，初始化 Redis 操作模板和相关操作接口
 	 *
@@ -65,7 +39,6 @@ public class JRedis {
 		setOps = redisTemplate.opsForSet(); // 初始化集合操作接口
 		zSetOps = redisTemplate.opsForZSet(); // 初始化有序集合操作接口
 	}
-
 	/**
 	 * 设置缓存
 	 *
@@ -81,7 +54,6 @@ public class JRedis {
 			setEx(key, value, expire); // 如果设置了过期时间，设置缓存并指定过期时间
 		}
 	}
-
 	/**
 	 * 存放 key-value 对到 Redis
 	 *
@@ -91,7 +63,6 @@ public class JRedis {
 	public void set(String key, Object value) {
 		valueOps.set(key, value);
 	}
-
 	/**
 	 * 存放 key value 对到 redis，用于自定义序列化的方式
 	 *
@@ -102,7 +73,6 @@ public class JRedis {
 	public <T> void set(String key, T value, Function<T, byte[]> mapper) {
 		redisTemplate.execute((RedisCallback<Object>) redis -> redis.stringCommands().set(keySerialize(key), mapper.apply(value)));
 	}
-
 	/**
 	 * 存放 key-value 对到 Redis，并设置过期时间
 	 *
@@ -113,7 +83,6 @@ public class JRedis {
 	public void setEx(String key, Object value, Duration timeout) {
 		valueOps.set(key, value, timeout);
 	}
-
 	/**
 	 * 存放 key-value 对到 Redis，并设置过期时间（以秒为单位）
 	 *
@@ -124,7 +93,6 @@ public class JRedis {
 	public void setEx(String key, Object value, Long seconds) {
 		valueOps.set(key, value, seconds, TimeUnit.SECONDS);
 	}
-
 	/**
 	 * 存放 key-value 对到 Redis，并设置过期时间（自定义单位）
 	 *
@@ -136,7 +104,6 @@ public class JRedis {
 	public void setEx(String key, Object value, long timeout, TimeUnit unit) {
 		valueOps.set(key, value, timeout, unit);
 	}
-
 	/**
 	 * 获取 key 对应的值
 	 *
@@ -148,7 +115,6 @@ public class JRedis {
 	public <T> T get(String key) {
 		return (T) valueOps.get(key);
 	}
-
 	/**
 	 * 返回 key 所关联的 value 值
 	 *
@@ -167,7 +133,6 @@ public class JRedis {
 			return mapper.apply(value);
 		});
 	}
-
 	/**
 	 * 获取缓存值，如果缓存不存在则通过加载器获取值并设置缓存
 	 *
@@ -189,7 +154,6 @@ public class JRedis {
 		this.set(key, value); // 设置缓存
 		return value;
 	}
-
 	/**
 	 * 获取 key 对应的值
 	 *
@@ -201,7 +165,6 @@ public class JRedis {
 	public <T> T get(CacheKey cacheKey) {
 		return (T) valueOps.get(cacheKey.getKey());
 	}
-
 	/**
 	 * 获取缓存值，如果缓存不存在则通过加载器获取值并设置缓存
 	 *
@@ -224,7 +187,6 @@ public class JRedis {
 		this.set(cacheKey, value); // 设置缓存
 		return value;
 	}
-
 	/**
 	 * 获取 key 对应的值，并删除 key
 	 *
@@ -238,7 +200,6 @@ public class JRedis {
 		this.del(key);
 		return o;
 	}
-
 	/**
 	 * 删除指定的 key
 	 *
@@ -248,7 +209,6 @@ public class JRedis {
 	public Boolean del(String key) {
 		return redisTemplate.delete(key);
 	}
-
 	/**
 	 * 删除指定的 key
 	 *
@@ -258,7 +218,6 @@ public class JRedis {
 	public Boolean del(CacheKey key) {
 		return redisTemplate.delete(key.getKey());
 	}
-
 	/**
 	 * 删除多个 key
 	 *
@@ -268,7 +227,6 @@ public class JRedis {
 	public Long del(String... keys) {
 		return del(Arrays.asList(keys));
 	}
-
 	/**
 	 * 删除多个 key
 	 *
@@ -278,7 +236,6 @@ public class JRedis {
 	public Long del(Collection<String> keys) {
 		return redisTemplate.delete(keys);
 	}
-
 	/**
 	 * 查找所有符合给定模式的 key
 	 *
@@ -288,8 +245,6 @@ public class JRedis {
 	public Set<String> keys(String pattern) {
 		return redisTemplate.keys(pattern);
 	}
-
-
 	/**
 	 * redis scan，count 默认 100
 	 *
@@ -299,7 +254,6 @@ public class JRedis {
 	public Set<String> scan(String pattern) {
 		return scan(pattern, 100L);
 	}
-
 	/**
 	 * redis scan
 	 *
@@ -312,7 +266,6 @@ public class JRedis {
 		scan(pattern, count, keySet::add);
 		return keySet;
 	}
-
 	/**
 	 * redis scan, count 默认 100
 	 *
@@ -322,7 +275,6 @@ public class JRedis {
 	public void scan(String pattern, Consumer<String> consumer) {
 		scan(pattern, 100L, consumer);
 	}
-
 	/**
 	 * redis scan
 	 *
@@ -333,7 +285,6 @@ public class JRedis {
 	public void scan(String pattern, @Nullable Long count, Consumer<String> consumer) {
 		scanBytes(pattern, count, (bytes) -> consumer.accept(keyDeserialize(bytes)));
 	}
-
 	/**
 	 * redis scan
 	 *
@@ -355,7 +306,6 @@ public class JRedis {
 			return null;
 		});
 	}
-
 	/**
 	 * 同时设置多个 key-value 对
 	 *
@@ -364,7 +314,6 @@ public class JRedis {
 	public void mSet(Object... keysValues) {
 		valueOps.multiSet(CollectionUtil.toMap(keysValues));
 	}
-
 	/**
 	 * 获取多个 key 对应的值
 	 *
@@ -374,7 +323,6 @@ public class JRedis {
 	public List<Object> mGet(String... keys) {
 		return mGet(Arrays.asList(keys));
 	}
-
 	/**
 	 * 获取多个 key 对应的值
 	 *
@@ -384,7 +332,6 @@ public class JRedis {
 	public List<Object> mGet(Collection<String> keys) {
 		return valueOps.multiGet(keys);
 	}
-
 	/**
 	 * 将 key 中存储的数字值减一
 	 *
@@ -394,7 +341,6 @@ public class JRedis {
 	public Long decr(String key) {
 		return stringRedisTemplate.opsForValue().decrement(key);
 	}
-
 	/**
 	 * 将 key 中存储的数字值减去指定的值
 	 *
@@ -405,7 +351,6 @@ public class JRedis {
 	public Long decrBy(String key, long longValue) {
 		return stringRedisTemplate.opsForValue().decrement(key, longValue);
 	}
-
 	/**
 	 * 将 key 中存储的数字值加一
 	 *
@@ -415,7 +360,6 @@ public class JRedis {
 	public Long incr(String key) {
 		return stringRedisTemplate.opsForValue().increment(key);
 	}
-
 	/**
 	 * 将 key 中存储的数字值加上指定的值
 	 *
@@ -426,7 +370,6 @@ public class JRedis {
 	public Long incrBy(String key, long longValue) {
 		return stringRedisTemplate.opsForValue().increment(key, longValue);
 	}
-
 	/**
 	 * 获取 key 对应的递减值
 	 *
@@ -436,7 +379,6 @@ public class JRedis {
 	public Long getDecr(String key) {
 		return NumberUtil.toLong(stringRedisTemplate.opsForValue().get(key));
 	}
-
 	/**
 	 * 获取 key 对应的递增值
 	 *
@@ -446,7 +388,6 @@ public class JRedis {
 	public Long getIncr(String key) {
 		return NumberUtil.toLong(stringRedisTemplate.opsForValue().get(key));
 	}
-
 	/**
 	 * 获取计数器的值
 	 *
@@ -456,7 +397,6 @@ public class JRedis {
 	public Long getCounter(String key) {
 		return Long.valueOf(String.valueOf(valueOps.get(key)));
 	}
-
 	/**
 	 * 检查 key 是否存在
 	 *
@@ -466,7 +406,6 @@ public class JRedis {
 	public Boolean exists(String key) {
 		return redisTemplate.hasKey(key);
 	}
-
 	/**
 	 * 随机返回一个 key
 	 *
@@ -475,7 +414,6 @@ public class JRedis {
 	public String randomKey() {
 		return redisTemplate.randomKey();
 	}
-
 	/**
 	 * 将 key 改名为 newkey
 	 *
@@ -485,7 +423,6 @@ public class JRedis {
 	public void rename(String oldkey, String newkey) {
 		redisTemplate.rename(oldkey, newkey);
 	}
-
 	/**
 	 * 将 key 移动到指定的数据库
 	 *
@@ -496,7 +433,6 @@ public class JRedis {
 	public Boolean move(String key, int dbIndex) {
 		return redisTemplate.move(key, dbIndex);
 	}
-
 	/**
 	 * 为 key 设置过期时间（以秒为单位）
 	 *
@@ -507,7 +443,6 @@ public class JRedis {
 	public Boolean expire(String key, long seconds) {
 		return redisTemplate.expire(key, seconds, TimeUnit.SECONDS);
 	}
-
 	/**
 	 * 为 key 设置过期时间
 	 *
@@ -518,7 +453,6 @@ public class JRedis {
 	public Boolean expire(String key, Duration timeout) {
 		return expire(key, timeout.getSeconds());
 	}
-
 	/**
 	 * 为 key 设置过期时间（指定时间点）
 	 *
@@ -529,7 +463,6 @@ public class JRedis {
 	public Boolean expireAt(String key, Date date) {
 		return redisTemplate.expireAt(key, date);
 	}
-
 	/**
 	 * 为 key 设置过期时间（指定时间戳）
 	 *
@@ -540,7 +473,6 @@ public class JRedis {
 	public Boolean expireAt(String key, long unixTime) {
 		return expireAt(key, new Date(unixTime));
 	}
-
 	/**
 	 * 为 key 设置过期时间（以毫秒为单位）
 	 *
@@ -551,7 +483,6 @@ public class JRedis {
 	public Boolean pexpire(String key, long milliseconds) {
 		return redisTemplate.expire(key, milliseconds, TimeUnit.MILLISECONDS);
 	}
-
 	/**
 	 * 设置 key 的值并返回旧值
 	 *
@@ -563,7 +494,6 @@ public class JRedis {
 	public <T> T getSet(String key, Object value) {
 		return (T) valueOps.getAndSet(key, value);
 	}
-
 	/**
 	 * 移除 key 的过期时间，使其永久有效
 	 *
@@ -573,7 +503,6 @@ public class JRedis {
 	public Boolean persist(String key) {
 		return redisTemplate.persist(key);
 	}
-
 	/**
 	 * 返回 key 所存储的值的类型
 	 *
@@ -583,7 +512,6 @@ public class JRedis {
 	public String type(String key) {
 		return redisTemplate.type(key).code();
 	}
-
 	/**
 	 * 返回 key 的剩余生存时间（以秒为单位）
 	 *
@@ -593,7 +521,6 @@ public class JRedis {
 	public Long ttl(String key) {
 		return redisTemplate.getExpire(key);
 	}
-
 	/**
 	 * 返回 key 的剩余生存时间（以毫秒为单位）
 	 *
@@ -603,7 +530,6 @@ public class JRedis {
 	public Long pttl(String key) {
 		return redisTemplate.getExpire(key, TimeUnit.MILLISECONDS);
 	}
-
 	/**
 	 * 设置哈希表中指定字段的值
 	 *
@@ -614,7 +540,6 @@ public class JRedis {
 	public void hSet(String key, Object field, Object value) {
 		hashOps.put(key, field, value);
 	}
-
 	/**
 	 * 同时设置哈希表中多个字段的值
 	 *
@@ -624,7 +549,6 @@ public class JRedis {
 	public void hMset(String key, Map<Object, Object> hash) {
 		hashOps.putAll(key, hash);
 	}
-
 	/**
 	 * 获取哈希表中指定字段的值
 	 *
@@ -636,7 +560,6 @@ public class JRedis {
 	public <T> T hGet(String key, Object field) {
 		return (T) hashOps.get(key, field);
 	}
-
 	/**
 	 * 获取哈希表中多个字段的值
 	 *
@@ -647,7 +570,6 @@ public class JRedis {
 	public List hmGet(String key, Object... fields) {
 		return hmGet(key, Arrays.asList(fields));
 	}
-
 	/**
 	 * 获取哈希表中多个字段的值
 	 *
@@ -658,7 +580,6 @@ public class JRedis {
 	public List hmGet(String key, Collection<Object> hashKeys) {
 		return hashOps.multiGet(key, hashKeys);
 	}
-
 	/**
 	 * 删除哈希表中一个或多个字段
 	 *
@@ -669,7 +590,6 @@ public class JRedis {
 	public Long hDel(String key, Object... fields) {
 		return hashOps.delete(key, fields);
 	}
-
 	/**
 	 * 检查哈希表中是否存在指定字段
 	 *
@@ -680,7 +600,6 @@ public class JRedis {
 	public Boolean hExists(String key, Object field) {
 		return hashOps.hasKey(key, field);
 	}
-
 	/**
 	 * 获取哈希表中所有字段和值
 	 *
@@ -690,7 +609,6 @@ public class JRedis {
 	public Map hGetAll(String key) {
 		return hashOps.entries(key);
 	}
-
 	/**
 	 * 获取哈希表中所有字段的值
 	 *
@@ -700,7 +618,6 @@ public class JRedis {
 	public List hVals(String key) {
 		return hashOps.values(key);
 	}
-
 	/**
 	 * 获取哈希表中所有字段
 	 *
@@ -710,7 +627,6 @@ public class JRedis {
 	public Set<Object> hKeys(String key) {
 		return hashOps.keys(key);
 	}
-
 	/**
 	 * 获取哈希表中字段的数量
 	 *
@@ -720,7 +636,6 @@ public class JRedis {
 	public Long hLen(String key) {
 		return hashOps.size(key);
 	}
-
 	/**
 	 * 为哈希表中指定字段的值加上增量
 	 *
@@ -732,7 +647,6 @@ public class JRedis {
 	public Long hIncrBy(String key, Object field, long value) {
 		return hashOps.increment(key, field, value);
 	}
-
 	/**
 	 * 为哈希表中指定字段的值加上浮点数增量
 	 *
@@ -744,7 +658,6 @@ public class JRedis {
 	public Double hIncrByFloat(String key, Object field, double value) {
 		return hashOps.increment(key, field, value);
 	}
-
 	/**
 	 * 获取列表中指定下标的元素
 	 *
@@ -756,7 +669,6 @@ public class JRedis {
 	public <T> T lIndex(String key, long index) {
 		return (T) listOps.index(key, index);
 	}
-
 	/**
 	 * 获取列表的长度
 	 *
@@ -766,7 +678,6 @@ public class JRedis {
 	public Long lLen(String key) {
 		return listOps.size(key);
 	}
-
 	/**
 	 * 移除并返回列表的头元素
 	 *
@@ -777,7 +688,6 @@ public class JRedis {
 	public <T> T lPop(String key) {
 		return (T) listOps.leftPop(key);
 	}
-
 	/**
 	 * 将一个或多个值插入到列表的头部
 	 *
@@ -788,7 +698,6 @@ public class JRedis {
 	public Long lPush(String key, Object... values) {
 		return listOps.leftPush(key, values);
 	}
-
 	/**
 	 * 设置列表中指定下标的元素
 	 *
@@ -799,7 +708,6 @@ public class JRedis {
 	public void lSet(String key, long index, Object value) {
 		listOps.set(key, index, value);
 	}
-
 	/**
 	 * 移除列表中与指定值相等的元素
 	 *
@@ -811,7 +719,6 @@ public class JRedis {
 	public Long lRem(String key, long count, Object value) {
 		return listOps.remove(key, count, value);
 	}
-
 	/**
 	 * 获取列表中指定区间的元素
 	 *
@@ -823,7 +730,6 @@ public class JRedis {
 	public List lRange(String key, long start, long end) {
 		return listOps.range(key, start, end);
 	}
-
 	/**
 	 * 对列表进行修剪，只保留指定区间的元素
 	 *
@@ -834,7 +740,6 @@ public class JRedis {
 	public void lTrim(String key, long start, long end) {
 		listOps.trim(key, start, end);
 	}
-
 	/**
 	 * 移除并返回列表的尾元素
 	 *
@@ -845,7 +750,6 @@ public class JRedis {
 	public <T> T rPop(String key) {
 		return (T) listOps.rightPop(key);
 	}
-
 	/**
 	 * 将一个或多个值插入到列表的尾部
 	 *
@@ -856,7 +760,6 @@ public class JRedis {
 	public Long rPush(String key, Object... values) {
 		return listOps.rightPushAll(key, values);
 	}
-
 	/**
 	 * 将列表的尾元素弹出并插入到另一个列表的头部
 	 *
@@ -868,7 +771,6 @@ public class JRedis {
 	public <T> T rPopLPush(String srcKey, String dstKey) {
 		return (T) listOps.rightPopAndLeftPush(srcKey, dstKey);
 	}
-
 	/**
 	 * 将一个或多个成员添加到集合中
 	 *
@@ -879,7 +781,6 @@ public class JRedis {
 	public Long sAdd(String key, Object... members) {
 		return setOps.add(key, members);
 	}
-
 	/**
 	 * 移除并返回集合中的一个随机元素
 	 *
@@ -890,7 +791,6 @@ public class JRedis {
 	public <T> T sPop(String key) {
 		return (T) setOps.pop(key);
 	}
-
 	/**
 	 * 获取集合中的所有成员
 	 *
@@ -900,7 +800,6 @@ public class JRedis {
 	public Set sMembers(String key) {
 		return setOps.members(key);
 	}
-
 	/**
 	 * 检查成员是否在集合中
 	 *
@@ -911,7 +810,6 @@ public class JRedis {
 	public boolean sIsMember(String key, Object member) {
 		return setOps.isMember(key, member);
 	}
-
 	/**
 	 * 返回多个集合的交集
 	 *
@@ -922,7 +820,6 @@ public class JRedis {
 	public Set sInter(String key, String otherKey) {
 		return setOps.intersect(key, otherKey);
 	}
-
 	/**
 	 * 返回多个集合的交集
 	 *
@@ -933,7 +830,6 @@ public class JRedis {
 	public Set sInter(String key, Collection<String> otherKeys) {
 		return setOps.intersect(key, otherKeys);
 	}
-
 	/**
 	 * 返回集合中的一个随机成员
 	 *
@@ -944,7 +840,6 @@ public class JRedis {
 	public <T> T sRandMember(String key) {
 		return (T) setOps.randomMember(key);
 	}
-
 	/**
 	 * 返回集合中的多个随机成员
 	 *
@@ -955,7 +850,6 @@ public class JRedis {
 	public List sRandMember(String key, int count) {
 		return setOps.randomMembers(key, count);
 	}
-
 	/**
 	 * 移除集合中的一个或多个成员
 	 *
@@ -966,7 +860,6 @@ public class JRedis {
 	public Long sRem(String key, Object... members) {
 		return setOps.remove(key, members);
 	}
-
 	/**
 	 * 返回多个集合的并集
 	 *
@@ -977,7 +870,6 @@ public class JRedis {
 	public Set sUnion(String key, String otherKey) {
 		return setOps.union(key, otherKey);
 	}
-
 	/**
 	 * 返回多个集合的并集
 	 *
@@ -988,7 +880,6 @@ public class JRedis {
 	public Set sUnion(String key, Collection<String> otherKeys) {
 		return setOps.union(key, otherKeys);
 	}
-
 	/**
 	 * 返回多个集合的差集
 	 *
@@ -999,7 +890,6 @@ public class JRedis {
 	public Set sDiff(String key, String otherKey) {
 		return setOps.difference(key, otherKey);
 	}
-
 	/**
 	 * 返回多个集合的差集
 	 *
@@ -1010,7 +900,6 @@ public class JRedis {
 	public Set sDiff(String key, Collection<String> otherKeys) {
 		return setOps.difference(key, otherKeys);
 	}
-
 	/**
 	 * 将一个或多个成员及其分数添加到有序集合中
 	 *
@@ -1022,7 +911,6 @@ public class JRedis {
 	public Boolean zAdd(String key, Object member, double score) {
 		return zSetOps.add(key, member, score);
 	}
-
 	/**
 	 * 将一个或多个成员及其分数添加到有序集合中
 	 *
@@ -1037,7 +925,6 @@ public class JRedis {
 		});
 		return zSetOps.add(key, tuples);
 	}
-
 	/**
 	 * 获取有序集合的基数
 	 *
@@ -1047,7 +934,6 @@ public class JRedis {
 	public Long zCard(String key) {
 		return zSetOps.zCard(key);
 	}
-
 	/**
 	 * 返回有序集合中分数在指定范围内的成员数量
 	 *
@@ -1059,7 +945,6 @@ public class JRedis {
 	public Long zCount(String key, double min, double max) {
 		return zSetOps.count(key, min, max);
 	}
-
 	/**
 	 * 为有序集合中的成员增加分数
 	 *
@@ -1071,7 +956,6 @@ public class JRedis {
 	public Double zIncrBy(String key, Object member, double score) {
 		return zSetOps.incrementScore(key, member, score);
 	}
-
 	/**
 	 * 返回有序集合中指定区间的成员（按分数递增排序）
 	 *
@@ -1083,7 +967,6 @@ public class JRedis {
 	public Set zRange(String key, long start, long end) {
 		return zSetOps.range(key, start, end);
 	}
-
 	/**
 	 * 返回有序集合中指定区间的成员（按分数递减排序）
 	 *
@@ -1095,7 +978,6 @@ public class JRedis {
 	public Set zRevrange(String key, long start, long end) {
 		return zSetOps.reverseRange(key, start, end);
 	}
-
 	/**
 	 * 返回有序集合中分数在指定范围内的成员（按分数递增排序）
 	 *
@@ -1107,7 +989,6 @@ public class JRedis {
 	public Set zRangeByScore(String key, double min, double max) {
 		return zSetOps.rangeByScore(key, min, max);
 	}
-
 	/**
 	 * 返回有序集合中成员的排名（按分数递增排序）
 	 *
@@ -1118,7 +999,6 @@ public class JRedis {
 	public Long zRank(String key, Object member) {
 		return zSetOps.rank(key, member);
 	}
-
 	/**
 	 * 返回有序集合中成员的排名（按分数递减排序）
 	 *
@@ -1129,7 +1009,6 @@ public class JRedis {
 	public Long zRevrank(String key, Object member) {
 		return zSetOps.reverseRank(key, member);
 	}
-
 	/**
 	 * 移除有序集合中的一个或多个成员
 	 *
@@ -1140,7 +1019,6 @@ public class JRedis {
 	public Long zRem(String key, Object... members) {
 		return zSetOps.remove(key, members);
 	}
-
 	/**
 	 * 返回有序集合中成员的分数
 	 *
@@ -1151,7 +1029,6 @@ public class JRedis {
 	public Double zScore(String key, Object member) {
 		return zSetOps.score(key, member);
 	}
-
 	/**
 	 * 发布消息到指定频道
 	 *
@@ -1168,7 +1045,6 @@ public class JRedis {
 			return redis.publish(channelBytes, mapper.apply(message));
 		});
 	}
-
 	/**
 	 * 序列化 Redis 键
 	 *
@@ -1179,7 +1055,6 @@ public class JRedis {
 		RedisSerializer<String> keySerializer = (RedisSerializer<String>) this.redisTemplate.getKeySerializer();
 		return Objects.requireNonNull(keySerializer.serialize(redisKey), "Redis key is null.");
 	}
-
 	/**
 	 * redisKey 序列化
 	 *
@@ -1190,7 +1065,6 @@ public class JRedis {
 		RedisSerializer<Object> hashKeySerializer = (RedisSerializer<Object>) this.redisTemplate.getHashKeySerializer();
 		return Objects.requireNonNull(hashKeySerializer.serialize(redisKey), "Redis key is null.");
 	}
-
 	/**
 	 * redisKey 序列化
 	 *
@@ -1201,5 +1075,4 @@ public class JRedis {
 		RedisSerializer<String> keySerializer = (RedisSerializer<String>) this.redisTemplate.getKeySerializer();
 		return Objects.requireNonNull(keySerializer.deserialize(redisKey), "Redis key is null.");
 	}
-
 }

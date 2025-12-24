@@ -1,20 +1,4 @@
-/**
- * Copyright (c) 2018-2099, DreamLu 卢春梦 (qq596392912@gmail.com).
- * <p>
- * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE 3.0;
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.gnu.org/licenses/lgpl.html
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package org.jboot.kernel.toolkit.utils;
-
 import org.springframework.core.BridgeMethodResolver;
 import org.springframework.core.DefaultParameterNameDiscoverer;
 import org.springframework.core.MethodParameter;
@@ -22,20 +6,11 @@ import org.springframework.core.ParameterNameDiscoverer;
 import org.springframework.core.annotation.AnnotatedElementUtils;
 import org.springframework.core.annotation.SynthesizingMethodParameter;
 import org.springframework.web.method.HandlerMethod;
-
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
-
-/**
- * 类操作工具
- *
- * @author Corsak
- */
 public class ClassUtil extends org.springframework.util.ClassUtils {
-
 	private static final ParameterNameDiscoverer PARAMETER_NAME_DISCOVERER = new DefaultParameterNameDiscoverer();
-
 	/**
 	 * 获取方法参数信息
 	 *
@@ -48,7 +23,6 @@ public class ClassUtil extends org.springframework.util.ClassUtils {
 		methodParameter.initParameterNameDiscovery(PARAMETER_NAME_DISCOVERER);
 		return methodParameter;
 	}
-
 	/**
 	 * 获取方法参数信息
 	 *
@@ -61,7 +35,6 @@ public class ClassUtil extends org.springframework.util.ClassUtils {
 		methodParameter.initParameterNameDiscovery(PARAMETER_NAME_DISCOVERER);
 		return methodParameter;
 	}
-
 	/**
 	 * 获取Annotation
 	 *
@@ -86,7 +59,6 @@ public class ClassUtil extends org.springframework.util.ClassUtils {
 		// 获取类上面的Annotation，可能包含组合注解，故采用spring的工具类
 		return AnnotatedElementUtils.findMergedAnnotation(specificMethod.getDeclaringClass(), annotationType);
 	}
-
 	/**
 	 * 获取Annotation
 	 *
@@ -105,8 +77,6 @@ public class ClassUtil extends org.springframework.util.ClassUtils {
 		Class<?> beanType = handlerMethod.getBeanType();
 		return AnnotatedElementUtils.findMergedAnnotation(beanType, annotationType);
 	}
-
-
 	/**
 	 * 判断是否有注解 Annotation
 	 *
@@ -125,5 +95,4 @@ public class ClassUtil extends org.springframework.util.ClassUtils {
 		Class<?> targetClass = method.getDeclaringClass();
 		return AnnotatedElementUtils.isAnnotated(targetClass, annotationType);
 	}
-
 }

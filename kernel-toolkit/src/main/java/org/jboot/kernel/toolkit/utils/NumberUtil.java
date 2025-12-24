@@ -1,32 +1,7 @@
-/**
- * Copyright (c) 2018-2099, DreamLu 卢春梦 (qq596392912@gmail.com).
- * <p>
- * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE 3.0;
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.gnu.org/licenses/lgpl.html
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package org.jboot.kernel.toolkit.utils;
-
-
 import org.springframework.lang.Nullable;
-
-/**
- * 数字类型工具类
- *
- * @author Corsak
- */
 public class NumberUtil extends org.springframework.util.NumberUtils {
-
 	//-----------------------------------------------------------------------
-
 	/**
 	 * <p>Convert a <code>String</code> to an <code>int</code>, returning
 	 * <code>zero</code> if the conversion fails.</p>
@@ -46,7 +21,6 @@ public class NumberUtil extends org.springframework.util.NumberUtils {
 	public static int toInt(final String str) {
 		return toInt(str, -1);
 	}
-
 	/**
 	 * <p>Convert a <code>String</code> to an <code>int</code>, returning a
 	 * default value if the conversion fails.</p>
@@ -73,7 +47,6 @@ public class NumberUtil extends org.springframework.util.NumberUtils {
 			return defaultValue;
 		}
 	}
-
 	/**
 	 * <p>Convert a <code>String</code> to a <code>long</code>, returning
 	 * <code>zero</code> if the conversion fails.</p>
@@ -93,7 +66,6 @@ public class NumberUtil extends org.springframework.util.NumberUtils {
 	public static long toLong(final String str) {
 		return toLong(str, 0L);
 	}
-
 	/**
 	 * <p>Convert a <code>String</code> to a <code>long</code>, returning a
 	 * default value if the conversion fails.</p>
@@ -120,7 +92,6 @@ public class NumberUtil extends org.springframework.util.NumberUtils {
 			return defaultValue;
 		}
 	}
-
 	/**
 	 * <p>Convert a <code>String</code> to a <code>Double</code>
 	 *
@@ -130,7 +101,6 @@ public class NumberUtil extends org.springframework.util.NumberUtils {
 	public static Double toDouble(String value) {
 		return toDouble(value, null);
 	}
-
 	/**
 	 * <p>Convert a <code>String</code> to a <code>Double</code>
 	 *
@@ -144,7 +114,6 @@ public class NumberUtil extends org.springframework.util.NumberUtils {
 		}
 		return defaultValue;
 	}
-
 	/**
 	 * <p>Convert a <code>String</code> to a <code>Double</code>
 	 *
@@ -154,7 +123,6 @@ public class NumberUtil extends org.springframework.util.NumberUtils {
 	public static Float toFloat(String value) {
 		return toFloat(value, null);
 	}
-
 	/**
 	 * <p>Convert a <code>String</code> to a <code>Double</code>
 	 *
@@ -168,7 +136,6 @@ public class NumberUtil extends org.springframework.util.NumberUtils {
 		}
 		return defaultValue;
 	}
-
 	/**
 	 * All possible chars for representing a number as a String
 	 */
@@ -185,7 +152,6 @@ public class NumberUtil extends org.springframework.util.NumberUtils {
 		'S', 'T', 'U', 'V', 'W', 'X',
 		'Y', 'Z'
 	};
-
 	/**
 	 * 将 long 转短字符串 为 62 进制
 	 *
@@ -204,7 +170,6 @@ public class NumberUtil extends org.springframework.util.NumberUtils {
 		buf[charPos] = DIGITS[(int) (-i)];
 		return new String(buf, charPos, (65 - charPos));
 	}
-
 	/**
 	 * 将 62 进制字符串转为数字
 	 *
@@ -232,5 +197,4 @@ public class NumberUtil extends org.springframework.util.NumberUtils {
 		}
 		return res;
 	}
-
 }

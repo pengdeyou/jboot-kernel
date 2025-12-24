@@ -1,35 +1,11 @@
-/**
- * Copyright (c) 2018-2099, DreamLu 卢春梦 (qq596392912@gmail.com).
- * <p>
- * Licensed under the GNU LESSER GENERAL PUBLIC LICENSE 3.0;
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.gnu.org/licenses/lgpl.html
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package org.jboot.kernel.toolkit.utils;
-
 import org.springframework.lang.Nullable;
 import org.springframework.util.CollectionUtils;
-
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
-
-/**
- * 集合工具类
- *
- * @author Corsak
- */
 public class CollectionUtil extends org.springframework.util.CollectionUtils {
-
 	/**
 	 * Check whether the given Array contains the given element.
 	 *
@@ -44,7 +20,6 @@ public class CollectionUtil extends org.springframework.util.CollectionUtils {
 		}
 		return Arrays.stream(array).anyMatch(x -> ObjectUtil.nullSafeEquals(x, element));
 	}
-
 	/**
 	 * 对象是否为数组对象
 	 *
@@ -57,7 +32,6 @@ public class CollectionUtil extends org.springframework.util.CollectionUtils {
 		}
 		return obj.getClass().isArray();
 	}
-
 	/**
 	 * Determine whether the given Collection is not empty:
 	 * i.e. {@code null} or of zero length.
@@ -68,7 +42,6 @@ public class CollectionUtil extends org.springframework.util.CollectionUtils {
 	public static boolean isNotEmpty(@Nullable Collection<?> coll) {
 		return !CollectionUtils.isEmpty(coll);
 	}
-
 	/**
 	 * Determine whether the given Map is not empty:
 	 * i.e. {@code null} or of zero length.
@@ -79,7 +52,6 @@ public class CollectionUtil extends org.springframework.util.CollectionUtils {
 	public static boolean isNotEmpty(@Nullable Map<?, ?> map) {
 		return !CollectionUtils.isEmpty(map);
 	}
-
 	/**
 	 * 将key value 数组转为 map
 	 *
@@ -101,5 +73,4 @@ public class CollectionUtil extends org.springframework.util.CollectionUtils {
 		}
 		return keyValueMap;
 	}
-
 }
