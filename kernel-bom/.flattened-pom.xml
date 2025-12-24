@@ -113,6 +113,11 @@
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
+        <artifactId>kernel-rds</artifactId>
+        <version>3.7.3-RELEASE</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jboot</groupId>
         <artifactId>kernel-oss</artifactId>
         <version>3.7.3-RELEASE</version>
       </dependency>
@@ -225,6 +230,41 @@
         <groupId>org.mybatis</groupId>
         <artifactId>mybatis-typehandlers-jsr310</artifactId>
         <version>1.0.2</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jbatis</groupId>
+        <artifactId>jbatis-rds-kernel</artifactId>
+        <version>3.0.4-RELEASE</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jbatis</groupId>
+        <artifactId>jbatis-rds</artifactId>
+        <version>3.0.4-RELEASE</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jbatis</groupId>
+        <artifactId>jbatis-rds-annotation</artifactId>
+        <version>3.0.4-RELEASE</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jbatis</groupId>
+        <artifactId>jbatis-rds-extension</artifactId>
+        <version>3.0.4-RELEASE</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jbatis</groupId>
+        <artifactId>jbatis-rds-generator</artifactId>
+        <version>3.0.4-RELEASE</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jbatis</groupId>
+        <artifactId>jbatis-rds-spring-boot-autoconfigure</artifactId>
+        <version>3.0.4-RELEASE</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jbatis</groupId>
+        <artifactId>jbatis-rds-spring-boot3-starter</artifactId>
+        <version>3.0.4-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>com.alibaba.nacos</groupId>

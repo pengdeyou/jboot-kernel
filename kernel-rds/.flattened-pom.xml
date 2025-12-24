@@ -46,25 +46,25 @@
     <dependency>
       <groupId>org.jbatis</groupId>
       <artifactId>jbatis-rds-kernel</artifactId>
-      <version>3.0.2-RELEASE</version>
+      <version>3.0.4-RELEASE</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.jbatis</groupId>
       <artifactId>jbatis-rds-extension</artifactId>
-      <version>3.0.2-RELEASE</version>
+      <version>3.0.4-RELEASE</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.jbatis</groupId>
       <artifactId>jbatis-rds-springboot-autoconfigure</artifactId>
-      <version>3.0.2-RELEASE</version>
+      <version>3.0.4-RELEASE</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.jbatis</groupId>
       <artifactId>jbatis-rds-springboot3-starter</artifactId>
-      <version>3.0.2-RELEASE</version>
+      <version>3.0.4-RELEASE</version>
       <scope>compile</scope>
     </dependency>
     <dependency>

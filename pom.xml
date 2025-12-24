@@ -35,7 +35,7 @@
     </scm>
 
     <properties>
-        <!-- J-Tool Version -->
+        <!-- JBoot-Kernel Version -->
         <revision>3.7.3-RELEASE</revision>
         <module.name>org.jboot.kernel</module.name>
         <!-- jdk Version -->
