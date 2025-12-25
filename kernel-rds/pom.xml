@@ -23,22 +23,18 @@
         <dependency>
             <groupId>org.jbatis</groupId>
             <artifactId>jbatis-rds-kernel</artifactId>
-            <version>${jbatis.rds.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jbatis</groupId>
             <artifactId>jbatis-rds-extension</artifactId>
-            <version>${jbatis.rds.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jbatis</groupId>
             <artifactId>jbatis-rds-springboot-autoconfigure</artifactId>
-            <version>${jbatis.rds.version}</version>
         </dependency>
         <dependency>
             <groupId>org.jbatis</groupId>
             <artifactId>jbatis-rds-springboot3-starter</artifactId>
-            <version>${jbatis.rds.version}</version>
         </dependency>
         <!--Mybatis作为后备-->
         <dependency>

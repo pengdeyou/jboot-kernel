@@ -258,12 +258,12 @@
       </dependency>
       <dependency>
         <groupId>org.jbatis</groupId>
-        <artifactId>jbatis-rds-spring-boot-autoconfigure</artifactId>
+        <artifactId>jbatis-rds-springboot-autoconfigure</artifactId>
         <version>3.0.4-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jbatis</groupId>
-        <artifactId>jbatis-rds-spring-boot3-starter</artifactId>
+        <artifactId>jbatis-rds-springboot3-starter</artifactId>
         <version>3.0.4-RELEASE</version>
       </dependency>
       <dependency>

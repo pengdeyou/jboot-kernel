@@ -117,14 +117,14 @@
     </dependency>
     <dependency>
       <groupId>org.jboot</groupId>
-      <artifactId>kernel-mp</artifactId>
+      <artifactId>kernel-rds</artifactId>
       <version>3.0.4-RELEASE</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>com.baomidou</groupId>
-      <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
-      <version>3.5.14</version>
+      <groupId>org.jbatis</groupId>
+      <artifactId>jbatis-rds-springboot3-starter</artifactId>
+      <version>3.0.4-RELEASE</version>
       <scope>compile</scope>
     </dependency>
     <dependency>

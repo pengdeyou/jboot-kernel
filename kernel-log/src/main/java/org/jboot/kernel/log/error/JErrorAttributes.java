@@ -1,4 +1,3 @@
-
 package org.jboot.kernel.log.error;
 
 import lombok.RequiredArgsConstructor;
