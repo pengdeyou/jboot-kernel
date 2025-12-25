@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jboot</groupId>
   <artifactId>kernel-loadbalancer</artifactId>
-  <version>3.0.4-RELEASE</version>
+  <version>3.0.5-RELEASE</version>
   <name>kernel-loadbalancer</name>
   <description>jboot-kernel is a powerful toolbox for JBoot</description>
   <url>https://github.com/pengdeyou/jboot-kernel/kernel-loadbalancer</url>

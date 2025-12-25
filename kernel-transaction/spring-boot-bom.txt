@@ -1,6 +1,6 @@
 
 The following files have been resolved:
-   org.jboot:kernel-mp:jar:3.0.4-RELEASE:compile[36m -- module org.jboot.kernel.mybatis[0;1m [auto][m
+   org.jboot:kernel-mp:jar:3.0.5-RELEASE:compile[36m -- module org.jboot.kernel.mybatis[0;1m [auto][m
    org.mybatis:mybatis:jar:3.5.19:compile[36m -- module org.mybatis[0;1m [auto][m
    org.mybatis:mybatis-spring:jar:3.0.5:compile[36m -- module org.mybatis.spring[0;1m [auto][m
    com.baomidou:mybatis-plus:jar:3.5.14:compile[36m -- module com.baomidou.mybatis.plus[0;1m [auto][m
@@ -17,12 +17,12 @@ The following files have been resolved:
    com.alibaba:druid:jar:1.2.27:compile[36m -- module druid[0;1;33m (auto)[m
    org.slf4j:slf4j-api:jar:2.0.17:compile[36m -- module org.slf4j[m
    org.springframework.boot:spring-boot-autoconfigure:jar:3.5.6:compile[36m -- module spring.boot.autoconfigure[0;1m [auto][m
-   org.jboot:kernel-secure:jar:3.0.4-RELEASE:compile[36m -- module org.jboot.kernel.secure[0;1m [auto][m
+   org.jboot:kernel-secure:jar:3.0.5-RELEASE:compile[36m -- module org.jboot.kernel.secure[0;1m [auto][m
    io.jsonwebtoken:jjwt-impl:jar:0.13.0:compile[36m -- module jjwt.impl[0;1;33m (auto)[m
    io.jsonwebtoken:jjwt-api:jar:0.13.0:compile[36m -- module jjwt.api[0;1;33m (auto)[m
    io.jsonwebtoken:jjwt-jackson:jar:0.13.0:compile[36m -- module jjwt.jackson[0;1;33m (auto)[m
-   org.jboot:kernel-toolkit:jar:3.0.4-RELEASE:compile[36m -- module org.jboot.kernel.toolkit[0;1m [auto][m
-   org.jboot:kernel-launch:jar:3.0.4-RELEASE:compile[36m -- module org.jboot.kernel.launch[0;1m [auto][m
+   org.jboot:kernel-toolkit:jar:3.0.5-RELEASE:compile[36m -- module org.jboot.kernel.toolkit[0;1m [auto][m
+   org.jboot:kernel-launch:jar:3.0.5-RELEASE:compile[36m -- module org.jboot.kernel.launch[0;1m [auto][m
    org.springframework.boot:spring-boot-starter-web:jar:3.5.6:compile[36m -- module spring.boot.starter.web[0;1m [auto][m
    org.springframework.boot:spring-boot-starter-json:jar:3.5.6:compile[36m -- module spring.boot.starter.json[0;1m [auto][m
    com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.19.2:compile[36m -- module com.fasterxml.jackson.datatype.jdk8[m
@@ -66,7 +66,7 @@ The following files have been resolved:
    com.zaxxer:HikariCP:jar:6.3.3:compile[36m -- module com.zaxxer.hikari[m
    org.springframework:spring-jdbc:jar:6.2.11:compile[36m -- module spring.jdbc[0;1m [auto][m
    org.springframework:spring-tx:jar:6.2.11:compile[36m -- module spring.tx[0;1m [auto][m
-   org.jboot:kernel-cloud:jar:3.0.4-RELEASE:compile[36m -- module org.jboot.kernel.cloud[0;1m [auto][m
+   org.jboot:kernel-cloud:jar:3.0.5-RELEASE:compile[36m -- module org.jboot.kernel.cloud[0;1m [auto][m
    org.springframework.cloud:spring-cloud-starter-openfeign:jar:4.3.0:compile[36m -- module spring.cloud.starter.openfeign[0;1;33m (auto)[m
    org.springframework.cloud:spring-cloud-starter:jar:4.3.0:compile[36m -- module spring.cloud.starter[0;1;33m (auto)[m
    org.springframework.cloud:spring-cloud-openfeign-core:jar:4.3.0:compile[36m -- module spring.cloud.openfeign.core[0;1;33m (auto)[m
@@ -89,7 +89,7 @@ The following files have been resolved:
    org.jetbrains.kotlin:kotlin-stdlib-jdk7:jar:1.9.25:compile[36m -- module kotlin.stdlib.jdk7[m
    org.springframework.cloud:spring-cloud-starter-loadbalancer:jar:4.3.0:compile[36m -- module spring.cloud.starter.loadbalancer[0;1;33m (auto)[m
    org.springframework.cloud:spring-cloud-loadbalancer:jar:4.3.0:compile[36m -- module spring.cloud.loadbalancer[0;1;33m (auto)[m
-   io.projectreactor:reactor-core:jar:3.0.4-RELEASE1:compile[36m -- module reactor.core[0;1m [auto][m
+   io.projectreactor:reactor-core:jar:3.0.5-RELEASE1:compile[36m -- module reactor.core[0;1m [auto][m
    org.reactivestreams:reactive-streams:jar:1.0.4:compile[36m -- module org.reactivestreams[0;1m [auto][m
    io.projectreactor.addons:reactor-extra:jar:3.5.3:compile[36m -- module reactor.extra[0;1m [auto][m
    org.springframework.boot:spring-boot-starter-cache:jar:3.5.6:compile[36m -- module spring.boot.starter.cache[0;1m [auto][m

@@ -36,7 +36,7 @@
 
     <properties>
         <!-- JBoot-Kernel Version -->
-        <revision>3.0.4-RELEASE</revision>
+        <revision>3.0.5-RELEASE</revision>
         <module.name>org.jboot.kernel</module.name>
         <!-- jdk Version -->
         <java.version>17</java.version>
@@ -73,7 +73,7 @@
         <poi.version>5.4.1</poi.version>
         <poi.ooxl.version>1.4</poi.ooxl.version>
         
-        <jbatis.rds.version>3.0.4-RELEASE</jbatis.rds.version>
+        <jbatis.rds.version>3.0.5-RELEASE</jbatis.rds.version>
     </properties>
 
     <modules>

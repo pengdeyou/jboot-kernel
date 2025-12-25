@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jboot</groupId>
   <artifactId>kernel-bom</artifactId>
-  <version>3.0.4-RELEASE</version>
+  <version>3.0.5-RELEASE</version>
   <packaging>pom</packaging>
   <name>kernel-bom</name>
   <description>jboot-kernel is a powerful toolbox for JBoot</description>
@@ -54,117 +54,117 @@
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-launch</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-boot</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-cloud</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-toolkit</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-develop</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-excel</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-secure</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-social</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-log</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-test</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-swagger</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-mp</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-rds</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-oss</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-redis</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-tenant</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-transaction</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-i18n</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-loadbalancer</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-report</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-cache</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-datascope</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jboot</groupId>
         <artifactId>kernel-crypto</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>com.squareup.okhttp3</groupId>
@@ -234,37 +234,37 @@
       <dependency>
         <groupId>org.jbatis</groupId>
         <artifactId>jbatis-rds-kernel</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jbatis</groupId>
         <artifactId>jbatis-rds</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jbatis</groupId>
         <artifactId>jbatis-rds-annotation</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jbatis</groupId>
         <artifactId>jbatis-rds-extension</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jbatis</groupId>
         <artifactId>jbatis-rds-generator</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jbatis</groupId>
         <artifactId>jbatis-rds-springboot-autoconfigure</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>org.jbatis</groupId>
         <artifactId>jbatis-rds-springboot3-starter</artifactId>
-        <version>3.0.4-RELEASE</version>
+        <version>3.0.5-RELEASE</version>
       </dependency>
       <dependency>
         <groupId>com.alibaba.nacos</groupId>

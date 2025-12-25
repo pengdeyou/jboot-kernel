@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jboot</groupId>
   <artifactId>kernel-secure</artifactId>
-  <version>3.0.4-RELEASE</version>
+  <version>3.0.5-RELEASE</version>
   <name>kernel-secure</name>
   <description>jboot-kernel is a powerful toolbox for JBoot</description>
   <url>https://github.com/pengdeyou/jboot-kernel/kernel-secure</url>
@@ -58,7 +58,7 @@
     <dependency>
       <groupId>org.jboot</groupId>
       <artifactId>kernel-toolkit</artifactId>
-      <version>3.0.4-RELEASE</version>
+      <version>3.0.5-RELEASE</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
