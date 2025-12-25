@@ -1,7 +1,7 @@
 
 package org.jboot.kernel.report.mapper;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.jbatis.rds.kernel.mapper.BaseMapper;
 import org.jboot.kernel.report.entity.ReportFileEntity;
 
 /**

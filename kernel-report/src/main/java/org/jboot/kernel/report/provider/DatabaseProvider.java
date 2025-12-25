@@ -1,7 +1,7 @@
 
 package org.jboot.kernel.report.provider;
 
-import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import org.jbatis.rds.kernel.toolkit.Wrappers;
 import com.bstek.ureport.provider.report.ReportFile;
 import com.bstek.ureport.provider.report.ReportProvider;
 import lombok.AllArgsConstructor;

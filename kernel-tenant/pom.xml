@@ -29,7 +29,7 @@
         </dependency>
         <dependency>
             <groupId>org.jboot</groupId>
-            <artifactId>kernel-mp</artifactId>
+            <artifactId>kernel-rds</artifactId>
         </dependency>
     </dependencies>
 

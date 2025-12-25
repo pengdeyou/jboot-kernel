@@ -1,8 +1,8 @@
 
 package org.jboot.kernel.datascope.interceptor;
 
-import com.baomidou.mybatisplus.core.toolkit.PluginUtils;
-import com.baomidou.mybatisplus.core.toolkit.StringPool;
+import org.jbatis.rds.kernel.toolkit.PluginUtils;
+import org.jbatis.rds.kernel.toolkit.StringPool;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.executor.Executor;
@@ -16,7 +16,7 @@ import org.jboot.kernel.datascope.annotation.DataAuth;
 import org.jboot.kernel.datascope.handler.DataScopeHandler;
 import org.jboot.kernel.datascope.model.DataScopeModel;
 import org.jboot.kernel.datascope.props.DataScopeProperties;
-import org.jboot.kernel.mp.intercept.QueryInterceptor;
+import org.jboot.kernel.rds.intercept.QueryInterceptor;
 import org.jboot.kernel.secure.AuthUser;
 import org.jboot.kernel.secure.utils.SecureUtil;
 import org.jboot.kernel.toolkit.utils.ClassUtil;

@@ -1,10 +1,10 @@
 
 package org.jboot.kernel.report.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableLogic;
-import com.baomidou.mybatisplus.annotation.TableName;
+import org.jbatis.rds.annotation.IdType;
+import org.jbatis.rds.annotation.TableId;
+import org.jbatis.rds.annotation.TableLogic;
+import org.jbatis.rds.annotation.TableName;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import lombok.Data;

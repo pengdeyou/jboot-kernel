@@ -1,10 +1,10 @@
 
 package org.jboot.kernel.report.endpoint;
 
-import com.baomidou.mybatisplus.core.metadata.IPage;
+import org.jbatis.rds.kernel.metadata.IPage;
 import lombok.AllArgsConstructor;
-import org.jboot.kernel.mp.support.Condition;
-import org.jboot.kernel.mp.support.Query;
+import org.jboot.kernel.rds.support.Condition;
+import org.jboot.kernel.rds.support.Query;
 import org.jboot.kernel.report.entity.ReportFileEntity;
 import org.jboot.kernel.report.service.IReportFileService;
 import org.jboot.kernel.toolkit.api.R;

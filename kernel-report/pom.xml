@@ -20,7 +20,7 @@
     <dependencies>
         <dependency>
             <groupId>org.jboot</groupId>
-            <artifactId>kernel-mp</artifactId>
+            <artifactId>kernel-rds</artifactId>
         </dependency>
         <dependency>
             <groupId>com.bstek.ureport</groupId>

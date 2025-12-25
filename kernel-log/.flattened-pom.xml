@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jboot</groupId>
   <artifactId>kernel-log</artifactId>
-  <version>3.7.3-RELEASE</version>
+  <version>3.0.4-RELEASE</version>
   <name>kernel-log</name>
   <description>jboot-kernel is a powerful toolbox for JBoot</description>
   <url>https://github.com/pengdeyou/jboot-kernel/kernel-log</url>
@@ -46,19 +46,19 @@
     <dependency>
       <groupId>org.jboot</groupId>
       <artifactId>kernel-toolkit</artifactId>
-      <version>3.7.3-RELEASE</version>
+      <version>3.0.4-RELEASE</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.jboot</groupId>
       <artifactId>kernel-secure</artifactId>
-      <version>3.7.3-RELEASE</version>
+      <version>3.0.4-RELEASE</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.jboot</groupId>
       <artifactId>kernel-cloud</artifactId>
-      <version>3.7.3-RELEASE</version>
+      <version>3.0.4-RELEASE</version>
       <scope>compile</scope>
     </dependency>
     <dependency>

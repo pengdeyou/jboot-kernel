@@ -1,6 +1,6 @@
 
 The following files have been resolved:
-   org.jboot:kernel-launch:jar:3.7.3-RELEASE:compile[36m -- module org.jboot.kernel.launch[0;1m [auto][m
+   org.jboot:kernel-launch:jar:3.0.4-RELEASE:compile[36m -- module org.jboot.kernel.launch[0;1m [auto][m
    org.springframework.boot:spring-boot-starter-web:jar:3.5.6:compile[36m -- module spring.boot.starter.web[0;1m [auto][m
    org.springframework.boot:spring-boot-starter-json:jar:3.5.6:compile[36m -- module spring.boot.starter.json[0;1m [auto][m
    com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.19.2:compile[36m -- module com.fasterxml.jackson.datatype.jdk8[m
